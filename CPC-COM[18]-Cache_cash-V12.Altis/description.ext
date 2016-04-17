@@ -1,0 +1,427 @@
+﻿onLoadName =| Cache Cash |;
+enableDebugConsole = 1;
+
+class Params
+{
+	class Heure 		//paramsArray select 0
+	{
+	title = "Heure :";
+	values[] = {24,25,26,27,28,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
+	texts[] = {"00:00","01:00","02:00","03:00","04:00","05:00","06:00","07:00","08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00"};
+	default = 12;
+	};
+
+	class insertion		//paramsArray select 1
+	{
+	title = "Type d'insertion :";
+	values[] = {0,1,2,4};
+	texts[] = {"Aléatoire","Choisie","Héliportée","Parachutage"};
+	default = 0;
+	};
+
+	class difficulte	//paramsArray select 2
+	{
+	title = "Difficulté :";
+	values[] = {0,0.5,1,1.5,2,2.5,3};
+	texts[] = {"Facile (-8 joueurs)","Facile + de véhicules","Normal (~10 joueurs)","Normal + de véhicules","Difficile (+12 joueurs)","Difficile + de véhicules","Impossible"};
+	default = 1;
+	};
+
+	class J_NVG	//paramsArray select 3
+	{
+	title = "Joueurs avec NVG/lampes :";
+	values[] = {0,1};
+	texts[] = {"Non","oui"};
+	default = 0;
+	};
+
+	class SkillIA	//paramsArray select 4
+	{
+	title = "Skill des IAs (par rapport au réglage serveur):";
+	values[] = {0.1,0.3,0.5,0.7,0.85,1,1.2,1.5};
+	texts[] = {"- 90%","- 70%","- 50%","- 30%","- 15%","Par défaut","+ 20%","+ 50%"};
+	default = 1;
+	};
+
+	class Faction	//paramsArray select 5
+	{
+	title = "Faction joueur :";
+	values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18};
+	texts[] = {
+		"US (RHS)",
+		"US (CUP)",
+		"Russe (RHS)",
+		"Russe (CUP)",
+		"Insurgés (RHS)",
+		"Insurgés (CUP)",
+		"Rebelles takistanais (RHS)",
+		"Rebelles takistanais (CUP)",
+		"Armée takistanaise (RHS)",
+		"Armée takistanaise (CUP)",
+		"GER (RHS) WIP",
+		"GER (CUP) WIP",
+		"OTAN",
+		"CSAT",
+		"AAF",
+		"GFD (CUP)",
+		"NPFD (CUP)",
+		"RACS (CUP)",
+		"SLA (CUP)"
+	};
+	default = 0;
+	};
+
+	class Faction_Ennemi	//paramsArray select 6
+	{
+	title = "Faction Ennemie:";
+	values[] = {0,1,2,3,4,5,6,7,8,9,100,101,102,103,104};
+	texts[] = 
+	{
+		"US (RHS)",
+		"US (CUP)",
+		"Russe (RHS)",
+		"Armée takistanaise (CUP)",
+		"RACS(CUP)",
+		"SLA (CUP)",
+		"AAF",
+		"CSAT",
+		"NATO",
+		"GFD (CUP)",
+		"Insurgés (RHS)",
+		"Rebelles takistanais (CUP)",
+		"NAPA (CUP)",
+		"FIA",
+		"NPFD (CUP)"
+	};
+	default = 100;
+	};
+
+	class extraction	//paramsArray select 7
+	{
+	title = "Extraction :";
+	values[] = {0,1,2};
+	texts[] = {"Aucune","Aléatoire","Sur insertion"};
+	default = 1;
+	};
+
+	class Vehicule1		//paramsArray select 8
+	{
+	title = "1er vehicule :";
+	values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89};
+	texts[] = 
+	{
+		"Aucun",
+		"Off-Road",
+		"Off-Road M2",
+		"Camionnette",
+		"HMMWV M2 Desert (RHS)",
+		"HMMWV M2 Wood (RHS)",
+		"HMMWV Desert (RHS)",
+		"HMMWV Wood (RHS)",
+		"GAZ Tigr (RHS)",
+		"GAZ Tigr armé (RHS)",
+		"UAZ",
+		"UAZ open",
+		"UAZ Dshkm",
+		"UAZ AGS-30",
+		"UAZ Metis",
+		"RG-31 M2 Desert",
+		"RG-31 M2 Wood",
+		"HMMWV Desert",
+		"HMMWV M2 GPK Desert",
+		"HMMWV M2 CROWS Desert",
+		"HMMWV TOW Desert",
+		"HMMWV SOV Desert",
+		"Land Rover Desert",
+		"Land Rover Wood",
+		"Land Rover M2 Desert",
+		"Land Rover M2 Wood",
+		"Land Rover Special Desert",
+		"Land Rover Special Wood",
+		"Jackal MG Desert",
+		"Jackal MG Wood",
+		"Ural",
+		"Ural ZU-23",
+		"Dingo MG Desert",
+		"Dingo MG Wood",
+		"Strider",
+		"Strider MG",
+		"Ifrit",
+		"Ifrit MG",
+		"Hunter",
+		"Hunter MG",
+		"Quad",
+		"M113 M2 Desert (RHS)",
+		"M113 M2 Wood (RHS)",
+		"Bradley Desert (RHS)",
+		"Bradley Wood (RHS)",
+		"M1A1 Desert (RHS)",
+		"M1A1 Wood (RHS)",
+		"M113 M2 Wood",
+		"Bradley Desert",
+		"Bradley Wood",
+		"Stryker (Desert)",
+		"Stryker (Wood)",
+		"LAV-25 Wood",
+		"M1A1 Desert",
+		"M1A1 Wood",
+		"BTR-70 (RHS)",
+		"BTR-80A (RHS)",
+		"BMP-1 (RHS)",
+		"BMP-2 (RHS)",
+		"BMP-3 (RHS)",
+		"T-72 (RHS)",
+		"T-80 (RHS)",
+		"T-90(RHS)",
+		"BTR-90",
+		"BRDM2",
+		"BRDM2 ATGM",
+		"BMP-1",
+		"BMP-2",
+		"T-34",
+		"T-55",
+		"T-72",
+		"Pickup PK",
+		"Marid",
+		"Kamysh",
+		"T-100",
+		"Gorgon",
+		"Mora",
+		"Kuma",
+		"Marshall",
+		"Panther",
+		"Slammer",
+		"Pawnee",
+		"HummingBird",
+		"Hellcat",
+		"Hellcat armé",
+		"UH-1H",
+		"UH-1Y",
+		"UH-1Y armé",
+		"Mi-24",
+		"Orca"
+	};
+	default = 0;
+	};
+	class Vehicule2		//paramsArray select 9
+	{
+	title = "2eme vehicule :";
+	values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89};
+	texts[] = 
+	{
+		"Aucun",
+		"Off-Road",
+		"Off-Road M2",
+		"Camionnette",
+		"HMMWV M2 Desert (RHS)",
+		"HMMWV M2 Wood (RHS)",
+		"HMMWV Desert (RHS)",
+		"HMMWV Wood (RHS)",
+		"GAZ Tigr (RHS)",
+		"GAZ Tigr armé (RHS)",
+		"UAZ",
+		"UAZ open",
+		"UAZ Dshkm",
+		"UAZ AGS-30",
+		"UAZ Metis",
+		"RG-31 M2 Desert",
+		"RG-31 M2 Wood",
+		"HMMWV Desert",
+		"HMMWV M2 GPK Desert",
+		"HMMWV M2 CROWS Desert",
+		"HMMWV TOW Desert",
+		"HMMWV SOV Desert",
+		"Land Rover Desert",
+		"Land Rover Wood",
+		"Land Rover M2 Desert",
+		"Land Rover M2 Wood",
+		"Land Rover Special Desert",
+		"Land Rover Special Wood",
+		"Jackal MG Desert",
+		"Jackal MG Wood",
+		"Ural",
+		"Ural ZU-23",
+		"Dingo MG Desert",
+		"Dingo MG Wood",
+		"Strider",
+		"Strider MG",
+		"Ifrit",
+		"Ifrit MG",
+		"Hunter",
+		"Hunter MG",
+		"Quad",
+		"M113 M2 Desert (RHS)",
+		"M113 M2 Wood (RHS)",
+		"Bradley Desert (RHS)",
+		"Bradley Wood (RHS)",
+		"M1A1 Desert (RHS)",
+		"M1A1 Wood (RHS)",
+		"M113 M2 Wood",
+		"Bradley Desert",
+		"Bradley Wood",
+		"Stryker (Desert)",
+		"Stryker (Wood)",
+		"LAV-25 Wood",
+		"M1A1 Desert",
+		"M1A1 Wood",
+		"BTR-70 (RHS)",
+		"BTR-80A (RHS)",
+		"BMP-1 (RHS)",
+		"BMP-2 (RHS)",
+		"BMP-3 (RHS)",
+		"T-72 (RHS)",
+		"T-80 (RHS)",
+		"T-90(RHS)",
+		"BTR-90",
+		"BRDM2",
+		"BRDM2 ATGM",
+		"BMP-1",
+		"BMP-2",
+		"T-34",
+		"T-55",
+		"T-72",
+		"Pickup PK",
+		"Marid",
+		"Kamysh",
+		"T-100",
+		"Gorgon",
+		"Mora",
+		"Kuma",
+		"Marshall",
+		"Panther",
+		"Slammer",
+		"Pawnee",
+		"HummingBird",
+		"Hellcat",
+		"Hellcat armé",
+		"UH-1H",
+		"UH-1Y",
+		"UH-1Y armé",
+		"Mi-24",
+		"Orca"
+	};
+	default = 0;
+	};
+	class Vehicule3		//paramsArray select 10
+	{
+	title = "3eme vehicule :";
+	values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89};
+	texts[] = 
+	{
+		"Aucun",
+		"Off-Road",
+		"Off-Road M2",
+		"Camionnette",
+		"HMMWV M2 Desert (RHS)",
+		"HMMWV M2 Wood (RHS)",
+		"HMMWV Desert (RHS)",
+		"HMMWV Wood (RHS)",
+		"GAZ Tigr (RHS)",
+		"GAZ Tigr armé (RHS)",
+		"UAZ",
+		"UAZ open",
+		"UAZ Dshkm",
+		"UAZ AGS-30",
+		"UAZ Metis",
+		"RG-31 M2 Desert",
+		"RG-31 M2 Wood",
+		"HMMWV Desert",
+		"HMMWV M2 GPK Desert",
+		"HMMWV M2 CROWS Desert",
+		"HMMWV TOW Desert",
+		"HMMWV SOV Desert",
+		"Land Rover Desert",
+		"Land Rover Wood",
+		"Land Rover M2 Desert",
+		"Land Rover M2 Wood",
+		"Land Rover Special Desert",
+		"Land Rover Special Wood",
+		"Jackal MG Desert",
+		"Jackal MG Wood",
+		"Ural",
+		"Ural ZU-23",
+		"Dingo MG Desert",
+		"Dingo MG Wood",
+		"Strider",
+		"Strider MG",
+		"Ifrit",
+		"Ifrit MG",
+		"Hunter",
+		"Hunter MG",
+		"Quad",
+		"M113 M2 Desert (RHS)",
+		"M113 M2 Wood (RHS)",
+		"Bradley Desert (RHS)",
+		"Bradley Wood (RHS)",
+		"M1A1 Desert (RHS)",
+		"M1A1 Wood (RHS)",
+		"M113 M2 Wood",
+		"Bradley Desert",
+		"Bradley Wood",
+		"Stryker (Desert)",
+		"Stryker (Wood)",
+		"LAV-25 Wood",
+		"M1A1 Desert",
+		"M1A1 Wood",
+		"BTR-70 (RHS)",
+		"BTR-80A (RHS)",
+		"BMP-1 (RHS)",
+		"BMP-2 (RHS)",
+		"BMP-3 (RHS)",
+		"T-72 (RHS)",
+		"T-80 (RHS)",
+		"T-90(RHS)",
+		"BTR-90",
+		"BRDM2",
+		"BRDM2 ATGM",
+		"BMP-1",
+		"BMP-2",
+		"T-34",
+		"T-55",
+		"T-72",
+		"Pickup PK",
+		"Marid",
+		"Kamysh",
+		"T-100",
+		"Gorgon",
+		"Mora",
+		"Kuma",
+		"Marshall",
+		"Panther",
+		"Slammer",
+		"Pawnee",
+		"HummingBird",
+		"Hellcat",
+		"Hellcat armé",
+		"UH-1H",
+		"UH-1Y",
+		"UH-1Y armé",
+		"Mi-24",
+		"Orca"
+	};
+	default = 0;
+	};
+	class Weather	//paramsArray select 11
+	{
+	title = $STR_A3_rscattributeovercast_title;
+	values[] = {0,25,50,75,100};
+	texts[] = {
+		$STR_A3_rscattributeovercast_value000_tooltip,
+		$STR_A3_rscattributeovercast_value025_tooltip,
+		$STR_A3_rscattributeovercast_value050_tooltip,
+		$STR_A3_rscattributeovercast_value075_tooltip,
+		$STR_A3_rscattributeovercast_value100_tooltip
+	};
+	default = 25;
+	function = "BIS_fnc_paramWeather";
+	};
+/*	
+	class Brouillard	//paramsArray select 12
+	{
+	title = "Brouillard :";
+	values[] = {2,0.25,0.5,0.8};
+	texts[] = {"Par défaut","Léger","Moyen","Dense"};
+	default = 2;
+	};
+*/
+};
