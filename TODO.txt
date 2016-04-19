@@ -11,3 +11,4 @@
 - ajouter des armes statiques dans les véhicules disponibles
 - les GER sont un peu lights en AT
 - ajouter des munitions dans les véhicules ?
+- utiliser setposATL

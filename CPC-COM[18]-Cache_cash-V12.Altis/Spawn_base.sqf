@@ -48,6 +48,6 @@ if ((paramsArray select 6) > 99) then {
 	typecamp = 3; publicvariable "typecamp";
 	[
 		Random_Position
-		, ["OutpostA","OutpostC","OutpostD","OutpostE"] select (floor random 4)
+		, selectRandom ["OutpostA","OutpostC","OutpostD","OutpostE"]
 	] execVM "spawn_camp.sqf";
 };

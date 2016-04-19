@@ -33,5 +33,5 @@ if (isServer) then {
 			_para setpos [(getMarkerPos "Mark_Inser" select 0) + (_i* sin _dir)+ (random 3),(getMarkerPos "Mark_Inser" select 1)+ (_i* cos _dir)+ (random 3),200];
 			_x moveInAny _para;
 		};
-	} foreach SlotPlayers;
+	} foreach playableUnits;
 };
