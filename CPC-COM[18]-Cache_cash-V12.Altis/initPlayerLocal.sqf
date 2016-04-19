@@ -46,8 +46,8 @@ switch (paramsArray select 5) do {
 	case 7 : {call compile preprocessFileLineNumbers "loadout\loadout_TAKINS_CUP.sqf";};
 	case 8 : {call compile preprocessFileLineNumbers "loadout\loadout_TAK_RHS.sqf";};
 	case 9 : {call compile preprocessFileLineNumbers "loadout\loadout_TAK_CUP.sqf";};
-	case 10 : {call compile preprocessFileLineNumbers "loadout\loadout_GER_RHS.sqf";};
-	case 11 : {call compile preprocessFileLineNumbers "loadout\loadout_GER_CUP.sqf";};
+	case 10 : {call compile preprocessFileLineNumbers "loadout\loadout_GER_des.sqf";};
+	case 11 : {call compile preprocessFileLineNumbers "loadout\loadout_GER_wood.sqf";};
 	case 12 : {call compile preprocessFileLineNumbers "loadout\loadout_NATO.sqf";};
 	case 13 : {call compile preprocessFileLineNumbers "loadout\loadout_CSAT.sqf";};
 	case 14 : {call compile preprocessFileLineNumbers "loadout\loadout_AAF.sqf";};

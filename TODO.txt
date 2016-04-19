@@ -1,0 +1,10 @@
+- faction joueur spetsnaz/sf
+- joueurs spawnent en l'air sur dariya
+- grosse chute de fps en milieu de mission ?
+- trop de pop d'IA sur le camp (maisons pleines de mecs) - a tester
+- changer le pop de civils en fonction de la map
+- retoucher un peu le briefing
+- revoir le spawn des IA ?
+- Se passer de GAIA ?
+- rajouter des batiments pour Duala
+- la commande de brouillard n'a pas toujours un effet

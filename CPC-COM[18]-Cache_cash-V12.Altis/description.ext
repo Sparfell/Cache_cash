@@ -58,8 +58,8 @@ class Params
 		"Rebelles takistanais (CUP)",
 		"Armée takistanaise (RHS)",
 		"Armée takistanaise (CUP)",
-		"GER (RHS) WIP",
-		"GER (CUP) WIP",
+		"KSK desert (CUP)",
+		"KSK woodland (CUP)",
 		"OTAN",
 		"CSAT",
 		"AAF",
@@ -401,27 +401,20 @@ class Params
 	};
 	default = 0;
 	};
-	class Weather	//paramsArray select 11
+
+	class Meteo	//paramsArray select 11
 	{
-	title = $STR_A3_rscattributeovercast_title;
-	values[] = {0,25,50,75,100};
-	texts[] = {
-		$STR_A3_rscattributeovercast_value000_tooltip,
-		$STR_A3_rscattributeovercast_value025_tooltip,
-		$STR_A3_rscattributeovercast_value050_tooltip,
-		$STR_A3_rscattributeovercast_value075_tooltip,
-		$STR_A3_rscattributeovercast_value100_tooltip
+	title = "Météo :";
+	values[] = {2,0,0.5,0.72,1};
+	texts[] = {"Par défaut","Dégagée","Nuageuse","Pluvieuse","Orageuse"};
+	default = 2;
 	};
-	default = 25;
-	function = "BIS_fnc_paramWeather";
-	};
-/*	
+
 	class Brouillard	//paramsArray select 12
 	{
 	title = "Brouillard :";
-	values[] = {2,0.25,0.5,0.8};
-	texts[] = {"Par défaut","Léger","Moyen","Dense"};
-	default = 2;
+	values[] = {0,0.25,0.5,0.8};
+	texts[] = {"Aucun","Léger","Moyen","Dense"};
+	default = 0;
 	};
-*/
 };

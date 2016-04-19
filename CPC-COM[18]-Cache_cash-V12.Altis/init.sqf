@@ -4,7 +4,7 @@
 };
 
 if (isNil "paramsArray") then {
-	paramsArray = [12,0,1,0,1,0,9,1,0,0,0,25]
+	paramsArray = [12,0,1,0,1,0,9,1,0,0,0,25,0]
 };
 
 waitUntil {CPC_MarkersCreated};
@@ -16,15 +16,14 @@ chefIA = null;
 if (isServer) then {
 	skipTime (paramsArray select 0);
 };
-/*
+
+
 if ((paramsArray select 11)< 1.5) then {
 	0 setOvercast (paramsArray select 11);
 };
-if ((paramsArray select 12)< 1.5) then {
-	0 setfog (paramsArray select 12);
-};
+0 setfog (paramsArray select 12);
 forceWeatherChange;
-*/
+
 
 //Script
 null = [] execVM "briefing.sqf";

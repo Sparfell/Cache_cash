@@ -84,8 +84,8 @@ if ((paramsArray select 1) == 2) then
 		case 7 : {heliType = "CUP_I_UH1H_TK_GUE";}; // INS TAK
 		case 8 : {heliType = "CUP_O_Mi17_TK";}; // TK RHS
 		case 9 : {heliType = "CUP_O_Mi17_TK";}; // TK RHS
-		case 10 : {heliType = "RHS_UH60M_d";}; // GER RHS
-		case 11 : {heliType = "CUP_B_UH60M_US";}; // GER RHS
+		case 10 : {heliType = "CUP_B_UH60M_US";}; // GER Desert
+		case 11 : {heliType = "CUP_B_UH60M_US";}; // GER Woodland
 		case 12 : {heliType = "B_Heli_Transport_01_camo_F";}; // OTAN
 		case 13 : {heliType = "O_Heli_Light_02_F";}; // CSAT
 		case 14 : {heliType = "I_Heli_Transport_02_F";}; // AAF

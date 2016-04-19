@@ -272,10 +272,10 @@ switch (paramsArray select 6) do {
 };
 
 _fois = switch (_Nombre_Ennemi) do {
-	case 0: {2};
-	case 1: {3};
-	case 2: {4};
-	case 3: {5};
+	case 0: {1};
+	case 1: {2};
+	case 2: {3};
+	case 3: {4};
 };
 for "_n" from 1 to _fois do {
 	_mark = "2";
@@ -283,7 +283,7 @@ for "_n" from 1 to _fois do {
 	_markPos = markerpos _mark;
 	_dir = random 360;
 	_pos = [_mark,0,_markEx,100] call SHK_pos;
-	_group = [_pos, resistance, _Compo_group select (floor random (count _compo_group)),[],[],[],[],[],random 360] call BIS_fnc_spawnGroup;
+	_group = [_pos, resistance, selectrandom _Compo_group,[],[],[],[],[],random 360] call BIS_fnc_spawnGroup;
 	_group setVariable ["GAIA_ZONE_INTEND",[_mark, "NOFOLLOW"], false];
 	sleep 0.5;
 };
@@ -318,7 +318,7 @@ for "_n" from 1 to _fois do {
 	_markPos = markerpos _mark;
 	_dir = random 360;
 	_pos = [_mark,0,[],100] call SHK_pos;
-	_group = [_pos, resistance, _Compo_group select (floor random (count _compo_group)),[],[],[],[],[],random 360] call BIS_fnc_spawnGroup;
+	_group = [_pos, resistance, selectrandom _Compo_group,[],[],[],[],[],random 360] call BIS_fnc_spawnGroup;
 	_group setVariable ["GAIA_ZONE_INTEND",[_mark, "FORTIFY"], false];
 	sleep 0.5;
 };
@@ -337,7 +337,7 @@ for "_n" from 1 to _fois do {
 	_markPos = markerpos _mark;
 	_dir = random 360;
 	_pos = [_mark,0,_markEx,200] call SHK_pos;
-	_group = [_pos, resistance, _Compo_group select (floor random (count _compo_group)),[],[],[],[],[],random 360] call BIS_fnc_spawnGroup;
+	_group = [_pos, resistance, selectrandom _Compo_group,[],[],[],[],[],random 360] call BIS_fnc_spawnGroup;
 	_group setVariable ["GAIA_ZONE_INTEND",[_mark, "MOVE"], false];
 	sleep 0.5;
 	} foreach [1,2,3,4];
@@ -390,7 +390,7 @@ if (random 100 < 22) then {
 			_mark setMarkerSize [50,51];
 			_mark setMarkerAlpha 0;
 		_dir = random 360;
-		_group = [_pos, resistance, _ennemi_group,[],[],[],[],[],random 360] call BIS_fnc_spawnGroup;
+		_group = [_pos, resistance, selectrandom _compo_group,[],[],[],[],[],random 360] call BIS_fnc_spawnGroup;
 		_group setVariable ["GAIA_ZONE_INTEND",[_mark, "FORTIFY"], false];
 		sleep 0.5;
 	};
@@ -441,7 +441,7 @@ if (random 100 < 75) then {
 _objet = "Land_Cargo_Patrol_V2_F" CreateVehicle [_pos select 0, _pos select 1,-3];
 _objet setdir random 360;
 "4" setmarkerpos _pos;
-_group = [getpos _objet, resistance, _ennemi_group,[],[],[],[],[],random 360] call BIS_fnc_spawnGroup;
+_group = [getpos _objet, resistance,  selectrandom _compo_group,[],[],[],[],[],random 360] call BIS_fnc_spawnGroup;
 leader _group setPosATL (_objet buildingPos 1);
 _group setVariable ["GAIA_ZONE_INTEND",["4", "FORTIFY"], false];
 };
@@ -517,7 +517,7 @@ if (!isnull chefIA) then {chefIA addHeadgear "H_Beret_blk";};
 		_markPos = markerpos _mark;
 		_dir = random 360;
 		_pos = [[_markPos select 0,_markPos select 1,0],1400,random 360,0,[],100] call SHK_pos;
-		_group = [_pos, resistance, _Compo_group select (floor random (count _compo_group)),[],[],[],[],[],random 360] call BIS_fnc_spawnGroup;
+		_group = [_pos, resistance, selectrandom _Compo_group,[],[],[],[],[],random 360] call BIS_fnc_spawnGroup;
 		_group setVariable ["GAIA_ZONE_INTEND",[_mark, "NOFOLLOW"], false];
 		sleep 0.5;
 		{
