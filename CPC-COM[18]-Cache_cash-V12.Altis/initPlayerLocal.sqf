@@ -55,6 +55,7 @@ switch (paramsArray select 5) do {
 	case 16 : {call compile preprocessFileLineNumbers "loadout\loadout_NPFD.sqf";};
 	case 17 : {call compile preprocessFileLineNumbers "loadout\loadout_RACS.sqf";};
 	case 18 : {call compile preprocessFileLineNumbers "loadout\loadout_SLA.sqf";};
+	case 19 : {call compile preprocessFileLineNumbers "loadout\loadout_Spetsnaz.sqf";};
 };
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

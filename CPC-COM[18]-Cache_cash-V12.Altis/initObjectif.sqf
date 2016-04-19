@@ -93,6 +93,7 @@ if ((paramsArray select 1) == 2) then
 		case 16 : {heliType = "CUP_I_UH1H_TK_GUE";}; // NPFD
 		case 17 : {heliType = "CUP_I_UH60L_RACS";}; // RACS
 		case 18 : {heliType = "CUP_O_Mi8_SLA_1";}; // SLA
+		case 19 : {heliType = "RHS_Mi8mt_vvsc";}; // Spetsnaz RHS
 	};
 	"M_helipad1" setMarkerAlpha 1;
 	_HeliSpawn1 = heliType createVehicle (getMarkerPos "M_helipad1");
