@@ -55,7 +55,7 @@ if ((paramsArray select 1 == 0) or (paramsArray select 1 == 2)) then {
 	_i = 0;
 	{
 		if (_x == player) then {
-			_x setpos [(_pos select 0)+(8 * cos(_deg *_i)),(_pos select 1)+(8 * sin(_deg *_i)),1.5];
+			_x setposATL [(_pos select 0)+(8 * cos(_deg *_i)),(_pos select 1)+(8 * sin(_deg *_i)),1.5];
 			_x setdir (270-(_deg *_i));
 			_x DisableAI "MOVE";
 			_x DisableAI "AUTOTARGET";
