@@ -65,3 +65,10 @@ if ((paramsArray select 1 == 0) or (paramsArray select 1 == 2)) then {
 };
 
 
+if ((paramsArray select 11)< 1.5) then {
+	0 setOvercast (paramsArray select 11);
+};
+0 setfog (paramsArray select 12);
+forceWeatherChange;
+
+

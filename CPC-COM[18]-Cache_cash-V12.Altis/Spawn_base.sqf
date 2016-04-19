@@ -10,9 +10,10 @@ if ((paramsArray select 6) > 99) then {
 	typecamp = 1; publicvariable "typecamp";
 	_rdir = random 360;
 	{
-	if (CPC_WorldType == "vanilla") then {type1 = ["CamoNet_INDP_F","Land_Cargo_House_V2_F","Land_Unfinished_Building_01_F","Land_i_Stone_Shed_V1_F"] select (floor random 4);};
-	if (CPC_WorldType == "desert") then {type1 = ["Land_House_K_1_EP1","Land_House_K_3_EP1","Land_House_K_8_EP1","Land_House_K_5_EP1","Land_House_K_6_EP1","Land_House_K_7_EP1"] select (floor random 6);};
-	if (CPC_WorldType == "afrique") then {type1 = ["Land_Unfinished_Building_01_F","Land_Slum_House02_F","Land_Slum_House03_F","Land_Slum_House01_F","Land_cargo_house_slum_F"] select (floor random 6);};
+	if (CPC_WorldType == "vanilla") then {type1 = selectRandom ["CamoNet_INDP_F","Land_Cargo_House_V2_F","Land_Unfinished_Building_01_F","Land_i_Stone_Shed_V1_F"];};
+	if (CPC_WorldType == "desert") then {type1 = selectRandom ["Land_House_K_1_EP1","Land_House_K_3_EP1","Land_House_K_8_EP1","Land_House_K_5_EP1","Land_House_K_6_EP1","Land_House_K_7_EP1"];};
+	if (CPC_WorldType == "afrique") then {type1 = selectRandom ["Land_Unfinished_Building_01_F","Land_Unfinished_Building_01_F","Land_Slum_House02_F","Land_Slum_House03_F","Land_Slum_House01_F","Land_cargo_house_slum_F"];};
+	if (CPC_WorldType == "jungle") then {type1 = selectRandom ["Land_Slum_House02_F","Land_Slum_House03_F","Land_Slum_House01_F","Land_d_House_Small_01_V1_F","Land_d_House_Small_01_V1_F","Land_i_Stone_HouseBig_V2_F","Land_i_Stone_HouseBig_V2_F","Land_i_Stone_Shed_V3_F","Land_i_Stone_Shed_V2_F","Land_Unfinished_Building_01_F","Land_FuelStation_Build_F"];};
 	_objet = type1 CreateVehicle [(Random_Position select 0)+((sin (_rdir + _x))*10),(Random_Position select 1)+((cos (_rdir + _x))*10),1.5];
 	_objet setdir (_rdir + _x);
 	_objet setvectorUp [0,0,1];
