@@ -95,4 +95,9 @@ waitUntil {time > 1};
 call compile preprocessFileLineNumbers "loadout.sqf"; 
 [player] call hard_setLoadout;
 player setVariable ["loadout_done", true, true];
+
+if (time > 150) exitWith {};
+player allowdamage false;
+waitUntil {time > 120};
+player allowdamage true;
 */

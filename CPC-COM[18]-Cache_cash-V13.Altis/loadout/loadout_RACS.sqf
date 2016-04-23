@@ -191,7 +191,7 @@ loadoutCC_DOC = //
 	_unit linkItem "ItemWatch";
 
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_14";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_14"; _unit addPrimaryWeaponItem "CUP_acc_Flashlight";};
 
 };
 
@@ -327,7 +327,7 @@ loadoutCC_AT = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_14";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_14"; _unit addPrimaryWeaponItem "CUP_acc_Flashlight";};
 
 };
 
@@ -418,7 +418,7 @@ loadoutCC_GL = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_14";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_14"; _unit addPrimaryWeaponItem "CUP_acc_Flashlight";};
 
 };
 
@@ -460,7 +460,7 @@ loadoutCC_R = //
 	_unit linkItem "ItemWatch";
 
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_14";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_14"; _unit addPrimaryWeaponItem "CUP_acc_Flashlight";};
 
 };
 
@@ -507,7 +507,7 @@ loadoutCC_A = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_14";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_14"; _unit addPrimaryWeaponItem "CUP_acc_Flashlight";};
 };
 
 loadoutCC_CREW = //

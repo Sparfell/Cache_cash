@@ -56,9 +56,8 @@ loadoutCC_SL = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform "CUP_U_B_GER_Flecktarn_1";
+	_unit forceAddUniform "CUP_U_B_GER_Tropentarn_2";
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
-	_unit addItemToUniform "ACE_DefusalKit";
 	_unit addItemToUniform "ACE_EarPlugs";
 	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACE_Flashlight_MX991";
@@ -73,12 +72,12 @@ loadoutCC_SL = //
 	for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 	for "_i" from 1 to 4 do {_unit addItemToVest "CUP_30Rnd_556x45_G36";};
 	for "_i" from 1 to 4 do {_unit addItemToVest "CUP_30Rnd_TE1_Red_Tracer_556x45_G36";};
-	_unit addHeadgear "H_Cap_oli_hs";
-	_unit addGoggles "CUP_FR_NeckScarf";
+	_unit addHeadgear "CUP_H_PMC_Cap_PRR_Grey";
+	_unit addGoggles "CUP_TK_NeckScarf";
 
 	comment "Add weapons";
-	_unit addWeapon "CUP_arifle_G36C";
-	_unit addPrimaryWeaponItem "CUP_optic_CompM2_Black";
+	_unit addWeapon "CUP_arifle_G36C_camo";
+	_unit addPrimaryWeaponItem "CUP_optic_CompM2_Desert";
 	_unit addWeapon "CUP_hgun_Glock17";
 	_unit addWeapon "ACE_Vector";
 
@@ -106,9 +105,8 @@ loadoutCC_TL = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform "CUP_U_B_GER_Flecktarn_1";
+	_unit forceAddUniform "CUP_U_B_GER_Tropentarn_2";
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
-	_unit addItemToUniform "ACE_DefusalKit";
 	_unit addItemToUniform "ACE_EarPlugs";
 	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACE_Flashlight_MX991";
@@ -131,7 +129,7 @@ loadoutCC_TL = //
 	_unit addGoggles "G_Shades_Black";
 
 	comment "Add weapons";
-	_unit addWeapon "CUP_arifle_G36A";
+	_unit addWeapon "CUP_arifle_G36A_camo";
 	_unit addWeapon "CUP_hgun_Glock17";
 	_unit addWeapon "ACE_Vector";
 	_unit addWeapon "CUP_launch_M136";
@@ -160,9 +158,8 @@ loadoutCC_DOC = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform "CUP_U_B_GER_Flecktarn_1";
+	_unit forceAddUniform "CUP_U_B_GER_Tropentarn_2";
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
-	_unit addItemToUniform "ACE_DefusalKit";
 	_unit addItemToUniform "ACE_EarPlugs";
 	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACE_Flashlight_MX991";
@@ -172,7 +169,7 @@ loadoutCC_DOC = //
 	_unit addVest "CUP_V_B_GER_Carrier_Vest";
 	for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 	for "_i" from 1 to 8 do {_unit addItemToVest "CUP_30Rnd_556x45_G36";};
-	_unit addBackpack "CUP_B_GER_Medic_Flecktarn";
+	_unit addBackpack "CUP_B_GER_Medic_Tropentarn";
 	_unit addItemToBackpack "ACE_personalAidKit";
 	for "_i" from 1 to 20 do {_unit addItemToBackpack "ACE_fieldDressing";};
 	for "_i" from 1 to 20 do {_unit addItemToBackpack "ACE_packingBandage";};
@@ -189,7 +186,7 @@ loadoutCC_DOC = //
 	_unit addGoggles "rhs_googles_black";
 
 	comment "Add weapons";
-	_unit addWeapon "CUP_arifle_G36K";
+	_unit addWeapon "CUP_arifle_G36K_camo";
 	_unit addWeapon "CUP_hgun_Glock17";
 
 	comment "Add items";
@@ -217,9 +214,8 @@ loadoutCC_MG = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform "CUP_U_B_GER_Flecktarn_1";
+	_unit forceAddUniform "CUP_U_B_GER_Tropentarn_2";
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
-	_unit addItemToUniform "ACE_DefusalKit";
 	_unit addItemToUniform "ACE_EarPlugs";
 	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACE_Flashlight_MX991";
@@ -230,11 +226,11 @@ loadoutCC_MG = //
 	for "_i" from 1 to 2 do {_unit addItemToVest "CUP_100Rnd_556x45_BetaCMag";};
 	_unit addBackpack "B_AssaultPack_khk";
 	for "_i" from 1 to 3 do {_unit addItemToBackpack "CUP_100Rnd_556x45_BetaCMag";};
-	_unit addHeadgear "H_Shemag_olive";
+	_unit addHeadgear "H_ShemagOpen_khk";
 
 	comment "Add weapons";
-	_unit addWeapon "CUP_arifle_MG36";
-	_unit addPrimaryWeaponItem "optic_tws_mg";
+	_unit addWeapon "CUP_arifle_MG36_camo";
+	_unit addPrimaryWeaponItem "CUP_optic_AN_PAS_13c2";
 	_unit addWeapon "CUP_hgun_Glock17";
 
 	comment "Add items";
@@ -261,9 +257,8 @@ loadoutCC_M = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform "CUP_U_B_GER_Flecktarn_1";
+	_unit forceAddUniform "CUP_U_B_GER_Tropentarn_2";
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
-	_unit addItemToUniform "ACE_DefusalKit";
 	_unit addItemToUniform "ACE_EarPlugs";
 	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACE_Flashlight_MX991";
@@ -271,18 +266,17 @@ loadoutCC_M = //
 	_unit addItemToUniform "ACE_Kestrel4500";
 	_unit addItemToUniform "ACE_RangeCard";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 4 do {_unit addItemToUniform "CUP_17Rnd_9x19_glock17";};
+	_unit addItemToUniform "CUP_17Rnd_9x19_glock17";
 	_unit addVest "CUP_V_B_GER_Carrier_Vest";
-	for "_i" from 1 to 8 do {_unit addItemToVest "rhsusf_5Rnd_300winmag_xm2010";};
-	_unit addBackpack "CUP_B_SLA_Medicbag";
-	for "_i" from 1 to 8 do {_unit addItemToBackpack "rhsusf_5Rnd_300winmag_xm2010";};
-	_unit addHeadgear "H_Shemag_olive";
+	for "_i" from 1 to 7 do {_unit addItemToVest "CUP_20Rnd_762x51_B_M110";};
+	_unit addItemToVest "HandGrenade";
+	_unit addHeadgear "H_ShemagOpen_khk";
 
 	comment "Add weapons";
-	_unit addWeapon "rhs_weap_XM2010_sa";
-	_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_2_camo";
-	_unit addPrimaryWeaponItem "rhsusf_acc_LEUPOLDMK4_2";
-	_unit addPrimaryWeaponItem "bipod_03_F_oli";
+	_unit addWeapon "CUP_srifle_M110";
+	_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
+	_unit addPrimaryWeaponItem "CUP_optic_LeupoldMk4_MRT_tan";
+	_unit addPrimaryWeaponItem "CUP_bipod_VLTOR_Modpod";
 	_unit addWeapon "CUP_hgun_Glock17";
 	_unit addWeapon "ACE_Vector";
 
@@ -310,9 +304,8 @@ loadoutCC_AT = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform "CUP_U_B_GER_Flecktarn_1";
+	_unit forceAddUniform "CUP_U_B_GER_Tropentarn_2";
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
-	_unit addItemToUniform "ACE_DefusalKit";
 	_unit addItemToUniform "ACE_EarPlugs";
 	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACE_Flashlight_MX991";
@@ -322,10 +315,10 @@ loadoutCC_AT = //
 	_unit addVest "CUP_V_B_GER_Carrier_Vest";
 	for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 	for "_i" from 1 to 8 do {_unit addItemToVest "CUP_30Rnd_556x45_G36";};
-	_unit addHeadgear "H_Shemag_olive";
+	_unit addHeadgear "H_ShemagOpen_khk";
 
 	comment "Add weapons";
-	_unit addWeapon "CUP_arifle_G36K";
+	_unit addWeapon "CUP_arifle_G36K_camo";
 	_unit addWeapon "CUP_launch_M47";
 	_unit addWeapon "CUP_hgun_Glock17";
 
@@ -354,9 +347,8 @@ loadoutCC_DEMO = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform "CUP_U_B_GER_Flecktarn_1";
+	_unit forceAddUniform "CUP_U_B_GER_Tropentarn_2";
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
-	_unit addItemToUniform "ACE_DefusalKit";
 	_unit addItemToUniform "ACE_EarPlugs";
 	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACE_Flashlight_MX991";
@@ -366,18 +358,18 @@ loadoutCC_DEMO = //
 	_unit addVest "CUP_V_B_GER_Carrier_Vest";
 	for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 	for "_i" from 1 to 8 do {_unit addItemToVest "CUP_30Rnd_556x45_G36";};
-	_unit addBackpack "CUP_B_GER_Pack_Flecktarn";
+	_unit addBackpack "CUP_B_GER_Pack_Tropentarn";
 	_unit addItemToBackpack "ACE_M26_Clacker";
 	_unit addItemToBackpack "ACE_EntrenchingTool";
 	_unit addItemToBackpack "ACE_DefusalKit";
 	_unit addItemToBackpack "SatchelCharge_Remote_Mag";
 	for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
 	for "_i" from 1 to 6 do {_unit addItemToBackpack "CUP_30Rnd_556x45_G36";};
-	_unit addHeadgear "CUP_H_Ger_Boonie_Flecktarn";
-	_unit addGoggles "CUP_FR_NeckScarf";
+	_unit addHeadgear "CUP_H_Ger_Boonie_desert";
+	_unit addGoggles "CUP_TK_NeckScarf";
 
 	comment "Add weapons";
-	_unit addWeapon "CUP_arifle_G36K";
+	_unit addWeapon "CUP_arifle_G36K_camo";
 	_unit addWeapon "CUP_hgun_Glock17";
 
 	comment "Add items";
@@ -404,9 +396,8 @@ loadoutCC_GL = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform "CUP_U_B_GER_Flecktarn_1";
+	_unit forceAddUniform "CUP_U_B_GER_Tropentarn_2";
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
-	_unit addItemToUniform "ACE_DefusalKit";
 	_unit addItemToUniform "ACE_EarPlugs";
 	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACE_Flashlight_MX991";
@@ -415,10 +406,10 @@ loadoutCC_GL = //
 	for "_i" from 1 to 4 do {_unit addItemToUniform "CUP_17Rnd_9x19_glock17";};
 	_unit addVest "CUP_V_B_GER_Carrier_Vest";
 	for "_i" from 1 to 2 do {_unit addItemToVest "CUP_6Rnd_HE_M203";};
-	_unit addBackpack "CUP_B_GER_Pack_Flecktarn";
+	_unit addBackpack "CUP_B_GER_Pack_Tropentarn";
 	for "_i" from 1 to 4 do {_unit addItemToBackpack "CUP_6Rnd_HE_M203";};
-	_unit addHeadgear "H_Bandanna_khk";
-	_unit addGoggles "CUP_FR_NeckScarf2";
+	_unit addHeadgear "H_Bandanna_sand";
+	_unit addGoggles "CUP_TK_NeckScarf";
 
 	comment "Add weapons";
 	_unit addWeapon "CUP_glaunch_M32";
@@ -448,9 +439,8 @@ loadoutCC_R = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform "CUP_U_B_GER_Flecktarn_1";
+	_unit forceAddUniform "CUP_U_B_GER_Tropentarn_2";
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
-	_unit addItemToUniform "ACE_DefusalKit";
 	_unit addItemToUniform "ACE_EarPlugs";
 	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACE_Flashlight_MX991";
@@ -460,10 +450,10 @@ loadoutCC_R = //
 	_unit addVest "CUP_V_B_GER_Carrier_Vest";
 	for "_i" from 1 to 8 do {_unit addItemToVest "CUP_30Rnd_556x45_G36";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
-	_unit addHeadgear "H_Shemag_olive";
+	_unit addHeadgear "H_ShemagOpen_khk";
 
 	comment "Add weapons";
-	_unit addWeapon "CUP_arifle_G36A";
+	_unit addWeapon "CUP_arifle_G36A_camo";
 	_unit addWeapon "CUP_hgun_Glock17";
 
 	comment "Add items";
@@ -491,9 +481,8 @@ loadoutCC_A = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform "CUP_U_B_GER_Flecktarn_1";
+	_unit forceAddUniform "CUP_U_B_GER_Tropentarn_2";
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
-	_unit addItemToUniform "ACE_DefusalKit";
 	_unit addItemToUniform "ACE_EarPlugs";
 	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACE_Flashlight_MX991";
@@ -503,14 +492,14 @@ loadoutCC_A = //
 	_unit addVest "CUP_V_B_GER_Carrier_Vest";
 	for "_i" from 1 to 8 do {_unit addItemToVest "CUP_30Rnd_556x45_G36";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
-	_unit addBackpack "CUP_B_GER_Pack_Flecktarn";
+	_unit addBackpack "CUP_B_GER_Pack_Tropentarn";
 	for "_i" from 1 to 6 do {_unit addItemToBackpack "CUP_30Rnd_556x45_G36";};
 	for "_i" from 1 to 2 do {_unit addItemToBackpack "HandGrenade";};
 	for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShell";};
-	_unit addHeadgear "H_Shemag_olive";
+	_unit addHeadgear "H_ShemagOpen_khk";
 
 	comment "Add weapons";
-	_unit addWeapon "CUP_arifle_G36A";
+	_unit addWeapon "CUP_arifle_G36A_camo";
 	_unit addWeapon "CUP_hgun_Glock17";
 	_unit addWeapon "Binocular";
 	_unit addWeapon "CUP_launch_M136";
@@ -539,9 +528,8 @@ loadoutCC_CREW = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform "CUP_U_B_GER_Flecktarn_1";
+	_unit forceAddUniform "CUP_U_B_GER_Tropentarn_2";
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
-	_unit addItemToUniform "ACE_DefusalKit";
 	_unit addItemToUniform "ACE_EarPlugs";
 	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACE_Flashlight_MX991";
@@ -557,8 +545,8 @@ loadoutCC_CREW = //
 	_unit addGoggles "CUP_FR_NeckScarf";
 
 	comment "Add weapons";
-	_unit addWeapon "CUP_arifle_G36C";
-	_unit addPrimaryWeaponItem "CUP_optic_HoloBlack";
+	_unit addWeapon "CUP_arifle_G36C_camo";
+	_unit addPrimaryWeaponItem "CUP_optic_HoloDesert";
 	_unit addWeapon "Binocular";
 
 	comment "Add items";

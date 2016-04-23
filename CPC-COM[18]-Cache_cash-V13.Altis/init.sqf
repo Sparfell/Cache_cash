@@ -36,7 +36,6 @@ if ((paramsArray select 1) == 4) then {null = [] execVM "playerPara.sqf";};
 //onMapSingleClick "player setPos _pos";
 //player allowdammage false;
 
-
 for "_x" from 1 to 100 do
 {
 	format ["%1",_x] setMarkerAlpha 0;
@@ -55,7 +54,7 @@ if ((paramsArray select 1 == 0) or (paramsArray select 1 == 2)) then {
 	_i = 0;
 	{
 		if (_x == player) then {
-			_x setposATL [(_pos select 0)+(8 * cos(_deg *_i)),(_pos select 1)+(8 * sin(_deg *_i)),1.5];
+			_x setpos [(_pos select 0)+(8 * cos(_deg *_i)),(_pos select 1)+(8 * sin(_deg *_i)),1.5];
 			_x setdir (270-(_deg *_i));
 			_x DisableAI "MOVE";
 			_x DisableAI "AUTOTARGET";
