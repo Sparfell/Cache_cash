@@ -15,7 +15,7 @@ if (hasInterface) then {
 	{
 		_i = _i - 15;
 		if (player == _x) then {
-			_para = "NonSteerable_Parachute_F" createVehicle [0,0,0];
+			_para = "Steerable_Parachute_F" createVehicle [0,0,0];
 			_para setpos [(getMarkerPos "Mark_Inser" select 0) + (_i* sin _dir) + (random 3),(getMarkerPos "Mark_Inser" select 1)+ (_i* cos _dir) + (random 3),200];
 			_x moveInAny _para;
 		};
@@ -29,7 +29,7 @@ if (isServer) then {
 	{
 		_i = _i - 15;
 		if (!(player == _x)) then {
-			_para = "NonSteerable_Parachute_F" createVehicle [0,0,0];
+			_para = "Steerable_Parachute_F" createVehicle [0,0,0];
 			_para setpos [(getMarkerPos "Mark_Inser" select 0) + (_i* sin _dir)+ (random 3),(getMarkerPos "Mark_Inser" select 1)+ (_i* cos _dir)+ (random 3),200];
 			_x moveInAny _para;
 		};

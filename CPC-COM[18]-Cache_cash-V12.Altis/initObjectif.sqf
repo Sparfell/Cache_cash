@@ -37,6 +37,7 @@ if (CPC_loadedworld == "IslaDuala3") then {_marker = str (75 + (floor random 25)
 if (CPC_loadedworld == "smd_sahrani_a3") then {_marker = str (87 + (floor random 13));};
 if (CPC_loadedworld == "FDF_Isle1_a") then {_marker = str (75 + (floor random 25));};
 if (CPC_loadedworld == "Woodland_ACR") then {_marker = str (88 + (floor random 12));};
+if (CPC_loadedworld == "pja305") then {_marker = str (71 + (floor random 29));};
 if (CPC_loadedworld == "pja307") then {_marker = str (80 + (floor random 20));};
 _markEx = [];
 Random_Position = [_marker,0,_markEx,50] call SHK_pos;
@@ -58,9 +59,9 @@ _pos = markerpos "Mark_Cible";
 
 //création du camp
 if (random 100 < 70) then {
-	[] execVM "spawn_base.sqf";
+	[] execVM "spawn\spawn_base.sqf";
 } else {
-	["1"] execVM "spawn_ville.sqf";
+	["1"] execVM "spawn\spawn_ville.sqf";
 };
 
 if (paramsArray select 1 == 0) then {
@@ -94,6 +95,7 @@ if ((paramsArray select 1) == 2) then
 		case 17 : {heliType = "CUP_I_UH60L_RACS";}; // RACS
 		case 18 : {heliType = "CUP_O_Mi8_SLA_1";}; // SLA
 		case 19 : {heliType = "RHS_Mi8mt_vvsc";}; // Spetsnaz RHS
+		case 20 : {heliType = "CUP_B_UH60M_US";}; // US SF
 	};
 	"M_helipad1" setMarkerAlpha 1;
 	_HeliSpawn1 = heliType createVehicle (getMarkerPos "M_helipad1");
@@ -128,7 +130,7 @@ if ((paramsArray select 1) == 2) then
 	"CUP_O_LR_Transport_TKA",
 	"CUP_B_LR_Transport_GB_W",
 	"CUP_O_LR_MG_TKA",
-	"CUP_B_LR_Transport_GB_W",
+	"CUP_B_LR_MG_GB_W",
 	"CUP_B_LR_Special_Des_CZ_D",
 	"CUP_B_LR_Special_CZ_W",
 	"CUP_B_Jackal2_L2A1_GB_D",

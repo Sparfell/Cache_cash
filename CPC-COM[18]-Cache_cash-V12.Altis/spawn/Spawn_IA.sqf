@@ -38,7 +38,7 @@ switch (paramsArray select 6) do {
 			["CUP_B_USMC_Soldier","CUP_B_USMC_Soldier","CUP_B_USMC_Soldier_GL"],
 			["CUP_B_USMC_Soldier","CUP_B_USMC_Soldier_LAT","CUP_B_USMC_Medic"],
 			["CUP_B_USMC_Soldier_SL","CUP_B_USMC_Soldier","CUP_B_USMC_Soldier","CUP_B_USMC_Medic","CUP_B_USMC_Soldier"],
-			["rhs_g_Soldier_M_F","CUP_B_USMC_Soldier"]
+			["CUP_B_USMC_Soldier_Marksman","CUP_B_USMC_Soldier"]
 		];
 
 		_binome = ["CUP_B_USMC_Soldier","CUP_B_USMC_Soldier"];
@@ -382,8 +382,8 @@ if (random 100 < 22) then {
 		};
 		[
 			_pos
-			, ["campA","campB","campC","campD","campE","campF"] select (floor random 6)
-		] execVM "spawn_OP.sqf";
+			, selectrandom ["campA","campB","campC","campD","campE","campF"]
+		] execVM "spawn\spawn_OP.sqf";
 		_mark = createMarker [format["CPos%1",_x],_pos];
 			_mark setmarkerColor "colorRed";
 			_mark setMarkerShape "ELLIPSE";
@@ -469,6 +469,7 @@ _houselist = nearestObjects [getMarkerPos "3", ["Building","House"], 1200];
 		_group setVariable ["GAIA_ZONE_INTEND",["2", "FORTIFY"], false];
 		if ((isnull chefIA) AND (random 100 < 20) AND !(["1",_pos] call BIS_fnc_inTrigger)) then {
 			chefIA = _group createUnit [(_binome select 0), _pos, [], 0, "FORM"];
+			chefIA allowDamage false; 
 			_mark = createMarker ["Chefmarker",_pos];
 			_mark setMarkerType "HD_dot";
 			_mark setMarkerColor "colorRed";
@@ -481,7 +482,12 @@ _houseOutlist = (nearestObjects [getMarkerPos "3", ["Building","House"], 1800]) 
 {
 	if (random 100 < 3.5) then {
 		_pos = getpos _x;
-		_group = [_pos, civilian, ["C_man_polo_"+str (floor random 5)+"_F_euro","C_man_polo_"+str (floor random 5)+"_F_euro"],[],[],[],[],[],random 360] call BIS_fnc_spawnGroup;
+		if (CPC_WorldType == "vanilla") then {CPC_civilianType =["CUP_C_C_Citizen_02","CUP_C_C_Citizen_01","CUP_C_C_Citizen_04","CUP_C_C_Citizen_03""CUP_C_C_Functionary_01","CUP_C_C_Functionary_02","CUP_C_C_Profiteer_02","CUP_C_C_Profiteer_03","CUP_C_C_Profiteer_01","CUP_C_C_Profiteer_04","CUP_C_C_Rocker_01","CUP_C_C_Rocker_03","CUP_C_C_Rocker_02","CUP_C_C_Rocker_04","CUP_C_C_Schoolteacher_01","CUP_C_C_Villager_01","CUP_C_C_Villager_04","CUP_C_C_Villager_02","CUP_C_C_Villager_03","CUP_C_C_Worker_03","CUP_C_C_Worker_04","CUP_C_C_Worker_02","CUP_C_C_Worker_01","C_man_polo_1_F","C_man_polo_2_F","C_man_polo_3_F","C_man_polo_4_F","C_man_polo_5_F","C_man_polo_6_F","C_man_p_beggar_F"];};
+		if (CPC_WorldType == "desert") then {CPC_civilianType =["C_man_p_beggar_F_afro","C_man_polo_1_F_afro","C_man_polo_2_F_afro","C_man_polo_3_F_afro","C_man_polo_4_F_afro","C_man_polo_5_F_afro","C_man_polo_6_F_afro","C_man_p_beggar_F_asia","C_man_polo_1_F_asia","C_man_polo_2_F_asia","C_man_polo_3_F_asia","C_man_polo_4_F_asia","C_man_polo_5_F_asia","C_man_polo_6_F_asia"];};
+		if (CPC_WorldType == "afrique") then {CPC_civilianType =["C_man_p_beggar_F_afro","C_man_polo_1_F_afro","C_man_polo_2_F_afro","C_man_polo_3_F_afro","C_man_polo_4_F_afro","C_man_polo_5_F_afro","C_man_polo_6_F_afro"];};
+		if (CPC_WorldType == "jungle") then {CPC_civilianType =["C_man_p_beggar_F_afro","C_man_polo_1_F_afro","C_man_polo_2_F_afro","C_man_polo_3_F_afro","C_man_polo_4_F_afro","C_man_polo_5_F_afro","C_man_polo_6_F_afro"];};
+		if (CPC_WorldType == "chernarus") then {CPC_civilianType =["CUP_C_C_Citizen_02","CUP_C_C_Citizen_01","CUP_C_C_Citizen_04","CUP_C_C_Citizen_03""CUP_C_C_Functionary_01","CUP_C_C_Functionary_02","CUP_C_C_Priest_01","CUP_C_C_Profiteer_02","CUP_C_C_Profiteer_03","CUP_C_C_Profiteer_01","CUP_C_C_Profiteer_04","CUP_C_C_Rocker_01","CUP_C_C_Rocker_03","CUP_C_C_Rocker_02","CUP_C_C_Rocker_04","CUP_C_C_Schoolteacher_01","CUP_C_C_Villager_01","CUP_C_C_Villager_04","CUP_C_C_Villager_02","CUP_C_C_Villager_03","CUP_C_C_Woodlander_01","CUP_C_C_Woodlander_02","CUP_C_C_Woodlander_03","CUP_C_C_Woodlander_04","CUP_C_C_Worker_03","CUP_C_C_Worker_04","CUP_C_C_Worker_02","CUP_C_C_Worker_01"];};
+		_group = [_pos, civilian, [(selectrandom CPC_civilianType),(selectrandom CPC_civilianType)],[],[],[],[],[],random 360] call BIS_fnc_spawnGroup;
 		[_group, 0] setWaypointType "DISMISS";
 		sleep 0.5;
 	};
@@ -498,7 +504,7 @@ _skill = paramsArray select 4;
 	} foreach ["aimingShake","aimingSpeed","spotTime","spotDistance","aimingAccuracy"];
 } foreach allUnits;
 
-if (!isnull chefIA) then {chefIA addHeadgear "H_Beret_blk";};
+if (!isnull chefIA) then {removeHeadgear chefIA; chefIA addHeadgear "H_Beret_blk"; chefIA allowDamage true;};
 
 //event fin
 [_Nombre_Ennemi,_Compo_group,_skill] spawn {
