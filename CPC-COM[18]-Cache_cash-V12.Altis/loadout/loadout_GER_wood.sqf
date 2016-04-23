@@ -513,6 +513,7 @@ loadoutCC_A = //
 	_unit addWeapon "CUP_arifle_G36A";
 	_unit addWeapon "CUP_hgun_Glock17";
 	_unit addWeapon "Binocular";
+	_unit addWeapon "CUP_launch_M136";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
