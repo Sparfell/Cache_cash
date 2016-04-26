@@ -7,6 +7,4 @@
 - la commande de brouillard n'a pas toujours un effet - TEST
 - ajouter des armes statiques dans les véhicules disponibles
 - ajouter des munitions dans les véhicules ?
-- sur nazigogo l'objectif peut tomber en 0,0,0
-- possibilité de n'allumer le feu que la nuit (en random)
 - améliorer la variation jour/nuit pour les loadouts (ex: chgmnt optic)

@@ -2,7 +2,8 @@ if (!isServer) exitwith {};
 
 
 	_objet = "Flag_POWMIA_F" CreateVehicle [Random_Position select 0,Random_Position select 1,0];
-	_objet = "Land_Campfire_F" CreateVehicle [(Random_Position select 0) - 2,Random_Position select 1,0];
+	if (((paramsArray select 0) in [24,25,26,27,28,5,19,20,21,22,23]) AND (random 100 < 50)) then {CPC_TypeFire = "Campfire_burning_F";} else {CPC_TypeFire = "Land_Campfire_F";};
+	_objet = CPC_TypeFire CreateVehicle [(Random_Position select 0) - 2,Random_Position select 1,0];
 
 if ((paramsArray select 6) > 99) then {
 	_objet = "Land_GarbagePallet_F" CreateVehicle [(Random_Position select 0) - 15,(Random_Position select 1)+3,0];
