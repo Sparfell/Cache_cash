@@ -7,7 +7,7 @@ if (player in [p1,p2,p9,p16]) then {
 
 waituntil {time > 0};
 onMapSingleClick "";
-if (time > 60) exitWith {};
+if (serverTime > 60) exitWith {};
 if (hasInterface) then {
 	player setpos [(markerpos "mark_inser" select 0) + (random 30) -15,(markerpos "mark_inser" select 1)+ (random 30) -15,1.5];
 };

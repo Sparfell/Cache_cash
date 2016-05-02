@@ -36,11 +36,16 @@ if ((paramsArray select 6) > 99) then {
 			case 7 : {"O_HMG_01_F"}; //CSAT
 			case 8 : {"B_HMG_01_F"}; //NATO
 			case 9 : {"CPC_Duala_B_GFD_M2StaticMG_MiniTripod"}; //GFD
+			case 10 : {"CUP_O_KORD_RU"}; //russe CUP
+			case 11 : {"CUP_B_M2StaticMG_MiniTripod_US"}; //US army CUP
+			case 12 : {"CUP_B_M2StaticMG_MiniTripod_US"}; //BAF des CUP
+			case 13 : {"CUP_B_M2StaticMG_MiniTripod_US"}; //BAF wdl CUP
 			case 100 : {"rhs_DSHKM_Mini_TriPod_ins"}; //INS RHS
 			case 101 : {"CUP_I_DSHkM_MiniTriPod_TK_GUE"}; //INS TK
 			case 102 : {"CUP_I_DSHKM_NAPA"}; //NAPA
 			case 103 : {"B_HMG_01_F"}; //FIA
 			case 104 : {"CUP_O_KORD_TK"}; //NPFD
+			case 105 : {"CUP_O_DSHkM_MiniTriPod_ChDKZ"}; //chdkz
 		};
 		_objet = _type CreateVehicle [(Random_Position select 0)+((sin (_rdir + (_x +30)))*10),(Random_Position select 1)+((cos (_rdir + (_x +30)))*10),0];
 		_objet setdir (_rdir + (_x +30));

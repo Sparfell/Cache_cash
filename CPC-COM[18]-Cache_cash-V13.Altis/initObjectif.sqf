@@ -96,6 +96,10 @@ if ((paramsArray select 1) == 2) then
 		case 18 : {heliType = "CUP_O_Mi8_SLA_1";}; // SLA
 		case 19 : {heliType = "RHS_Mi8mt_vvsc";}; // Spetsnaz RHS
 		case 20 : {heliType = "CUP_B_UH60M_US";}; // US SF
+		case 21 : {heliType = "CUP_B_UH60M_US";}; // commando jungle
+		case 22 : {heliType = "CUP_B_Merlin_HC3_GB";}; // BAF desert
+		case 23 : {heliType = "CUP_B_Merlin_HC3_GB";}; // BAF woodland
+		case 24 : {heliType = "CUP_O_Mi8_CHDKZ";}; // Chedaki
 	};
 	"M_helipad1" setMarkerAlpha 1;
 	_HeliSpawn1 = heliType createVehicle (getMarkerPos "M_helipad1");
@@ -190,11 +194,33 @@ if ((paramsArray select 1) == 2) then
 	"B_Heli_Light_01_F",
 	"I_Heli_light_03_unarmed_F",
 	"CUP_B_AW159_Cannon_GB",
-	"CUP_I_UH1H_TK_GUE",
+	"CUP_O_UH1H_SLA",
 	"CUP_B_UH1Y_UNA_USMC",
 	"CUP_B_UH1Y_GUNSHIP_USMC",
 	"CUP_O_Mi24_V_RU",
-	"O_Heli_Light_02_unarmed_F"
+	"O_Heli_Light_02_unarmed_F",
+	"CUP_I_BTR40_MG_TKG",
+	"CUP_I_BTR40_TKG",
+	"CUP_B_T72_CZ",
+	"CUP_O_BTR60_SLA",
+	"CUP_B_FV510_GB_W_SLAT",
+	"CUP_B_FV510_GB_D_SLAT",
+	"CUP_B_FV432_Bulldog_GB_W",
+	"CUP_B_FV432_Bulldog_GB_D",
+	"CUP_B_Ridgback_HMG_GB_W",
+	"CUP_B_Ridgback_HMG_GB_D",
+	"CUP_O_GAZ_Vodnik_PK_RU",
+	"CUP_O_GAZ_Vodnik_BPPU_RU",
+	"CUP_B_MH6J_USA",
+	"CUP_B_AH6J_Escort_USA",
+	"CUP_B_DSHkM_MiniTriPod_CDF",
+	"CUP_B_M2StaticMG_MiniTripod_US",
+	"CUP_B_AGS_CDF",
+	"CUP_B_2b14_82mm_CDF",
+	"CUP_B_TOW_TriPod_US",
+	"CUP_O_Metis_RU",
+	"RHS_TOW_TriPod_WD",
+	"rhs_Metis_9k115_2_msv"
 	];
 	waitUntil {time > 0};
 	_pos = markerpos "Mark_inser";
