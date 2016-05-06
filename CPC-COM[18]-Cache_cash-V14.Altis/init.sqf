@@ -45,7 +45,7 @@ for "_x" from 1 to 100 do
 finishMissionInit;
 
 waitUntil {time > 0};
-if (serverTime > 60) exitWith {};
+if (Time > 60) exitWith {};
 
 //spawn
 if ((paramsArray select 1 == 0) or (paramsArray select 1 == 2)) then {

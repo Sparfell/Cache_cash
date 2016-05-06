@@ -7,7 +7,7 @@ if (player in [p1,p2,p9,p16]) then {
 
 waituntil {time > 0};
 onMapSingleClick "";
-if (serverTime > 60) exitWith {};
+if (Time > 60) exitWith {};
 if (hasInterface) then {
 	_dir = [[getMarkerPos "Mark_Inser" select 0,getMarkerPos "Mark_Inser" select 1,0],[getMarkerPos "2" select 0,getMarkerPos "2" select 1,0]] call BIS_fnc_dirTo;
 	_dir = _dir +90;
