@@ -44,43 +44,46 @@ hard_setLoadout =
 loadoutCC_SL = //
 {
 	_unit = _this select 0;
-	
-	comment "Remove existing items";
-	removeAllWeapons _unit;
-	removeAllItems _unit;
-	removeAllAssignedItems _unit;
-	removeUniform _unit;
-	removeVest _unit;
-	removeBackpack _unit;
-	removeHeadgear _unit;
-	removeGoggles _unit;
 
-	comment "Add containers";
-	_unit forceAddUniform "rhs_uniform_mflora_patchless";
-	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
-	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_Flashlight_KSF1";
-	_unit addItemToUniform "ACRE_PRC343";
-	_unit addItemToUniform "ACRE_PRC148";
-	_unit addItemToUniform "ACE_MapTools";
-	_unit addItemToUniform "ACE_microDAGR";
-	for "_i" from 1 to 3 do {_unit addItemToUniform "SmokeShellOrange";};
-	_unit addVest "rhs_6b23_ML_6sh92_headset_mapcase";
-	for "_i" from 1 to 5 do {_unit addItemToVest "rhs_30Rnd_545x39_7N10_AK";};
-	for "_i" from 1 to 4 do {_unit addItemToVest "rhs_30Rnd_545x39_AK_green";};
-	_unit addHeadgear "rhs_fieldcap_ml";
+comment "Remove existing items";
+removeAllWeapons _unit;
+removeAllItems _unit;
+removeAllAssignedItems _unit;
+removeUniform _unit;
+removeVest _unit;
+removeBackpack _unit;
+removeHeadgear _unit;
+removeGoggles _unit;
 
-	comment "Add weapons";
-	_unit addWeapon "rhs_weap_ak74m";
-	_unit addPrimaryWeaponItem "rhs_acc_dtk";
-	_unit addPrimaryWeaponItem "rhs_acc_1p63";
-	_unit addWeapon "rhs_pdu4";
+comment "Add containers";
+_unit forceAddUniform "CUP_U_O_RUS_EMR_1_VDV";
+for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
+_unit addItemToUniform "ACE_EarPlugs";
+_unit addItemToUniform "ACE_tourniquet";
+_unit addItemToUniform "ACE_Flashlight_KSF1";
+_unit addItemToUniform "ACE_MapTools";
+_unit addItemToUniform "ACE_microDAGR";
+_unit addItemToUniform "ACRE_PRC343";
+_unit addItemToUniform "ACRE_PRC148";
+for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_HandFlare_Yellow";};
+_unit addVest "CUP_V_RUS_6B3_1";
+for "_i" from 1 to 6 do {_unit addItemToVest "CUP_30Rnd_545x39_AK_M";};
+for "_i" from 1 to 3 do {_unit addItemToVest "CUP_8Rnd_9x18_Makarov_M";};
+for "_i" from 1 to 2 do {_unit addItemToVest "CUP_HandGrenade_RGD5";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
+_unit addBackpack "CUP_B_HikingPack_Civ";
+for "_i" from 1 to 8 do {_unit addItemToBackpack "CUP_30Rnd_545x39_AK_M";};
+_unit addHeadgear "CUP_H_RUS_6B27";
 
-	comment "Add items";
-	_unit linkItem "ItemMap";
-	_unit linkItem "ItemCompass";
-	_unit linkItem "ItemWatch";
+comment "Add weapons";
+_unit addWeapon "CUP_arifle_AK74M";
+_unit addWeapon "CUP_hgun_Makarov";
+_unit addWeapon "CUP_Vector21Nite";
+
+comment "Add items";
+_unit linkItem "ItemMap";
+_unit linkItem "ItemCompass";
+_unit linkItem "ItemWatch";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
 
@@ -89,46 +92,46 @@ loadoutCC_SL = //
 loadoutCC_TL = //
 {
 	_unit = _this select 0;
-	
-	comment "Remove existing items";
-	removeAllWeapons _unit;
-	removeAllItems _unit;
-	removeAllAssignedItems _unit;
-	removeUniform _unit;
-	removeVest _unit;
-	removeBackpack _unit;
-	removeHeadgear _unit;
-	removeGoggles _unit;
 
-	comment "Add containers";
-	_unit forceAddUniform "rhs_uniform_mflora_patchless";
-	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
-	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_Flashlight_KSF1";
-	_unit addItemToUniform "ACRE_PRC343";
-	_unit addItemToUniform "ACE_MapTools";
-	_unit addItemToUniform "ACRE_PRC148";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
-	_unit addVest "rhs_6b23_ML_6sh92_radio";
-	_unit addItemToVest "rhs_mag_rdg2_white";
-	for "_i" from 1 to 8 do {_unit addItemToVest "rhs_30Rnd_545x39_AK_green";};
-	_unit addBackpack "rhs_sidor";
-	for "_i" from 1 to 8 do {_unit addItemToBackpack "rhs_30Rnd_545x39_7N10_AK";};
-	for "_i" from 1 to 4 do {_unit addItemToBackpack "rhs_mag_rdg2_white";};
-	for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_HandFlare_Green";};
-	_unit addHeadgear "rhs_6b27m_ml";
+comment "Remove existing items";
+removeAllWeapons _unit;
+removeAllItems _unit;
+removeAllAssignedItems _unit;
+removeUniform _unit;
+removeVest _unit;
+removeBackpack _unit;
+removeHeadgear _unit;
+removeGoggles _unit;
 
-	comment "Add weapons";
-	_unit addWeapon "rhs_weap_ak74m";
-	_unit addPrimaryWeaponItem "rhs_acc_dtk";
-	_unit addPrimaryWeaponItem "rhs_acc_1p78";
-	_unit addWeapon "rhs_pdu4";
+comment "Add containers";
+_unit forceAddUniform "CUP_U_O_RUS_EMR_1_VDV";
+for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
+_unit addItemToUniform "ACE_EarPlugs";
+_unit addItemToUniform "ACE_tourniquet";
+_unit addItemToUniform "ACE_Flashlight_KSF1";
+_unit addItemToUniform "ACE_MapTools";
+_unit addItemToUniform "ACE_microDAGR";
+_unit addItemToUniform "ACRE_PRC343";
+_unit addItemToUniform "ACRE_PRC148";
+for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_HandFlare_Yellow";};
+_unit addVest "CUP_V_RUS_6B3_1";
+for "_i" from 1 to 6 do {_unit addItemToVest "CUP_30Rnd_545x39_AK_M";};
+for "_i" from 1 to 3 do {_unit addItemToVest "CUP_8Rnd_9x18_Makarov_M";};
+for "_i" from 1 to 2 do {_unit addItemToVest "CUP_HandGrenade_RGD5";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
+_unit addBackpack "CUP_B_HikingPack_Civ";
+for "_i" from 1 to 8 do {_unit addItemToBackpack "CUP_30Rnd_545x39_AK_M";};
+_unit addHeadgear "CUP_H_RUS_6B27";
 
-	comment "Add items";
-	_unit linkItem "ItemMap";
-	_unit linkItem "ItemCompass";
-	_unit linkItem "ItemWatch";
+comment "Add weapons";
+_unit addWeapon "CUP_arifle_AK74M";
+_unit addWeapon "CUP_hgun_Makarov";
+_unit addWeapon "CUP_Vector21Nite";
+
+comment "Add items";
+_unit linkItem "ItemMap";
+_unit linkItem "ItemCompass";
+_unit linkItem "ItemWatch";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
 
@@ -138,51 +141,56 @@ loadoutCC_DOC = //
 {
 	_unit = _this select 0;
 	
-	comment "Remove existing items";
-	removeAllWeapons _unit;
-	removeAllItems _unit;
-	removeAllAssignedItems _unit;
-	removeUniform _unit;
-	removeVest _unit;
-	removeBackpack _unit;
-	removeHeadgear _unit;
-	removeGoggles _unit;
+comment "Remove existing items";
+removeAllWeapons _unit;
+removeAllItems _unit;
+removeAllAssignedItems _unit;
+removeUniform _unit;
+removeVest _unit;
+removeBackpack _unit;
+removeHeadgear _unit;
+removeGoggles _unit;
 
-	comment "Add containers";
-	_unit forceAddUniform "rhs_uniform_mflora_patchless";
-	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
-	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_Flashlight_KSF1";
-	_unit addItemToUniform "ACRE_PRC343";
-	_unit addItemToUniform "rhs_mag_rdg2_white";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
-	_unit addVest "rhs_6b23_ML_medic";
-	for "_i" from 1 to 8 do {_unit addItemToVest "rhs_30Rnd_545x39_7N10_AK";};
-	for "_i" from 1 to 3 do {_unit addItemToVest "rhs_mag_rdg2_white";};
-	_unit addBackpack "rhs_assault_umbts";
-	_unit addItemToBackpack "ACE_personalAidKit";
-	for "_i" from 1 to 20 do {_unit addItemToBackpack "ACE_fieldDressing";};
-	for "_i" from 1 to 20 do {_unit addItemToBackpack "ACE_packingBandage";};
-	for "_i" from 1 to 15 do {_unit addItemToBackpack "ACE_elasticBandage";};
-	for "_i" from 1 to 10 do {_unit addItemToBackpack "ACE_quikclot";};
-	for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_salineIV_250";};
-	for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_salineIV_500";};
-	for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_salineIV";};
-	for "_i" from 1 to 8 do {_unit addItemToBackpack "ACE_morphine";};
-	for "_i" from 1 to 8 do {_unit addItemToBackpack "ACE_epinephrine";};
-	for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_tourniquet";};
-	_unit addItemToBackpack "ACE_surgicalKit";
-	_unit addHeadgear "rhs_6b27m_ml_ess";
+comment "Add containers";
+_unit forceAddUniform "CUP_U_O_RUS_EMR_1_VDV";
+for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
+_unit addItemToUniform "ACE_EarPlugs";
+_unit addItemToUniform "ACE_tourniquet";
+_unit addItemToUniform "ACE_Flashlight_KSF1";
+_unit addItemToUniform "ACRE_PRC343";
+for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rdg2_white";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_HandFlare_Yellow";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "CUP_8Rnd_9x18_Makarov_M";};
+_unit addVest "CUP_V_RUS_6B3_1";
+for "_i" from 1 to 8 do {_unit addItemToVest "CUP_30Rnd_545x39_AK_M";};
+for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_rdg2_white";};
+_unit addBackpack "CUP_B_HikingPack_Civ";
+for "_i" from 1 to 20 do {_unit addItemToBackpack "ACE_fieldDressing";};
+for "_i" from 1 to 20 do {_unit addItemToBackpack "ACE_packingBandage";};
+for "_i" from 1 to 15 do {_unit addItemToBackpack "ACE_elasticBandage";};
+for "_i" from 1 to 10 do {_unit addItemToBackpack "ACE_quikclot";};
+for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_salineIV_250";};
+for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_salineIV_500";};
+for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_salineIV";};
+for "_i" from 1 to 8 do {_unit addItemToBackpack "ACE_morphine";};
+for "_i" from 1 to 8 do {_unit addItemToBackpack "ACE_epinephrine";};
+for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_tourniquet";};
+_unit addItemToBackpack "ACE_personalAidKit";
+_unit addItemToBackpack "ACE_surgicalKit";
+_unit addHeadgear "CUP_H_RUS_6B27";
 
-	comment "Add weapons";
-	_unit addWeapon "rhs_weap_ak74m";
-	_unit addPrimaryWeaponItem "rhs_acc_dtk";
+comment "Add weapons";
+_unit addWeapon "CUP_arifle_AK74M";
+_unit addWeapon "CUP_hgun_Makarov";
 
-	comment "Add items";
-	_unit linkItem "ItemMap";
-	_unit linkItem "ItemCompass";
-	_unit linkItem "ItemWatch";
+comment "Add items";
+_unit linkItem "ItemMap";
+_unit linkItem "ItemCompass";
+_unit linkItem "ItemWatch";
+
+sleep 1.0;
+_unit addItemToUniform "CUP_8Rnd_9x18_Makarov_M";
+_unit addItemToVest "CUP_30Rnd_545x39_AK_M";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
 
@@ -192,40 +200,44 @@ loadoutCC_MG = //
 {
 	_unit = _this select 0;
 	
-	comment "Remove existing items";
-	removeAllWeapons _unit;
-	removeAllItems _unit;
-	removeAllAssignedItems _unit;
-	removeUniform _unit;
-	removeVest _unit;
-	removeBackpack _unit;
-	removeHeadgear _unit;
-	removeGoggles _unit;
+comment "Remove existing items";
+removeAllWeapons _unit;
+removeAllItems _unit;
+removeAllAssignedItems _unit;
+removeUniform _unit;
+removeVest _unit;
+removeBackpack _unit;
+removeHeadgear _unit;
+removeGoggles _unit;
 
-	comment "Add containers";
-	_unit forceAddUniform "rhs_uniform_mflora_patchless";
-	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
-	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_Flashlight_KSF1";
-	_unit addItemToUniform "ACRE_PRC343";
-	_unit addItemToUniform "rhs_mag_rdg2_white";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
-	_unit addVest "rhs_6b23_ML_engineer";
-	_unit addItemToVest "rhs_100Rnd_762x54mmR_green";
-	_unit addBackpack "rhs_sidor";
-	for "_i" from 1 to 3 do {_unit addItemToBackpack "rhs_100Rnd_762x54mmR_green";};
-	_unit addHeadgear "rhs_6b27m_ml_ess";
+comment "Add containers";
+_unit forceAddUniform "CUP_U_O_RUS_EMR_1_VDV";
+for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
+_unit addItemToUniform "ACE_EarPlugs";
+_unit addItemToUniform "ACE_tourniquet";
+_unit addItemToUniform "ACE_Flashlight_KSF1";
+_unit addItemToUniform "ACRE_PRC343";
+for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rdg2_white";};
+for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_HandFlare_Yellow";};
+_unit addVest "CUP_V_RUS_6B3_3";
+for "_i" from 1 to 3 do {_unit addItemToVest "CUP_8Rnd_9x18_Makarov_M";};
+for "_i" from 1 to 3 do {_unit addItemToVest "CUP_HandGrenade_RGD5";};
+_unit addItemToVest "CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Green_M";
+_unit addBackpack "CUP_B_HikingPack_Civ";
+for "_i" from 1 to 2 do {_unit addItemToBackpack "CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Green_M";};
+_unit addHeadgear "CUP_H_RUS_6B27";
 
-	comment "Add weapons";
-	_unit addWeapon "rhs_weap_pkp";
-	_unit addPrimaryWeaponItem "rhs_acc_1p29";
+comment "Add weapons";
+_unit addWeapon "CUP_lmg_PKM";
+_unit addWeapon "CUP_hgun_Makarov";
 
-	comment "Add items";
-	_unit linkItem "ItemMap";
-	_unit linkItem "ItemCompass";
-	_unit linkItem "ItemWatch";
-	_unit addItemToVest "rhs_100Rnd_762x54mmR_green";
+comment "Add items";
+_unit linkItem "ItemMap";
+_unit linkItem "ItemCompass";
+_unit linkItem "ItemWatch";
+
+sleep 1.0;
+_unit addItemToVest "CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Green_M";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
 
@@ -235,37 +247,44 @@ loadoutCC_M = //
 {
 	_unit = _this select 0;
 	
-	comment "Remove existing items";
-	removeAllWeapons _unit;
-	removeAllItems _unit;
-	removeAllAssignedItems _unit;
-	removeUniform _unit;
-	removeVest _unit;
-	removeBackpack _unit;
-	removeHeadgear _unit;
-	removeGoggles _unit;
+comment "Remove existing items";
+removeAllWeapons _unit;
+removeAllItems _unit;
+removeAllAssignedItems _unit;
+removeUniform _unit;
+removeVest _unit;
+removeBackpack _unit;
+removeHeadgear _unit;
+removeGoggles _unit;
 
-	comment "Add containers";
-	_unit forceAddUniform "rhs_uniform_mflora_patchless";
-	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
-	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_Flashlight_KSF1";
-	_unit addItemToUniform "ACRE_PRC343";
-	_unit addItemToUniform "rhs_mag_rdg2_white";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
-	_unit addVest "rhs_6b23_ML_sniper";
-	for "_i" from 1 to 17 do {_unit addItemToVest "rhs_10Rnd_762x54mmR_7N1";};
-	_unit addHeadgear "rhs_6b27m_ml_bala";
+comment "Add containers";
+_unit forceAddUniform "CUP_U_O_RUS_EMR_1_VDV";
+for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
+_unit addItemToUniform "ACE_EarPlugs";
+_unit addItemToUniform "ACE_tourniquet";
+_unit addItemToUniform "ACE_Flashlight_KSF1";
+_unit addItemToUniform "ACE_Kestrel4500";
+_unit addItemToUniform "ACE_RangeCard";
+_unit addItemToUniform "ACRE_PRC343";
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_HandFlare_Yellow";};
+for "_i" from 1 to 3 do {_unit addItemToUniform "CUP_8Rnd_9x18_Makarov_M";};
+_unit addVest "CUP_V_RUS_6B3_1";
+for "_i" from 1 to 13 do {_unit addItemToVest "CUP_10Rnd_762x54_SVD_M";};
+for "_i" from 1 to 2 do {_unit addItemToVest "CUP_HandGrenade_RGD5";};
+for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_rdg2_white";};
+_unit addHeadgear "CUP_H_RUS_6B27_olive";
+_unit addGoggles "rhs_balaclava1_olive";
 
-	comment "Add weapons";
-	_unit addWeapon "rhs_weap_svdp_wd";
-	_unit addPrimaryWeaponItem "rhs_acc_pso1m2";
+comment "Add weapons";
+_unit addWeapon "CUP_srifle_SVD";
+_unit addPrimaryWeaponItem "CUP_optic_PSO_1";
+_unit addWeapon "CUP_hgun_Makarov";
+_unit addWeapon "CUP_Vector21Nite";
 
-	comment "Add items";
-	_unit linkItem "ItemMap";
-	_unit linkItem "ItemCompass";
-	_unit linkItem "ItemWatch";
+comment "Add items";
+_unit linkItem "ItemMap";
+_unit linkItem "ItemCompass";
+_unit linkItem "ItemWatch";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
 
@@ -275,44 +294,48 @@ loadoutCC_AT = //
 {
 	_unit = _this select 0;
 	
-	comment "Remove existing items";
-	removeAllWeapons _unit;
-	removeAllItems _unit;
-	removeAllAssignedItems _unit;
-	removeUniform _unit;
-	removeVest _unit;
-	removeBackpack _unit;
-	removeHeadgear _unit;
-	removeGoggles _unit;
+comment "Remove existing items";
+removeAllWeapons _unit;
+removeAllItems _unit;
+removeAllAssignedItems _unit;
+removeUniform _unit;
+removeVest _unit;
+removeBackpack _unit;
+removeHeadgear _unit;
+removeGoggles _unit;
 
-	comment "Add containers";
-	_unit forceAddUniform "rhs_uniform_mflora_patchless";
-	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
-	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_Flashlight_KSF1";
-	_unit addItemToUniform "ACRE_PRC343";
-	_unit addItemToUniform "rhs_mag_rdg2_white";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
-	_unit addVest "rhs_6b23_ML_6sh92";
-	for "_i" from 1 to 8 do {_unit addItemToVest "rhs_30Rnd_545x39_7N10_AK";};
-	_unit addItemToVest "rhs_mag_rdg2_white";
-	_unit addBackpack "CUP_B_RPGPack_Khaki";
-	for "_i" from 1 to 2 do {_unit addItemToBackpack "CUP_PG7VL_M";};
-	_unit addHeadgear "rhs_6b27m_ml";
+comment "Add containers";
+_unit forceAddUniform "CUP_U_O_RUS_EMR_1_VDV";
+for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
+_unit addItemToUniform "ACE_EarPlugs";
+_unit addItemToUniform "ACE_tourniquet";
+_unit addItemToUniform "ACE_Flashlight_KSF1";
+_unit addItemToUniform "ACRE_PRC343";
+for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rdg2_white";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_HandFlare_Yellow";};
+_unit addVest "CUP_V_RUS_6B3_2";
+for "_i" from 1 to 8 do {_unit addItemToVest "CUP_30Rnd_545x39_AK_M";};
+for "_i" from 1 to 3 do {_unit addItemToVest "CUP_8Rnd_9x18_Makarov_M";};
+for "_i" from 1 to 2 do {_unit addItemToVest "CUP_HandGrenade_RGD5";};
+_unit addBackpack "CUP_B_RPGPack_Khaki";
+_unit addItemToBackpack "CUP_PG7V_M";
+for "_i" from 1 to 2 do {_unit addItemToBackpack "CUP_OG7_M";};
+_unit addHeadgear "CUP_H_RUS_6B27";
 
-	comment "Add weapons";
-	_unit addWeapon "rhs_weap_ak74m";
-	_unit addPrimaryWeaponItem "rhs_acc_dtk";
-	_unit addWeapon "CUP_launch_RPG7V";
-	_unit addSecondaryWeaponItem "CUP_optic_PGO7V3";
+comment "Add weapons";
+_unit addWeapon "CUP_arifle_AK74M";
+_unit addWeapon "CUP_launch_RPG7V";
+_unit addSecondaryWeaponItem "CUP_optic_PGO7V3";
+_unit addWeapon "CUP_hgun_Makarov";
 
-	comment "Add items";
-	_unit linkItem "ItemMap";
-	_unit linkItem "ItemCompass";
-	_unit linkItem "ItemWatch";
-	_unit addItemToVest "rhs_30Rnd_545x39_7N10_AK";
-	_unit addItemToBackpack "CUP_PG7VL_M";
+comment "Add items";
+_unit linkItem "ItemMap";
+_unit linkItem "ItemCompass";
+_unit linkItem "ItemWatch";
+
+sleep 1.0;
+_unit addItemToVest "CUP_30Rnd_545x39_AK_M";
+_unit addItemToBackpack "CUP_PG7V_M";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
 
@@ -322,44 +345,48 @@ loadoutCC_DEMO = //
 {
 	_unit = _this select 0;
 	
-	comment "Remove existing items";
-	removeAllWeapons _unit;
-	removeAllItems _unit;
-	removeAllAssignedItems _unit;
-	removeUniform _unit;
-	removeVest _unit;
-	removeBackpack _unit;
-	removeHeadgear _unit;
-	removeGoggles _unit;
+comment "Remove existing items";
+removeAllWeapons _unit;
+removeAllItems _unit;
+removeAllAssignedItems _unit;
+removeUniform _unit;
+removeVest _unit;
+removeBackpack _unit;
+removeHeadgear _unit;
+removeGoggles _unit;
 
-	comment "Add containers";
-	_unit forceAddUniform "rhs_uniform_mflora_patchless";
-	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
-	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_Flashlight_KSF1";
-	_unit addItemToUniform "ACRE_PRC343";
-	_unit addItemToUniform "rhs_mag_rdg2_white";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
-	_unit addVest "rhs_6b23_ML_6sh92";
-	for "_i" from 1 to 8 do {_unit addItemToVest "rhs_30Rnd_545x39_7N10_AK";};
-	_unit addItemToVest "rhs_mag_rdg2_white";
-	_unit addBackpack "rhs_assault_umbts_engineer_empty";
-	_unit addItemToBackpack "ACE_DefusalKit";
-	_unit addItemToBackpack "ACE_M26_Clacker";
-	_unit addItemToBackpack "SatchelCharge_Remote_Mag";
-	for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
-	for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_30Rnd_545x39_7N10_AK";};
-	_unit addHeadgear "rhs_6b27m_ml_bala";
+comment "Add containers";
+_unit forceAddUniform "CUP_U_O_RUS_EMR_1_VDV";
+for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
+_unit addItemToUniform "ACE_EarPlugs";
+_unit addItemToUniform "ACE_tourniquet";
+_unit addItemToUniform "ACE_Flashlight_KSF1";
+_unit addItemToUniform "ACRE_PRC343";
+for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rdg2_white";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_HandFlare_Yellow";};
+_unit addVest "CUP_V_RUS_6B3_1";
+for "_i" from 1 to 7 do {_unit addItemToVest "CUP_30Rnd_545x39_AK_M";};
+for "_i" from 1 to 3 do {_unit addItemToVest "CUP_8Rnd_9x18_Makarov_M";};
+for "_i" from 1 to 2 do {_unit addItemToVest "CUP_HandGrenade_RGD5";};
+_unit addBackpack "CUP_B_HikingPack_Civ";
+for "_i" from 1 to 8 do {_unit addItemToBackpack "CUP_30Rnd_545x39_AK_M";};
+_unit addItemToBackpack "ACE_DefusalKit";
+_unit addItemToBackpack "ACE_M26_Clacker";
+_unit addItemToBackpack "SatchelCharge_Remote_Mag";
+for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_Clacker";};
+for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
+_unit addHeadgear "CUP_H_RUS_6B27_olive";
+_unit addGoggles "rhs_balaclava1_olive";
 
-	comment "Add weapons";
-	_unit addWeapon "rhs_weap_ak74m";
-	_unit addPrimaryWeaponItem "rhs_acc_dtk";
+comment "Add weapons";
+_unit addWeapon "CUP_arifle_AK74M";
+_unit addWeapon "CUP_hgun_Makarov";
 
-	comment "Add items";
-	_unit linkItem "ItemMap";
-	_unit linkItem "ItemCompass";
-	_unit linkItem "ItemWatch";
+comment "Add items";
+_unit linkItem "ItemMap";
+_unit linkItem "ItemCompass";
+_unit linkItem "ItemWatch";
+
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
 
@@ -369,39 +396,44 @@ loadoutCC_GL = //
 {
 	_unit = _this select 0;
 	
-	comment "Remove existing items";
-	removeAllWeapons _unit;
-	removeAllItems _unit;
-	removeAllAssignedItems _unit;
-	removeUniform _unit;
-	removeVest _unit;
-	removeBackpack _unit;
-	removeHeadgear _unit;
-	removeGoggles _unit;
+comment "Remove existing items";
+removeAllWeapons _unit;
+removeAllItems _unit;
+removeAllAssignedItems _unit;
+removeUniform _unit;
+removeVest _unit;
+removeBackpack _unit;
+removeHeadgear _unit;
+removeGoggles _unit;
 
-	comment "Add containers";
-	_unit forceAddUniform "rhs_uniform_mflora_patchless";
-	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
-	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_Flashlight_KSF1";
-	_unit addItemToUniform "ACRE_PRC343";
-	_unit addItemToUniform "rhs_mag_rdg2_white";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
-	_unit addVest "rhs_6b23_ML_6sh92_vog";
-	for "_i" from 1 to 6 do {_unit addItemToVest "rhs_30Rnd_545x39_7N10_AK";};
-	for "_i" from 1 to 11 do {_unit addItemToVest "rhs_VOG25";};
-	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_GRD40_Red";};
-	_unit addHeadgear "rhs_6b27m_ml";
+comment "Add containers";
+_unit forceAddUniform "CUP_U_O_RUS_EMR_1_VDV";
+for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
+_unit addItemToUniform "ACE_EarPlugs";
+_unit addItemToUniform "ACE_tourniquet";
+_unit addItemToUniform "ACE_Flashlight_KSF1";
+_unit addItemToUniform "ACRE_PRC343";
+for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rdg2_white";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_HandFlare_Yellow";};
+_unit addVest "CUP_V_RUS_6B3_1";
+for "_i" from 1 to 2 do {_unit addItemToVest "CUP_HandGrenade_RGD5";};
+for "_i" from 1 to 7 do {_unit addItemToVest "CUP_30Rnd_545x39_AK_M";};
+for "_i" from 1 to 3 do {_unit addItemToVest "CUP_8Rnd_9x18_Makarov_M";};
+_unit addBackpack "CUP_B_HikingPack_Civ";
+for "_i" from 1 to 8 do {_unit addItemToBackpack "CUP_30Rnd_545x39_AK_M";};
+for "_i" from 1 to 15 do {_unit addItemToBackpack "CUP_1Rnd_HE_GP25_M";};
+for "_i" from 1 to 6 do {_unit addItemToBackpack "CUP_1Rnd_SmokeRed_GP25_M";};
+for "_i" from 1 to 8 do {_unit addItemToBackpack "CUP_IlumFlareWhite_GP25_M";};
+_unit addHeadgear "CUP_H_RUS_6B27";
 
-	comment "Add weapons";
-	_unit addWeapon "rhs_weap_ak74m_gp25";
-	_unit addPrimaryWeaponItem "rhs_acc_dtk";
+comment "Add weapons";
+_unit addWeapon "CUP_arifle_AK74M_GL";
+_unit addWeapon "CUP_hgun_Makarov";
 
-	comment "Add items";
-	_unit linkItem "ItemMap";
-	_unit linkItem "ItemCompass";
-	_unit linkItem "ItemWatch";
+comment "Add items";
+_unit linkItem "ItemMap";
+_unit linkItem "ItemCompass";
+_unit linkItem "ItemWatch";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
 
@@ -411,39 +443,41 @@ loadoutCC_R = //
 {
 	_unit = _this select 0;
 	
-	comment "Remove existing items";
-	removeAllWeapons _unit;
-	removeAllItems _unit;
-	removeAllAssignedItems _unit;
-	removeUniform _unit;
-	removeVest _unit;
-	removeBackpack _unit;
-	removeHeadgear _unit;
-	removeGoggles _unit;
+comment "Remove existing items";
+removeAllWeapons _unit;
+removeAllItems _unit;
+removeAllAssignedItems _unit;
+removeUniform _unit;
+removeVest _unit;
+removeBackpack _unit;
+removeHeadgear _unit;
+removeGoggles _unit;
 
-	comment "Add containers";
-	_unit forceAddUniform "rhs_uniform_mflora_patchless";
-	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
-	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_Flashlight_KSF1";
-	_unit addItemToUniform "ACRE_PRC343";
-	_unit addItemToUniform "rhs_mag_rdg2_white";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
-	_unit addVest "rhs_6b23_ML_6sh92";
-	for "_i" from 1 to 8 do {_unit addItemToVest "rhs_30Rnd_545x39_7N10_AK";};
-	_unit addItemToVest "rhs_mag_rdg2_white";
-	_unit addHeadgear "rhs_6b27m_ml";
+comment "Add containers";
+_unit forceAddUniform "CUP_U_O_RUS_EMR_1_VDV";
+for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
+_unit addItemToUniform "ACE_EarPlugs";
+_unit addItemToUniform "ACE_tourniquet";
+_unit addItemToUniform "ACE_Flashlight_KSF1";
+_unit addItemToUniform "ACRE_PRC343";
+for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rdg2_white";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_HandFlare_Yellow";};
+_unit addVest "CUP_V_RUS_6B3_1";
+for "_i" from 1 to 3 do {_unit addItemToVest "CUP_8Rnd_9x18_Makarov_M";};
+for "_i" from 1 to 3 do {_unit addItemToVest "CUP_HandGrenade_RGD5";};
+for "_i" from 1 to 7 do {_unit addItemToVest "CUP_30Rnd_545x39_AK_M";};
+_unit addBackpack "CUP_B_HikingPack_Civ";
+for "_i" from 1 to 8 do {_unit addItemToBackpack "CUP_30Rnd_545x39_AK_M";};
+_unit addHeadgear "CUP_H_RUS_6B27";
 
-	comment "Add weapons";
-	_unit addWeapon "rhs_weap_ak74m";
-	_unit addPrimaryWeaponItem "rhs_acc_dtk";
+comment "Add weapons";
+_unit addWeapon "CUP_arifle_AK74M";
+_unit addWeapon "CUP_hgun_Makarov";
 
-	comment "Add items";
-	_unit linkItem "ItemMap";
-	_unit linkItem "ItemCompass";
-	_unit linkItem "ItemWatch";
-	_unit addItemToVest "rhs_30Rnd_545x39_7N10_AK";
+comment "Add items";
+_unit linkItem "ItemMap";
+_unit linkItem "ItemCompass";
+_unit linkItem "ItemWatch";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
 
@@ -453,43 +487,43 @@ loadoutCC_A = //
 {
 	_unit = _this select 0;
 	
-	comment "Remove existing items";
-	removeAllWeapons _unit;
-	removeAllItems _unit;
-	removeAllAssignedItems _unit;
-	removeUniform _unit;
-	removeVest _unit;
-	removeBackpack _unit;
-	removeHeadgear _unit;
-	removeGoggles _unit;
+comment "Remove existing items";
+removeAllWeapons _unit;
+removeAllItems _unit;
+removeAllAssignedItems _unit;
+removeUniform _unit;
+removeVest _unit;
+removeBackpack _unit;
+removeHeadgear _unit;
+removeGoggles _unit;
 
-	comment "Add containers";
-	_unit forceAddUniform "rhs_uniform_mflora_patchless";
-	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
-	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_Flashlight_KSF1";
-	_unit addItemToUniform "ACRE_PRC343";
-	_unit addItemToUniform "rhs_mag_rdg2_white";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
-	_unit addVest "rhs_6b23_ML_6sh92";
-	for "_i" from 1 to 8 do {_unit addItemToVest "rhs_30Rnd_545x39_7N10_AK";};
-	_unit addItemToVest "rhs_mag_rdg2_white";
-	_unit addBackpack "CUP_B_CivPack_WDL";
-	for "_i" from 1 to 8 do {_unit addItemToBackpack "rhs_30Rnd_545x39_7N10_AK";};
-	for "_i" from 1 to 2 do {_unit addItemToBackpack "CUP_OG7_M";};
+comment "Add containers";
+_unit forceAddUniform "CUP_U_O_RUS_EMR_1_VDV";
+for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
+_unit addItemToUniform "ACE_EarPlugs";
+_unit addItemToUniform "ACE_tourniquet";
+_unit addItemToUniform "ACE_Flashlight_KSF1";
+_unit addItemToUniform "ACRE_PRC343";
+for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rdg2_white";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_HandFlare_Yellow";};
+_unit addVest "CUP_V_RUS_6B3_1";
+for "_i" from 1 to 3 do {_unit addItemToVest "CUP_8Rnd_9x18_Makarov_M";};
+for "_i" from 1 to 2 do {_unit addItemToVest "CUP_HandGrenade_RGD5";};
+for "_i" from 1 to 7 do {_unit addItemToVest "CUP_30Rnd_545x39_AK_M";};
+_unit addBackpack "CUP_B_HikingPack_Civ";
+for "_i" from 1 to 8 do {_unit addItemToBackpack "CUP_30Rnd_545x39_AK_M";};
+for "_i" from 1 to 3 do {_unit addItemToBackpack "rhs_100Rnd_762x54mmR_green";};
+_unit addHeadgear "CUP_H_RUS_6B27";
 
-	_unit addHeadgear "rhs_6b27m_ml";
+comment "Add weapons";
+_unit addWeapon "CUP_arifle_AK74M";
+_unit addWeapon "CUP_hgun_Makarov";
+_unit addWeapon "Binocular";
 
-	comment "Add weapons";
-	_unit addWeapon "rhs_weap_ak74m";
-	_unit addPrimaryWeaponItem "rhs_acc_dtk";
-
-	comment "Add items";
-	_unit linkItem "ItemMap";
-	_unit linkItem "ItemCompass";
-	_unit linkItem "ItemWatch";
-	_unit addItemToVest "rhs_30Rnd_545x39_7N10_AK";
+comment "Add items";
+_unit linkItem "ItemMap";
+_unit linkItem "ItemCompass";
+_unit linkItem "ItemWatch";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
 
@@ -499,40 +533,41 @@ loadoutCC_CREW = //
 {
 	_unit = _this select 0;
 	
-	comment "Remove existing items";
-	removeAllWeapons _unit;
-	removeAllItems _unit;
-	removeAllAssignedItems _unit;
-	removeUniform _unit;
-	removeVest _unit;
-	removeBackpack _unit;
-	removeHeadgear _unit;
-	removeGoggles _unit;
+comment "Remove existing items";
+removeAllWeapons _unit;
+removeAllItems _unit;
+removeAllAssignedItems _unit;
+removeUniform _unit;
+removeVest _unit;
+removeBackpack _unit;
+removeHeadgear _unit;
+removeGoggles _unit;
 
-	comment "Add containers";
-	_unit forceAddUniform "rhs_uniform_mflora_patchless";
-	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
-	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_Flashlight_KSF1";
-	_unit addItemToUniform "ACRE_PRC343";
-	_unit addItemToUniform "ACRE_PRC148";
-	_unit addItemToUniform "rhs_mag_rdg2_white";
-	_unit addItemToUniform "rhs_mag_rgd5";
-	_unit addVest "rhs_6b23_ML_crew";
-	for "_i" from 1 to 5 do {_unit addItemToVest "rhs_30Rnd_545x39_7N10_AK";};
-	_unit addHeadgear "rhs_tsh4";
+comment "Add containers";
+_unit forceAddUniform "CUP_U_O_RUS_EMR_1";
+for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
+_unit addItemToUniform "ACE_EarPlugs";
+_unit addItemToUniform "ACE_tourniquet";
+_unit addItemToUniform "ACE_Flashlight_KSF1";
+_unit addItemToUniform "ACRE_PRC343";
+_unit addItemToUniform "ACRE_PRC148";
+for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rdg2_white";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_HandFlare_Yellow";};
+_unit addVest "CUP_V_RUS_6B3_4";
+for "_i" from 1 to 3 do {_unit addItemToVest "CUP_8Rnd_9x18_Makarov_M";};
+for "_i" from 1 to 5 do {_unit addItemToVest "CUP_30Rnd_545x39_AK_M";};
+_unit addHeadgear "CUP_H_RUS_TSH_4_Brown";
+_unit addGoggles "G_Balaclava_blk";
 
-	comment "Add weapons";
-	_unit addWeapon "rhs_weap_ak74m";
-	_unit addPrimaryWeaponItem "rhs_acc_dtk";
-	_unit addWeapon "Binocular";
+comment "Add weapons";
+_unit addWeapon "CUP_arifle_AKS74U";
+_unit addWeapon "CUP_hgun_Makarov";
 
-	comment "Add items";
-	_unit linkItem "ItemMap";
-	_unit linkItem "ItemCompass";
-	_unit linkItem "ItemWatch";
-	
+comment "Add items";
+_unit linkItem "ItemMap";
+_unit linkItem "ItemCompass";
+_unit linkItem "ItemWatch";
+
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
 
 };

@@ -14,5 +14,7 @@
 - ajout d'une insertion HALO
 - ajout des nouveau véhicules CUP dans les factions ennemies (BTR)
 
-
-- Test Dranac
+Loadouts
+- US (CUP) = camo ucp avec M4A1/M249/MAAWS
+- RU (CUP) = camo emr avec Ak-74M
+- US SF desert (CUP) = changement en USMC (CUP) = Camo Marpat avec des Scar/Mk48/Smaw
