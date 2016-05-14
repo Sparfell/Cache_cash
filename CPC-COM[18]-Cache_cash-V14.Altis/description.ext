@@ -1,4 +1,4 @@
-﻿onLoadName =| Cache Cash |;
+﻿3onLoadName =| Cache Cash |;
 enableDebugConsole = 1;
 
 class Params
@@ -48,10 +48,10 @@ class Params
 	title = "Faction joueur :";
 	values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24};
 	texts[] = {
-		"US (RHS)",
-		"US (CUP)",
-		"Russe (RHS)",
-		"Russe (CUP)",
+		"US Army ocp (RHS)",
+		"US Army ucp (CUP)",
+		"Russe mflora (RHS)",
+		"Russe emr (CUP)",
 		"Insurgés (RHS)",
 		"Insurgés (CUP)",
 		"Rebelles takistanais (RHS)",
@@ -68,7 +68,7 @@ class Params
 		"RACS (CUP)",
 		"SLA (CUP)",
 		"Spetsnaz (RHS)",
-		"US SF desert (CUP)",
+		"USMC (CUP)",
 		"Commando jungle (CUP)",
 		"BAF desert (CUP)",
 		"BAF woodland (CUP)",
