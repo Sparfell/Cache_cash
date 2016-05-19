@@ -1,4 +1,4 @@
-﻿3onLoadName =| Cache Cash |;
+﻿onLoadName =| Cache Cash |;
 enableDebugConsole = 1;
 
 class Params
