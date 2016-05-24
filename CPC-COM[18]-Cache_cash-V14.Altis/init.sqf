@@ -17,13 +17,12 @@ if (isServer) then {
 	skipTime (paramsArray select 0);
 };
 
-
 if ((paramsArray select 11)< 1.5) then {
 	0 setOvercast (paramsArray select 11);
 };
 0 setfog (paramsArray select 12);
 forceWeatherChange;
-
+CPC_CC_Insertion_OK = false;
 
 //Script
 null = [] execVM "briefing.sqf";
@@ -45,7 +44,11 @@ for "_x" from 1 to 100 do
 finishMissionInit;
 
 waitUntil {time > 0};
-if (Time > 60) exitWith {};
+
+0 setfog (paramsArray select 12);
+forceWeatherChange;
+
+if (CPC_CC_Insertion_OK) exitWith {};
 
 //spawn
 if ((paramsArray select 1 == 0) or (paramsArray select 1 == 2)) then {
@@ -61,9 +64,7 @@ if ((paramsArray select 1 == 0) or (paramsArray select 1 == 2)) then {
 		};
 		_i = _i +1;
 	} foreach SlotPlayers;
+	CPC_CC_Insertion_OK = true;
 };
-
-0 setfog (paramsArray select 12);
-forceWeatherChange;
 
 

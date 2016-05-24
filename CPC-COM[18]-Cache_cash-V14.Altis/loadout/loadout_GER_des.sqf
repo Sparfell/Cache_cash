@@ -316,6 +316,8 @@ loadoutCC_AT = //
 	for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 	for "_i" from 1 to 8 do {_unit addItemToVest "CUP_30Rnd_556x45_G36";};
 	_unit addHeadgear "H_ShemagOpen_khk";
+	_unit addBackpack "B_Carryall_cbr";
+	_unit addItemToBackpack "CUP_Dragon_EP1_M";
 
 	comment "Add weapons";
 	_unit addWeapon "CUP_arifle_G36K_camo";

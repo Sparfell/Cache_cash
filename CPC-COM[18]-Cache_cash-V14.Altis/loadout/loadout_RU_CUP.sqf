@@ -73,7 +73,7 @@ for "_i" from 1 to 2 do {_unit addItemToVest "CUP_HandGrenade_RGD5";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
 _unit addBackpack "CUP_B_HikingPack_Civ";
 for "_i" from 1 to 8 do {_unit addItemToBackpack "CUP_30Rnd_545x39_AK_M";};
-_unit addHeadgear "CUP_H_RUS_6B27";
+_unit addHeadgear "CUP_H_ChDKZ_Cap";
 
 comment "Add weapons";
 _unit addWeapon "CUP_arifle_AK74M";
@@ -85,7 +85,7 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
 
 };
 
@@ -188,7 +188,7 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 
-sleep 1.0;
+
 _unit addItemToUniform "CUP_8Rnd_9x18_Makarov_M";
 _unit addItemToVest "CUP_30Rnd_545x39_AK_M";
 	
@@ -236,7 +236,6 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 
-sleep 1.0;
 _unit addItemToVest "CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Green_M";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
@@ -318,8 +317,7 @@ for "_i" from 1 to 8 do {_unit addItemToVest "CUP_30Rnd_545x39_AK_M";};
 for "_i" from 1 to 3 do {_unit addItemToVest "CUP_8Rnd_9x18_Makarov_M";};
 for "_i" from 1 to 2 do {_unit addItemToVest "CUP_HandGrenade_RGD5";};
 _unit addBackpack "CUP_B_RPGPack_Khaki";
-_unit addItemToBackpack "CUP_PG7V_M";
-for "_i" from 1 to 2 do {_unit addItemToBackpack "CUP_OG7_M";};
+for "_i" from 1 to 2 do {_unit addItemToBackpack "CUP_PG7VL_M";};
 _unit addHeadgear "CUP_H_RUS_6B27";
 
 comment "Add weapons";
@@ -335,7 +333,7 @@ _unit linkItem "ItemWatch";
 
 sleep 1.0;
 _unit addItemToVest "CUP_30Rnd_545x39_AK_M";
-_unit addItemToBackpack "CUP_PG7V_M";
+_unit addItemToBackpack "CUP_PG7VL_M";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
 
@@ -512,7 +510,8 @@ for "_i" from 1 to 2 do {_unit addItemToVest "CUP_HandGrenade_RGD5";};
 for "_i" from 1 to 7 do {_unit addItemToVest "CUP_30Rnd_545x39_AK_M";};
 _unit addBackpack "CUP_B_HikingPack_Civ";
 for "_i" from 1 to 8 do {_unit addItemToBackpack "CUP_30Rnd_545x39_AK_M";};
-for "_i" from 1 to 3 do {_unit addItemToBackpack "rhs_100Rnd_762x54mmR_green";};
+for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_100Rnd_762x54mmR_green";};
+for "_i" from 1 to 2 do {_unit addItemToBackpack "CUP_OG7_M";};
 _unit addHeadgear "CUP_H_RUS_6B27";
 
 comment "Add weapons";
@@ -555,7 +554,7 @@ for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rdg2_white";};
 for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_HandFlare_Yellow";};
 _unit addVest "CUP_V_RUS_6B3_4";
 for "_i" from 1 to 3 do {_unit addItemToVest "CUP_8Rnd_9x18_Makarov_M";};
-for "_i" from 1 to 5 do {_unit addItemToVest "CUP_30Rnd_545x39_AK_M";};
+for "_i" from 1 to 7 do {_unit addItemToVest "CUP_30Rnd_545x39_AK_M";};
 _unit addHeadgear "CUP_H_RUS_TSH_4_Brown";
 _unit addGoggles "G_Balaclava_blk";
 
@@ -568,6 +567,6 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 
-	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_HMNVS";};
 
 };

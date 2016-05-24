@@ -168,6 +168,18 @@ loadoutCC_DOC = //
 	_unit addVest "rhs_6sh92_digi";
 	for "_i" from 1 to 9 do {_unit addItemToVest "rhs_30Rnd_545x39_7N22_AK";};
 	_unit addBackpack "B_Carryall_oli";
+	_unit addItemToBackpack "ACE_personalAidKit";
+	for "_i" from 1 to 20 do {_unit addItemToBackpack "ACE_fieldDressing";};
+	for "_i" from 1 to 20 do {_unit addItemToBackpack "ACE_packingBandage";};
+	for "_i" from 1 to 15 do {_unit addItemToBackpack "ACE_elasticBandage";};
+	for "_i" from 1 to 10 do {_unit addItemToBackpack "ACE_quikclot";};
+	for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_salineIV_250";};
+	for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_salineIV_500";};
+	for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_salineIV";};
+	for "_i" from 1 to 8 do {_unit addItemToBackpack "ACE_morphine";};
+	for "_i" from 1 to 8 do {_unit addItemToBackpack "ACE_epinephrine";};
+	for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_tourniquet";};
+	_unit addItemToBackpack "ACE_surgicalKit";
 	_unit addHeadgear "rhs_Booniehat_digi";
 	_unit addGoggles "rhs_scarf";
 
@@ -253,27 +265,25 @@ loadoutCC_M = //
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
 	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
 	_unit addVest "rhs_6sh92_digi";
-	for "_i" from 1 to 5 do {_unit addItemToVest "rhs_20rnd_9x39mm_SP5";};
-	for "_i" from 1 to 4 do {_unit addItemToVest "rhs_20rnd_9x39mm_SP6";};
+	for "_i" from 1 to 18 do {_unit addItemToVest "rhs_10Rnd_762x54mmR_7N1";};
 	_unit addBackpack "B_FieldPack_oli";
-	_unit addItemToBackpack "ACE_MapTools";
-	_unit addItemToBackpack "ACE_Kestrel4500";
+	_unit addItemToVest "ACE_MapTools";
+	_unit addItemToVest "ACE_Kestrel4500";
 	_unit addItemToBackpack "ACE_DefusalKit";
 	_unit addItemToBackpack "ACE_Clacker";
-	for "_i" from 1 to 6 do {_unit addItemToBackpack "rhs_20rnd_9x39mm_SP5";};
-	for "_i" from 1 to 4 do {_unit addItemToBackpack "rhs_20rnd_9x39mm_SP6";};
 	for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
 	_unit addGoggles "rhs_balaclava1_olive";
 
 	comment "Add weapons";
-	_unit addWeapon "rhs_weap_asval";
-	_unit addPrimaryWeaponItem "rhs_acc_pso1m21";
+	_unit addWeapon "rhs_weap_svdp_wd";
+	_unit addPrimaryWeaponItem "rhs_acc_pso1m2";
 	_unit addWeapon "rhs_pdu4";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	_unit linkItem "ItemRadio";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
 

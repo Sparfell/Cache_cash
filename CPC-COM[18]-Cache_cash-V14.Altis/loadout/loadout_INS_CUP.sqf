@@ -154,6 +154,18 @@ loadoutCC_DOC = //
 	for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
 	for "_i" from 1 to 10 do {_unit addItemToVest "rhs_30Rnd_762x39mm";};
 	_unit addBackpack "B_Carryall_cbr";
+	_unit addItemToBackpack "ACE_personalAidKit";
+	for "_i" from 1 to 20 do {_unit addItemToBackpack "ACE_fieldDressing";};
+	for "_i" from 1 to 20 do {_unit addItemToBackpack "ACE_packingBandage";};
+	for "_i" from 1 to 15 do {_unit addItemToBackpack "ACE_elasticBandage";};
+	for "_i" from 1 to 10 do {_unit addItemToBackpack "ACE_quikclot";};
+	for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_salineIV_250";};
+	for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_salineIV_500";};
+	for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_salineIV";};
+	for "_i" from 1 to 8 do {_unit addItemToBackpack "ACE_morphine";};
+	for "_i" from 1 to 8 do {_unit addItemToBackpack "ACE_epinephrine";};
+	for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_tourniquet";};
+	_unit addItemToBackpack "ACE_surgicalKit";
 	_unit addHeadgear (selectRandom ["rhs_beanie_green","CUP_H_FR_BandanaWdl","CUP_H_SLA_BeanieGreen","CUP_H_SLA_BeanieGreen","H_Beret_blk","rhs_ssh68","CUP_H_C_Ushanka_03","rhs_Booniehat_flora","CUP_H_C_Beanie_02","H_Bandanna_camo","H_Bandanna_sgg","H_Bandanna_gry","CUP_H_C_Beanie_04","H_Booniehat_khk","H_Booniehat_oli","H_Cap_oli","H_Cap_blk"]);
 
 	comment "Add weapons";

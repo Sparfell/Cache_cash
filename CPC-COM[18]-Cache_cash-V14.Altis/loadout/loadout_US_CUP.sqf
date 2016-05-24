@@ -89,10 +89,9 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 
-sleep 1.0;
 _unit addItemToVest "CUP_30Rnd_556x45_Stanag";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_HMNVS";};
 
 };
 
@@ -145,10 +144,9 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 
-sleep 1.0;
 _unit addItemToVest "CUP_30Rnd_556x45_Stanag";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_HMNVS";};
 
 };
 
@@ -205,10 +203,9 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 
-sleep 1.0;
 for "_i" from 1 to 2 do {_unit addItemToVest "CUP_15Rnd_9x19_M9";};
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_HMNVS";};
 
 };
 
@@ -255,7 +252,7 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_HMNVS";};
 
 };
 
@@ -297,7 +294,7 @@ _unit addHeadgear "CUP_H_USArmy_HelmetMICH";
 
 comment "Add weapons";
 _unit addWeapon "CUP_srifle_M14_DMR";
-_unit addPrimaryWeaponItem "CUP_optic_LeupoldM3LR";
+_unit addPrimaryWeaponItem "CUP_optic_LeupoldMk4";
 _unit addPrimaryWeaponItem "CUP_bipod_Harris_1A2_L";
 _unit addWeapon "CUP_hgun_M9";
 _unit addWeapon "CUP_Vector21Nite";
@@ -307,10 +304,9 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 
-sleep 1.0;
 _unit addItemToVest "CUP_20Rnd_762x51_DMR";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_HMNVS";};
 
 };
 
@@ -360,12 +356,11 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 
-sleep 1.0;
 _unit addItemToVest "CUP_30Rnd_556x45_Stanag";
 _unit addItemToVest "CUP_15Rnd_9x19_M9";
 _unit addItemToBackpack "CUP_MAAWS_HEAT_M";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_HMNVS";};
 
 };
 
@@ -417,11 +412,10 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 
-sleep 1.0;
 _unit addItemToVest "CUP_30Rnd_556x45_Stanag";
 _unit addItemToVest "CUP_15Rnd_9x19_M9";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_HMNVS";};
 
 };
 
@@ -471,11 +465,10 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 
-sleep 1.0;
 _unit addItemToVest "CUP_30Rnd_556x45_Stanag";
 _unit addItemToVest "CUP_15Rnd_9x19_M9";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_HMNVS";};
 
 };
 
@@ -523,10 +516,9 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 
-sleep 1.0;
 _unit addItemToVest "CUP_30Rnd_556x45_Stanag";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_HMNVS";};
 
 };
 
@@ -575,12 +567,11 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 
-sleep 1.0;
 _unit addItemToVest "CUP_30Rnd_556x45_Stanag";
 _unit addItemToVest "CUP_15Rnd_9x19_M9";
 
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_HMNVS";};
 };
 
 loadoutCC_CREW = //
@@ -608,7 +599,7 @@ _unit addItemToUniform "ACRE_PRC148";
 _unit addItemToUniform "ACE_IR_Strobe_Item";
 for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
 _unit addVest "CUP_V_B_IOTV_Rifleman";
-for "_i" from 1 to 5 do {_unit addItemToVest "CUP_30Rnd_556x45_Stanag";};
+for "_i" from 1 to 7 do {_unit addItemToVest "CUP_30Rnd_556x45_Stanag";};
 for "_i" from 1 to 3 do {_unit addItemToVest "CUP_15Rnd_9x19_M9";};
 _unit addHeadgear "CUP_H_USMC_Crew_Helmet";
 
@@ -621,6 +612,6 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_HMNVS";};
 
 };

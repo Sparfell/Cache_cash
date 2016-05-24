@@ -88,7 +88,7 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 
-sleep 1.0;
+
 _unit addItemToUniform "CUP_17Rnd_9x19_glock17";
 _unit addItemToVest "CUP_30Rnd_556x45_Stanag";
 	
@@ -144,7 +144,7 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 
-sleep 1.0;
+
 _unit addItemToUniform "CUP_17Rnd_9x19_glock17";
 _unit addItemToVest "CUP_30Rnd_556x45_Stanag";
 	
@@ -206,7 +206,7 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 
-sleep 1.0;
+
 _unit addItemToVest "CUP_30Rnd_556x45_Stanag";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
@@ -251,7 +251,7 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 
-sleep 1.0;
+
 _unit addItemToVest "CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
@@ -305,7 +305,7 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 
-sleep 1.0;
+
 _unit addItemToVest "CUP_20Rnd_762x51_B_M110";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
@@ -412,7 +412,7 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 
-sleep 1.0;
+
 _unit addItemToVest "CUP_30Rnd_556x45_Stanag";
 
 	
@@ -465,7 +465,7 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 
-sleep 1.0;
+
 _unit addItemToVest "CUP_30Rnd_556x45_Stanag";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
@@ -514,7 +514,7 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 
-sleep 1.0;
+
 _unit addItemToVest "CUP_30Rnd_556x45_Stanag";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
@@ -566,7 +566,7 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 
-sleep 1.0;
+
 _unit addItemToVest "CUP_30Rnd_556x45_Stanag";
 
 	
