@@ -61,7 +61,7 @@ loadoutCC_SL = //
 	_unit addItemToUniform "ACE_EarPlugs";
 	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACE_Flashlight_KSF1";
-	_unit addItemToUniform "ACRE_PRC343";
+	_unit addItemToUniform "ACRE_PRC148";
 	_unit addItemToUniform "ACE_MapTools";
 	_unit addItemToUniform "CUP_HandGrenade_RGD5";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShellGreen";};
@@ -102,7 +102,7 @@ loadoutCC_TL = //
 	_unit addItemToUniform "ACE_EarPlugs";
 	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACE_Flashlight_KSF1";
-	_unit addItemToUniform "ACRE_PRC343";
+	_unit addItemToUniform "ACRE_PRC148";
 	_unit addItemToUniform "ACE_MapTools";
 	_unit addItemToUniform "CUP_HandGrenade_RGD5";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShellGreen";};
@@ -471,7 +471,7 @@ loadoutCC_CREW = //
 	_unit addItemToUniform "ACE_EarPlugs";
 	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACE_Flashlight_KSF1";
-	_unit addItemToUniform "ACRE_PRC343";
+	_unit addItemToUniform "ACRE_PRC148";
 	_unit addItemToUniform "ACE_MapTools";
 	_unit addItemToUniform "CUP_HandGrenade_RGD5";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};

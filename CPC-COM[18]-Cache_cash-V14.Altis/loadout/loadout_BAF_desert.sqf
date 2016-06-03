@@ -132,6 +132,7 @@ loadoutCC_TL = //
 	_unit addPrimaryWeaponItem "CUP_optic_SUSAT";
 	_unit addWeapon "CUP_hgun_M9";
 	_unit addWeapon "ACE_Vector";
+	_unit addWeapon "CUP_launch_M136";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
@@ -497,6 +498,7 @@ loadoutCC_A = //
 	_unit addPrimaryWeaponItem "CUP_optic_SUSAT";
 	_unit addWeapon "CUP_hgun_M9";
 	_unit addWeapon "Binocular";
+	_unit addWeapon "CUP_launch_M136";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";

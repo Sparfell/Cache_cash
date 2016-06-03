@@ -22,6 +22,10 @@ switch (paramsArray select 7) do {
 		task3 = player createSimpleTask ["S'extraire."];
 		task3 setSimpleTaskDescription ["S'extraire sur le point d'insertion.","S'extraire sur le point d'insertion.","S'extraire sur le point d'insertion."];
 	};
+	case 3: {
+		task3 = player createSimpleTask ["S'extraire."];
+		task3 setSimpleTaskDescription ["S'extraire en appelant l'hélico sur le canal 5 de la PRC148.","S'extraire sur le point d'insertion.","S'extraire sur le point d'insertion."];
+	};
 };
 
 player createDiaryRecord ["Diary",["Extraction",
@@ -35,6 +39,9 @@ switch (paramsArray select 7) do {
 	"};
 	case 2: {"| Extraction sur insertion|
 <br/><br/>Une fois la cache détruite, revenez sur le point d'insertion. (un chef de groupe peut fermer la mission avec le menu molette)
+	"};
+	case 3: {"| Extraction heliportée|
+<br/><br/>Une fois la cache détruite, appellez l'hélicoptère d'extraction sur le canal 5 de la PRC148 (menu molette)
 	"};
 }]];
 

@@ -30,6 +30,7 @@ null = [] execVM "spawn\Spawn_IA.sqf";
 null = [2,true,true] execVM "roster.sqf";
 if ((paramsArray select 1) == 1) then {null = [] execVM "playerPos.sqf";};
 if ((paramsArray select 1) == 4) then {null = [] execVM "playerPara.sqf";};
+if ((paramsArray select 7) == 3) then {null = [] execVM "CPC_EXTRA\call_extraction.sqf";};
 
 // Teleport & invulnerable
 //onMapSingleClick "player setPos _pos";

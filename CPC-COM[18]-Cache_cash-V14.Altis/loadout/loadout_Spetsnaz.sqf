@@ -277,6 +277,7 @@ loadoutCC_M = //
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_svdp_wd";
 	_unit addPrimaryWeaponItem "rhs_acc_pso1m2";
+	_unit addPrimaryWeaponItem "rhs_acc_tgpv";
 	_unit addWeapon "rhs_pdu4";
 
 	comment "Add items";

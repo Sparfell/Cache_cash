@@ -76,15 +76,15 @@ if ((paramsArray select 1) == 2) then
 {
 	switch (paramsArray select 5) do {
 		case 0 : {heliType = "RHS_UH60M_d";}; // US RHS
-		case 1 : {heliType = "CUP_B_UH60M_US";}; // US
+		case 1 : {heliType = "CUP_B_UH60M_US";}; // US CUP
 		case 2 : {heliType = "RHS_Mi8mt_vvsc";}; // RU RHS
-		case 3 : {heliType = "RHS_Mi8mt_vvsc";}; // RU
-		case 4 : {heliType = "RHS_Mi8amt_chdkz";}; // INS
-		case 5 : {heliType = "RHS_Mi8amt_chdkz";}; // INS
+		case 3 : {heliType = "CUP_O_Mi8_medevac_RU";}; // RU CUP
+		case 4 : {heliType = "RHS_Mi8amt_chdkz";}; // INS RHS
+		case 5 : {heliType = "CUP_O_Mi8_CHDKZ";}; // INS CUP
 		case 6 : {heliType = "CUP_I_UH1H_TK_GUE";}; // INS TAK RHS
 		case 7 : {heliType = "CUP_I_UH1H_TK_GUE";}; // INS TAK
 		case 8 : {heliType = "CUP_O_Mi17_TK";}; // TK RHS
-		case 9 : {heliType = "CUP_O_Mi17_TK";}; // TK RHS
+		case 9 : {heliType = "CUP_O_Mi17_TK";}; // TK CUP
 		case 10 : {heliType = "CUP_B_UH60M_US";}; // GER Desert
 		case 11 : {heliType = "CUP_B_UH60M_US";}; // GER Woodland
 		case 12 : {heliType = "B_Heli_Transport_01_camo_F";}; // OTAN
@@ -95,7 +95,7 @@ if ((paramsArray select 1) == 2) then
 		case 17 : {heliType = "CUP_I_UH60L_RACS";}; // RACS
 		case 18 : {heliType = "CUP_O_Mi8_SLA_1";}; // SLA
 		case 19 : {heliType = "RHS_Mi8mt_vvsc";}; // Spetsnaz RHS
-		case 20 : {heliType = "CUP_B_UH60M_US";}; // US SF
+		case 20 : {heliType = "CUP_B_UH60M_US";}; // USMC SF SCAR
 		case 21 : {heliType = "CUP_B_UH60M_US";}; // commando jungle
 		case 22 : {heliType = "CUP_B_Merlin_HC3_GB";}; // BAF desert
 		case 23 : {heliType = "CUP_B_Merlin_HC3_GB";}; // BAF woodland

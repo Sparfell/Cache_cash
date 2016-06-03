@@ -110,9 +110,9 @@ class Params
 	class extraction	//paramsArray select 7
 	{
 	title = "Extraction :";
-	values[] = {0,1,2};
-	texts[] = {"Aucune","Aléatoire","Sur insertion"};
-	default = 1;
+	values[] = {0,1,2,3};
+	texts[] = {"Aucune","Aléatoire","Sur insertion","héliportée"};
+	default = 3;
 	};
 
 	class Vehicule1		//paramsArray select 8
