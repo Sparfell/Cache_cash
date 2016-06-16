@@ -13,8 +13,8 @@ if ((paramsArray select 6) > 99) then {
 	{
 	if (CPC_WorldType == "vanilla") then {type1 = selectRandom ["CamoNet_INDP_F","Land_Cargo_House_V2_F","Land_Unfinished_Building_01_F","Land_i_Stone_Shed_V1_F"];};
 	if (CPC_WorldType == "desert") then {type1 = selectRandom ["Land_House_K_1_EP1","Land_House_K_3_EP1","Land_House_K_8_EP1","Land_House_K_5_EP1","Land_House_K_6_EP1","Land_House_K_7_EP1"];};
-	if (CPC_WorldType == "afrique") then {type1 = selectRandom ["Land_Unfinished_Building_01_F","Land_Unfinished_Building_01_F","Land_Slum_House02_F","Land_Slum_House03_F","Land_Slum_House01_F","Land_cargo_house_slum_F"];};
-	if (CPC_WorldType == "jungle") then {type1 = selectRandom ["Land_Slum_House02_F","Land_Slum_House03_F","Land_Slum_House01_F","Land_d_House_Small_01_V1_F","Land_d_House_Small_01_V1_F","Land_i_Stone_HouseBig_V2_F","Land_i_Stone_HouseBig_V2_F","Land_i_Stone_Shed_V3_F","Land_i_Stone_Shed_V2_F","Land_Unfinished_Building_01_F","Land_FuelStation_Build_F"];};
+	if (CPC_WorldType == "afrique") then {type1 = selectRandom ["Land_Unfinished_Building_01_F","Land_Unfinished_Building_01_F","Land_Slum_House02_F","Land_Slum_House03_F","Land_Slum_House01_F","Land_cargo_house_slum_F","Land_Dum_istan3_pumpa","Land_House_C_5_EP1"];};
+	if (CPC_WorldType == "jungle") then {type1 = selectRandom ["Land_Hut02","Land_Hut03","Land_Hut04","Land_Hut06","Land_Slum_House02_F","Land_Slum_House03_F","Land_Slum_House01_F","Land_d_House_Small_01_V1_F","Land_d_House_Small_01_V1_F","Land_i_Stone_HouseBig_V2_F","Land_i_Stone_HouseBig_V2_F","Land_i_Stone_Shed_V3_F","Land_i_Stone_Shed_V2_F","Land_Unfinished_Building_01_F","Land_FuelStation_Build_F"];};
 	if (CPC_WorldType == "chernarus") then {type1 = selectRandom ["CamoNet_INDP_F","Land_Cargo_House_V2_F","Land_Unfinished_Building_01_F","Land_i_Stone_Shed_V1_F"];};
 	_objet = type1 CreateVehicle [(Random_Position select 0)+((sin (_rdir + _x))*10),(Random_Position select 1)+((cos (_rdir + _x))*10),1.5];
 	_objet setdir (_rdir + _x);
@@ -40,12 +40,14 @@ if ((paramsArray select 6) > 99) then {
 			case 11 : {"CUP_B_M2StaticMG_MiniTripod_US"}; //US army CUP
 			case 12 : {"CUP_B_M2StaticMG_MiniTripod_US"}; //BAF des CUP
 			case 13 : {"CUP_B_M2StaticMG_MiniTripod_US"}; //BAF wdl CUP
-			case 100 : {"rhs_DSHKM_Mini_TriPod_ins"}; //INS RHS
+			case 14 : {"rhsgref_cdf_DSHKM_Mini_TriPod"}; //BAF wdl CUP
+			case 100 : {"rhsgref_ins_g_DSHKM_Mini_TriPod"}; //INS RHS
 			case 101 : {"CUP_I_DSHkM_MiniTriPod_TK_GUE"}; //INS TK
 			case 102 : {"CUP_I_DSHKM_NAPA"}; //NAPA
 			case 103 : {"B_HMG_01_F"}; //FIA
 			case 104 : {"CUP_O_KORD_TK"}; //NPFD
 			case 105 : {"CUP_O_DSHkM_MiniTriPod_ChDKZ"}; //chdkz
+			case 106 : {"rhsgref_nat_rifleman"}; //nationalists RHS
 		};
 		_objet = _type CreateVehicle [(Random_Position select 0)+((sin (_rdir + (_x +30)))*10),(Random_Position select 1)+((cos (_rdir + (_x +30)))*10),0];
 		_objet setdir (_rdir + (_x +30));
