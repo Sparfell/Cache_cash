@@ -79,7 +79,7 @@ if ((paramsArray select 1) == 2) then
 		case 1 : {heliType = "CUP_B_UH60M_US";}; // US CUP
 		case 2 : {heliType = "RHS_Mi8mt_vvsc";}; // RU RHS
 		case 3 : {heliType = "CUP_O_Mi8_medevac_RU";}; // RU CUP
-		case 4 : {heliType = "RHS_Mi8amt_chdkz";}; // INS RHS
+		case 4 : {heliType = "rhsgref_ins_g_Mi8amt";}; // INS RHS
 		case 5 : {heliType = "CUP_O_Mi8_CHDKZ";}; // INS CUP
 		case 6 : {heliType = "CUP_I_UH1H_TK_GUE";}; // INS TAK RHS
 		case 7 : {heliType = "CUP_I_UH1H_TK_GUE";}; // INS TAK
@@ -220,7 +220,10 @@ if ((paramsArray select 1) == 2) then
 	"CUP_B_TOW_TriPod_US",
 	"CUP_O_Metis_RU",
 	"RHS_TOW_TriPod_WD",
-	"rhs_Metis_9k115_2_msv"
+	"rhs_Metis_9k115_2_msv",
+	"rhs_Kornet_9M133_2_msv",
+	"rhsusf_M1117_O",
+	"rhsgref_nat_uaz_spg9"
 	];
 	waitUntil {time > 0};
 	_pos = markerpos "Mark_inser";

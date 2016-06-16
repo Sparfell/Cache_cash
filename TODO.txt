@@ -1,9 +1,8 @@
-- grosse chute de fps en milieu de mission ?
 - trop de pop d'IA sur le camp (maisons pleines de mecs) - TEST
 - revoir le spawn des IA ?
 - Se passer de GAIA ?
 - Améliorer le spawn des campements
-- utiliser des batiments A2 dans les campements/villes
+- utiliser des batiments A2/APEX dans les campements/villes WIP
 - ajouter des munitions dans les véhicules ?
 - améliorer la variation jour/nuit pour les loadouts (ex: chgmnt optic)
 - reco en cours de mission = reparachutage TEST
@@ -12,7 +11,6 @@
 - peut être que c'est le groupe du chef
 
 - ajout d'une insertion HALO
-- ajout des nouveau véhicules CUP dans les factions ennemies (BTR)
-
-- utiliser des batiments de CUP terrains pour les camps/villages
 - ajout d'une insertion héliportée ?
+- ajout de CPC CHOPPA
+- pop de wrecks en random dans la zone ?
