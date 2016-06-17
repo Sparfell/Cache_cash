@@ -275,7 +275,7 @@ loadoutCC_M = //
 	comment "Add weapons";
 	_unit addWeapon "CUP_srifle_M110";
 	_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
-	_unit addPrimaryWeaponItem "CUP_optic_LeupoldMk4_MRT_tan";
+	_unit addPrimaryWeaponItem "CUP_optic_AN_PVS_10";
 	_unit addPrimaryWeaponItem "CUP_bipod_VLTOR_Modpod";
 	_unit addWeapon "CUP_hgun_Glock17";
 	_unit addWeapon "ACE_Vector";

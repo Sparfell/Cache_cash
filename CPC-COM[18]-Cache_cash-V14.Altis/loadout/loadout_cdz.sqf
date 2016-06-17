@@ -23,6 +23,10 @@ hard_setLoadout =
 {
 	_unit = _this select 0;
 	_loadout = _unit getVariable "loadout";
+	
+	_uniform =["CUP_U_O_CHDKZ_Kam_01","CUP_U_O_CHDKZ_Kam_02","CUP_U_O_CHDKZ_Kam_03","CUP_U_O_CHDKZ_Kam_04"];
+	_headgear =["CUP_H_ChDKZ_Beanie","CUP_H_SLA_BeanieGreen","CUP_H_C_Beanie_02","H_Bandanna_camo"];
+	
 	switch _loadout do 
 	{
 		case "cc_sl": {[_unit] call loadoutCC_SL};
@@ -78,6 +82,8 @@ loadoutCC_SL = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
 
 };
 
@@ -96,7 +102,7 @@ loadoutCC_TL = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform (selectrandom ["CUP_U_O_CHDKZ_Kam_01","CUP_U_O_CHDKZ_Kam_02","CUP_U_O_CHDKZ_Kam_03","CUP_U_O_CHDKZ_Kam_04"]);
+	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
 	_unit addItemToUniform "ACE_tourniquet";
@@ -112,7 +118,7 @@ loadoutCC_TL = //
 	for "_i" from 1 to 8 do {_unit addItemToBackpack "CUP_30Rnd_545x39_AK_M";};
 	for "_i" from 1 to 3 do {_unit addItemToBackpack "SmokeShellGreen";};
 	for "_i" from 1 to 3 do {_unit addItemToBackpack "CUP_HandGrenade_RGD5";};
-	_unit addHeadgear (selectRandom ["CUP_H_ChDKZ_Beanie","CUP_H_SLA_BeanieGreen","CUP_H_C_Beanie_02","H_Bandanna_camo"]);
+	_unit addHeadgear (selectRandom _headgear);
 
 	comment "Add weapons";
 	_unit addWeapon "CUP_arifle_AKS74";
@@ -122,6 +128,8 @@ loadoutCC_TL = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
 
 };
 
@@ -140,7 +148,7 @@ loadoutCC_DOC = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform (selectrandom ["CUP_U_O_CHDKZ_Kam_01","CUP_U_O_CHDKZ_Kam_02","CUP_U_O_CHDKZ_Kam_03","CUP_U_O_CHDKZ_Kam_04"]);
+	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
 	_unit addItemToUniform "ACE_tourniquet";
@@ -162,7 +170,7 @@ loadoutCC_DOC = //
 	for "_i" from 1 to 8 do {_unit addItemToBackpack "ACE_epinephrine";};
 	for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_tourniquet";};
 	_unit addItemToBackpack "ACE_surgicalKit";
-	_unit addHeadgear (selectRandom ["CUP_H_ChDKZ_Beanie","CUP_H_SLA_BeanieGreen","CUP_H_C_Beanie_02","H_Bandanna_camo"]);
+	_unit addHeadgear (selectRandom _headgear);
 
 	comment "Add weapons";
 	_unit addWeapon "CUP_arifle_AK74";
@@ -171,6 +179,8 @@ loadoutCC_DOC = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
 
 };
 
@@ -189,7 +199,7 @@ loadoutCC_MG = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform (selectrandom ["CUP_U_O_CHDKZ_Kam_01","CUP_U_O_CHDKZ_Kam_02","CUP_U_O_CHDKZ_Kam_03","CUP_U_O_CHDKZ_Kam_04"]);
+	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
 	_unit addItemToUniform "ACE_tourniquet";
@@ -208,6 +218,8 @@ loadoutCC_MG = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	_unit addItemToVest "CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Green_M";
+	
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
 
 };
 
@@ -226,7 +238,7 @@ loadoutCC_M = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform (selectrandom ["CUP_U_O_CHDKZ_Kam_01","CUP_U_O_CHDKZ_Kam_02","CUP_U_O_CHDKZ_Kam_03","CUP_U_O_CHDKZ_Kam_04"]);
+	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
 	_unit addItemToUniform "ACE_tourniquet";
@@ -245,6 +257,8 @@ loadoutCC_M = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
 
 };
 
@@ -263,7 +277,7 @@ loadoutCC_AT = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform (selectrandom ["CUP_U_O_CHDKZ_Kam_01","CUP_U_O_CHDKZ_Kam_02","CUP_U_O_CHDKZ_Kam_03","CUP_U_O_CHDKZ_Kam_04"]);
+	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
 	_unit addItemToUniform "ACE_tourniquet";
@@ -286,6 +300,8 @@ loadoutCC_AT = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	_unit addItemToBackpack "CUP_PG7VL_M";
+	
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
 
 };
 
@@ -304,7 +320,7 @@ loadoutCC_DEMO = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform (selectrandom ["CUP_U_O_CHDKZ_Kam_01","CUP_U_O_CHDKZ_Kam_02","CUP_U_O_CHDKZ_Kam_03","CUP_U_O_CHDKZ_Kam_04"]);
+	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
 	_unit addItemToUniform "ACE_tourniquet";
@@ -319,7 +335,7 @@ loadoutCC_DEMO = //
 	_unit addItemToBackpack "ACE_Clacker";
 	_unit addItemToBackpack "SatchelCharge_Remote_Mag";
 	for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
-	_unit addHeadgear (selectRandom ["CUP_H_ChDKZ_Beanie","CUP_H_SLA_BeanieGreen","CUP_H_C_Beanie_02","H_Bandanna_camo"]);
+	_unit addHeadgear (selectRandom _headgear);
 
 	comment "Add weapons";
 	_unit addWeapon "CUP_arifle_AK74";
@@ -328,6 +344,8 @@ loadoutCC_DEMO = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
 
 };
 
@@ -346,7 +364,7 @@ loadoutCC_GL = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform (selectrandom ["CUP_U_O_CHDKZ_Kam_01","CUP_U_O_CHDKZ_Kam_02","CUP_U_O_CHDKZ_Kam_03","CUP_U_O_CHDKZ_Kam_04"]);
+	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
 	_unit addItemToUniform "ACE_tourniquet";
@@ -361,7 +379,7 @@ loadoutCC_GL = //
 	for "_i" from 1 to 10 do {_unit addItemToBackpack "CUP_IlumFlareWhite_GP25_M";};
 	for "_i" from 1 to 4 do {_unit addItemToBackpack "CUP_1Rnd_SmokeRed_GP25_M";};
 	for "_i" from 1 to 6 do {_unit addItemToBackpack "CUP_30Rnd_545x39_AK_M";};
-	_unit addHeadgear (selectRandom ["CUP_H_ChDKZ_Beanie","CUP_H_SLA_BeanieGreen","CUP_H_C_Beanie_02","H_Bandanna_camo"]);
+	_unit addHeadgear (selectRandom _headgear);
 
 	comment "Add weapons";
 	_unit addWeapon "CUP_arifle_AK74_GL";
@@ -370,6 +388,8 @@ loadoutCC_GL = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
 
 };
 
@@ -388,7 +408,7 @@ loadoutCC_R = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform (selectrandom ["CUP_U_O_CHDKZ_Kam_01","CUP_U_O_CHDKZ_Kam_02","CUP_U_O_CHDKZ_Kam_03","CUP_U_O_CHDKZ_Kam_04"]);
+	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
 	_unit addItemToUniform "ACE_tourniquet";
@@ -397,7 +417,7 @@ loadoutCC_R = //
 	for "_i" from 1 to 2 do {_unit addItemToUniform "CUP_HandGrenade_RGD5";};
 	_unit addVest "CUP_V_RUS_Smersh_1";
 	for "_i" from 1 to 10 do {_unit addItemToVest "CUP_30Rnd_545x39_AK_M";};
-	_unit addHeadgear (selectRandom ["CUP_H_ChDKZ_Beanie","CUP_H_SLA_BeanieGreen","CUP_H_C_Beanie_02","H_Bandanna_camo"]);
+	_unit addHeadgear (selectRandom _headgear);
 
 	comment "Add weapons";
 	_unit addWeapon "CUP_arifle_AK74";
@@ -406,6 +426,8 @@ loadoutCC_R = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
 
 };
 
@@ -424,7 +446,7 @@ loadoutCC_A = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform (selectrandom ["CUP_U_O_CHDKZ_Kam_01","CUP_U_O_CHDKZ_Kam_02","CUP_U_O_CHDKZ_Kam_03","CUP_U_O_CHDKZ_Kam_04"]);
+	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
 	_unit addItemToUniform "ACE_tourniquet";
@@ -448,6 +470,8 @@ loadoutCC_A = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
 };
 
 loadoutCC_CREW = //
@@ -465,7 +489,7 @@ loadoutCC_CREW = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform (selectrandom ["CUP_U_O_CHDKZ_Kam_01","CUP_U_O_CHDKZ_Kam_02","CUP_U_O_CHDKZ_Kam_03","CUP_U_O_CHDKZ_Kam_04"]);
+	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
 	_unit addItemToUniform "ACE_tourniquet";
@@ -486,5 +510,7 @@ loadoutCC_CREW = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
 
 };

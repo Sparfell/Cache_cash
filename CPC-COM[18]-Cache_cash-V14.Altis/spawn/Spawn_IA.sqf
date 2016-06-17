@@ -415,6 +415,7 @@ _fois = switch (_Nombre_Ennemi) do {
 	case 3: {4};
 };
 //if (typecamp == 2) then {_fois = _fois + 2;}; la ville doit elle vraiment provoquer + de véhicules ?
+if ((paramsArray select 13) < 1) then {
 for "_n" from 1 to _fois do {
 	_pos = [_mark,0,_markEx,100] call SHK_pos;
 	_objet = _offroad CreateVehicle _pos;
@@ -423,6 +424,7 @@ for "_n" from 1 to _fois do {
 	units _group select 0 moveInDriver _objet; units _group select 0 assignAsDriver _objet;
 	units _group select 1 moveInGunner _objet; units _group select 1 assignAsGunner _objet;
 	sleep 0.5;
+};
 };
 
 //groupe garde
@@ -469,6 +471,7 @@ _fois = switch (_Nombre_Ennemi) do {
 	case 2: {(floor random 1.8) + 1};
 	case 3: {(floor random 3) + 2};
 };
+if ((paramsArray select 13) == 0) then {
 if (_rab_veh) then {_fois = _fois + 1 + _Nombre_Ennemi;}; 
 for "_n" from 1 to _fois do {
 	_mark = "3";
@@ -480,6 +483,7 @@ for "_n" from 1 to _fois do {
 	_group = [_pos,random 360,_type,resistance] call BIS_fnc_spawnVehicle;
 	group ((_group select 1) select 0) setVariable ["GAIA_ZONE_INTEND",[_mark, "MOVE"], false];
 	sleep 0.5;
+};
 };
 
 //mortier
@@ -566,6 +570,7 @@ _group setVariable ["GAIA_ZONE_INTEND",["4", "FORTIFY"], false];
 };
 
 //hélico
+if ((paramsArray select 13) == 0) then {
 if ((_helico != "") AND (random 100 < 20)) then {
 	_mark = "2";
 	_markEx = "1";
@@ -577,6 +582,7 @@ if ((_helico != "") AND (random 100 < 20)) then {
 	{_x assignAsCargo (_veh select 0); _x moveInCargo (_veh select 0);} foreach units _group;
 	units _group join (_veh select 2);
 	(_veh select 2) setVariable ["GAIA_ZONE_INTEND",["3", "MOVE"], false];
+};
 };
 
 //pat Ville
@@ -728,6 +734,7 @@ if ((({(paramsArray select 6) == _x} count [0,1,4,8]) > 0) AND (4 > random 10)) 
 	};
 };
 
+if ((paramsArray select 13) == 0) then {
 if ((_helico != "") AND (random 100 < 35)) then {
 	waitUntil {time > (6100+ (random 300))};
 	_mark = "2";
@@ -749,4 +756,5 @@ if ((_helico != "") AND (random 100 < 35)) then {
 		_IA setSkill [_x,( _Sktype * _skill)];
 		} foreach ["aimingShake","aimingSpeed","spotTime","spotDistance","aimingAccuracy"];
 	} foreach (units (_veh select 2));
+};
 };

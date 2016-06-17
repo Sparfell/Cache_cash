@@ -74,7 +74,7 @@ loadoutCC_SL = //
 
 	comment "Add weapons";
 	_unit addWeapon "arifle_Katiba_C_F";
-	_unit addPrimaryWeaponItem "ACE_acc_pointer_green";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "ACE_acc_pointer_green";};
 	_unit addPrimaryWeaponItem "optic_Arco";
 	_unit addWeapon "Rangefinder";
 
@@ -126,7 +126,7 @@ loadoutCC_TL = //
 
 	comment "Add weapons";
 	_unit addWeapon "arifle_Katiba_F";
-	_unit addPrimaryWeaponItem "ACE_acc_pointer_green";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "ACE_acc_pointer_green";};
 	_unit addPrimaryWeaponItem "optic_Arco";
 	_unit addWeapon "Rangefinder";
 
@@ -183,7 +183,7 @@ loadoutCC_DOC = //
 
 	comment "Add weapons";
 	_unit addWeapon "arifle_Katiba_F";
-	_unit addPrimaryWeaponItem "ACE_acc_pointer_green";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "ACE_acc_pointer_green";};
 	_unit addPrimaryWeaponItem "optic_ACO_grn";
 
 	comment "Add items";
@@ -225,7 +225,7 @@ loadoutCC_MG = //
 
 	comment "Add weapons";
 	_unit addWeapon "LMG_Zafir_F";
-	_unit addPrimaryWeaponItem "ACE_acc_pointer_green";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "ACE_acc_pointer_green";};
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
@@ -270,7 +270,8 @@ loadoutCC_M = //
 
 	comment "Add weapons";
 	_unit addWeapon "srifle_DMR_01_F";
-	_unit addPrimaryWeaponItem "ACE_acc_pointer_green";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "ACE_acc_pointer_green";};
+	if ((paramsArray select 3) == 1) then {_unit addPrimaryWeaponItem "optic_NVS"; _unit additemtoVest "optic_DMS";} else {_unit addPrimaryWeaponItem "optic_DMS";};
 	_unit addPrimaryWeaponItem "optic_DMS";
 	_unit addPrimaryWeaponItem "bipod_02_F_hex";
 	_unit addWeapon "Rangefinder";
@@ -316,7 +317,7 @@ loadoutCC_AT = //
 
 	comment "Add weapons";
 	_unit addWeapon "arifle_Katiba_F";
-	_unit addPrimaryWeaponItem "ACE_acc_pointer_green";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "ACE_acc_pointer_green";};
 	_unit addPrimaryWeaponItem "optic_ACO_grn";
 	_unit addWeapon "launch_RPG32_F";
 
@@ -365,7 +366,7 @@ loadoutCC_DEMO = //
 
 	comment "Add weapons";
 	_unit addWeapon "arifle_Katiba_F";
-	_unit addPrimaryWeaponItem "ACE_acc_pointer_green";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "ACE_acc_pointer_green";};
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
@@ -408,7 +409,7 @@ loadoutCC_GL = //
 
 	comment "Add weapons";
 	_unit addWeapon "arifle_Katiba_GL_F";
-	_unit addPrimaryWeaponItem "ACE_acc_pointer_green";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "ACE_acc_pointer_green";};
 	_unit addPrimaryWeaponItem "optic_ACO_grn";
 
 	comment "Add items";
@@ -450,7 +451,7 @@ loadoutCC_R = //
 
 	comment "Add weapons";
 	_unit addWeapon "arifle_Katiba_F";
-	_unit addPrimaryWeaponItem "ACE_acc_pointer_green";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "ACE_acc_pointer_green";};
 	_unit addPrimaryWeaponItem "optic_ACO_grn";
 
 	comment "Add items";
@@ -498,7 +499,7 @@ loadoutCC_A = //
 
 	comment "Add weapons";
 	_unit addWeapon "arifle_Katiba_F";
-	_unit addPrimaryWeaponItem "ACE_acc_pointer_green";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "ACE_acc_pointer_green";};
 	_unit addWeapon "Binocular";
 
 	comment "Add items";
@@ -540,7 +541,7 @@ loadoutCC_CREW = //
 
 	comment "Add weapons";
 	_unit addWeapon "arifle_Katiba_C_F";
-	_unit addPrimaryWeaponItem "ACE_acc_pointer_green";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "ACE_acc_pointer_green";};
 	_unit addWeapon "Rangefinder";
 
 	comment "Add items";

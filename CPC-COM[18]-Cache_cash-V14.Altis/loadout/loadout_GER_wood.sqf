@@ -276,7 +276,7 @@ loadoutCC_M = //
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_XM2010_sa";
 	_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_2_camo";
-	_unit addPrimaryWeaponItem "rhsusf_acc_LEUPOLDMK4_2";
+	if ((paramsArray select 3) == 0) then {_unit addPrimaryWeaponItem "rhsusf_acc_LEUPOLDMK4_2";} else {_unit addPrimaryWeaponItem "CUP_optic_AN_PVS_4"; _unit additemtoBackpack "rhsusf_acc_LEUPOLDMK4_2";};
 	_unit addPrimaryWeaponItem "bipod_03_F_oli";
 	_unit addWeapon "CUP_hgun_Glock17";
 	_unit addWeapon "ACE_Vector";

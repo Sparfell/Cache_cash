@@ -87,8 +87,8 @@ loadoutCC_SL = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";_unit addPrimaryWeaponItem "acc_flashlight";};
-
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";};
 };
 
 loadoutCC_TL = //
@@ -142,9 +142,9 @@ loadoutCC_TL = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";_unit addPrimaryWeaponItem "acc_flashlight";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";};
 
 };
 
@@ -198,8 +198,9 @@ loadoutCC_DOC = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-
-	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";_unit addPrimaryWeaponItem "acc_flashlight";};
+	
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";};
 
 };
 
@@ -242,9 +243,9 @@ loadoutCC_MG = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";_unit addPrimaryWeaponItem "acc_flashlight";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";};
 
 };
 
@@ -283,7 +284,7 @@ loadoutCC_M = //
 
 	comment "Add weapons";
 	_unit addWeapon "CUP_srifle_M14_DMR";
-	_unit addPrimaryWeaponItem "CUP_optic_LeupoldMk4";
+	if ((paramsArray select 3) == 0) then {_unit addPrimaryWeaponItem "CUP_optic_LeupoldMk4";} else {_unit addPrimaryWeaponItem "CUP_optic_AN_PVS_4"; _unit additemtouniform "CUP_optic_LeupoldMk4";};
 	_unit addPrimaryWeaponItem "CUP_bipod_Harris_1A2_L";
 	_unit addWeapon "ACE_Vector";
 
@@ -292,7 +293,8 @@ loadoutCC_M = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";_unit addPrimaryWeaponItem "acc_flashlight";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";};
 
 };
 
@@ -337,7 +339,8 @@ loadoutCC_AT = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";_unit addPrimaryWeaponItem "acc_flashlight";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";};
 
 };
 
@@ -385,9 +388,9 @@ loadoutCC_DEMO = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";_unit addPrimaryWeaponItem "acc_flashlight";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";};
 
 };
 
@@ -431,7 +434,8 @@ loadoutCC_GL = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";_unit addPrimaryWeaponItem "acc_flashlight";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";};
 
 };
 
@@ -474,7 +478,8 @@ loadoutCC_R = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";_unit addPrimaryWeaponItem "acc_flashlight";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";};
 
 };
 
@@ -521,7 +526,8 @@ loadoutCC_A = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";_unit addPrimaryWeaponItem "acc_flashlight";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";};
 };
 
 loadoutCC_CREW = //
@@ -566,6 +572,7 @@ loadoutCC_CREW = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";_unit addPrimaryWeaponItem "acc_flashlight";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";};
 
 };

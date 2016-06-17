@@ -23,6 +23,10 @@ hard_setLoadout =
 {
 	_unit = _this select 0;
 	_loadout = _unit getVariable "loadout";
+	
+	_helmet = ["rhs_6b27m_ml","rhs_6b27m_ml_bala","rhs_6b27m_ml_ess","rhs_6b27m_ML_ess_bala"];
+	_helmetcrew = ["rhs_tsh4","rhs_tsh4_bala","rhs_tsh4_ess","rhs_tsh4_ess_bala"];
+	
 	switch _loadout do 
 	{
 		case "cc_sl": {[_unit] call loadoutCC_SL};
@@ -82,7 +86,8 @@ loadoutCC_SL = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7"; _unit addprimaryweaponitem "rhs_acc_perst1ik";};
+	if ((paramsArray select 3) == 2) then {_unit addprimaryweaponitem "rhs_acc_2dpZenit";};
 
 };
 
@@ -117,7 +122,7 @@ loadoutCC_TL = //
 	for "_i" from 1 to 8 do {_unit addItemToBackpack "rhs_30Rnd_545x39_7N10_AK";};
 	for "_i" from 1 to 4 do {_unit addItemToBackpack "rhs_mag_rdg2_white";};
 	for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_HandFlare_Green";};
-	_unit addHeadgear "rhs_6b27m_ml";
+	_unit addHeadgear (selectrandom _helmet);
 
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_ak74m";
@@ -130,7 +135,8 @@ loadoutCC_TL = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15"; _unit addprimaryweaponitem "rhs_acc_perst1ik";};
+	if ((paramsArray select 3) == 2) then {_unit addprimaryweaponitem "rhs_acc_2dpZenit";};
 
 };
 
@@ -173,7 +179,7 @@ loadoutCC_DOC = //
 	for "_i" from 1 to 8 do {_unit addItemToBackpack "ACE_epinephrine";};
 	for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_tourniquet";};
 	_unit addItemToBackpack "ACE_surgicalKit";
-	_unit addHeadgear "rhs_6b27m_ml_ess";
+	_unit addHeadgear (selectrandom _helmet);
 
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_ak74m";
@@ -185,6 +191,7 @@ loadoutCC_DOC = //
 	_unit linkItem "ItemWatch";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 2) then {_unit addprimaryweaponitem "rhs_acc_2dpZenit";};
 
 };
 
@@ -215,7 +222,7 @@ loadoutCC_MG = //
 	_unit addItemToVest "rhs_100Rnd_762x54mmR_green";
 	_unit addBackpack "rhs_sidor";
 	for "_i" from 1 to 3 do {_unit addItemToBackpack "rhs_100Rnd_762x54mmR_green";};
-	_unit addHeadgear "rhs_6b27m_ml_ess";
+	_unit addHeadgear (selectrandom _helmet);
 
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_pkp";
@@ -228,6 +235,7 @@ loadoutCC_MG = //
 	_unit addItemToVest "rhs_100Rnd_762x54mmR_green";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 2) then {_unit addprimaryweaponitem "rhs_acc_2dpZenit";};
 
 };
 
@@ -256,7 +264,7 @@ loadoutCC_M = //
 	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
 	_unit addVest "rhs_6b23_ML_sniper";
 	for "_i" from 1 to 17 do {_unit addItemToVest "rhs_10Rnd_762x54mmR_7N1";};
-	_unit addHeadgear "rhs_6b27m_ml_bala";
+	_unit addHeadgear (selectrandom _helmet);
 
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_svdp_wd";
@@ -298,7 +306,7 @@ loadoutCC_AT = //
 	for "_i" from 1 to 8 do {_unit addItemToVest "rhs_30Rnd_545x39_7N10_AK";};
 	_unit addItemToVest "rhs_mag_rdg2_white";
 	_unit addBackpack "rhs_rpg_empty";
-	_unit addHeadgear "rhs_6b27m_ml";
+	_unit addHeadgear (selectrandom _helmet);
 
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_ak74m";
@@ -315,6 +323,7 @@ loadoutCC_AT = //
 	_unit addItemToBackpack "rhs_rpg7_OG7V_mag";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 2) then {_unit addprimaryweaponitem "rhs_acc_2dpZenit";};
 
 };
 
@@ -350,7 +359,7 @@ loadoutCC_DEMO = //
 	_unit addItemToBackpack "SatchelCharge_Remote_Mag";
 	for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
 	for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_30Rnd_545x39_7N10_AK";};
-	_unit addHeadgear "rhs_6b27m_ml_bala";
+	_unit addHeadgear (selectrandom _helmet);
 
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_ak74m";
@@ -362,6 +371,7 @@ loadoutCC_DEMO = //
 	_unit linkItem "ItemWatch";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 2) then {_unit addprimaryweaponitem "rhs_acc_2dpZenit";};
 
 };
 
@@ -392,7 +402,7 @@ loadoutCC_GL = //
 	for "_i" from 1 to 6 do {_unit addItemToVest "rhs_30Rnd_545x39_7N10_AK";};
 	for "_i" from 1 to 11 do {_unit addItemToVest "rhs_VOG25";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_GRD40_Red";};
-	_unit addHeadgear "rhs_6b27m_ml";
+	_unit addHeadgear (selectrandom _helmet);
 
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_ak74m_gp25";
@@ -404,6 +414,7 @@ loadoutCC_GL = //
 	_unit linkItem "ItemWatch";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 2) then {_unit addprimaryweaponitem "rhs_acc_2dpZenit";};
 
 };
 
@@ -433,7 +444,7 @@ loadoutCC_R = //
 	_unit addVest "rhs_6b23_ML_6sh92";
 	for "_i" from 1 to 8 do {_unit addItemToVest "rhs_30Rnd_545x39_7N10_AK";};
 	_unit addItemToVest "rhs_mag_rdg2_white";
-	_unit addHeadgear "rhs_6b27m_ml";
+	_unit addHeadgear (selectrandom _helmet);
 
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_ak74m";
@@ -446,6 +457,7 @@ loadoutCC_R = //
 	_unit addItemToVest "rhs_30Rnd_545x39_7N10_AK";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 2) then {_unit addprimaryweaponitem "rhs_acc_2dpZenit";};
 
 };
 
@@ -478,7 +490,7 @@ loadoutCC_A = //
 	_unit addBackpack "CUP_B_CivPack_WDL";
 	for "_i" from 1 to 8 do {_unit addItemToBackpack "rhs_30Rnd_545x39_7N10_AK";};
 	_unit addItemToBackpack "rhs_rpg7_OG7V_mag";
-	_unit addHeadgear "rhs_6b27m_ml";
+	_unit addHeadgear (selectrandom _helmet);
 
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_ak74m";
@@ -491,6 +503,7 @@ loadoutCC_A = //
 	_unit addItemToVest "rhs_30Rnd_545x39_7N10_AK";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 2) then {_unit addprimaryweaponitem "rhs_acc_2dpZenit";};
 
 };
 
@@ -520,7 +533,7 @@ loadoutCC_CREW = //
 	_unit addItemToUniform "rhs_mag_rgd5";
 	_unit addVest "rhs_6b23_ML_crew";
 	for "_i" from 1 to 5 do {_unit addItemToVest "rhs_30Rnd_545x39_7N10_AK";};
-	_unit addHeadgear "rhs_tsh4";
+	_unit addHeadgear (selectrandom _helmetcrew);
 
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_ak74m";
@@ -533,5 +546,6 @@ loadoutCC_CREW = //
 	_unit linkItem "ItemWatch";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 2) then {_unit addprimaryweaponitem "rhs_acc_2dpZenit";};
 
 };

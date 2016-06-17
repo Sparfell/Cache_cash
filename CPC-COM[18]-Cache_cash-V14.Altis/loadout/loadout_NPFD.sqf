@@ -79,6 +79,8 @@ loadoutCC_SL = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	_unit addItemToVest "CUP_30Rnd_762x39_AK47_M";
+	
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
 
 };
 
@@ -124,6 +126,8 @@ loadoutCC_TL = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	_unit addItemToVest "CUP_30Rnd_762x39_AK47_M";
+	
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
 
 };
 
@@ -174,6 +178,8 @@ loadoutCC_DOC = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	_unit addItemToVest "CUP_30Rnd_762x39_AK47_M";
+	
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
 
 };
 
@@ -212,6 +218,8 @@ loadoutCC_MG = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
 
 };
 
@@ -249,6 +257,8 @@ loadoutCC_M = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
 
 };
 
@@ -290,6 +300,8 @@ loadoutCC_AT = //
 	_unit linkItem "ItemWatch";
 	_unit addItemToBackpack "CUP_PG7VM_M";
 	_unit addItemToVest "CUP_30Rnd_762x39_AK47_M";
+	
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
 
 };
 
@@ -333,6 +345,8 @@ loadoutCC_DEMO = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	_unit addItemToVest "CUP_30Rnd_762x39_AK47_M";
+	
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
 
 };
 
@@ -370,6 +384,8 @@ loadoutCC_GL = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
 
 };
 
@@ -407,6 +423,8 @@ loadoutCC_R = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	_unit addItemToVest "CUP_30Rnd_762x39_AK47_M";
+	
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
 
 };
 
@@ -449,6 +467,8 @@ loadoutCC_A = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	_unit addItemToVest "CUP_30Rnd_762x39_AK47_M";
+	
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
 };
 
 loadoutCC_CREW = //
@@ -489,5 +509,7 @@ loadoutCC_CREW = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	_unit addItemToVest "CUP_30Rnd_762x39_AK47_M";
+	
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
 
 };

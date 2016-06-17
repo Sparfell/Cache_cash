@@ -23,6 +23,9 @@ hard_setLoadout =
 {
 	_unit = _this select 0;
 	_loadout = _unit getVariable "loadout";
+	
+	_helmet = ["rhsusf_ach_helmet_camo_ocp","rhsusf_ach_helmet_ESS_ocp","rhsusf_ach_helmet_ocp","rhsusf_ach_helmet_ocp","rhsusf_ach_helmet_ocp"];
+	
 	switch _loadout do 
 	{
 		case "cc_sl": {[_unit] call loadoutCC_SL};
@@ -76,8 +79,9 @@ loadoutCC_SL = //
 
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_m4a1_carryhandle_grip2";
-	_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";
 	_unit addPrimaryWeaponItem "rhsusf_acc_ACOG_USMC";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "rhsusf_acc_M952V";}
+	else {_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";};
 	_unit addWeapon "Rangefinder";
 
 	comment "Add items";
@@ -86,7 +90,6 @@ loadoutCC_SL = //
 	_unit linkItem "ItemWatch";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
-
 };
 
 loadoutCC_TL = //
@@ -127,7 +130,8 @@ loadoutCC_TL = //
 
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_m4a1_carryhandle_grip2";
-	_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "rhsusf_acc_M952V";}
+	else {_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";};
 	_unit addPrimaryWeaponItem "rhsusf_acc_ACOG_USMC";
 	_unit addWeapon "rhs_weap_M136";
 	_unit addWeapon "ACE_Vector";
@@ -180,11 +184,12 @@ loadoutCC_DOC = //
 	for "_i" from 1 to 8 do {_unit addItemToBackpack "ACE_epinephrine";};
 	for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_tourniquet";};
 	_unit addItemToBackpack "ACE_surgicalKit";
-	_unit addHeadgear "rhsusf_ach_helmet_ocp";
+	_unit addHeadgear (selectrandom _helmet);
 
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_m4a1_carryhandle_grip2";
-	_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "rhsusf_acc_M952V";}
+	else {_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";};
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
@@ -222,11 +227,12 @@ loadoutCC_MG = //
 	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_200rnd_556x45_M_SAW";};
 	_unit addBackpack "B_Kitbag_mcamo";
 	for "_i" from 1 to 3 do {_unit addItemToBackpack "rhs_200rnd_556x45_M_SAW";};
-	_unit addHeadgear "rhsusf_ach_helmet_ocp";
+	_unit addHeadgear (selectrandom _helmet);
 
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_m249_pip_L";
 	_unit addPrimaryWeaponItem "rhsusf_acc_ELCAN";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "rhsusf_acc_M952V";};
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
@@ -264,11 +270,12 @@ loadoutCC_M = //
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
 	_unit addVest "rhsusf_iotv_ocp_Rifleman";
 	for "_i" from 1 to 11 do {_unit addItemToVest "rhsusf_20Rnd_762x51_m118_special_Mag";};
-	_unit addHeadgear "rhsusf_ach_helmet_ocp";
+	_unit addHeadgear (selectrandom _helmet);
 
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_m14ebrri";
-	_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "rhsusf_acc_M952V";}
+	else {_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side";};
 	_unit addPrimaryWeaponItem "rhsusf_acc_LEUPOLDMK4";
 	_unit addPrimaryWeaponItem "rhsusf_acc_harris_bipod";
 	_unit addWeapon "ACE_Vector";
@@ -307,11 +314,12 @@ loadoutCC_AT = //
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
 	_unit addVest "rhsusf_iotv_ocp_Rifleman";
 	for "_i" from 1 to 10 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
-	_unit addHeadgear "rhsusf_ach_helmet_ocp";
+	_unit addHeadgear (selectrandom _helmet);
 
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_m4a1_carryhandle_grip2";
-	_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "rhsusf_acc_M952V";}
+	else {_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";};
 	_unit addWeapon "rhs_weap_M136";
 
 	comment "Add items";
@@ -353,11 +361,13 @@ loadoutCC_DEMO = //
 	_unit addItemToBackpack "ACE_DefusalKit";
 	_unit addItemToBackpack "SatchelCharge_Remote_Mag";
 	for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
-	_unit addHeadgear "rhsusf_ach_helmet_ocp";
+	_unit addHeadgear (selectrandom _helmet);
 
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_m4a1_carryhandle_grip2";
-	_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "rhsusf_acc_M952V";}
+	else {_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";};
+	_unit addPrimaryWeaponItem "rhsusf_acc_eotech_552";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
@@ -395,11 +405,12 @@ loadoutCC_GL = //
 	for "_i" from 1 to 8 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_Mk318_Stanag";};
 	for "_i" from 1 to 14 do {_unit addItemToVest "rhs_mag_M433_HEDP";};
 	for "_i" from 1 to 5 do {_unit addItemToVest "rhs_mag_m713_Red";};
-	_unit addHeadgear "rhsusf_ach_helmet_ocp";
+	_unit addHeadgear (selectrandom _helmet);
 
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_m4a1_carryhandle_m203S";
-	_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "rhsusf_acc_M952V";}
+	else {_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side";};
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
@@ -435,11 +446,13 @@ loadoutCC_R = //
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
 	_unit addVest "rhsusf_iotv_ocp_Rifleman";
 	for "_i" from 1 to 10 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
-	_unit addHeadgear "rhsusf_ach_helmet_ocp";
+	_unit addHeadgear (selectrandom _helmet);
 
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_m4a1_carryhandle_grip2";
-	_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "rhsusf_acc_M952V";}
+	else {_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";};
+	_unit addPrimaryWeaponItem "rhsusf_acc_compm4";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
@@ -479,12 +492,13 @@ loadoutCC_A = //
 	for "_i" from 1 to 6 do {_unit addItemToBackpack "30Rnd_556x45_Stanag";};
 	for "_i" from 1 to 3 do {_unit addItemToBackpack "SmokeShell";};
 	for "_i" from 1 to 3 do {_unit addItemToBackpack "rhs_mag_m67";};
-	for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_200rnd_556x45_M_SAW";};	
-	_unit addHeadgear "rhsusf_ach_helmet_ocp";
+	for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_200rnd_556x45_M_SAW";};
+	_unit addHeadgear (selectrandom _helmet);
 
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_m4a1_carryhandle_grip2";
-	_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "rhsusf_acc_M952V";}
+	else {_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";};
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
@@ -525,6 +539,8 @@ loadoutCC_CREW = //
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_m4a1_carryhandle_grip2";
 	_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "rhsusf_acc_M952V";}
+	else {_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";};
 	_unit addWeapon "Binocular";
 
 	comment "Add items";

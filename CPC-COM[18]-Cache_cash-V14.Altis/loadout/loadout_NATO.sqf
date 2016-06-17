@@ -76,7 +76,7 @@ loadoutCC_SL = //
 
 	comment "Add weapons";
 	_unit addWeapon "arifle_MXC_F";
-	_unit addPrimaryWeaponItem "acc_pointer_IR";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "ACE_acc_pointer_IR";};
 	_unit addPrimaryWeaponItem "optic_Hamr";
 	_unit addWeapon "hgun_P07_F";
 	_unit addWeapon "Rangefinder";
@@ -129,7 +129,7 @@ loadoutCC_TL = //
 
 	comment "Add weapons";
 	_unit addWeapon "arifle_MX_F";
-	_unit addPrimaryWeaponItem "acc_pointer_IR";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "ACE_acc_pointer_IR";};
 	_unit addPrimaryWeaponItem "optic_Hamr";
 	_unit addWeapon "CUP_launch_M136";
 	_unit addWeapon "hgun_P07_F";
@@ -188,7 +188,7 @@ loadoutCC_DOC = //
 
 	comment "Add weapons";
 	_unit addWeapon "arifle_MXC_F";
-	_unit addPrimaryWeaponItem "acc_pointer_IR";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "ACE_acc_pointer_IR";};
 	_unit addPrimaryWeaponItem "optic_Holosight";
 	_unit addWeapon "hgun_P07_F";
 
@@ -233,7 +233,7 @@ loadoutCC_MG = //
 
 	comment "Add weapons";
 	_unit addWeapon "arifle_MX_SW_F";
-	_unit addPrimaryWeaponItem "acc_pointer_IR";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "ACE_acc_pointer_IR";};
 	_unit addPrimaryWeaponItem "optic_MRCO";
 	_unit addPrimaryWeaponItem "bipod_01_F_snd";
 	_unit addWeapon "hgun_P07_F";
@@ -282,8 +282,8 @@ loadoutCC_M = //
 
 	comment "Add weapons";
 	_unit addWeapon "arifle_MXM_F";
-	_unit addPrimaryWeaponItem "acc_pointer_IR";
-	_unit addPrimaryWeaponItem "optic_SOS";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "ACE_acc_pointer_IR";};
+	if ((paramsArray select 3) == 1) then {_unit addPrimaryWeaponItem "optic_NVS"; _unit additemtoVest "optic_SOS";} else {_unit addPrimaryWeaponItem "optic_SOS";};
 	_unit addPrimaryWeaponItem "bipod_01_F_snd";
 	_unit addWeapon "hgun_P07_F";
 	_unit addWeapon "Rangefinder";
@@ -327,7 +327,7 @@ loadoutCC_AT = //
 
 	comment "Add weapons";
 	_unit addWeapon "arifle_MX_F";
-	_unit addPrimaryWeaponItem "acc_pointer_IR";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "ACE_acc_pointer_IR";};
 	_unit addPrimaryWeaponItem "optic_Holosight";
 	_unit addWeapon "launch_NLAW_F";
 	_unit addWeapon "hgun_P07_F";
@@ -377,7 +377,7 @@ loadoutCC_DEMO = //
 
 	comment "Add weapons";
 	_unit addWeapon "arifle_MXC_F";
-	_unit addPrimaryWeaponItem "acc_pointer_IR";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "ACE_acc_pointer_IR";};
 	_unit addPrimaryWeaponItem "optic_Holosight";
 	_unit addWeapon "hgun_P07_F";
 
@@ -422,7 +422,7 @@ loadoutCC_GL = //
 
 	comment "Add weapons";
 	_unit addWeapon "arifle_MX_GL_F";
-	_unit addPrimaryWeaponItem "acc_pointer_IR";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "ACE_acc_pointer_IR";};
 	_unit addPrimaryWeaponItem "optic_Holosight";
 	_unit addWeapon "hgun_P07_F";
 
@@ -465,7 +465,7 @@ loadoutCC_R = //
 
 	comment "Add weapons";
 	_unit addWeapon "arifle_MX_F";
-	_unit addPrimaryWeaponItem "acc_pointer_IR";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "ACE_acc_pointer_IR";};
 	_unit addPrimaryWeaponItem "optic_Holosight";
 	_unit addWeapon "hgun_P07_F";
 
@@ -513,7 +513,7 @@ loadoutCC_A = //
 
 	comment "Add weapons";
 	_unit addWeapon "arifle_MX_F";
-	_unit addPrimaryWeaponItem "acc_pointer_IR";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "ACE_acc_pointer_IR";};
 	_unit addPrimaryWeaponItem "optic_Holosight";
 	_unit addWeapon "hgun_P07_F";
 
@@ -559,6 +559,7 @@ loadoutCC_CREW = //
 
 	comment "Add weapons";
 	_unit addWeapon "arifle_MXC_F";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";};
 	_unit addPrimaryWeaponItem "optic_Holosight";
 	_unit addWeapon "hgun_P07_F";
 	_unit addWeapon "Binocular";

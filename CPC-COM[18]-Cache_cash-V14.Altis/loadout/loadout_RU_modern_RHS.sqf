@@ -11,7 +11,7 @@
 		- Vous pouvez creer vos loadouts dans l'arsenal virtuel de Arma 3, les exporter avec la commande ingame et les coller dans le script comme ci-dessous.
 		- Une fois ceci fait, remplacez tout les 'this' par '_unit'.
 	3/ Dans l'éditeur, placez la commande ci-dessous dans les init d'unités jouables pour leur attribuer le loadout souhaité :
-		this setVariable ["loadout", "cc_sl"];
+		this setVariable ["loadout", "aaf_officer"];
 		
 	PS :Dans l'exemple ci-dessous les lignes des commentaires issues de l'exportation avec l'arsenal vitruel ont été supprimées pour une meilleure lisibilité.
 
@@ -23,6 +23,13 @@ hard_setLoadout =
 {
 	_unit = _this select 0;
 	_loadout = _unit getVariable "loadout";
+	
+	_helmetnight = ["rhs_6b47","rhs_6b47_bala","rhs_6b47_ess","rhs_6b47_ess_bala"];
+	_helmetday = ["rhs_6b7_1m_emr","rhs_6b7_1m_bala2_emr","rhs_6b7_1m_bala1_emr","rhs_6b7_1m_emr_ess","rhs_6b7_1m_emr_ess_bala","rhs_6b7_1m_emr","rhs_6b7_1m_bala2_emr","rhs_6b7_1m_bala1_emr","rhs_6b7_1m_emr_ess","rhs_6b7_1m_emr_ess_bala","rhs_6b7_1m","rhs_6b7_1m_bala2","rhs_6b7_1m_bala1","rhs_6b7_1m_ess","rhs_6b7_1m_ess_bala"];
+	_helmetnightOFF = ["rhs_6b47","rhs_6b47_ess"];
+	_helmetdayOFF = ["rhs_6b7_1m_emr","rhs_6b7_1m_emr_ess","rhs_6b7_1m","rhs_6b7_1m_ess"];
+	_helmetcrew = ["rhs_tsh4","rhs_tsh4_bala","rhs_tsh4_ess","rhs_tsh4_ess_bala"];
+	
 	switch _loadout do 
 	{
 		case "cc_sl": {[_unit] call loadoutCC_SL};
@@ -56,27 +63,29 @@ loadoutCC_SL = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform "rhs_uniform_gorka_r_y";
+	_unit forceAddUniform "rhs_uniform_vdv_emr";
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACE_Flashlight_KSF1";
+	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACRE_PRC343";
+	_unit addItemToUniform "ACRE_PRC148";
 	_unit addItemToUniform "ACE_microDAGR";
 	_unit addItemToUniform "ACE_MapTools";
-	_unit addItemToUniform "ACE_IR_Strobe_Item";
-	_unit addItemToUniform "ACRE_PRC148";
-	_unit addItemToUniform "ACE_HandFlare_Yellow";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShellYellow";};
-	_unit addVest "rhs_6sh92_digi_radio";
-	for "_i" from 1 to 3 do {_unit addItemToVest "rhs_30Rnd_545x39_AK";};
-	_unit addHeadgear "CUP_H_FR_BeanieGreen";
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
+	_unit addVest "rhs_6b23_digi_6sh92_headset_mapcase";
+	_unit addItemToVest "ACE_IR_Strobe_Item";
+	_unit addItemToVest "rhs_mag_rdg2_white";
+	for "_i" from 1 to 4 do {_unit addItemToVest "rhs_30Rnd_545x39_7N10_AK";};
+	for "_i" from 1 to 4 do {_unit addItemToVest "rhs_30Rnd_545x39_AK_green";};
+	for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellOrange";};
+	if ((paramsArray select 3) == 1) then {_unit addheadgear (selectrandom _helmetnightOFF)}
+	else {_unit addheadgear (selectrandom _helmetdayOFF)};
 
 	comment "Add weapons";
-	_unit addWeapon "rhs_weap_ak74m_npz";
-	_unit addPrimaryWeaponItem "rhs_acc_dtk4short";
-	_unit addPrimaryWeaponItem "rhs_acc_2dpZenit";
-	_unit addPrimaryWeaponItem "CUP_optic_HoloBlack";
+	_unit addWeapon "rhs_weap_ak74m";
+	_unit addPrimaryWeaponItem "rhs_acc_dtk";
+	_unit addPrimaryWeaponItem "rhs_acc_1p63";
 	_unit addWeapon "rhs_pdu4";
 
 	comment "Add items";
@@ -84,7 +93,7 @@ loadoutCC_SL = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7"; _unit addprimaryweaponitem "rhs_acc_perst1ik";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "rhs_1PN138"; _unit addprimaryweaponitem "rhs_acc_perst1ik";};
 	if ((paramsArray select 3) == 2) then {_unit addprimaryweaponitem "rhs_acc_2dpZenit";};
 
 };
@@ -104,33 +113,32 @@ loadoutCC_TL = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform "rhs_uniform_gorka_r_y";
+	_unit forceAddUniform "rhs_uniform_vdv_emr";
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACE_Flashlight_KSF1";
+	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACRE_PRC343";
 	_unit addItemToUniform "ACE_microDAGR";
-	_unit addItemToUniform "ACE_MapTools";
-	_unit addItemToUniform "ACE_IR_Strobe_Item";
 	_unit addItemToUniform "ACRE_PRC148";
-	_unit addItemToUniform "ACE_HandFlare_Yellow";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShellYellow";};
-	_unit addVest "rhs_6sh92_digi_radio";
-	for "_i" from 1 to 5 do {_unit addItemToVest "rhs_30Rnd_545x39_7N22_AK";};
+	_unit addItemToUniform "ACE_MapTools";
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
+	_unit addVest "rhs_6b23_digi_6sh92_radio";
+	for "_i" from 1 to 4 do {_unit addItemToVest "rhs_30Rnd_545x39_7N10_AK";};
+	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
 	for "_i" from 1 to 4 do {_unit addItemToVest "rhs_30Rnd_545x39_AK_green";};
-	_unit addBackpack "B_AssaultPack_rgr";
-	for "_i" from 1 to 6 do {_unit addItemToBackpack "rhs_30Rnd_545x39_7N22_AK";};
-	for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellYellow";};
+	_unit addBackpack "rhs_assault_umbts";
+	for "_i" from 1 to 5 do {_unit addItemToBackpack "rhs_30Rnd_545x39_7N10_AK";};
+	for "_i" from 1 to 5 do {_unit addItemToBackpack "rhs_30Rnd_545x39_AK_green";};
+	for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_rdg2_white";};
 	for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_rgo";};
-	for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_nspn_yellow";};
-	_unit addGoggles "rhs_balaclava";
+	if ((paramsArray select 3) == 1) then {_unit addheadgear (selectrandom _helmetnight)}
+	else {_unit addheadgear (selectrandom _helmetday)};
 
 	comment "Add weapons";
-	_unit addWeapon "rhs_weap_ak74m_2mag_npz";
-	_unit addPrimaryWeaponItem "rhs_acc_dtk4short";
-	_unit addPrimaryWeaponItem "rhs_acc_2dpZenit";
-	_unit addPrimaryWeaponItem "optic_MRCO";
+	_unit addWeapon "rhs_weap_ak74m";
+	_unit addPrimaryWeaponItem "rhs_acc_dtk";
+	_unit addPrimaryWeaponItem "rhs_acc_1p78";
 	_unit addWeapon "rhs_weap_rpg26";
 	_unit addWeapon "rhs_pdu4";
 
@@ -139,7 +147,7 @@ loadoutCC_TL = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7"; _unit addprimaryweaponitem "rhs_acc_perst1ik";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "rhs_1PN138"; _unit addprimaryweaponitem "rhs_acc_perst1ik";};
 	if ((paramsArray select 3) == 2) then {_unit addprimaryweaponitem "rhs_acc_2dpZenit";};
 
 };
@@ -159,17 +167,17 @@ loadoutCC_DOC = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform "rhs_uniform_gorka_r_y";
+	_unit forceAddUniform "rhs_uniform_vdv_emr";
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACE_Flashlight_KSF1";
+	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACRE_PRC343";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
 	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
-	_unit addVest "rhs_6sh92_digi";
-	for "_i" from 1 to 9 do {_unit addItemToVest "rhs_30Rnd_545x39_7N22_AK";};
-	_unit addBackpack "B_Carryall_oli";
+	_unit addVest "rhs_6b23_digi_medic";
+	for "_i" from 1 to 10 do {_unit addItemToVest "rhs_30Rnd_545x39_7N10_AK";};
+	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
+	_unit addBackpack "rhs_assault_umbts";
 	_unit addItemToBackpack "ACE_personalAidKit";
 	for "_i" from 1 to 20 do {_unit addItemToBackpack "ACE_fieldDressing";};
 	for "_i" from 1 to 20 do {_unit addItemToBackpack "ACE_packingBandage";};
@@ -182,21 +190,19 @@ loadoutCC_DOC = //
 	for "_i" from 1 to 8 do {_unit addItemToBackpack "ACE_epinephrine";};
 	for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_tourniquet";};
 	_unit addItemToBackpack "ACE_surgicalKit";
-	_unit addHeadgear "rhs_Booniehat_digi";
-	_unit addGoggles "rhs_scarf";
+	if ((paramsArray select 3) == 1) then {_unit addheadgear (selectrandom _helmetnight)}
+	else {_unit addheadgear (selectrandom _helmetday)};
 
 	comment "Add weapons";
-	_unit addWeapon "rhs_weap_ak74m_2mag_npz";
-	_unit addPrimaryWeaponItem "rhs_acc_dtk4short";
-	_unit addPrimaryWeaponItem "rhs_acc_2dpZenit";
-	_unit addPrimaryWeaponItem "CUP_optic_MRad";
+	_unit addWeapon "rhs_weap_ak74m";
+	_unit addPrimaryWeaponItem "rhs_acc_dtk";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7"; _unit addprimaryweaponitem "rhs_acc_perst1ik";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "rhs_1PN138";};
 	if ((paramsArray select 3) == 2) then {_unit addprimaryweaponitem "rhs_acc_2dpZenit";};
 
 };
@@ -216,32 +222,32 @@ loadoutCC_MG = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform "rhs_uniform_gorka_r_y";
+	_unit forceAddUniform "rhs_uniform_vdv_emr";
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACE_Flashlight_KSF1";
+	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACRE_PRC343";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
 	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
-	_unit addVest "rhs_6sh92_digi";
-	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_100Rnd_762x54mmR_green";};
-	_unit addBackpack "B_Carryall_oli";
-	for "_i" from 1 to 3 do {_unit addItemToBackpack "rhs_100Rnd_762x54mmR_green";};
-	_unit addHeadgear "rhs_Booniehat_flora";
-	_unit addGoggles "G_Bandanna_oli";
+	_unit addVest "rhs_6b23_digi_rifleman";
+	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
+	_unit addItemToVest "rhs_100Rnd_762x54mmR";
+	_unit addBackpack "rhs_sidor";
+	_unit addItemToBackpack "rhs_100Rnd_762x54mmR";
+	for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_100Rnd_762x54mmR_7N26";};
+	if ((paramsArray select 3) == 1) then {_unit addheadgear (selectrandom _helmetnight)}
+	else {_unit addheadgear (selectrandom _helmetday)};
 
 	comment "Add weapons";
-	_unit addWeapon "rhs_weap_pkm";
-	_unit addWeapon "rhs_pdu4";
+	_unit addWeapon "rhs_weap_pkp";
+	_unit addPrimaryWeaponItem "rhs_acc_1p29";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
-
+	if ((paramsArray select 3) == 1) then {_unit linkitem "rhs_1PN138";};
 };
 
 loadoutCC_M = //
@@ -259,38 +265,30 @@ loadoutCC_M = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform "rhs_uniform_gorka_r_y";
+	_unit forceAddUniform "rhs_uniform_vdv_emr";
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACE_Flashlight_KSF1";
+	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACRE_PRC343";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
 	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
-	_unit addVest "rhs_6sh92_digi";
+	_unit addVest "rhs_6b23_6sh116";
+	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
 	for "_i" from 1 to 18 do {_unit addItemToVest "rhs_10Rnd_762x54mmR_7N1";};
-	_unit addBackpack "B_FieldPack_oli";
-	_unit addItemToVest "ACE_MapTools";
-	_unit addItemToVest "ACE_Kestrel4500";
-	_unit addItemToBackpack "ACE_DefusalKit";
-	_unit addItemToBackpack "ACE_Clacker";
-	for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
-	_unit addGoggles "rhs_balaclava1_olive";
+	if ((paramsArray select 3) == 1) then {_unit addheadgear (selectrandom _helmetnight)}
+	else {_unit addheadgear (selectrandom _helmetday)};
 
 	comment "Add weapons";
-	_unit addWeapon "rhs_weap_svdp_wd";
-	if ((paramsArray select 3) == 1) then {_unit addPrimaryWeaponItem "rhs_acc_1pn93_1"; _unit additemtoBackpack "rhs_acc_pso1m2";} else {_unit addPrimaryWeaponItem "rhs_acc_pso1m2";};
-	_unit addPrimaryWeaponItem "rhs_acc_tgpv";
-	_unit addWeapon "rhs_pdu4";
+	_unit addWeapon "rhs_weap_svdp";
+	if ((paramsArray select 3) == 1) then {_unit addPrimaryWeaponItem "rhs_acc_1pn93_1"; _unit additemtoVest "rhs_acc_pso1m2";}
+	else {_unit addPrimaryWeaponItem "rhs_acc_pso1m2";};
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-	_unit linkItem "ItemRadio";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
-
+	if ((paramsArray select 3) == 1) then {_unit linkitem "rhs_1PN138";};
 };
 
 loadoutCC_AT = //
@@ -308,35 +306,36 @@ loadoutCC_AT = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform "rhs_uniform_gorka_r_y";
+	_unit forceAddUniform "rhs_uniform_vdv_emr";
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACE_Flashlight_KSF1";
+	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACRE_PRC343";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
 	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
-	_unit addVest "rhs_6sh92_digi";
-	for "_i" from 1 to 9 do {_unit addItemToVest "rhs_30Rnd_545x39_7N22_AK";};
+	_unit addVest "rhs_6b23_digi_6sh92";
+	for "_i" from 1 to 10 do {_unit addItemToVest "rhs_30Rnd_545x39_7N10_AK";};
+	_unit addItemToVest "rhs_mag_rdg2_white";
 	_unit addBackpack "rhs_rpg_empty";
-	for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_rpg7_OG7V_mag";};
-	for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_rpg7_PG7VL_mag";};
-	_unit addGoggles "rhs_balaclava1_olive";
+	if ((paramsArray select 3) == 1) then {_unit addheadgear (selectrandom _helmetnight)}
+	else {_unit addheadgear (selectrandom _helmetday)};
 
 	comment "Add weapons";
-	_unit addWeapon "rhs_weap_ak74m_npz";
-	_unit addPrimaryWeaponItem "rhs_acc_dtk4short";
-	_unit addPrimaryWeaponItem "rhs_acc_2dpZenit";
-	_unit addPrimaryWeaponItem "CUP_optic_ZDDot";
+	_unit addWeapon "rhs_weap_ak74m";
+	_unit addPrimaryWeaponItem "rhs_acc_dtk";
 	_unit addWeapon "rhs_weap_rpg7";
-	_unit addSecondaryWeaponItem "rhs_acc_pgo7v";
+	if ((paramsArray select 3) == 1) then {_unit addSecondaryWeaponItem "rhs_acc_1pn93_2"; _unit additemtoBackpack "rhs_acc_pgo7v";}
+	else {_unit addSecondaryWeaponItem "rhs_acc_pgo7v";};
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
+	for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_rpg7_PG7VL_mag";};
+	for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_rpg7_OG7V_mag";};
+
+	if ((paramsArray select 3) == 1) then {_unit linkitem "rhs_1PN138";};
+	if ((paramsArray select 3) == 2) then {_unit addprimaryweaponitem "rhs_acc_2dpZenit";};
 
 };
 
@@ -355,36 +354,36 @@ loadoutCC_DEMO = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform "rhs_uniform_gorka_r_y";
+	_unit forceAddUniform "rhs_uniform_vdv_emr";
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACE_Flashlight_KSF1";
+	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACRE_PRC343";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
 	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
-	_unit addVest "rhs_6sh92_digi";
-	for "_i" from 1 to 9 do {_unit addItemToVest "rhs_30Rnd_545x39_AK";};
-	_unit addBackpack "rhs_assault_umbts_engineer_empty";
-	_unit addItemToBackpack "ACE_DefusalKit";
+	_unit addVest "rhs_6b23_6sh116";
+	for "_i" from 1 to 10 do {_unit addItemToVest "rhs_30Rnd_545x39_7N10_AK";};
+	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
+	_unit addBackpack "B_Carryall_oli";
 	_unit addItemToBackpack "ACE_M26_Clacker";
+	_unit addItemToBackpack "ACE_EntrenchingTool";
+	_unit addItemToBackpack "ACE_DefusalKit";
 	_unit addItemToBackpack "SatchelCharge_Remote_Mag";
-	_unit addItemToBackpack "ACE_wirecutter";
-	_unit addHeadgear "H_Bandanna_khk";
-	_unit addGoggles "rhs_scarf";
+	for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
+	if ((paramsArray select 3) == 1) then {_unit addheadgear (selectrandom _helmetnight)}
+	else {_unit addheadgear (selectrandom _helmetday)};
 
 	comment "Add weapons";
-	_unit addWeapon "rhs_weap_ak74m_2mag";
-	_unit addPrimaryWeaponItem "rhs_acc_dtk4short";
-	_unit addPrimaryWeaponItem "rhs_acc_2dpZenit";
-	_unit addPrimaryWeaponItem "rhs_acc_pkas";
+	_unit addWeapon "rhs_weap_ak74m";
+	_unit addPrimaryWeaponItem "rhs_acc_dtk";
+	_unit addPrimaryWeaponItem "rhs_acc_1p63";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7"; _unit addprimaryweaponitem "rhs_acc_perst1ik";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "rhs_1PN138";};
 	if ((paramsArray select 3) == 2) then {_unit addprimaryweaponitem "rhs_acc_2dpZenit";};
 
 };
@@ -404,33 +403,32 @@ loadoutCC_GL = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform "rhs_uniform_gorka_r_y";
+	_unit forceAddUniform "rhs_uniform_vdv_emr";
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACE_Flashlight_KSF1";
+	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACRE_PRC343";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
 	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
-	_unit addVest "rhs_6sh92_digi_vog";
-	for "_i" from 1 to 5 do {_unit addItemToVest "rhs_30Rnd_545x39_7N22_AK";};
-	for "_i" from 1 to 6 do {_unit addItemToVest "rhs_VOG25";};
-	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_VG40TB";};
-	for "_i" from 1 to 3 do {_unit addItemToVest "rhs_GDM40";};
-	_unit addHeadgear "rhs_beanie_green";
+	_unit addItemToUniform "rhs_mag_rdg2_white";
+	_unit addVest "rhs_6b23_digi_6sh92_vog";
+	for "_i" from 1 to 8 do {_unit addItemToVest "rhs_30Rnd_545x39_7N10_AK";};
+	for "_i" from 1 to 10 do {_unit addItemToVest "rhs_VOG25";};
+	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_GRD40_Red";};
+	if ((paramsArray select 3) == 1) then {_unit addheadgear (selectrandom _helmetnight)}
+	else {_unit addheadgear (selectrandom _helmetday)};
 
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_ak74m_gp25";
-	_unit addPrimaryWeaponItem "rhs_acc_dtk4short";
+	_unit addPrimaryWeaponItem "rhs_acc_dtk";
 	_unit addPrimaryWeaponItem "rhs_acc_ekp1";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-	_unit addItemToVest "rhs_30Rnd_545x39_7N22_AK";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "rhs_1PN138";};
 
 };
 
@@ -449,30 +447,31 @@ loadoutCC_R = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform "rhs_uniform_gorka_r_y";
+	_unit forceAddUniform "rhs_uniform_vdv_emr";
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACE_Flashlight_KSF1";
+	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACRE_PRC343";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
 	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
-	_unit addVest "rhs_6sh92_digi";
-	for "_i" from 1 to 9 do {_unit addItemToVest "rhs_30Rnd_545x39_7N22_AK";};
-	_unit addGoggles "rhs_balaclava";
+	_unit addVest "rhs_6b23_6sh116";
+	for "_i" from 1 to 10 do {_unit addItemToVest "rhs_30Rnd_545x39_7N10_AK";};
+	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
+	_unit addHeadgear "rhs_6b7_1m_emr";
+	if ((paramsArray select 3) == 1) then {_unit addheadgear (selectrandom _helmetnight)}
+	else {_unit addheadgear (selectrandom _helmetday)};
 
 	comment "Add weapons";
-	_unit addWeapon "rhs_weap_ak74m_2mag_npz";
-	_unit addPrimaryWeaponItem "rhs_acc_dtk4short";
-	_unit addPrimaryWeaponItem "rhs_acc_2dpZenit";
-	_unit addPrimaryWeaponItem "optic_MRCO";
+	_unit addWeapon "rhs_weap_ak74m";
+	_unit addPrimaryWeaponItem "rhs_acc_dtk";
+	_unit addPrimaryWeaponItem "rhs_acc_1p63";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7"; _unit addprimaryweaponitem "rhs_acc_perst1ik";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "rhs_1PN138";};
 	if ((paramsArray select 3) == 2) then {_unit addprimaryweaponitem "rhs_acc_2dpZenit";};
 
 };
@@ -492,39 +491,39 @@ loadoutCC_A = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform "rhs_uniform_gorka_r_y";
+	_unit forceAddUniform "rhs_uniform_vdv_emr";
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACE_Flashlight_KSF1";
+	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACRE_PRC343";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
 	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
-	_unit addVest "rhs_6sh92_digi";
-	for "_i" from 1 to 9 do {_unit addItemToVest "rhs_30Rnd_545x39_7N22_AK";};
+	_unit addVest "rhs_6b23_6sh116";
+	for "_i" from 1 to 10 do {_unit addItemToVest "rhs_30Rnd_545x39_7N10_AK";};
+	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
 	_unit addBackpack "B_Carryall_oli";
-	for "_i" from 1 to 6 do {_unit addItemToBackpack "rhs_30Rnd_545x39_7N22_AK";};
-	for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_rgo";};
-	for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_nspn_green";};
-	for "_i" from 1 to 3 do {_unit addItemToBackpack "rhs_100Rnd_762x54mmR_green";};
-	_unit addGoggles "rhs_balaclava1_olive";
+	for "_i" from 1 to 6 do {_unit addItemToBackpack "rhs_30Rnd_545x39_7N10_AK";};
+	for "_i" from 1 to 4 do {_unit addItemToBackpack "rhs_mag_rgo";};
+	for "_i" from 1 to 4 do {_unit addItemToBackpack "rhs_mag_rdg2_white";};
+	_unit addItemToBackpack "rhs_100Rnd_762x54mmR";
+	_unit addItemToBackpack "rhs_100Rnd_762x54mmR_7N26";
+	if ((paramsArray select 3) == 1) then {_unit addheadgear (selectrandom _helmetnight)}
+	else {_unit addheadgear (selectrandom _helmetday)};
 
 	comment "Add weapons";
-	_unit addWeapon "rhs_weap_ak74m_npz";
-	_unit addPrimaryWeaponItem "rhs_acc_dtk4short";
-	_unit addPrimaryWeaponItem "rhs_acc_2dpZenit";
-	_unit addPrimaryWeaponItem "CUP_optic_MRad";
-	_unit addWeapon "Binocular";
+	_unit addWeapon "rhs_weap_ak74m";
+	_unit addPrimaryWeaponItem "rhs_acc_dtk";
+	_unit addPrimaryWeaponItem "rhs_acc_1p63";
+	_unit addWeapon "rhs_pdu4";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7"; _unit addprimaryweaponitem "rhs_acc_perst1ik";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "rhs_1PN138";};
 	if ((paramsArray select 3) == 2) then {_unit addprimaryweaponitem "rhs_acc_2dpZenit";};
+
 };
 
 loadoutCC_CREW = //
@@ -542,33 +541,33 @@ loadoutCC_CREW = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform "rhs_uniform_gorka_r_y";
+	_unit forceAddUniform "rhs_uniform_vdv_emr";
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACE_Flashlight_KSF1";
+	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACRE_PRC343";
-	_unit addItemToUniform "ACE_MapTools";
 	_unit addItemToUniform "ACRE_PRC148";
+	_unit addItemToUniform "ACE_MapTools";
 	_unit addItemToUniform "ACE_microDAGR";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	_unit addItemToUniform "ACE_HandFlare_Yellow";
-	_unit addVest "rhs_vydra_3m";
-	for "_i" from 1 to 7 do {_unit addItemToVest "rhs_30Rnd_545x39_7N22_AK";};
-	_unit addHeadgear "rhs_tsh4_bala";
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
+	_unit addVest "rhs_6b23_digi_6sh92";
+	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
+	for "_i" from 1 to 8 do {_unit addItemToVest "rhs_30Rnd_545x39_7N10_AK";};
+	_unit addHeadgear "rhs_tsh4";
+	_unit addheadgear (selectrandom _helmetcrew);
 
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_ak74m";
 	_unit addPrimaryWeaponItem "rhs_acc_dtk";
-	_unit addPrimaryWeaponItem "rhs_acc_2dpZenit";
-	_unit addWeapon "Binocular";
+	_unit addWeapon "rhs_pdu4";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7"; _unit addprimaryweaponitem "rhs_acc_perst1ik";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "rhs_1PN138";};
 	if ((paramsArray select 3) == 2) then {_unit addprimaryweaponitem "rhs_acc_2dpZenit";};
 
 };

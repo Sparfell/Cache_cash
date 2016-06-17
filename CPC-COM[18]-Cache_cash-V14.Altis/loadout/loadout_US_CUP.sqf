@@ -79,7 +79,6 @@ _unit addHeadgear "CUP_H_USArmy_HelmetMICH_earpro";
 
 comment "Add weapons";
 _unit addWeapon "CUP_arifle_M4A1_black";
-_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
 _unit addPrimaryWeaponItem "CUP_optic_ACOG";
 _unit addWeapon "CUP_hgun_M9";
 _unit addWeapon "CUP_Vector21Nite";
@@ -92,6 +91,7 @@ _unit linkItem "ItemWatch";
 _unit addItemToVest "CUP_30Rnd_556x45_Stanag";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_HMNVS";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";};
 
 };
 
@@ -133,7 +133,6 @@ _unit addHeadgear "CUP_H_USArmy_HelmetMICH_earpro";
 
 comment "Add weapons";
 _unit addWeapon "CUP_arifle_M4A1_black";
-_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
 _unit addPrimaryWeaponItem "CUP_optic_ACOG";
 _unit addWeapon "CUP_launch_M136";
 _unit addWeapon "CUP_hgun_M9";
@@ -147,6 +146,7 @@ _unit linkItem "ItemWatch";
 _unit addItemToVest "CUP_30Rnd_556x45_Stanag";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_HMNVS";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";};
 
 };
 
@@ -194,7 +194,6 @@ _unit addHeadgear "CUP_H_USArmy_HelmetMICH";
 
 comment "Add weapons";
 _unit addWeapon "CUP_arifle_M4A1_black";
-_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
 _unit addPrimaryWeaponItem "CUP_optic_HoloBlack";
 _unit addWeapon "CUP_hgun_M9";
 
@@ -206,6 +205,7 @@ _unit linkItem "ItemWatch";
 for "_i" from 1 to 2 do {_unit addItemToVest "CUP_15Rnd_9x19_M9";};
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_HMNVS";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";};
 
 };
 
@@ -253,6 +253,7 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_HMNVS";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";};
 
 };
 
@@ -294,7 +295,7 @@ _unit addHeadgear "CUP_H_USArmy_HelmetMICH";
 
 comment "Add weapons";
 _unit addWeapon "CUP_srifle_M14_DMR";
-_unit addPrimaryWeaponItem "CUP_optic_LeupoldMk4";
+if ((paramsArray select 3) == 0) then {_unit addPrimaryWeaponItem "CUP_optic_LeupoldMk4";} else {_unit addPrimaryWeaponItem "CUP_optic_AN_PVS_4"; _unit additemtobackpack "CUP_optic_LeupoldMk4";};
 _unit addPrimaryWeaponItem "CUP_bipod_Harris_1A2_L";
 _unit addWeapon "CUP_hgun_M9";
 _unit addWeapon "CUP_Vector21Nite";
@@ -345,7 +346,6 @@ _unit addHeadgear "CUP_H_USArmy_HelmetMICH_ESS";
 
 comment "Add weapons";
 _unit addWeapon "CUP_arifle_M4A1_black";
-_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
 _unit addPrimaryWeaponItem "CUP_optic_CompM2_Black";
 _unit addWeapon "CUP_launch_MAAWS";
 _unit addSecondaryWeaponItem "CUP_optic_MAAWS_Scope";
@@ -361,6 +361,7 @@ _unit addItemToVest "CUP_15Rnd_9x19_M9";
 _unit addItemToBackpack "CUP_MAAWS_HEAT_M";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_HMNVS";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";};
 
 };
 
@@ -403,7 +404,6 @@ _unit addHeadgear "CUP_H_USArmy_HelmetMICH";
 
 comment "Add weapons";
 _unit addWeapon "CUP_arifle_M4A1_black";
-_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
 _unit addPrimaryWeaponItem "CUP_optic_CompM2_Black";
 _unit addWeapon "CUP_hgun_M9";
 
@@ -416,6 +416,7 @@ _unit addItemToVest "CUP_30Rnd_556x45_Stanag";
 _unit addItemToVest "CUP_15Rnd_9x19_M9";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_HMNVS";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";};
 
 };
 
@@ -456,7 +457,6 @@ _unit addHeadgear "CUP_H_USArmy_HelmetMICH_ESS";
 
 comment "Add weapons";
 _unit addWeapon "CUP_arifle_M4A1_BUIS_GL";
-_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
 _unit addPrimaryWeaponItem "CUP_optic_HoloBlack";
 _unit addWeapon "CUP_hgun_M9";
 
@@ -469,6 +469,7 @@ _unit addItemToVest "CUP_30Rnd_556x45_Stanag";
 _unit addItemToVest "CUP_15Rnd_9x19_M9";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_HMNVS";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";};
 
 };
 
@@ -507,7 +508,6 @@ _unit addHeadgear "CUP_H_USArmy_HelmetMICH";
 
 comment "Add weapons";
 _unit addWeapon "CUP_arifle_M4A1_black";
-_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
 _unit addPrimaryWeaponItem "CUP_optic_CompM2_Black";
 _unit addWeapon "CUP_hgun_M9";
 
@@ -519,6 +519,7 @@ _unit linkItem "ItemWatch";
 _unit addItemToVest "CUP_30Rnd_556x45_Stanag";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_HMNVS";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";};
 
 };
 
@@ -557,7 +558,6 @@ _unit addHeadgear "CUP_H_USArmy_HelmetMICH";
 
 comment "Add weapons";
 _unit addWeapon "CUP_arifle_M4A1_black";
-_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
 _unit addPrimaryWeaponItem "CUP_optic_CompM2_Black";
 _unit addWeapon "CUP_hgun_M9";
 _unit addWeapon "Binocular";
@@ -572,6 +572,7 @@ _unit addItemToVest "CUP_15Rnd_9x19_M9";
 
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_HMNVS";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";};
 };
 
 loadoutCC_CREW = //

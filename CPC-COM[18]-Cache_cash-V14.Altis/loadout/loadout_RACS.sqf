@@ -75,7 +75,9 @@ loadoutCC_SL = //
 	_unit addGoggles "G_Shades_Black";
 
 	comment "Add weapons";
-	_unit addWeapon "CUP_arifle_M4A1";
+	_unit addWeapon "CUP_arifle_M4A1_black";
+	_unit addPrimaryWeaponItem "CUP_optic_HoloBlack";
+	if ((paramsArray select 3) < 2) then {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_2";} else {_unit addPrimaryWeaponItem "acc_flashlight";};
 	_unit addWeapon "ACE_Vector";
 
 	comment "Add items";
@@ -125,7 +127,7 @@ loadoutCC_TL = //
 
 	comment "Add weapons";
 	_unit addWeapon "CUP_arifle_M16A4_Base";
-	_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_2";
+	if ((paramsArray select 3) < 2) then {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_2";} else {_unit addPrimaryWeaponItem "acc_flashlight";};
 	_unit addPrimaryWeaponItem "CUP_optic_ACOG";
 	_unit addWeapon "CUP_hgun_M9";
 	_unit addWeapon "ACE_Vector";
@@ -183,6 +185,7 @@ loadoutCC_DOC = //
 
 	comment "Add weapons";
 	_unit addWeapon "CUP_arifle_M16A4_Base";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";};
 	_unit addWeapon "CUP_hgun_M9";
 
 	comment "Add items";
@@ -191,7 +194,7 @@ loadoutCC_DOC = //
 	_unit linkItem "ItemWatch";
 
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_14"; _unit addPrimaryWeaponItem "acc_flashlight";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_14";};
 
 };
 
@@ -269,7 +272,7 @@ loadoutCC_M = //
 
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_sr25";
-	_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side"};
 	_unit addPrimaryWeaponItem "optic_SOS";
 	_unit addPrimaryWeaponItem "bipod_01_F_blk";
 	_unit addWeapon "CUP_hgun_M9";
@@ -318,6 +321,7 @@ loadoutCC_AT = //
 
 	comment "Add weapons";
 	_unit addWeapon "CUP_arifle_M16A4_Base";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";};
 	_unit addWeapon "CUP_launch_Mk153Mod0";
 	_unit addSecondaryWeaponItem "CUP_optic_SMAW_Scope";
 	_unit addWeapon "CUP_hgun_M9";
@@ -327,7 +331,7 @@ loadoutCC_AT = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_14"; _unit addPrimaryWeaponItem "acc_flashlight";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_14";};
 
 };
 
@@ -367,7 +371,9 @@ loadoutCC_DEMO = //
 	_unit addGoggles "rhs_ess_black";
 
 	comment "Add weapons";
-	_unit addWeapon "CUP_arifle_M4A1";
+	_unit addWeapon "CUP_arifle_M4A1_black";
+	_unit addPrimaryWeaponItem "CUP_optic_HoloBlack";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";};
 	_unit addWeapon "CUP_hgun_M9";
 
 	comment "Add items";
@@ -411,6 +417,7 @@ loadoutCC_GL = //
 
 	comment "Add weapons";
 	_unit addWeapon "CUP_arifle_M16A4_GL";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";};
 	_unit addWeapon "CUP_hgun_M9";
 
 	comment "Add items";
@@ -418,7 +425,7 @@ loadoutCC_GL = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_14"; _unit addPrimaryWeaponItem "acc_flashlight";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_14";};
 
 };
 
@@ -452,6 +459,7 @@ loadoutCC_R = //
 
 	comment "Add weapons";
 	_unit addWeapon "CUP_arifle_M16A4_Base";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";};
 	_unit addWeapon "CUP_hgun_M9";
 
 	comment "Add items";
@@ -460,7 +468,7 @@ loadoutCC_R = //
 	_unit linkItem "ItemWatch";
 
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_14"; _unit addPrimaryWeaponItem "acc_flashlight";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_14";};
 
 };
 
@@ -499,6 +507,7 @@ loadoutCC_A = //
 
 	comment "Add weapons";
 	_unit addWeapon "CUP_arifle_M16A4_Base";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";};
 	_unit addWeapon "CUP_hgun_M9";
 	_unit addWeapon "Binocular";
 
@@ -507,7 +516,7 @@ loadoutCC_A = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	
-	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_14"; _unit addPrimaryWeaponItem "acc_flashlight";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_14";};
 };
 
 loadoutCC_CREW = //
@@ -543,6 +552,9 @@ loadoutCC_CREW = //
 
 	comment "Add weapons";
 	_unit addWeapon "CUP_arifle_M4A1";
+	_unit addWeapon "CUP_arifle_M4A1_black";
+	_unit addPrimaryWeaponItem "CUP_optic_HoloBlack";
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";};
 	_unit addWeapon "Binocular";
 
 	comment "Add items";

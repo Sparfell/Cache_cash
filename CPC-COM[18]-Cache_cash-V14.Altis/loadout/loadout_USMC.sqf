@@ -23,6 +23,10 @@ hard_setLoadout =
 {
 	_unit = _this select 0;
 	_loadout = _unit getVariable "loadout";
+	
+	_helmet = ["rhsusf_opscore_mc_cover","rhsusf_opscore_mc","rhsusf_opscore_mc_cover_pelt","rhsusf_opscore_mc_cover_pelt_nsw","rhsusf_opscore_mc_pelt","rhsusf_opscore_mc_pelt_nsw"];
+	_helmetOFF = ["rhsusf_opscore_mc_cover_pelt","rhsusf_opscore_mc_cover_pelt_nsw","rhsusf_opscore_mc_pelt","rhsusf_opscore_mc_pelt_nsw"];
+	
 	switch _loadout do 
 	{
 		case "cc_sl": {[_unit] call loadoutCC_SL};
@@ -73,12 +77,11 @@ for "_i" from 1 to 3 do {_unit addItemToUniform "CUP_17Rnd_9x19_glock17";};
 _unit addItemToUniform "B_IR_Grenade";
 _unit addVest "CUP_V_B_MTV_TL";
 for "_i" from 1 to 10 do {_unit addItemToVest "CUP_30Rnd_556x45_Stanag";};
-_unit addHeadgear "rhsusf_opscore_mc_cover_pelt";
+_unit addHeadgear (selectRandom _helmetOFF);
 
 comment "Add weapons";
 _unit addWeapon "CUP_arifle_Mk16_STD";
 _unit addPrimaryWeaponItem "CUP_muzzle_snds_SCAR_L";
-_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
 _unit addPrimaryWeaponItem "optic_Arco";
 _unit addWeapon "CUP_hgun_Glock17";
 _unit addWeapon "CUP_Vector21Nite";
@@ -93,6 +96,7 @@ _unit addItemToUniform "CUP_17Rnd_9x19_glock17";
 _unit addItemToVest "CUP_30Rnd_556x45_Stanag";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";};
 
 };
 
@@ -128,12 +132,11 @@ for "_i" from 1 to 3 do {_unit addItemToUniform "CUP_17Rnd_9x19_glock17";};
 _unit addItemToUniform "B_IR_Grenade";
 _unit addVest "CUP_V_B_MTV_TL";
 for "_i" from 1 to 10 do {_unit addItemToVest "CUP_30Rnd_556x45_Stanag";};
-_unit addHeadgear "rhsusf_opscore_mc_cover_pelt";
+_unit addHeadgear (selectRandom _helmetOFF);
 
 comment "Add weapons";
 _unit addWeapon "CUP_arifle_Mk16_STD";
 _unit addPrimaryWeaponItem "CUP_muzzle_snds_SCAR_L";
-_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
 _unit addPrimaryWeaponItem "optic_Arco";
 _unit addWeapon "CUP_launch_M136";
 _unit addWeapon "CUP_hgun_Glock17";
@@ -149,6 +152,7 @@ _unit addItemToUniform "CUP_17Rnd_9x19_glock17";
 _unit addItemToVest "CUP_30Rnd_556x45_Stanag";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";};
 
 };
 
@@ -192,12 +196,11 @@ for "_i" from 1 to 8 do {_unit addItemToBackpack "ACE_morphine";};
 for "_i" from 1 to 8 do {_unit addItemToBackpack "ACE_epinephrine";};
 for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_tourniquet";};
 _unit addItemToBackpack "ACE_surgicalKit";
-_unit addHeadgear "rhsusf_opscore_mc_cover";
+_unit addHeadgear (selectRandom _helmet);
 
 comment "Add weapons";
 _unit addWeapon "CUP_arifle_Mk16_STD";
 _unit addPrimaryWeaponItem "CUP_muzzle_snds_SCAR_L";
-_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
 _unit addPrimaryWeaponItem "CUP_optic_Eotech533";
 _unit addWeapon "CUP_hgun_Glock17";
 
@@ -210,6 +213,7 @@ _unit linkItem "ItemWatch";
 _unit addItemToVest "CUP_30Rnd_556x45_Stanag";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";};
 
 };
 
@@ -239,7 +243,8 @@ for "_i" from 1 to 2 do {_unit addItemToUniform "HandGrenade";};
 for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
 _unit addVest "CUP_V_B_MTV_MG";
 for "_i" from 1 to 2 do {_unit addItemToVest "CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M";};
-_unit addHeadgear "rhsusf_opscore_mc_cover";
+
+_unit addHeadgear (selectRandom _helmet);
 
 comment "Add weapons";
 _unit addWeapon "CUP_lmg_Mk48_des";
@@ -255,6 +260,7 @@ _unit linkItem "ItemWatch";
 _unit addItemToVest "CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";};
 
 };
 
@@ -288,13 +294,13 @@ for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShellYellow";};
 for "_i" from 1 to 3 do {_unit addItemToUniform "CUP_17Rnd_9x19_glock17";};
 _unit addVest "CUP_V_B_MTV_Marksman";
 for "_i" from 1 to 8 do {_unit addItemToVest "CUP_20Rnd_762x51_B_M110";};
-_unit addHeadgear "rhsusf_opscore_mc_cover";
+
+_unit addHeadgear (selectRandom _helmet);
 _unit addGoggles "G_Bandanna_khk";
 
 comment "Add weapons";
 _unit addWeapon "CUP_srifle_M110";
 _unit addPrimaryWeaponItem "CUP_muzzle_snds_M110";
-_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
 _unit addPrimaryWeaponItem "CUP_optic_AN_PVS_10";
 _unit addPrimaryWeaponItem "CUP_bipod_VLTOR_Modpod";
 _unit addWeapon "CUP_hgun_Glock17";
@@ -309,6 +315,7 @@ _unit linkItem "ItemWatch";
 _unit addItemToVest "CUP_20Rnd_762x51_B_M110";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";};
 
 };
 
@@ -343,12 +350,11 @@ for "_i" from 1 to 3 do {_unit addItemToVest "CUP_SMAW_Spotting";};
 _unit addBackpack "CUP_B_USMC_MOLLE";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "CUP_SMAW_HEAA_M";};
 _unit addItemToBackpack "CUP_SMAW_HEDP_M";
-_unit addHeadgear "rhsusf_opscore_mc_cover";
+_unit addHeadgear (selectRandom _helmet);
 
 comment "Add weapons";
 _unit addWeapon "CUP_arifle_Mk16_STD";
 _unit addPrimaryWeaponItem "CUP_muzzle_snds_SCAR_L";
-_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
 _unit addPrimaryWeaponItem "optic_Arco";
 _unit addWeapon "CUP_launch_Mk153Mod0";
 _unit addSecondaryWeaponItem "CUP_optic_SMAW_Scope";
@@ -361,6 +367,7 @@ _unit linkItem "ItemWatch";
 
 
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";};
 
 };
 
@@ -398,12 +405,11 @@ _unit addItemToBackpack "ACE_M26_Clacker";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_Clacker";};
 _unit addItemToBackpack "SatchelCharge_Remote_Mag";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
-_unit addHeadgear "rhsusf_opscore_mc_cover";
+_unit addHeadgear (selectRandom _helmet);
 
 comment "Add weapons";
 _unit addWeapon "CUP_arifle_Mk16_STD";
 _unit addPrimaryWeaponItem "CUP_muzzle_snds_SCAR_L";
-_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
 _unit addPrimaryWeaponItem "optic_Arco";
 _unit addWeapon "CUP_hgun_Glock17";
 
@@ -417,6 +423,7 @@ _unit addItemToVest "CUP_30Rnd_556x45_Stanag";
 
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";};
 
 };
 
@@ -451,12 +458,11 @@ _unit addBackpack "CUP_B_USMC_MOLLE";
 for "_i" from 1 to 15 do {_unit addItemToBackpack "1Rnd_HE_Grenade_shell";};
 for "_i" from 1 to 6 do {_unit addItemToBackpack "1Rnd_SmokeRed_Grenade_shell";};
 for "_i" from 1 to 8 do {_unit addItemToBackpack "UGL_FlareWhite_F";};
-_unit addHeadgear "rhsusf_opscore_mc_cover";
+_unit addHeadgear (selectRandom _helmet);
 
 comment "Add weapons";
 _unit addWeapon "CUP_arifle_Mk16_STD_EGLM";
 _unit addPrimaryWeaponItem "CUP_muzzle_snds_SCAR_L";
-_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
 _unit addPrimaryWeaponItem "optic_Arco";
 _unit addWeapon "CUP_hgun_Glock17";
 
@@ -469,6 +475,7 @@ _unit linkItem "ItemWatch";
 _unit addItemToVest "CUP_30Rnd_556x45_Stanag";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";};
 
 };
 
@@ -500,12 +507,11 @@ for "_i" from 1 to 2 do {_unit addItemToUniform "HandGrenade";};
 for "_i" from 1 to 3 do {_unit addItemToUniform "CUP_17Rnd_9x19_glock17";};
 _unit addVest "CUP_V_B_RRV_DA2";
 for "_i" from 1 to 10 do {_unit addItemToVest "CUP_30Rnd_556x45_Stanag";};
-_unit addHeadgear "rhsusf_opscore_mc_cover";
+_unit addHeadgear (selectRandom _helmet);
 
 comment "Add weapons";
 _unit addWeapon "CUP_arifle_Mk16_STD";
 _unit addPrimaryWeaponItem "CUP_muzzle_snds_SCAR_L";
-_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
 _unit addPrimaryWeaponItem "optic_Arco";
 _unit addWeapon "CUP_hgun_Glock17";
 
@@ -518,6 +524,7 @@ _unit linkItem "ItemWatch";
 _unit addItemToVest "CUP_30Rnd_556x45_Stanag";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";};
 
 };
 
@@ -551,12 +558,11 @@ for "_i" from 1 to 10 do {_unit addItemToVest "CUP_30Rnd_556x45_Stanag";};
 _unit addBackpack "CUP_B_USMC_MOLLE";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M";};
 for "_i" from 1 to 8 do {_unit addItemToBackpack "CUP_30Rnd_556x45_Stanag";};
-_unit addHeadgear "rhsusf_opscore_mc_cover";
+_unit addHeadgear (selectRandom _helmet);
 
 comment "Add weapons";
 _unit addWeapon "CUP_arifle_Mk16_STD";
 _unit addPrimaryWeaponItem "CUP_muzzle_snds_SCAR_L";
-_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
 _unit addPrimaryWeaponItem "optic_Arco";
 _unit addWeapon "CUP_hgun_Glock17";
 _unit addWeapon "Binocular";
@@ -571,6 +577,7 @@ _unit addItemToVest "CUP_30Rnd_556x45_Stanag";
 
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";};
 };
 
 loadoutCC_CREW = //
@@ -604,7 +611,6 @@ _unit addHeadgear "CUP_H_USMC_Crew_Helmet";
 
 comment "Add weapons";
 _unit addWeapon "CUP_arifle_Mk16_STD";
-_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
 _unit addWeapon "CUP_hgun_Glock17";
 
 comment "Add items";
@@ -613,5 +619,6 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "rhsusf_ANPVS_15";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "acc_flashlight";} else {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";};
 
 };

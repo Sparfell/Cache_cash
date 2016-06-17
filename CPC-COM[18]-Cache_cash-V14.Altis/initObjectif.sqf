@@ -100,6 +100,8 @@ if ((paramsArray select 1) == 2) then
 		case 22 : {heliType = "CUP_B_Merlin_HC3_GB";}; // BAF desert
 		case 23 : {heliType = "CUP_B_Merlin_HC3_GB";}; // BAF woodland
 		case 24 : {heliType = "CUP_O_Mi8_CHDKZ";}; // Chedaki
+		case 25 : {heliType = "RHS_Mi8mt_vvsc";}; // URSS Afgha
+		case 26 : {heliType = "RHS_Mi8mt_vvsc";}; // RU modern RHS
 	};
 	"M_helipad1" setMarkerAlpha 1;
 	_HeliSpawn1 = heliType createVehicle (getMarkerPos "M_helipad1");

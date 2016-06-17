@@ -180,6 +180,9 @@ loadoutCC_DOC = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	_unit addItemToVest "CUP_30Rnd_545x39_AK_M";
+	
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "CUP_optic_NSPU";};
 
 };
 
@@ -219,6 +222,8 @@ loadoutCC_MG = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
 
 };
 
@@ -260,6 +265,7 @@ loadoutCC_M = //
 	_unit addItemToVest "CUP_30Rnd_TE1_Green_Tracer_545x39_AK_M";
 	
 	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "CUP_optic_NSPU";};
 
 };
 
@@ -302,6 +308,9 @@ loadoutCC_AT = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	_unit addItemToBackpack "CUP_TBG7V_M";
+	
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "CUP_optic_NSPU";};
 
 };
 
@@ -347,7 +356,8 @@ loadoutCC_DEMO = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	
-	if ((paramsArray select 3) == 1) then {_unit addPrimaryWeaponItem "CUP_optic_NSPU";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "CUP_optic_NSPU";};
 
 };
 
@@ -390,7 +400,8 @@ loadoutCC_GL = //
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
 	
-	if ((paramsArray select 3) == 1) then {_unit addPrimaryWeaponItem "CUP_optic_NSPU";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "CUP_optic_NSPU";};
 
 };
 
@@ -430,7 +441,8 @@ loadoutCC_R = //
 	_unit linkItem "ItemWatch";
 	_unit addItemToVest "CUP_30Rnd_545x39_AK_M";
 	
-	if ((paramsArray select 3) == 1) then {_unit addPrimaryWeaponItem "CUP_optic_NSPU";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "CUP_optic_NSPU";};
 
 };
 
@@ -474,9 +486,9 @@ loadoutCC_A = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-
 	
-	if ((paramsArray select 3) == 1) then {_unit addPrimaryWeaponItem "CUP_optic_NSPU";};
+	if ((paramsArray select 3) == 1) then {_unit linkitem "CUP_NVG_PVS7";};
+	if ((paramsArray select 3) == 2) then {_unit addPrimaryWeaponItem "CUP_optic_NSPU";};
 };
 
 loadoutCC_CREW = //

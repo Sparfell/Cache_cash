@@ -14,8 +14,8 @@ class Params
 	class insertion		//paramsArray select 1
 	{
 	title = "Type d'insertion :";
-	values[] = {0,1,2,4};
-	texts[] = {"Aléatoire","Choisie","Héliportée","Parachutage"};
+	values[] = {0,1,2,4,5};
+	texts[] = {"Aléatoire","Choisie","Héliportée","Parachutage","HALO jump"};
 	default = 0;
 	};
 
@@ -30,8 +30,8 @@ class Params
 	class J_NVG	//paramsArray select 3
 	{
 	title = "Joueurs avec NVG/lampes :";
-	values[] = {0,1};
-	texts[] = {"Non","oui"};
+	values[] = {0,1,2};
+	texts[] = {"Rien","NVG","Lampes et/ou equipements nocturnes (quand possible)"};
 	default = 0;
 	};
 
@@ -46,7 +46,7 @@ class Params
 	class Faction	//paramsArray select 5
 	{
 	title = "Faction joueur :";
-	values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24};
+	values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26};
 	texts[] = {
 		"US Army ocp (RHS)",
 		"US Army ucp (CUP)",
@@ -72,7 +72,9 @@ class Params
 		"Commando jungle (CUP)",
 		"BAF desert (CUP)",
 		"BAF woodland (CUP)",
-		"Chedaki (CUP)"
+		"Chedaki (CUP)",
+		"URSS en afghanistan (RHS)",
+		"Russe moderne EMR (RHS)"
 	};
 	default = 0;
 	};
@@ -114,7 +116,7 @@ class Params
 	title = "Extraction :";
 	values[] = {0,1,2,3};
 	texts[] = {"Aucune","Aléatoire","Sur insertion","héliportée"};
-	default = 3;
+	default = 1;
 	};
 
 	class Vehicule1		//paramsArray select 8
@@ -265,6 +267,14 @@ class Params
 	title = "Brouillard :";
 	values[] = {0,0.25,0.5,0.8};
 	texts[] = {"Aucun","Léger","Moyen","Dense"};
+	default = 0;
+	};
+
+	class EnnemyVeh	//paramsArray select 13
+	{
+	title = "Véhicules ennemis :";
+	values[] = {0,0.5,1};
+	texts[] = {"Par défaut","Véhicules légers uniquement","Aucun"};
 	default = 0;
 	};
 };

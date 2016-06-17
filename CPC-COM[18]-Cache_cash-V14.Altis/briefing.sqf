@@ -67,8 +67,15 @@ case 3:{
 	"};
 case 4:{
 	"| Insertion Parachutée |
-<br/><br/>Les chefs de groupe choisi la position du parachutage par un click sur la carte Attention de ne pas être trop loin. (Il est possible d'être parachuté dans la zone rouge.).
+<br/><br/>Les chefs de groupe choisissent la position du parachutage par un click sur la carte Attention de ne pas être trop loin. (Il est possible d'être parachuté dans la zone rouge.).
 <br/>Vous être parachutés <font color='#0066FF'><marker name='mark_inser'>ici</marker></font>.
+	"};
+case 5:{
+	"| Insertion HALO |
+<br/><br/>Les chefs de groupe choisissent la position de départ de l'avion par un click sur la carte.
+<br/>Puis il faut créer un marqueur nommé JUMP. Ce marqueur désignera l'endroit où les joueurs vont sauter de l'avion à 8000m d'altitude.
+<br/>Au moins 5 kilomètres recommandés entre la position de création de l'avion et la position du saut.
+<br/>Le saut des joueurs est automatique.
 	"};
 }]];
 

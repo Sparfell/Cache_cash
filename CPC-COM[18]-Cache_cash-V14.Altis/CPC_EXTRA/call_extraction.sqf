@@ -53,6 +53,8 @@ switch (paramsArray select 5) do {
 		case 22 : {CPC_EXTRA_HeloType = "CUP_B_Merlin_HC3_GB";}; // BAF desert
 		case 23 : {CPC_EXTRA_HeloType = "CUP_B_Merlin_HC3_GB";}; // BAF woodland
 		case 24 : {CPC_EXTRA_HeloType = "CUP_O_Mi8_CHDKZ";}; // Chedaki
+		case 25 : {CPC_EXTRA_HeloType = "RHS_Mi8mt_vvsc";}; // URSS Afgha
+		case 26 : {CPC_EXTRA_HeloType = "RHS_Mi8mt_vvsc";}; // RU modern RHS
 };
 CPC_EXTRA_AcreRadio = "ACRE_PRC148";					//Le Type de radio requis pour faire une demande d'extraction (classname)
 CPC_EXTRA_AcreChan = 5;									//Le Channel radio qui doit être utilisé pour faire une demande d'extraction
