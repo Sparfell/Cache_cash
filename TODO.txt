@@ -4,13 +4,14 @@
 - Améliorer le spawn des campements
 - utiliser des batiments A2/APEX dans les campements/villes WIP
 - ajouter des munitions dans les véhicules ?
-- améliorer la variation jour/nuit pour les loadouts (ex: chgmnt optic)
 - reco en cours de mission = reparachutage TEST
 
 - toujours trop d'IA qui popent sur la cache en FORTIFY ?
 - peut être que c'est le groupe du chef
 
-- ajout d'une insertion HALO
+- ajout d'une insertion HALO - TEST
 - ajout d'une insertion héliportée ?
 - ajout de CPC CHOPPA
 - pop de wrecks en random dans la zone ?
+- option pour une faction ennemie sans véhicules (lourds) - TESTS
+

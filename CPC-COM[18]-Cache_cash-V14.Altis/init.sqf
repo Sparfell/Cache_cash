@@ -4,7 +4,7 @@
 };
 
 if (isNil "paramsArray") then {
-	paramsArray = [12,0,1,0,1,0,9,1,0,0,0,25,0]
+	paramsArray = [12,0,1,0,1,0,100,1,0,0,0,0,0,0]
 };
 
 waitUntil {CPC_MarkersCreated};
@@ -30,6 +30,7 @@ null = [] execVM "spawn\Spawn_IA.sqf";
 null = [2,true,true] execVM "roster.sqf";
 if ((paramsArray select 1) == 1) then {null = [] execVM "playerPos.sqf";};
 if ((paramsArray select 1) == 4) then {null = [] execVM "playerPara.sqf";};
+if ((paramsArray select 1) == 5) then {null = [] execVM "playerHALO.sqf";};
 if ((paramsArray select 7) == 3) then {null = [] execVM "CPC_EXTRA\call_extraction.sqf";};
 
 // Teleport & invulnerable
