@@ -73,7 +73,7 @@ case 4:{
 case 5:{
 	"| Insertion HALO |
 <br/><br/>Les chefs de groupe choisissent la position de départ de l'avion par un click sur la carte.
-<br/>Puis il faut créer un marqueur nommé JUMP. Ce marqueur désignera l'endroit où les joueurs vont sauter de l'avion à 8000m d'altitude.
+<br/>Puis il faut créer un marqueur nommé JUMP dans le canal global. Ce marqueur désignera l'endroit où les joueurs vont sauter de l'avion à 8000m d'altitude.
 <br/>Au moins 5 kilomètres recommandés entre la position de création de l'avion et la position du saut.
 <br/>Le saut des joueurs est automatique.
 	"};
