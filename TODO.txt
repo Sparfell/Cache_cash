@@ -1,17 +1,18 @@
 - trop de pop d'IA sur le camp (maisons pleines de mecs) - TEST
 - revoir le spawn des IA ?
-- Se passer de GAIA ?
 - Améliorer le spawn des campements
 - utiliser des batiments A2/APEX dans les campements/villes WIP
 - ajouter des munitions dans les véhicules ?
-- reco en cours de mission = reparachutage TEST
-
-- toujours trop d'IA qui popent sur la cache en FORTIFY ?
-- peut être que c'est le groupe du chef
+- reco en cours de mission = reparachutage - TEST
 
 - ajout d'une insertion HALO - TEST
 - ajout d'une insertion héliportée ?
 - ajout de CPC CHOPPA
-- pop de wrecks en random dans la zone ?
-- option pour une faction ennemie sans véhicules (lourds) - TESTS
+
+
+
+
+
+
+
 

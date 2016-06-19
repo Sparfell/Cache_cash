@@ -523,7 +523,7 @@ if (random 100 < 22) then {
 			_mark setmarkerColor "colorRed";
 			_mark setMarkerShape "ELLIPSE";
 			_mark setMarkerSize [50,51];
-			_mark setMarkerAlpha 1;
+			_mark setMarkerAlpha 0;
 		_dir = random 360;
 		_group = [_pos, resistance, selectrandom _compo_group,[],[],[],[],[],random 360] call BIS_fnc_spawnGroup;
 		_group setVariable ["GAIA_ZONE_INTEND",[_mark, "FORTIFY"], false];
@@ -531,7 +531,7 @@ if (random 100 < 22) then {
 	};
 } foreach [45,25,8,2];
 
-//road Patrouille
+// Fait spawn un véhicule de transport de troupes sur une route entre 1000m et 1500m du camp et le fait patrouiller.
 if (random 100 < 75) then {
 	_vehtype = _transp_vehi;
 	_pos = [getMarkerPos "1",[1000,1500],random 360,0,[1,500],_vehtype] call SHK_pos;
@@ -558,6 +558,8 @@ if (random 100 < 75) then {
 		_way setWaypointSpeed "LIMITED";
 };
 
+
+// Fait spawn un poste d'observation au sommet d'un relief avec un groupe en FORTIFY dessus
 if (random 100 < 75) then {
 	_mark = "3";
 	_markPos = markerpos _mark;
@@ -573,7 +575,7 @@ if (random 100 < 75) then {
 		};
 	};
 
-_objet = "Land_Cargo_Patrol_V2_F" CreateVehicle [_pos select 0, _pos select 1,-3];
+_objet = (selectrandom ["Land_Cargo_Patrol_V2_F","Land_Fort_Watchtower"]) CreateVehicle [_pos select 0, _pos select 1,-3];
 _objet setdir random 360;
 "4" setmarkerpos _pos;
 _group = [getpos _objet, resistance,  selectrandom _compo_group,[],[],[],[],[],random 360] call BIS_fnc_spawnGroup;
@@ -597,8 +599,9 @@ if ((_helico != "") AND (random 100 < 20)) then {
 };
 };
 
-//pat Ville
+//Fait spawn des binomes dans les batiments de la grande zone et les assigne en FORTIFY à cette zone (désactivé pour l'instant car les mecs semblent se regouper sur le camp central)
 _houselist = nearestObjects [getMarkerPos "3", ["Building","House"], 1200];
+/*
 {
 	if (random 100 < 3.5) then {
 		_pos = getpos _x;
@@ -615,6 +618,8 @@ _houselist = nearestObjects [getMarkerPos "3", ["Building","House"], 1200];
 		sleep 0.5;
 	};
 } foreach _houselist;
+*/
+// Fait spawn des civils dans des batiments de la grande zone et les fait se balader.
 _houseOutlist = (nearestObjects [getMarkerPos "3", ["Building","House"], 1800]) - _houselist;
 {
 	if (random 100 < 3.5) then {
@@ -630,6 +635,24 @@ _houseOutlist = (nearestObjects [getMarkerPos "3", ["Building","House"], 1800]) 
 	};
 } foreach _houseOutlist;
 
+
+// Fait spawn des carcasses dans la grande zone
+_wrecklist = ["Land_Wreck_BMP2_F","Land_Wreck_BRDM2_F","Land_Wreck_HMMWV_F","Land_Wreck_Skodovka_F","Land_Wreck_CarDismantled_F","Land_Wreck_Truck_F","Land_Wreck_Car2_F","Land_Wreck_Car_F","Land_Wreck_Car3_F","Land_Wreck_Hunter_F","Land_Wreck_Offroad_F","Land_Wreck_Offroad2_F","Land_Wreck_UAZ_F","Land_Wreck_Ural_F","Land_Wreck_Truck_dropside_F","Land_Wreck_Van_F","Land_Wreck_Slammer_F","Land_Wreck_Slammer_hull_F","Land_Wreck_T72_hull_F","hiluxWreck","datsun01Wreck","datsun02Wreck","SKODAWreck","Mi8Wreck","Mi8Wreck"];
+_mark = "3";
+_markEx = "1";
+{
+	if (random 100 < _x) then {
+		_wreck = selectrandom _wrecklist;
+		_pos = [_mark,0,_markEx,_wreck] call SHK_pos;
+		_veh = _wreck createVehicle _pos;
+		_veh setdir (random 360);
+		_veh setVectorUp surfaceNormal position _veh;
+		sleep 0.5;
+	};
+} foreach [95,85,75,65,55,45,35,25,15,5];
+
+
+
 // réglage des skills
 _skill = paramsArray select 4;
 {
@@ -641,7 +664,7 @@ _skill = paramsArray select 4;
 	} foreach ["aimingShake","aimingSpeed","spotTime","spotDistance","aimingAccuracy"];
 } foreach allUnits;
 
-if (!isnull chefIA) then {removeHeadgear chefIA; chefIA addHeadgear "H_Beret_blk"; chefIA allowDamage true;};
+if (!isnull chefIA) then {removeHeadgear chefIA; chefIA addHeadgear "CUP_H_RUS_Beret_Spetsnaz"; chefIA allowDamage true;};
 
 //event fin
 [_Nombre_Ennemi,_Compo_group,_skill] spawn {

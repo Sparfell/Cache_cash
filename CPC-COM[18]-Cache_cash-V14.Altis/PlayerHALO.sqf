@@ -69,6 +69,7 @@ else
 	_myloadout = getUnitLoadout player;
 	removeBackpack player;
 	player addbackpack "B_Parachute";
+	player linkitem "ItemGPS";
 	sleep 5;
 	waitUntil {(getposATL player select 2) < 2};
 	removeBackpack player;
