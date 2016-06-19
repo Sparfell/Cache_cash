@@ -1,4 +1,5 @@
-if (hasInterface || isDedicated) exitwith {};
+//if (hasInterface || isDedicated) exitwith {};
+if (MODE_HC or MODE_EDITEUR) then {
 
 waitUntil {CPC_MarkersCreated};
 
@@ -390,24 +391,23 @@ switch (paramsArray select 6) do {
 	};
 };
 
+// Fait spawn des groupes (jusqu'à 4) qui patrouillent dans la petite zone en NOFOLLOW
 _fois = switch (_Nombre_Ennemi) do {
 	case 0: {1};
 	case 1: {2};
 	case 2: {3};
 	case 3: {4};
 };
+_mark = "2";
+_markEx = "1";
 for "_n" from 1 to _fois do {
-	_mark = "2";
-	_markEx = "1";
-	_markPos = markerpos _mark;
-	_dir = random 360;
 	_pos = [_mark,0,_markEx,100] call SHK_pos;
 	_group = [_pos, resistance, selectrandom _Compo_group,[],[],[],[],[],random 360] call BIS_fnc_spawnGroup;
 	_group setVariable ["GAIA_ZONE_INTEND",[_mark, "NOFOLLOW"], false];
 	sleep 0.5;
 };
 
-//offroad
+// Fait spawn des technicals (jusqu'à 4) qui patrouillent dans la petite zone en MOVE
 _fois = switch (_Nombre_Ennemi) do {
 	case 0: {2};
 	case 1: {2 + (floor random 2)};
@@ -427,36 +427,50 @@ for "_n" from 1 to _fois do {
 };
 };
 
-//groupe garde
-_fois = switch (_Nombre_Ennemi) do {
-	case 0: {2};
-	case 1: {3};
-	case 2: {4};
-	case 3: {6};
+// Fait spawn des groupes (jusqu'à 6) qui restent dans la zone du camp en FORTIFY
+if (typecamp == 1) then { //petit camp
+	_fois = switch (_Nombre_Ennemi) do {
+		case 0: {2};
+		case 1: {3};
+		case 2: {4};
+		case 3: {5};
+	};
 };
+if (typecamp == 2) then { //ville
+	_fois = switch (_Nombre_Ennemi) do {
+		case 0: {2 + (floor random 2)};
+		case 1: {3 + (floor random 2)};
+		case 2: {4 + (floor random 2)};
+		case 3: {6 + (floor random 2)};
+	};
+};
+if (typecamp == 3) then { //Base militaire
+	_fois = switch (_Nombre_Ennemi) do {
+		case 0: {2};
+		case 1: {3 + (floor random 2)};
+		case 2: {4 + (floor random 2)};
+		case 3: {6 + (floor random 2)};
+	};
+};
+_mark = "1";
 for "_n" from 1 to _fois do {
-	_mark = "1";
-	_markPos = markerpos _mark;
-	_dir = random 360;
 	_pos = [_mark,0,[],100] call SHK_pos;
 	_group = [_pos, resistance, selectrandom _Compo_group,[],[],[],[],[],random 360] call BIS_fnc_spawnGroup;
 	_group setVariable ["GAIA_ZONE_INTEND",[_mark, "FORTIFY"], false];
 	sleep 0.5;
 };
 
-//random pat
+// Fait spawn des groupes (minimum 4) qui patrouillent dans la grande zone en MOVE
 _fois = switch (_Nombre_Ennemi) do {
 	case 0: {1};
 	case 1: {2};
 	case 2: {3};
 	case 3: {5};
 };
+_mark = "3";
+_markEx = "2";
 for "_n" from 1 to _fois do {
 	{
-	_mark = "3";
-	_markEx = "2";
-	_markPos = markerpos _mark;
-	_dir = random 360;
 	_pos = [_mark,0,_markEx,200] call SHK_pos;
 	_group = [_pos, resistance, selectrandom _Compo_group,[],[],[],[],[],random 360] call BIS_fnc_spawnGroup;
 	_group setVariable ["GAIA_ZONE_INTEND",[_mark, "MOVE"], false];
@@ -464,7 +478,7 @@ for "_n" from 1 to _fois do {
 	} foreach [1,2,3,4];
 };
 
-//vehicules
+// Fait spawn des véhicules "lourds" (entre 1 et 8) qui patrouillent dans la grande zone en MOVE 
 _fois = switch (_Nombre_Ennemi) do {
 	case 0: {floor random 2};
 	case 1: {floor ((random 2)+ 0.5)};
@@ -473,11 +487,9 @@ _fois = switch (_Nombre_Ennemi) do {
 };
 if ((paramsArray select 13) == 0) then {
 if (_rab_veh) then {_fois = _fois + 1 + _Nombre_Ennemi;}; 
+_mark = "3";
+_markEx = "2";
 for "_n" from 1 to _fois do {
-	_mark = "3";
-	_markEx = "2";
-	_markPos = markerpos _mark;
-	_dir = random 360;
 	_pos = [_mark,0,_markEx,200] call SHK_pos; 
 	_type = selectrandom _rand_vehi;
 	_group = [_pos,random 360,_type,resistance] call BIS_fnc_spawnVehicle;
@@ -486,7 +498,7 @@ for "_n" from 1 to _fois do {
 };
 };
 
-//mortier
+// Fait spawn un mortier qui bombarde la grande zone
 if (random 100 < 22) then {
 	_dir = [[getMarkerPos "Mark_Inser" select 0,getMarkerPos "Mark_Inser" select 1,0],[getMarkerPos "1" select 0,getMarkerPos "1" select 1,0]] call BIS_fnc_dirTo;
 	_pos = [[getmarkerpos "1" select 0, getmarkerpos "1" select 1,0],2000,(_dir + ((random 20)-10)),0] call SHK_pos;
@@ -496,7 +508,7 @@ if (random 100 < 22) then {
 	units _group select 0 moveInGunner _objet; units _group select 0 assignAsGunner _objet;
 };
 
-//random camp
+//Fait spawn des petits camps (jusqu'à 4) dans la grande zone avec un groupe dessus en FORTIFY
 {
 	if (random 100 < _x) then {
 		_pos = [[getmarkerpos "1" select 0, getmarkerpos "1" select 1,0],[450,800],random 360,0] call SHK_pos;
@@ -511,7 +523,7 @@ if (random 100 < 22) then {
 			_mark setmarkerColor "colorRed";
 			_mark setMarkerShape "ELLIPSE";
 			_mark setMarkerSize [50,51];
-			_mark setMarkerAlpha 0;
+			_mark setMarkerAlpha 1;
 		_dir = random 360;
 		_group = [_pos, resistance, selectrandom _compo_group,[],[],[],[],[],random 360] call BIS_fnc_spawnGroup;
 		_group setVariable ["GAIA_ZONE_INTEND",[_mark, "FORTIFY"], false];
@@ -591,7 +603,7 @@ _houselist = nearestObjects [getMarkerPos "3", ["Building","House"], 1200];
 	if (random 100 < 3.5) then {
 		_pos = getpos _x;
 		_group = [_pos, resistance, _binome,[],[],[],[],[],random 360] call BIS_fnc_spawnGroup;
-		_group setVariable ["GAIA_ZONE_INTEND",["2", "FORTIFY"], false];
+		_group setVariable ["GAIA_ZONE_INTEND",["3", "FORTIFY"], false];
 		if ((isnull chefIA) AND (random 100 < 20) AND !(["1",_pos] call BIS_fnc_inTrigger)) then {
 			chefIA = _group createUnit [(_binome select 0), _pos, [], 0, "FORM"];
 			chefIA allowDamage false; 
@@ -757,4 +769,7 @@ if ((_helico != "") AND (random 100 < 35)) then {
 		} foreach ["aimingShake","aimingSpeed","spotTime","spotDistance","aimingAccuracy"];
 	} foreach (units (_veh select 2));
 };
+};
+
+
 };

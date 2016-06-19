@@ -1,5 +1,3 @@
-if !(isServer) exitWith {};
-
 _camp = (_this select 1);
 _pos = (_this select 0);
 _dir = random 360;

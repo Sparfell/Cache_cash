@@ -28,6 +28,6 @@ Utilisez ça dans la console de débug pour chopper toutes les infos utiles rela
 
 bleep = [[3644.94,5940.13,0],100,true] call BIS_fnc_ObjectsGrabber; copyToClipboard str bleep;
 
-
+https://community.bistudio.com/wiki/BIS_fnc_exportCfgGroups
 
 */
