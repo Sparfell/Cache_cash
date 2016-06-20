@@ -1,0 +1,28 @@
+
+
+Prévoir la structure pour supporter plusieurs types d'objectifs
+	> sélection dans les options ou random
+	> Idées de Types :
+		- Détruire une cache d'arme
+		- éliminer un VIP
+		- Voler un ou des véhicules
+		- récolter des Intel
+		- Convoi d'un point A à un point B (véhicule ou VIP a protéger)
+		- Transporter un véhicule/VIP dans plusieurs zones (mission d'escorte)
+		- Mission "Escape"
+		- mission de défense.
+
+Prévoir la structure pour supporter plusieurs types de factions ennemies (insurgés vs armée régulière)
+
+Prévoir la structure pour supporter plusieurs types de terrains
+
+Prévoir la structure pour pouvoir bien régler la difficulté / L'opposition
+	> Difficulté globale (en fonction du nombre de joueurs)
+	> Type de véhicules ennemis
+		- aucun
+		- que des véhicules légers
+		- légers et moyens
+		- légers, moyens et lourds
+		- véhcicules aériens ou non
+
+Créer un nouveau système de sélection de véhicules pour les joueurs.
