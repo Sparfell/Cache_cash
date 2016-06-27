@@ -84,7 +84,7 @@ _unit addWeapon "CUP_arifle_Mk16_STD";
 _unit addPrimaryWeaponItem "CUP_muzzle_snds_SCAR_L";
 _unit addPrimaryWeaponItem "optic_Arco";
 _unit addWeapon "CUP_hgun_Glock17";
-_unit addWeapon "CUP_Vector21Nite";
+_unit addWeapon "ACE_Vector";
 
 comment "Add items";
 _unit linkItem "ItemMap";
@@ -140,7 +140,7 @@ _unit addPrimaryWeaponItem "CUP_muzzle_snds_SCAR_L";
 _unit addPrimaryWeaponItem "optic_Arco";
 _unit addWeapon "CUP_launch_M136";
 _unit addWeapon "CUP_hgun_Glock17";
-_unit addWeapon "CUP_Vector21Nite";
+_unit addWeapon "ACE_Vector";
 
 comment "Add items";
 _unit linkItem "ItemMap";
@@ -304,7 +304,7 @@ _unit addPrimaryWeaponItem "CUP_muzzle_snds_M110";
 _unit addPrimaryWeaponItem "CUP_optic_AN_PVS_10";
 _unit addPrimaryWeaponItem "CUP_bipod_VLTOR_Modpod";
 _unit addWeapon "CUP_hgun_Glock17";
-_unit addWeapon "CUP_Vector21Nite";
+_unit addWeapon "ACE_Vector";
 
 comment "Add items";
 _unit linkItem "ItemMap";

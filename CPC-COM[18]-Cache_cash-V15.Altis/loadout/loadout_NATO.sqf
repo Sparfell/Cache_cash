@@ -553,7 +553,7 @@ loadoutCC_CREW = //
 	_unit addItemToUniform "16Rnd_9x21_Mag";
 	_unit addVest "V_PlateCarrier1_rgr";
 	for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
-	for "_i" from 1 to 3 do {_unit addItemToVest "30Rnd_65x39_caseless_mag";};
+	for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_mag";};
 	_unit addHeadgear "H_HelmetCrew_B";
 	_unit addGoggles "rhs_ess_black";
 
