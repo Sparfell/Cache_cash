@@ -1,0 +1,41 @@
+OnLoadName = "Projet 33";
+enableDebugConsole = 1;
+
+class Params
+{
+	class mission_type	//paramsArray select 0
+	{
+		title = "Type de mission :";
+		values[] = {0,1,2,3};
+		default = 0;
+		texts[] = {
+			"Aléatoire",
+			"Détruire un conteneur d'armes",
+			"Escorter un véhicule",
+			"Récolter des renseignements"
+		};
+	};
+	class faction_player	//paramsArray select 1
+	{
+		title = "Faction des joueurs :";
+		values[] = {0,1,2};
+		default = 0;
+		texts[] = {
+			"NATO",
+			"AAF",
+			"CSAT"
+		};
+	};
+	class faction_IA	//paramsArray select 2
+	{
+		title = "Faction ennemie :";
+		values[] = {0,1,2,100};
+		default = 0;
+		texts[] = {
+			"NATO",
+			"AAF",
+			"CSAT",
+			"FIA"
+		};
+	};
+};

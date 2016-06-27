@@ -24,5 +24,6 @@ Prévoir la structure pour pouvoir bien régler la difficulté / L'opposition
 		- légers et moyens
 		- légers, moyens et lourds
 		- véhcicules aériens ou non
+	> Possibilité de régler des variables de GAIA via des params ?
 
 Créer un nouveau système de sélection de véhicules pour les joueurs.
