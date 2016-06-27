@@ -96,14 +96,11 @@ if !(isMultiplayer) then
 
 
 [] execVM "inventory_briefing.sqf"; // lancement du script qui affiche le loadout lors du briefing.
-/*
-waitUntil {time > 1};
-call compile preprocessFileLineNumbers "loadout.sqf"; 
-[player] call hard_setLoadout;
-player setVariable ["loadout_done", true, true];
 
-if (time > 150) exitWith {};
-player allowdamage false;
-waitUntil {time > 120};
-player allowdamage true;
-*/
+waitUntil {time > 1};
+if ((uniform playerUnit) == "") then {
+call compile preprocessFileLineNumbers "loadout.sqf"; 
+[playerUnit] call hard_setLoadout;
+playerUnit setVariable ["loadout_done", true, true];
+playerUnit action ["WeaponOnBack", playerUnit];
+};

@@ -14,8 +14,8 @@ class Params
 	class insertion		//paramsArray select 1
 	{
 	title = "Type d'insertion :";
-	values[] = {0,1,2,4,5};
-	texts[] = {"Aléatoire","Choisie","Héliportée","Parachutage","HALO jump"};
+	values[] = {0,1,2,3,4,5};
+	texts[] = {"Aléatoire","Choisie","Héliportée","Héliportée (IA)","Parachutage","HALO jump"};
 	default = 0;
 	};
 
@@ -275,6 +275,14 @@ class Params
 	title = "Véhicules ennemis :";
 	values[] = {0,0.5,1};
 	texts[] = {"Par défaut","Véhicules légers uniquement","Aucun"};
+	default = 0;
+	};
+
+	class Fullmoon	//paramsArray select 14
+	{
+	title = "Nuit de pleine lune :";
+	values[] = {0,1};
+	texts[] = {"Non","Oui"};
 	default = 0;
 	};
 };

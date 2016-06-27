@@ -56,26 +56,30 @@ case 0:{
 
 case 1:{
 	"| Insertion Choisie |
-<br/><br/>Les chefs de groupe choisi la position d'insertion de tout le monde par un click sur la carte. Attention de ne pas être trop loin. (Il est impossible être dans la zone rouge pour l'insertion)
+<br/><br/>Les chefs de groupe choisi la position d'insertion de tout le monde par un clique gauche sur la carte. Attention de ne pas être trop loin. (Il est impossible être dans la zone rouge pour l'insertion)
 <br/>Vous allez être insérés <font color='#0066FF'><marker name='mark_inser'>ici</marker></font>.
 	"};
-case 2;
-case 3:{
+case 2:{
 	"| Insertion Héliportée |
 <br/><br/>Vous êtes sur un aérodrome et deux hélico sont a votre disposition pour rejoindre la zone d'opération.
 <br/>Vous être insérés <font color='#0066FF'><marker name='mark_inser'>ici</marker></font>.
 	"};
+case 3:{
+	"| Insertion Héliportée (IA) |
+<br/><br/>Les chefs de groupe choisissent la Landing Zone par un clique gauche sur la carte.
+<br/>Vous serez insérés par hélicoptère sur <font color='#0066FF'><marker name='mark_inser'>cette position</marker></font>.
+	"};
 case 4:{
 	"| Insertion Parachutée |
-<br/><br/>Les chefs de groupe choisissent la position du parachutage par un click sur la carte Attention de ne pas être trop loin. (Il est possible d'être parachuté dans la zone rouge.).
+<br/><br/>Les chefs de groupe choisissent la position du parachutage par un clique gauche sur la carte Attention de ne pas être trop loin. (Il est possible d'être parachuté dans la zone rouge.).
 <br/>Vous être parachutés <font color='#0066FF'><marker name='mark_inser'>ici</marker></font>.
 	"};
 case 5:{
 	"| Insertion HALO |
-<br/><br/>Les chefs de groupe choisissent la position de départ de l'avion par un click sur la carte.
-<br/>Puis il faut créer un marqueur nommé JUMP dans le canal global. Ce marqueur désignera l'endroit où les joueurs vont sauter de l'avion à 8000m d'altitude.
-<br/>Au moins 5 kilomètres recommandés entre la position de création de l'avion et la position du saut.
-<br/>Le saut des joueurs est automatique.
+<br/><br/>Les chefs de groupe choisissent la position de saut par un clique gauche sur la carte. Le saut débute à partir de ce point, les joueurs seront certainement dispersés sur une distance d'environ 1 kilomètre entre le point de saut et l'objectif.
+<br/>Le saut est automatique et s'effectue à 8000m d'altitude.
+<br/>Pendant le saut les joueurs disposent d'un GPS.
+<br/><br/>Note : Il est possible (mais pas indispensable) de choisir la position de départ de l'avion en créant un marqueur nommé ""AVION"" sur la map dans le canal global. Conseil : privilégiez au moins 5 ou 6 kilomètres entre ce marqueur et le marqueur de saut.
 	"};
 }]];
 

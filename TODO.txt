@@ -1,16 +1,12 @@
-- trop de pop d'IA sur le camp (maisons pleines de mecs) - TEST
 - revoir le spawn des IA ?
 - Améliorer le spawn des campements
 - utiliser des batiments A2/APEX dans les campements/villes WIP
 - ajouter des munitions dans les véhicules ?
 - reco en cours de mission = reparachutage - TEST
 
-- ajout d'une insertion HALO - TEST
-- ajout d'une insertion héliportée ?
-- ajout de CPC CHOPPA
-
-
-
+SAUT HALO : localité contenu sac à dos - test
+- rajouter un option "nuit de plein lune" - test
+- rajouter des chemlights dans les loadouts de nuit.
 
 
 

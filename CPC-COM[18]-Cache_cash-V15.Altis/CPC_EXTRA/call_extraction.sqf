@@ -31,9 +31,9 @@ switch (paramsArray select 5) do {
 		case 0 : {CPC_EXTRA_HeloType = "RHS_CH_47F";}; // US RHS
 		case 1 : {CPC_EXTRA_HeloType = "CUP_B_CH53E_USMC";}; // US CUP
 		case 2 : {CPC_EXTRA_HeloType = "RHS_Mi8mt_vvsc";}; // RU RHS
-		case 3 : {CPC_EXTRA_HeloType = "CUP_O_Mi8_medevac_RU";}; // RU CUP
+		case 3 : {CPC_EXTRA_HeloType = "RHS_Mi8mt_vvsc";}; // RU CUP
 		case 4 : {CPC_EXTRA_HeloType = "RHS_Mi8amt_chdkz";}; // INS RHS
-		case 5 : {CPC_EXTRA_HeloType = "CUP_O_Mi8_CHDKZ";}; // INS CUP
+		case 5 : {CPC_EXTRA_HeloType = "RHS_Mi8amt_chdkz";}; // INS CUP
 		case 6 : {CPC_EXTRA_HeloType = "CUP_C_Mi17_Civilian_RU";}; // INS TAK RHS
 		case 7 : {CPC_EXTRA_HeloType = "CUP_C_Mi17_Civilian_RU";}; // INS TAK
 		case 8 : {CPC_EXTRA_HeloType = "CUP_O_Mi17_TK";}; // TK RHS
@@ -48,11 +48,11 @@ switch (paramsArray select 5) do {
 		case 17 : {CPC_EXTRA_HeloType = "CUP_I_SA330_Puma_HC1_RACS";}; // RACS
 		case 18 : {CPC_EXTRA_HeloType = "CUP_O_Mi8_SLA_1";}; // SLA
 		case 19 : {CPC_EXTRA_HeloType = "RHS_Mi8mt_vvsc";}; // Spetsnaz RHS
-		case 20 : {CPC_EXTRA_HeloType = "CUP_B_CH47F_USA";}; // USMC SF SCAR
-		case 21 : {CPC_EXTRA_HeloType = "CUP_B_CH47F_USA";}; // commando jungle
+		case 20 : {CPC_EXTRA_HeloType = "RHS_CH_47F";}; // USMC SF SCAR
+		case 21 : {CPC_EXTRA_HeloType = "RHS_CH_47F";}; // commando jungle
 		case 22 : {CPC_EXTRA_HeloType = "CUP_B_Merlin_HC3_GB";}; // BAF desert
 		case 23 : {CPC_EXTRA_HeloType = "CUP_B_Merlin_HC3_GB";}; // BAF woodland
-		case 24 : {CPC_EXTRA_HeloType = "CUP_O_Mi8_CHDKZ";}; // Chedaki
+		case 24 : {CPC_EXTRA_HeloType = "RHS_Mi8amt_chdkz";}; // Chedaki
 		case 25 : {CPC_EXTRA_HeloType = "RHS_Mi8mt_vvsc";}; // URSS Afgha
 		case 26 : {CPC_EXTRA_HeloType = "RHS_Mi8mt_vvsc";}; // RU modern RHS
 };
@@ -65,9 +65,7 @@ switch (CPC_EXTRA_HeloType) do {
 		case "RHS_CH_47F" : 					{CPC_EXTRA_DoorAnimName1 = "ramp_anim"; CPC_EXTRA_DoorAnimName2 = ""; CPC_EXTRA_AnimType = 2;};
 		case "CUP_B_CH53E_USMC" : 				{CPC_EXTRA_DoorAnimName1 = "ramp_bottom"; CPC_EXTRA_DoorAnimName2 = "ramp_top"; CPC_EXTRA_AnimType = 1;};
 		case "RHS_Mi8mt_vvsc" : 				{CPC_EXTRA_DoorAnimName1 = "RearDoors"; CPC_EXTRA_DoorAnimName2 = ""; CPC_EXTRA_AnimType = 2;};
-		case "CUP_O_Mi8_medevac_RU" : 			{CPC_EXTRA_DoorAnimName1 = ""; CPC_EXTRA_DoorAnimName2 = ""; CPC_EXTRA_AnimType = 1;};
 		case "RHS_Mi8amt_chdkz" : 				{CPC_EXTRA_DoorAnimName1 = "RearDoors"; CPC_EXTRA_DoorAnimName2 = ""; CPC_EXTRA_AnimType = 2;};
-		case "CUP_O_Mi8_CHDKZ" : 				{CPC_EXTRA_DoorAnimName1 = ""; CPC_EXTRA_DoorAnimName2 = ""; CPC_EXTRA_AnimType = 1;};
 		case "CUP_C_Mi17_Civilian_RU" : 		{CPC_EXTRA_DoorAnimName1 = ""; CPC_EXTRA_DoorAnimName2 = ""; CPC_EXTRA_AnimType = 1;};
 		case "CUP_O_Mi17_TK" : 					{CPC_EXTRA_DoorAnimName1 = ""; CPC_EXTRA_DoorAnimName2 = ""; CPC_EXTRA_AnimType = 1;};
 		case "CUP_B_CH53E_GER" : 				{CPC_EXTRA_DoorAnimName1 = "ramp_bottom"; CPC_EXTRA_DoorAnimName2 = "ramp_top"; CPC_EXTRA_AnimType = 1;};
@@ -77,7 +75,6 @@ switch (CPC_EXTRA_HeloType) do {
 		case "CPC_Duala_B_GFD_SA330" : 			{CPC_EXTRA_DoorAnimName1 = "ofrp_puma_porte_droite"; CPC_EXTRA_DoorAnimName2 = "ofrp_puma_porte_gauche"; CPC_EXTRA_AnimType = 1;};
 		case "CUP_I_SA330_Puma_HC1_RACS" : 		{CPC_EXTRA_DoorAnimName1 = "ofrp_puma_porte_droite"; CPC_EXTRA_DoorAnimName2 = "ofrp_puma_porte_gauche"; CPC_EXTRA_AnimType = 1;};
 		case "CUP_O_Mi8_SLA_1" : 				{CPC_EXTRA_DoorAnimName1 = ""; CPC_EXTRA_DoorAnimName2 = ""; CPC_EXTRA_AnimType = 1;};
-		case "CUP_B_CH47F_USA" : 				{CPC_EXTRA_DoorAnimName1 = ""; CPC_EXTRA_DoorAnimName2 = ""; CPC_EXTRA_AnimType = 1;};
 		case "CUP_B_Merlin_HC3_GB" : 			{CPC_EXTRA_DoorAnimName1 = ""; CPC_EXTRA_DoorAnimName2 = ""; CPC_EXTRA_AnimType = 1;};
 };
 

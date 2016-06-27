@@ -532,6 +532,7 @@ if (random 100 < 22) then {
 } foreach [45,25,8,2];
 
 // Fait spawn un véhicule de transport de troupes sur une route entre 1000m et 1500m du camp et le fait patrouiller.
+if ((paramsArray select 13) < 1) then {
 if (random 100 < 75) then {
 	_vehtype = _transp_vehi;
 	_pos = [getMarkerPos "1",[1000,1500],random 360,0,[1,500],_vehtype] call SHK_pos;
@@ -556,6 +557,7 @@ if (random 100 < 75) then {
 		_way setWaypointType "CYCLE";
 		_way setWaypointBehaviour "SAFE";
 		_way setWaypointSpeed "LIMITED";
+};
 };
 
 
@@ -700,6 +702,7 @@ if (!isnull chefIA) then {removeHeadgear chefIA; chefIA addHeadgear "CUP_H_RUS_B
 
 waitUntil {time > (2100 + (random 600))};
 //random Event
+if ((paramsArray select 13) < 1) then {
 	_vehtype = _transp_vehi;
 	_pos = [getMarkerPos "1",[1500,1800],random 360,0,[1,200],_vehtype] call SHK_pos;
 	_veh = [_pos,random 360,_vehtype,resistance] call BIS_fnc_spawnVehicle;
@@ -716,9 +719,9 @@ waitUntil {time > (2100 + (random 600))};
 	_IA setSkill [_x,( _Sktype * _skill)];
 	} foreach ["aimingShake","aimingSpeed","spotTime","spotDistance","aimingAccuracy"];
 } foreach (units (_veh select 2));
+};
 
-
-if (random 100 < 50) then {
+if ((random 100 < 50) AND ((paramsArray select 13) < 1)) then {
 	sleep (600 + (random 300));
 		_vehtype = _transp_vehi;
 		_pos = [getMarkerPos "1",[1500,1800],random 360,0,[1,200],_vehtype] call SHK_pos;

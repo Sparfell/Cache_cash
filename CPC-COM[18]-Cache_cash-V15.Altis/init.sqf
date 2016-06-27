@@ -25,6 +25,7 @@ chefIA = null;
 
 //VARIABLES MISSION
 if (isServer) then {
+	if ((paramsArray select 14) == 1) then {setDate CPC_FullMoon;};
 	skipTime (paramsArray select 0);
 };
 
@@ -42,6 +43,7 @@ null = [2,true,true] execVM "roster.sqf";
 if ((paramsArray select 1) == 1) then {null = [] execVM "playerPos.sqf";};
 if ((paramsArray select 1) == 4) then {null = [] execVM "playerPara.sqf";};
 if ((paramsArray select 1) == 5) then {null = [] execVM "playerHALO.sqf";};
+if ((paramsArray select 1) == 3) then {null = [] execVM "CPC_INSERT\create_insertion.sqf";};
 if ((paramsArray select 7) == 3) then {null = [] execVM "CPC_EXTRA\call_extraction.sqf";};
 
 // Teleport & invulnerable

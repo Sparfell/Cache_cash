@@ -22,18 +22,20 @@ if (CPC_loadedworld == "Altis") then {
 
 	CPC_WorldType = "vanilla";
 	publicVariable "CPC_WorldType";
+	CPC_FullMoon = [2016,5,30,0,0];
+	publicVariable "CPC_FullMoon";
 
 	_marker0 = createMarker ["69", [19492.094,12333.145,0]]; "69" setMarkerShape "ELLIPSE";	"69" setMarkerSize [600, 1500];	"69" setMarkerDir 70.668; 
 	_marker1 = createMarker ["70", [22872.4,20867.8,0]]; "70" setMarkerShape "RECTANGLE";	"70" setMarkerSize [600, 800];	"70" setMarkerDir 336.272;
-	_marker2 = createMarker ["71", [21988.215,19201.723,0]];	"71" setMarkerShape "RECTANGLE";	"71" setMarkerSize [600, 800];	"71" setMarkerDir 41.943;
-	_marker3 = createMarker ["72", [19806.152,16299.153,0]];	"72" setMarkerShape "RECTANGLE";	"72" setMarkerSize [700, 900];	"72" setMarkerDir 0;
+	_marker2 = createMarker ["71", [21988.215,19201.723,0]]; "71" setMarkerShape "RECTANGLE";	"71" setMarkerSize [600, 800];	"71" setMarkerDir 41.943;
+	_marker3 = createMarker ["72", [19806.152,16299.153,0]]; "72" setMarkerShape "RECTANGLE";	"72" setMarkerSize [700, 900];	"72" setMarkerDir 0;
 	_marker4 = createMarker ["73", [9639.513,21193.887,0]];	"73" setMarkerShape "ELLIPSE";	"73" setMarkerSize [600, 800];	"73" setMarkerDir 30.439;
-	_marker5 = createMarker ["74", [8313.503,21418.5,0]];	"74" setMarkerShape "RECTANGLE";	"74" setMarkerSize [700, 1300];	"74" setMarkerDir 0;
-	_marker6 = createMarker ["75", [13406.479,15835.049,0]];	"75" setMarkerShape "ELLIPSE";	"75" setMarkerSize [600, 800];	"75" setMarkerDir 0;
+	_marker5 = createMarker ["74", [8313.503,21418.5,0]]; "74" setMarkerShape "RECTANGLE";	"74" setMarkerSize [700, 1300];	"74" setMarkerDir 0;
+	_marker6 = createMarker ["75", [13406.479,15835.049,0]]; "75" setMarkerShape "ELLIPSE";	"75" setMarkerSize [600, 800];	"75" setMarkerDir 0;
 	_marker7 = createMarker ["76", [22552.45,16711.605,0]];	"76" setMarkerShape "ELLIPSE";	"76" setMarkerSize [700, 900];	"76" setMarkerDir 293.209;
 	_marker8 = createMarker ["77", [8048.571,12673.027,0]];	"77" setMarkerShape "RECTANGLE";	"77" setMarkerSize [700, 1100];	"77" setMarkerDir 0;
-	_marker9 = createMarker ["78", [15818.385,19036.488,0]];	"78" setMarkerShape "ELLIPSE";	"78" setMarkerSize [1000, 1200];	"78" setMarkerDir 322.814;
-	_marker10 = createMarker ["79", [8446.367,19307.980,0]];	"79" setMarkerShape "RECTANGLE";	"79" setMarkerSize [800, 800];	"79" setMarkerDir 0;
+	_marker9 = createMarker ["78", [15818.385,19036.488,0]]; "78" setMarkerShape "ELLIPSE";	"78" setMarkerSize [1000, 1200];	"78" setMarkerDir 322.814;
+	_marker10 = createMarker ["79", [8446.367,19307.980,0]]; "79" setMarkerShape "RECTANGLE";	"79" setMarkerSize [800, 800];	"79" setMarkerDir 0;
 	_marker11 = createMarker ["80", [4336.629,19723.94,0]];	"80" setMarkerShape "RECTANGLE";	"80" setMarkerSize [700, 1500];	"80" setMarkerDir 0;
 	_marker12 = createMarker ["81", [6397.73,20752.672,0]];	"81" setMarkerShape "RECTANGLE";	"81" setMarkerSize [1200, 1200];	"81" setMarkerDir 0;
 	_marker13 = createMarker ["82", [6327.377,18092.133,0]];"82" setMarkerShape "RECTANGLE";	"82" setMarkerSize [1200, 1200];	"82" setMarkerDir 0;
@@ -61,6 +63,8 @@ if (CPC_loadedworld == "Takistan") then {
 
 	CPC_WorldType = "desert";
 	publicVariable "CPC_WorldType";
+	CPC_FullMoon = [2016,6,29,0,0];
+	publicVariable "CPC_FullMoon";
 
 	_marker0 = createMarker ["99", [5295.17,2657.773,0]];	"99" setMarkerShape "RECTANGLE";	"99" setMarkerSize [1000, 1000];	"99" setMarkerDir 0;
 	_marker1 = createMarker ["98", [9633.053,3390.555,0]];	"98" setMarkerShape "RECTANGLE";	"98" setMarkerSize [800, 800];	"98" setMarkerDir 0;
@@ -106,6 +110,8 @@ if (CPC_loadedworld == "Chernarus") then {
 
 	CPC_WorldType = "chernarus";
 	publicVariable "CPC_WorldType";
+	CPC_FullMoon = [2016,3,30,0,0];
+	publicVariable "CPC_FullMoon";
 
 	_marker0 = createMarker ["99", [8586.314,4862.615,0]];	"99" setMarkerShape "ELLIPSE";	"99" setMarkerSize [800, 1500];	"99" setMarkerDir 16.394;
 	_marker1 = createMarker ["98", [10403.963,5503.989,0]];	"98" setMarkerShape "RECTANGLE";	"98" setMarkerSize [800, 800];	"98" setMarkerDir 0;
@@ -149,6 +155,8 @@ if (CPC_loadedworld == "IslaDuala3") then {
 
 	CPC_WorldType = "afrique";
 	publicVariable "CPC_WorldType";
+	CPC_FullMoon = [2016,6,29,0,0];
+	publicVariable "CPC_FullMoon";
 
 	_marker0 = createMarker ["99", [7678.856,6275.589,0]];	"99" setMarkerShape "RECTANGLE";	"99" setMarkerSize [600, 400];	"99" setMarkerDir 180;
 	_marker1 = createMarker ["98", [7218.446,5368.355,0]];	"98" setMarkerShape "RECTANGLE";	"98" setMarkerSize [700, 500];	"98" setMarkerDir 0;
@@ -182,11 +190,13 @@ if (CPC_loadedworld == "IslaDuala3") then {
 	
 };
 
-//smd_sahrani_a3
-if (CPC_loadedworld == "smd_sahrani_a3") then {
+//Sahrani
+if (CPC_loadedworld == "Sara") then {
 
 	CPC_WorldType = "vanilla";
 	publicVariable "CPC_WorldType";
+	CPC_FullMoon = [2016,6,29,0,0];
+	publicVariable "CPC_FullMoon";
 
 	_marker0 = createMarker ["99", [7121.018,7341.33,0]];	"99" setMarkerShape "ELLIPSE";	"99" setMarkerSize [800, 600];	"99" setMarkerDir 0;
 	_marker1 = createMarker ["98", [8521.892,6539.810,0]];	"98" setMarkerShape "ELLIPSE";	"98" setMarkerSize [1000, 600];	"98" setMarkerDir 66.102;
@@ -213,6 +223,8 @@ if (CPC_loadedworld == "FDF_Isle1_a") then {
 
 	CPC_WorldType = "chernarus";
 	publicVariable "CPC_WorldType";
+	CPC_FullMoon = [2016,3,30,0,0];
+	publicVariable "CPC_FullMoon";
 
 	_marker0 = createMarker ["99", [7355.296,19517.443,0]];	"99" setMarkerShape "RECTANGLE";	"99" setMarkerSize [2000, 300];	"99" setMarkerDir 0;
 	_marker1 = createMarker ["98", [11803.866,19539.521,0]];	"98" setMarkerShape "RECTANGLE";	"98" setMarkerSize [2400, 300];	"98" setMarkerDir 0;
@@ -251,6 +263,8 @@ if (CPC_loadedworld == "Woodland_ACR") then {
 
 	CPC_WorldType = "chernarus";
 	publicVariable "CPC_WorldType";
+	CPC_FullMoon = [2016,3,30,0,0];
+	publicVariable "CPC_FullMoon";
 
 	_marker0 = createMarker ["99", [1065.433,6059.067,0]];	"99" setMarkerShape "RECTANGLE";	"99" setMarkerSize [600, 600];	"99" setMarkerDir 0;
 	_marker1 = createMarker ["98", [3032.660,5875.657,0]];	"98" setMarkerShape "RECTANGLE";	"98" setMarkerSize [1100, 1100];	"98" setMarkerDir 0;
@@ -276,6 +290,8 @@ if (CPC_loadedworld == "pja305") then {
 
 	CPC_WorldType = "jungle";
 	publicVariable "CPC_WorldType";
+	CPC_FullMoon = [2016,6,29,0,0];
+	publicVariable "CPC_FullMoon";
 
 	_marker_x = createMarker ["99",[3418.23,1963.03,0]]; "99" SetMarkerShape "RECTANGLE"; "99" setMarkerSize [900,1300]; "99" setMarkerDir 0;
 	_marker_x = createMarker ["98",[1491.54,2068.41,0]]; "98" SetMarkerShape "RECTANGLE"; "98" setMarkerSize [600,1400]; "98" setMarkerDir 0;
@@ -316,6 +332,8 @@ if (CPC_loadedworld == "pja307") then {
 
 	CPC_WorldType = "desert";
 	publicVariable "CPC_WorldType";
+	CPC_FullMoon = [2016,6,29,0,0];
+	publicVariable "CPC_FullMoon";
 
 	_marker_x = createMarker ["80",[12216.1,18560.9,0]]; "80" SetMarkerShape "RECTANGLE"; "80" setMarkerSize [500,500]; "80" setMarkerDir 0;
 	_marker_x = createMarker ["81",[12469.7,17554.8,0]]; "81" SetMarkerShape "RECTANGLE"; "81" setMarkerSize [500,500]; "81" setMarkerDir 0;
@@ -347,36 +365,3 @@ if (CPC_loadedworld == "pja307") then {
 
 CPC_MarkersCreated = true;
 publicVariable "CPC_MarkersCreated";
-
-/*
-if (CPC_loadedworld == "Altis") then {cpc_shop setpos [23729.7,16199.6,0.00143862];};
-if (CPC_loadedworld == "Stratis") then {cpc_shop setpos [3265.57,5785.52,0.00144529];};
-if (CPC_loadedworld == "Intro") then {cpc_shop setpos [2583.79,2808.39,0.00143909];};
-if (CPC_loadedworld == "Sara") then {cpc_shop setpos [17288.8,14113.1,0.00143909];};
-if (CPC_loadedworld == "SaraLite") then {cpc_shop setpos [4698.91,5768.17,0.00144958];};
-if (CPC_loadedworld == "Sara_dbe1") then {cpc_shop setpos [7998.78,7774.97,0.00143433];};
-if (CPC_loadedworld == "Chernarus") then {cpc_shop setpos [6298.27,7809.14,0.00143433];};
-if (CPC_loadedworld == "Chernarus_Summer") then {cpc_shop setpos [3609.48,2167.72,0.00166082];};
-if (CPC_loadedworld == "Porto") then {cpc_shop setpos [2091.05,2177.29,0.00154042];};
-if (CPC_loadedworld == "FDF_Isle1_a") then {cpc_shop setpos [10222.5,8883.83,0.00143814];};
-if (CPC_loadedworld == "Takistan") then {cpc_shop setpos [8254.76,2131.9,0.00143433];};
-if (CPC_loadedworld == "utes") then {cpc_shop setpos [2970.26,4514.79,0.00143814];};
-if (CPC_loadedworld == "Zargabad") then {cpc_shop setpos [3944.05,2766.71,0.00143623];};
-if (CPC_loadedworld == "imrali") then {cpc_shop setpos [6020.89,7134.42,0.00143909];};
-if (CPC_loadedworld == "gsep_zernovo") then {cpc_shop setpos [2702.21,648.074,0.00143909];};
-if (CPC_loadedworld == "pja307") then {cpc_shop setpos [7095.95,6966.03,0.00140381];};
-if (CPC_loadedworld == "MCN_Aliabad") then {cpc_shop setpos [2723.55,1217.55,0.00144958];};
-if (CPC_loadedworld == "MCN_HazarKot") then {cpc_shop setpos [3246.67,2979.38,0.0015564];};
-if (CPC_loadedworld == "Caribou") then {cpc_shop setpos [4752.1,4153.69,0.00136375];};
-if (CPC_loadedworld == "Thirsk") then {cpc_shop setpos [680.827,660.464,0.00162697];};
-if (CPC_loadedworld == "ThirskW") then {cpc_shop setpos [4553.56,2897.65,0.00149345];};
-if (CPC_loadedworld == "smd_sahrani_a3") then {cpc_shop setpos [12300,6844.22,0.00145531];};
-if (CPC_loadedworld == "Mountains_ACR") then {cpc_shop setpos [3287.3,4369.88,0.00146484];};
-if (CPC_loadedworld == "Woodland_ACR") then {cpc_shop setpos [1614.21,1640.87,0.0015974];};
-if (CPC_loadedworld == "Bootcamp_ACR") then {cpc_shop setpos [1021.84,3153.15,0.0015564];};
-if (CPC_loadedworld == "Desert_E") then {cpc_shop setpos [1359.03,1451.62,0.0014267];};
-if (CPC_loadedworld == "ProvingGrounds_PMC") then {cpc_shop setpos [719.613,1196.68,0.00143814];};
-if (CPC_loadedworld == "Shapur_BAF") then {cpc_shop setpos [1559.18,1109.37,0.00140762];};
-if (CPC_loadedworld == "IslaDuala3") then {cpc_shop setpos [4853.53,5181.87,0.00143909];};
-if (CPC_loadedworld == "pja305") then {cpc_shop setpos [7910.61,3355.99,0.00145876];};
-*/
