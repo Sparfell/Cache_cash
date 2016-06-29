@@ -90,7 +90,7 @@ else
 		[
 			["Quelque part 8000 mètres au-dessus de la croûte terrestre","<t align = 'left' size = '0.8'>%1</t><br/>"],
 			[str (date select 2) + "/" + str (date select 1) + "/" + str (date select 0),"<t align = 'left' size = '0.8'>%1</t><br/>"],
-			[str (date select 3) + ":" + str (date select 4),"<t align = 'left' size = '0.8'>%1</t><br/>"],
+			[str (date select 3) + ":" + "0" + str (date select 4),"<t align = 'left' size = '0.8'>%1</t><br/>"],
 			["...","<t align = 'left' size = '0.8'>%1</t>"]
 		]
 	] spawn BIS_fnc_typeText;

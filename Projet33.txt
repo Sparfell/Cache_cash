@@ -27,3 +27,26 @@ Prévoir la structure pour pouvoir bien régler la difficulté / L'opposition
 	> Possibilité de régler des variables de GAIA via des params ?
 
 Créer un nouveau système de sélection de véhicules pour les joueurs.
+
+
+Donner la possibilité aux joueurs/leaders de choisir les rôles qui conviennent pour la mission
+parmi un pool de rôle assez riche.
+Classes envisagées :
+- Chef d'opération x1
+- TL x2
+- Doc x2
+- AR x2
+- AAR x2
+- MG x2
+- AMG x2
+- AT x2
+- AAT x2
+- Mark x1
+- Fusilier x6
+- Sac à dos x2
+- Sapeur x1
+- Grenadier x2
+- Membre d'equipage x3
+- pilote x2
+- Sniper x1
+- observateur x1

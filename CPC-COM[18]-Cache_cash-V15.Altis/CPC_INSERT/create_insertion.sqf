@@ -1,6 +1,6 @@
 if (player in [p1,p2,p9,p16]) then {
 	onMapSingleClick "
-		'Mark_inser' setmarkerPos _pos;
+		if !(_pos inArea 'Mark_cible') then {'Mark_inser' setmarkerPos _pos;};
 	";
 };
 
@@ -128,7 +128,7 @@ else
 		[
 			["Quelque part sur Terre","<t align = 'left' size = '0.8'>%1</t><br/>"],
 			[str (date select 2) + "/" + str (date select 1) + "/" + str (date select 0),"<t align = 'left' size = '0.8'>%1</t><br/>"],
-			[str (date select 3) + ":" + str (date select 4),"<t align = 'left' size = '0.8'>%1</t><br/>"],
+			[str (date select 3) + ":" + "0" + str (date select 4),"<t align = 'left' size = '0.8'>%1</t><br/>"],
 			["...","<t align = 'left' size = '0.8'>%1</t>"]
 		]
 	] spawn BIS_fnc_typeText;	

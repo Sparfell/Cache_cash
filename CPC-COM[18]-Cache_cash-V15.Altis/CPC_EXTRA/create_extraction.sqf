@@ -20,8 +20,10 @@ _CPC_EXTRA_helipad = "Land_HelipadEmpty_F" createVehicle CPC_EXTRA_PosLZ;
 
 sleep 1;
 
-_CPC_EXTRA_PosSpawnHelo = (getmarkerpos "Mark_Cible_1");
-_CPC_EXTRA_PosSpawnHelo = [_CPC_EXTRA_PosSpawnHelo select 0, ((_CPC_EXTRA_PosSpawnHelo select 1) + 3000), _CPC_EXTRA_PosSpawnHelo select 2];
+// Création des positions
+_dir = (getmarkerPos "Mark_Cible") getDir (getmarkerPos "CPC_EXTRA_MLZ");
+_helipad = "Land_HelipadEmpty_F" createVehicle (getmarkerPos "CPC_EXTRA_MLZ");
+_CPC_EXTRA_PosSpawnHelo = _helipad getRelPos [3000, _dir];
 // Création de l'hélico
 CPC_EXTRA_SpawnHelo = [_CPC_EXTRA_PosSpawnHelo,0, CPC_EXTRA_HeloType, CPC_EXTRA_HeloSide] call BIS_fnc_spawnVehicle;
 CPC_EXTRA_Helo =  CPC_EXTRA_SpawnHelo select 0;
@@ -30,6 +32,7 @@ CPC_EXTRA_GroupHelo = CPC_EXTRA_SpawnHelo select 2;
 CPC_EXTRA_Helo disableAI "AUTOTARGET";
 CPC_EXTRA_Helo disableAI "AUTOCOMBAT";
 CPC_EXTRA_Helo disableAI "SUPPRESSION";
+deleteVehicle _helipad;
 
 sleep 1;
 

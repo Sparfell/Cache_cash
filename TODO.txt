@@ -4,10 +4,5 @@
 - ajouter des munitions dans les véhicules ?
 - reco en cours de mission = reparachutage - TEST
 
-SAUT HALO : localité contenu sac à dos - test
-- rajouter un option "nuit de plein lune" - test
+- SAUT HALO : localité contenu sac à dos - test
 - rajouter des chemlights dans les loadouts de nuit.
-
-
-
-
