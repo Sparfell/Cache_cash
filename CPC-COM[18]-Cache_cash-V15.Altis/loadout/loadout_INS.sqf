@@ -146,6 +146,7 @@ loadoutCC_OFF = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	if (_nvg) then {_unit linkItem "ACE_NVG_Gen1";};
 };
 
 loadoutCC_TL = //
@@ -189,6 +190,7 @@ loadoutCC_TL = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	if (_nvg) then {_unit linkItem "ACE_NVG_Gen1";};
 };
 
 loadoutCC_DOC = //
@@ -239,6 +241,7 @@ loadoutCC_DOC = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	if (_nvg) then {_unit linkItem "ACE_NVG_Gen1";};
 };
 
 loadoutCC_AR = //
@@ -277,6 +280,7 @@ loadoutCC_AR = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	if (_nvg) then {_unit linkItem "ACE_NVG_Gen1";};
 };
 
 loadoutCC_AAR = //
@@ -317,6 +321,7 @@ loadoutCC_AAR = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	if (_nvg) then {_unit linkItem "ACE_NVG_Gen1";};
 };
 
 loadoutCC_MG = //
@@ -356,6 +361,7 @@ loadoutCC_MG = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	if (_nvg) then {_unit linkItem "ACE_NVG_Gen1";};
 };
 
 loadoutCC_AMG = //
@@ -397,6 +403,7 @@ loadoutCC_AMG = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	if (_nvg) then {_unit linkItem "ACE_NVG_Gen1";};
 };
 
 loadoutCC_AT = //
@@ -446,6 +453,7 @@ loadoutCC_AT = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	if (_nvg) then {_unit linkItem "ACE_NVG_Gen1";};
 };
 
 loadoutCC_AAT = //
@@ -493,6 +501,7 @@ loadoutCC_AAT = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	if (_nvg) then {_unit linkItem "ACE_NVG_Gen1";};
 };
 
 loadoutCC_DEMO = //
@@ -536,6 +545,7 @@ loadoutCC_DEMO = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	if (_nvg) then {_unit linkItem "ACE_NVG_Gen1";};
 };
 
 loadoutCC_M = //
@@ -574,6 +584,7 @@ loadoutCC_M = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	if (_nvg) then {_unit linkItem "ACE_NVG_Gen1";};
 };
 
 loadoutCC_GL = //
@@ -610,6 +621,7 @@ loadoutCC_GL = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	if (_nvg) then {_unit linkItem "ACE_NVG_Gen1";};
 };
 
 loadoutCC_A = //
@@ -653,6 +665,7 @@ loadoutCC_A = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	if (_nvg) then {_unit linkItem "ACE_NVG_Gen1";};
 };
 
 loadoutCC_LAT = //
@@ -692,6 +705,7 @@ loadoutCC_LAT = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	if (_nvg) then {_unit linkItem "ACE_NVG_Gen1";};
 };
 
 loadoutCC_R = //
@@ -729,6 +743,7 @@ loadoutCC_R = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	if (_nvg) then {_unit linkItem "ACE_NVG_Gen1";};
 };
 
 loadoutCC_CREW = //
@@ -768,6 +783,7 @@ loadoutCC_CREW = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	if (_nvg) then {_unit linkItem "ACE_NVG_Gen1";};
 };
 
 loadoutCC_PILOT = //
@@ -806,6 +822,7 @@ loadoutCC_PILOT = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	if (_nvg) then {_unit linkItem "ACE_NVG_Gen1";};
 };
 
 loadoutCC_SNIPER = //
@@ -846,6 +863,7 @@ loadoutCC_SNIPER = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	if (_nvg) then {_unit linkItem "ACE_NVG_Gen1";};
 };
 
 loadoutCC_OBS = //
@@ -888,6 +906,7 @@ loadoutCC_OBS = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	if (_nvg) then {_unit linkItem "ACE_NVG_Gen1";};
 };
 
 loadoutCC_JTAC = //
@@ -930,4 +949,5 @@ loadoutCC_JTAC = //
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
+	if (_nvg) then {_unit linkItem "ACE_NVG_Gen1";};
 };
