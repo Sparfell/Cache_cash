@@ -271,6 +271,40 @@ switch (paramsArray select 6) do {
 		_helico = "rhsgref_cdf_reg_Mi17Sh";
 	};
 
+	case 15 : { // CSAT Tanoa
+		_compo_group = [
+			["O_T_Soldier_TL_F","O_T_Soldier_F","O_T_Soldier_AR_F"],
+			["O_T_Soldier_F","O_T_Soldier_F","O_T_Soldier_GL_F"],
+			["O_T_Soldier_F","O_T_Soldier_LAT_F","O_T_Medic_F"],
+			["O_T_Soldier_TL_F","O_T_Soldier_F","O_T_Soldier_F","O_T_Medic_F","O_T_Soldier_F"],
+			["O_T_Soldier_M_F","O_T_Soldier_F"]
+		];
+
+		_binome = ["O_T_Soldier_F","O_T_Soldier_F"];
+		_ennemi_group = ["O_T_Soldier_TL_F","O_T_Soldier_F","O_T_Soldier_AR_F","O_T_Soldier_LAT_F","O_T_Soldier_GL_F"];
+		_rand_vehi = ["O_T_LSV_02_armed_F","O_T_MRAP_02_hmg_ghex_F","O_T_APC_Wheeled_02_rcws_ghex_F","O_T_APC_Wheeled_02_rcws_ghex_F","O_T_APC_Tracked_02_cannon_ghex_F","O_T_MBT_02_cannon_ghex_F"];
+		_transp_vehi = "O_T_Truck_03_covered_ghex_F";
+		_offroad = "O_T_LSV_02_armed_F";
+		_helico = "O_Heli_Light_02_F";
+	};
+
+	case 16 : { // NATO Tanoa
+		_compo_group = [
+			["B_T_Soldier_SL_F","B_T_Soldier_F","B_T_Soldier_AR_F"],
+			["B_T_Soldier_F","B_T_Soldier_F","B_T_Soldier_GL_F"],
+			["B_T_Soldier_F","B_T_Soldier_LAT_F","B_T_medic_F"],
+			["B_T_Soldier_SL_F","B_T_Soldier_F","B_T_Soldier_F","B_T_medic_F","B_T_Soldier_F"],
+			["B_T_soldier_M_F","B_T_Soldier_F"]
+		];
+
+		_binome = ["B_T_Soldier_F","B_T_Soldier_F"];
+		_ennemi_group = ["B_T_Soldier_SL_F","B_T_Soldier_F","B_T_Soldier_AR_F","B_T_medic_F","B_T_Soldier_GL_F"];
+		_rand_vehi = ["B_T_MRAP_01_hmg_F","B_T_MRAP_01_hmg_F","B_T_MRAP_01_gmg_F","B_T_APC_Wheeled_01_cannon_F","B_T_APC_Tracked_01_rcws_F","B_T_MBT_01_cannon_F"];
+		_transp_vehi = "B_T_Truck_01_covered_F";
+		_offroad = "B_T_LSV_01_armed_F";
+		_helico = "B_Heli_Transport_01_camo_F";
+	};
+
 	case 100 : { // Insurge RHS
 		_compo_group = [
 			["rhsgref_ins_g_rifleman","rhsgref_ins_g_rifleman_akm","rhsgref_ins_g_machinegunner"],
@@ -387,6 +421,23 @@ switch (paramsArray select 6) do {
 		_rand_vehi = ["rhsgref_nat_uaz_dshkm","rhsgref_nat_uaz_ags","rhsgref_nat_uaz_spg9","rhsgref_nat_btr70","rhsgref_nat_btr70","rhsgref_nat_ural_Zu23"];
 		_transp_vehi = "rhsgref_nat_ural_open";
 		_offroad = "rhsgref_nat_uaz_dshkm";
+		_helico = "";
+	};
+
+	case 107 : { // Syndikat
+		_compo_group = [
+			["I_C_Soldier_Para_8_F","I_C_Soldier_Para_1_F","I_C_Soldier_Para_4_F"],
+			["I_C_Soldier_Para_1_F","I_C_Soldier_Para_1_F","I_C_Soldier_Para_6_F"],
+			["I_C_Soldier_Para_1_F","I_C_Soldier_Para_5_F","I_C_Soldier_Para_3_F"],
+			["I_C_Soldier_Para_8_F","I_C_Soldier_Para_1_F","I_C_Soldier_Para_7_F","I_C_Soldier_Para_3_F","I_C_Soldier_Para_7_F"],
+			["I_C_Soldier_Para_2_F","I_C_Soldier_Para_7_F"]
+		];
+
+		_binome = ["I_C_Soldier_Para_7_F","I_C_Soldier_Para_7_F"];
+		_ennemi_group = ["I_C_Soldier_Para_8_F","I_C_Soldier_Para_1_F","I_C_Soldier_Para_4_F","I_C_Soldier_Para_5_F","I_C_Soldier_Para_6_F"];
+		_rand_vehi = ["B_G_Offroad_01_armed_F","I_C_Offroad_02_unarmed_F"];
+		_transp_vehi = "I_C_Van_01_transport_F";
+		_offroad = "B_G_Offroad_01_armed_F";
 		_helico = "";
 	};
 };
@@ -577,7 +628,7 @@ if (random 100 < 75) then {
 		};
 	};
 
-_objet = (selectrandom ["Land_Cargo_Patrol_V2_F","Land_Fort_Watchtower"]) CreateVehicle [_pos select 0, _pos select 1,-3];
+_objet = "Land_Cargo_Patrol_V2_F" CreateVehicle [_pos select 0, _pos select 1,-3];
 _objet setdir random 360;
 "4" setmarkerpos _pos;
 _group = [getpos _objet, resistance,  selectrandom _compo_group,[],[],[],[],[],random 360] call BIS_fnc_spawnGroup;
@@ -631,6 +682,7 @@ _houseOutlist = (nearestObjects [getMarkerPos "3", ["Building","House"], 1800]) 
 		if (CPC_WorldType == "afrique") then {CPC_civilianType =["C_man_p_beggar_F_afro","C_man_polo_1_F_afro","C_man_polo_2_F_afro","C_man_polo_3_F_afro","C_man_polo_4_F_afro","C_man_polo_5_F_afro","C_man_polo_6_F_afro"];};
 		if (CPC_WorldType == "jungle") then {CPC_civilianType =["C_man_p_beggar_F_afro","C_man_polo_1_F_afro","C_man_polo_2_F_afro","C_man_polo_3_F_afro","C_man_polo_4_F_afro","C_man_polo_5_F_afro","C_man_polo_6_F_afro"];};
 		if (CPC_WorldType == "chernarus") then {CPC_civilianType =["CUP_C_C_Citizen_02","CUP_C_C_Citizen_01","CUP_C_C_Citizen_04","CUP_C_C_Citizen_03""CUP_C_C_Functionary_01","CUP_C_C_Functionary_02","CUP_C_C_Priest_01","CUP_C_C_Profiteer_02","CUP_C_C_Profiteer_03","CUP_C_C_Profiteer_01","CUP_C_C_Profiteer_04","CUP_C_C_Rocker_01","CUP_C_C_Rocker_03","CUP_C_C_Rocker_02","CUP_C_C_Rocker_04","CUP_C_C_Schoolteacher_01","CUP_C_C_Villager_01","CUP_C_C_Villager_04","CUP_C_C_Villager_02","CUP_C_C_Villager_03","CUP_C_C_Woodlander_01","CUP_C_C_Woodlander_02","CUP_C_C_Woodlander_03","CUP_C_C_Woodlander_04","CUP_C_C_Worker_03","CUP_C_C_Worker_04","CUP_C_C_Worker_02","CUP_C_C_Worker_01"];};
+		if (CPC_WorldType == "fidji") then {CPC_civilianType =["C_Man_casual_1_F_tanoan","C_Man_casual_2_F_tanoan","C_Man_casual_3_F_tanoan","C_man_sport_1_F_tanoan""C_man_sport_2_F_tanoan","C_man_sport_3_F_tanoan","C_Man_casual_4_F_tanoan","C_Man_casual_5_F_tanoan","C_Man_casual_6_F_tanoan"];};
 		_group = [_pos, civilian, [(selectrandom CPC_civilianType),(selectrandom CPC_civilianType)],[],[],[],[],[],random 360] call BIS_fnc_spawnGroup;
 		[_group, 0] setWaypointType "DISMISS";
 		sleep 0.5;
@@ -760,7 +812,7 @@ if ((({(paramsArray select 6) == _x} count [0,1,4,8]) > 0) AND (4 > random 10)) 
 	};
 	_veh spawn {
 		waitUntil {({(_this distance _x) < 700} count SlotPlayers) != 0};
-		[_this,140] execVM "Eject.sqf";
+		[_this,140] execVM "scripts\Eject.sqf";
 		sleep 40;
 		_wp2 = group driver _this addWaypoint [[0,0,500], 0];
 		_wp2 setWaypointSpeed "LIMITED";

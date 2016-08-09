@@ -1,4 +1,4 @@
-if (player in [p1,p2,p9,p16]) then {
+if (player in [p1,p2,p14,p26,P29,P31,P32,P33]) then {
 	onMapSingleClick "
 		if !(_pos inArea 'Mark_cible') then {'Mark_inser' setmarkerPos _pos;};
 	";
@@ -8,40 +8,28 @@ private["_type","_helipad","_DoorAnim1","_DoorAnim2","_AnimType","_dir","_helipa
 
 
 switch (paramsArray select 5) do {
-		case 0 : {_type = "RHS_CH_47F";}; // US RHS
-		case 1 : {_type = "RHS_CH_47F";}; // US CUP
-		case 2 : {_type = "RHS_Mi8mt_vvsc";}; // RU RHS
-		case 3 : {_type = "RHS_Mi8mt_vvsc";}; // RU CUP
-		case 4 : {_type = "RHS_Mi8amt_chdkz";}; // INS RHS
-		case 5 : {_type = "RHS_Mi8amt_chdkz";}; // INS CUP
-		case 6 : {_type = "CUP_C_Mi17_Civilian_RU";}; // INS TAK RHS
-		case 7 : {_type = "CUP_C_Mi17_Civilian_RU";}; // INS TAK
-		case 8 : {_type = "CUP_O_Mi17_TK";}; // TK RHS
-		case 9 : {_type = "CUP_O_Mi17_TK";}; // TK CUP
-		case 10 : {_type = "CUP_B_CH53E_GER";}; // GER Desert
-		case 11 : {_type = "CUP_B_CH53E_GER";}; // GER Woodland
-		case 12 : {_type = "B_Heli_Transport_03_unarmed_F";}; // OTAN
-		case 13 : {_type = "O_Heli_Transport_04_covered_F";}; // CSAT
-		case 14 : {_type = "I_Heli_Transport_02_F";}; // AAF
-		case 15 : {_type = "CPC_Duala_B_GFD_SA330";}; // GFD
-		case 16 : {_type = "CUP_C_Mi17_Civilian_RU";}; // NPFD
-		case 17 : {_type = "CUP_I_SA330_Puma_HC1_RACS";}; // RACS
-		case 18 : {_type = "CUP_O_Mi8_SLA_1";}; // SLA
-		case 19 : {_type = "RHS_Mi8mt_vvsc";}; // Spetsnaz RHS
-		case 20 : {_type = "CUP_B_CH53E_USMC";}; // USMC SF SCAR
-		case 21 : {_type = "RHS_CH_47F";}; // commando jungle
-		case 22 : {_type = "CUP_B_Merlin_HC3_GB";}; // BAF desert
-		case 23 : {_type = "CUP_B_Merlin_HC3_GB";}; // BAF woodland
-		case 24 : {_type = "RHS_Mi8amt_chdkz";}; // Chedaki
-		case 25 : {_type = "RHS_Mi8mt_vvsc";}; // URSS Afgha
-		case 26 : {_type = "RHS_Mi8mt_vvsc";}; // RU modern RHS
+		case 0 : {_type = "B_Heli_Transport_03_unarmed_F";}; // NATO
+		case 1 : {_type = "O_Heli_Transport_04_covered_F";}; // CSAT
+		case 2 : {_type = "I_Heli_Transport_02_F";}; // AAF
+		case 3 : {_type = "RHS_CH_47F";}; // US Army RHS
+		case 4 : {_type = "RHS_CH_47F";}; // USMC RHS
+		case 5 : {_type = "RHS_CH_47F";}; // US SF RHS
+		case 6 : {_type = "RHS_Mi8mt_vvsc";}; // RU 2000
+		case 7 : {_type = "RHS_Mi8mt_vvsc";}; // RU 2015
+		case 8 : {_type = "RHS_Mi8mt_vvsc";}; // RU SF
+		case 9 : {_type = "CUP_B_CH53E_GER";}; // KSK
+		case 10 : {_type = "CUP_B_Merlin_HC3_GB";}; // BAF
+		case 11 : {_type = "CUP_I_SA330_Puma_HC1_RACS";}; // RACS
+		case 12 : {_type = "CUP_O_Mi17_TK";}; // TAK
+		case 13 : {_type = "rhsgref_ins_Mi8amt";}; // INS
+		case 14 : {_type = "CUP_C_Mi17_Civilian_RU";}; // TAK INS
 };
 
 switch (_type) do {
 		case "RHS_CH_47F" : 					{_DoorAnim1 = "ramp_anim"; _DoorAnim2 = ""; _AnimType = 2;};
 		case "CUP_B_CH53E_USMC" : 				{_DoorAnim1 = "ramp_bottom"; _DoorAnim2 = "ramp_top"; _AnimType = 1;};
 		case "RHS_Mi8mt_vvsc" : 				{_DoorAnim1 = "RearDoors"; _DoorAnim2 = ""; _AnimType = 2;};
-		case "RHS_Mi8amt_chdkz" : 				{_DoorAnim1 = "RearDoors"; _DoorAnim2 = ""; _AnimType = 2;};
+		case "rhsgref_ins_Mi8amt" : 				{_DoorAnim1 = "RearDoors"; _DoorAnim2 = ""; _AnimType = 2;};
 		case "CUP_C_Mi17_Civilian_RU" : 		{_DoorAnim1 = ""; _DoorAnim2 = ""; _AnimType = 1;};
 		case "CUP_O_Mi17_TK" : 					{_DoorAnim1 = ""; _DoorAnim2 = ""; _AnimType = 1;};
 		case "CUP_B_CH53E_GER" : 				{_DoorAnim1 = "ramp_bottom"; _DoorAnim2 = "ramp_top"; _AnimType = 1;};

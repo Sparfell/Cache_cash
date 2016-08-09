@@ -1,4 +1,4 @@
-if (player in [p1,p2,p9,p16]) then {
+if (player in [p1,p2,p14,p26,P29,P31,P32,P33]) then {
 	onMapSingleClick "
 		if !(_pos inArea 'Mark_cible') then {'Mark_inser' setmarkerPos _pos;};
 	";

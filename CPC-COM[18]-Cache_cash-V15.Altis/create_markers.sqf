@@ -58,6 +58,36 @@ if (CPC_loadedworld == "Altis") then {
 	_marker30 = createMarker ["99", [20176.395,6254.457,0]];"99" setMarkerShape "ELLIPSE";"99" setMarkerSize [400, 1400];	"99" setMarkerDir 292.152;
 };
 
+//Tanoa
+if (CPC_loadedworld == "Tanoa") then {
+
+	CPC_WorldType = "fidji";
+	publicVariable "CPC_WorldType";
+	CPC_FullMoon = [2016,6,30,0,0];
+	publicVariable "CPC_FullMoon";
+
+	_marker_x = createMarker ["99",[4593.54,3280.12,0]]; "99" SetMarkerShape "ELLIPSE"; "99" setMarkerSize [580.515,1080.09]; "99" setMarkerDir 0;
+	_marker_x = createMarker ["98",[5770.36,4597.66,0]]; "98" SetMarkerShape "ELLIPSE"; "98" setMarkerSize [1244.13,323.702]; "98" setMarkerDir 198.442;
+	_marker_x = createMarker ["97",[3210.33,2735.82,0]]; "97" SetMarkerShape "ELLIPSE"; "97" setMarkerSize [430.132,654.708]; "97" setMarkerDir 137.154;
+	_marker_x = createMarker ["96",[5684.11,9323.27,0]]; "96" SetMarkerShape "RECTANGLE"; "96" setMarkerSize [442.956,820.482]; "96" setMarkerDir 269.954;
+	_marker_x = createMarker ["95",[9142.05,10927.5,0]]; "95" SetMarkerShape "ELLIPSE"; "95" setMarkerSize [649.63,605.116]; "95" setMarkerDir 0;
+	_marker_x = createMarker ["94",[9826.88,9704.25,0]]; "94" SetMarkerShape "ELLIPSE"; "94" setMarkerSize [972.167,402.178]; "94" setMarkerDir 190.598;
+	_marker_x = createMarker ["93",[9529.81,7310.09,0]]; "93" SetMarkerShape "ELLIPSE"; "93" setMarkerSize [1031.25,817.616]; "93" setMarkerDir 0;
+	_marker_x = createMarker ["92",[11447.8,7454.2,0]]; "92" SetMarkerShape "RECTANGLE"; "92" setMarkerSize [875.616,778.936]; "92" setMarkerDir 0;
+	_marker_x = createMarker ["91",[6125.73,7875.56,0]]; "91" SetMarkerShape "ELLIPSE"; "91" setMarkerSize [688.832,506.22]; "91" setMarkerDir 202.944;
+	_marker_x = createMarker ["90",[7233.76,10893.6,0]]; "90" SetMarkerShape "ELLIPSE"; "90" setMarkerSize [1042.33,660.798]; "90" setMarkerDir 191.669;
+	_marker_x = createMarker ["89",[3189.54,6133.91,0]]; "89" SetMarkerShape "ELLIPSE"; "89" setMarkerSize [1051.81,543.481]; "89" setMarkerDir 203.112;
+	_marker_x = createMarker ["88",[1897.84,7372.51,0]]; "88" SetMarkerShape "ELLIPSE"; "88" setMarkerSize [450.158,1099.79]; "88" setMarkerDir 151.621;
+	_marker_x = createMarker ["87",[8112.41,9099.19,0]]; "87" SetMarkerShape "ELLIPSE"; "87" setMarkerSize [571.829,667.089]; "87" setMarkerDir 225.383;
+	_marker_x = createMarker ["86",[2887.86,12345.1,0]]; "86" SetMarkerShape "ELLIPSE"; "86" setMarkerSize [657.894,1579.92]; "86" setMarkerDir 208.319;
+	_marker_x = createMarker ["85",[12030.9,9520.62,0]]; "85" SetMarkerShape "ELLIPSE"; "85" setMarkerSize [541.788,674.784]; "85" setMarkerDir 212.459;
+	_marker_x = createMarker ["84",[12801.2,7937.67,0]]; "84" SetMarkerShape "ELLIPSE"; "84" setMarkerSize [955.759,314.487]; "84" setMarkerDir 194.387;
+		
+	"Mark_Inser" setMarkerPos [11687,13115.1,0];
+	"M_helipad1" setMarkerPos [11778.7,13115.9,0];
+	"M_helipad2" setMarkerPos [11860.9,13089.2,0];
+};
+
 //Takistan
 if (CPC_loadedworld == "Takistan") then {
 
@@ -304,6 +334,7 @@ if (CPC_loadedworld == "pja305") then {
 	_marker_x = createMarker ["91",[2175.6,12887,0]]; "91" SetMarkerShape "RECTANGLE"; "91" setMarkerSize [1300,1400]; "91" setMarkerDir 0;
 	_marker_x = createMarker ["90",[2388.04,17912.1,0]]; "90" SetMarkerShape "RECTANGLE"; "90" setMarkerSize [1400,1400]; "90" setMarkerDir 0;
 	_marker_x = createMarker ["89",[8099.76,9926.55,0]]; "89" SetMarkerShape "ELLIPSE"; "89" setMarkerSize [1322.84,726.621]; "89" setMarkerDir 150.789;
+	_marker_x = createMarker ["88",[16505.4,6759.86,0]]; "88" SetMarkerShape "ELLIPSE"; "88" setMarkerSize [345.998,608.523]; "88" setMarkerDir 210.7;
 	_marker_x = createMarker ["87",[6183.18,16351.8,0]]; "87" SetMarkerShape "RECTANGLE"; "87" setMarkerSize [1816.67,881.381]; "87" setMarkerDir 0;
 	_marker_x = createMarker ["86",[12598.4,14599.8,0]]; "86" SetMarkerShape "ELLIPSE"; "86" setMarkerSize [2088.71,923.825]; "86" setMarkerDir 201.337;
 	_marker_x = createMarker ["85",[13918.3,18213,0]]; "85" SetMarkerShape "ELLIPSE"; "85" setMarkerSize [1008.69,1467.05]; "85" setMarkerDir 211.969;
@@ -320,7 +351,6 @@ if (CPC_loadedworld == "pja305") then {
 	_marker_x = createMarker ["74",[7967.67,13991.7,0]]; "74" SetMarkerShape "ELLIPSE"; "74" setMarkerSize [1827.93,977.271]; "74" setMarkerDir 0;
 	_marker_x = createMarker ["73",[2497.22,15388.7,0]]; "73" SetMarkerShape "RECTANGLE"; "73" setMarkerSize [1475.58,644.156]; "73" setMarkerDir 0;
 	_marker_x = createMarker ["72",[11517.4,8608.55,0]]; "72" SetMarkerShape "ELLIPSE"; "72" setMarkerSize [251.406,183.438]; "72" setMarkerDir 0;
-	_marker_x = createMarker ["71",[16505.4,6759.86,0]]; "71" SetMarkerShape "ELLIPSE"; "71" setMarkerSize [345.998,608.523]; "71" setMarkerDir 210.7;
 	
 	"Mark_Inser" setMarkerPos [13797.8,779.114,0];
 	"M_helipad1" setMarkerPos [13838.5,809.967,0];
@@ -359,6 +389,56 @@ if (CPC_loadedworld == "pja307") then {
 	"Mark_Inser" setMarkerPos [5325.86,14558.6,0];
 	"M_helipad1" setMarkerPos [5288,14527.8,0];
 	"M_helipad2" setMarkerPos [5287.86,14592.1,0];
+};
+
+//Nogova
+if (CPC_loadedworld == "noe") then {
+
+	CPC_WorldType = "vanilla";
+	publicVariable "CPC_WorldType";
+	CPC_FullMoon = [2016,6,29,0,0];
+	publicVariable "CPC_FullMoon";
+
+
+	_marker_x = createMarker ["99",[9406.34,3844.64,0]]; "99" SetMarkerShape "ELLIPSE"; "99" setMarkerSize [653.454,1167.76]; "99" setMarkerDir 152.283;
+	_marker_x = createMarker ["98",[11361.2,4256.65,0]]; "98" SetMarkerShape "ELLIPSE"; "98" setMarkerSize [608.971,1108.82]; "98" setMarkerDir 188.572;
+	_marker_x = createMarker ["97",[9769.39,6369.1,0]]; "97" SetMarkerShape "ELLIPSE"; "97" setMarkerSize [922.197,509.972]; "97" setMarkerDir 195.764;
+	_marker_x = createMarker ["96",[10127.7,7946.65,0]]; "96" SetMarkerShape "ELLIPSE"; "96" setMarkerSize [1219.74,707.624]; "96" setMarkerDir 159.768;
+	_marker_x = createMarker ["95",[11072.6,10286.1,0]]; "95" SetMarkerShape "ELLIPSE"; "95" setMarkerSize [488.309,886.193]; "95" setMarkerDir 0;
+	_marker_x = createMarker ["94",[2757.97,4136.47,0]]; "94" SetMarkerShape "ELLIPSE"; "94" setMarkerSize [504.474,1364.57]; "94" setMarkerDir 241.849;
+	_marker_x = createMarker ["93",[2256.01,7289.57,0]]; "93" SetMarkerShape "ELLIPSE"; "93" setMarkerSize [496.106,1302.63]; "93" setMarkerDir 210.78;
+	_marker_x = createMarker ["92",[5317.49,6707.62,0]]; "92" SetMarkerShape "ELLIPSE"; "92" setMarkerSize [1074.61,988.864]; "92" setMarkerDir 0;
+	_marker_x = createMarker ["91",[5485.68,4036.05,0]]; "91" SetMarkerShape "ELLIPSE"; "91" setMarkerSize [1239.02,783.374]; "91" setMarkerDir 214.445;
+	_marker_x = createMarker ["90",[7461.18,6452.24,0]]; "90" SetMarkerShape "ELLIPSE"; "90" setMarkerSize [576.517,1155]; "90" setMarkerDir 188.973;
+	_marker_x = createMarker ["89",[4192.9,8627.67,0]]; "89" SetMarkerShape "ELLIPSE"; "89" setMarkerSize [933.118,1176.46]; "89" setMarkerDir 153.567;
+	_marker_x = createMarker ["88",[1037.44,11128.2,0]]; "88" SetMarkerShape "ELLIPSE"; "88" setMarkerSize [571.067,941.602]; "88" setMarkerDir 161.174;
+	_marker_x = createMarker ["87",[7586.1,10025.3,0]]; "87" SetMarkerShape "ELLIPSE"; "87" setMarkerSize [858.925,494.953]; "87" setMarkerDir 0;
+	
+	"Mark_Inser" setMarkerPos [8903.34,12557,0];
+	"M_helipad1" setMarkerPos [8971.26,12574.6,0];
+	"M_helipad2" setMarkerPos [9009.84,12575,0];
+};
+
+//Everon
+if (CPC_loadedworld == "eden") then {
+
+	CPC_WorldType = "vanilla";
+	publicVariable "CPC_WorldType";
+	CPC_FullMoon = [2016,6,29,0,0];
+	publicVariable "CPC_FullMoon";
+
+	_marker_x = createMarker ["99",[4143.5,6022.54,0]]; "99" SetMarkerShape "ELLIPSE"; "99" setMarkerSize [1194.55,1004.47]; "99" setMarkerDir 202.986;
+	_marker_x = createMarker ["98",[3502.96,4437.24,0]]; "98" SetMarkerShape "ELLIPSE"; "98" setMarkerSize [1328.82,593.151]; "98" setMarkerDir 204.042;
+	_marker_x = createMarker ["97",[2524.88,6426.4,0]]; "97" SetMarkerShape "RECTANGLE"; "97" setMarkerSize [285.833,932.175]; "97" setMarkerDir 0;
+	_marker_x = createMarker ["96",[7633.85,2775.25,0]]; "96" SetMarkerShape "ELLIPSE"; "96" setMarkerSize [472.262,1394.58]; "96" setMarkerDir 165.148;
+	_marker_x = createMarker ["95",[9261.05,3633,0]]; "95" SetMarkerShape "RECTANGLE"; "95" setMarkerSize [325.965,1464.84]; "95" setMarkerDir 151.02;
+	_marker_x = createMarker ["94",[6369.11,7960.48,0]]; "94" SetMarkerShape "ELLIPSE"; "94" setMarkerSize [1149.31,668.067]; "94" setMarkerDir 148.887;
+	_marker_x = createMarker ["93",[6252.49,5804.72,0]]; "93" SetMarkerShape "ELLIPSE"; "93" setMarkerSize [662.495,1329.76]; "93" setMarkerDir 0;
+	_marker_x = createMarker ["92",[4914.12,8974.39,0]]; "92" SetMarkerShape "ELLIPSE"; "92" setMarkerSize [494.935,1370.63]; "92" setMarkerDir 206.219;
+	
+	"Mark_Inser" setMarkerPos [4862.15,11870.1,0];
+	"M_helipad1" setMarkerPos [4871.29,11817.6,0];
+	"M_helipad2" setMarkerPos [4872.43,11771.4,0];
 };
 
 

@@ -17,7 +17,7 @@
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------------*/
-private ["_rhsennemy","_uniform","_helmet","_cap","_hat","_vest1","_vest2","_nvg","_lamp","_bag_small","_bag_medium","_bag_big","_weapon_long","_weapon_short","_weapon_ar","_weapon_m","_weapon_gl","_weapon_mg"];
+private ["_rhsennemy","_uniform","_helmet","_helmetcrew","_dpm","_ddpm","_nvg","_lamp","_sac","_vest_r","_vest_sac","_vest_empty","_vest_pilot","_vest_gl"];
 
 hard_setLoadout = 
 {
@@ -28,97 +28,48 @@ hard_setLoadout =
 	if ((paramsArray select 6) in [0,2,14,100,106]) then {_rhsennemy = true};
 	_nvg = false;
 	_lamp = false;
-	_uniform = [];
-	_vest1 = "";
-	_vest2 = "";
+	_dpm = false;
+	_ddpm = false;
+	_uniform = "";
 	_helmet = [];
-	_bag_small = "";
-	_bag_medium = "";
-	_bag_big = "";
-	_weapon_long = "";
-	_weapon_short = "";
-	_weapon_ar = "";
-	_weapon_m = "";
-	_weapon_gl = "";
-	_weapon_mg = "";
-	_cap ="";
-	_hat = "";
+	_helmetnight = "";
+	_helmetcrew = "";
+	_vest_r = "";
+	_vest_sac = "";
+	_vest_empty = "";
+	_vest_pilot = "";
+	_vest_gl = "";
+	_sac = "";
 
-	//MTP
-	if (worldName in ["Takistan","Altis","IslaDuala3","pja307"]) then 
+	//DPM
+	if (worldName in ["Sara","Altis","Tanoa","Chernarus","FDF_Isle1_a","Woodland_ACR","pja305","noe","eden"]) then 
 	{
-		_uniform = ["U_B_CombatUniform_mcam","U_B_CombatUniform_mcam_tshirt","U_B_CombatUniform_mcam_vest"];
-		_vest1 = "V_PlateCarrier2_rgr";
-		_vest2 = "V_PlateCarrier1_rgr";
-		_helmet = ["H_HelmetB_camo","H_HelmetSpecB","H_HelmetSpecB_paint2","H_HelmetSpecB_paint1","H_HelmetSpecB_sand","H_HelmetSpecB_snakeskin"];
-		_bag_small = "B_AssaultPack_mcamo";
-		_bag_medium = "B_Kitbag_mcamo";
-		_bag_big = "B_Carryall_mcamo";
-		_weapon_long = "arifle_MX_F";
-		_weapon_short = "arifle_MXC_F";
-		_weapon_ar = "arifle_MX_SW_F";
-		_weapon_m = "arifle_MXM_F";
-		_weapon_gl = "arifle_MX_GL_F";
-		_weapon_mg = "MMG_02_sand_F";
-		_cap ="H_MilCap_mcamo";
-		_hat = "H_Booniehat_mcamo";
+		_uniform = ["CUP_U_B_BAF_DPM_S2_UnRolled","CUP_U_B_BAF_DPM_S1_RolledUp","CUP_U_B_BAF_DPM_Tshirt"];
+		_helmet = ["CUP_H_BAF_Helmet_1_DPM","CUP_H_BAF_Helmet_Net_2_DPM","CUP_H_BAF_Helmet_2_DPM","CUP_H_BAF_Helmet_3_DPM","CUP_H_BAF_Helmet_4_DPM"];
+		_helmetnight = "CUP_H_BAF_Helmet_1_DPM";
+		_helmetcrew = "CUP_H_BAF_Crew_Helmet_DPM";
+		_vest_r = "CUP_V_BAF_Osprey_Mk2_DPM_Soldier1";
+		_vest_sac = "CUP_V_BAF_Osprey_Mk2_DPM_Sapper";
+		_vest_empty = "CUP_V_BAF_Osprey_Mk2_DPM_Empty";
+		_vest_pilot = "CUP_V_BAF_Osprey_Mk2_DPM_Pilot";
+		_vest_gl = "CUP_V_BAF_Osprey_Mk2_DPM_Grenadier";
+		_sac = "B_TacticalPack_oli";
+		_dpm = true;		
 	};
-	//WDL
-	if (worldName in ["FDF_Isle1_a","Woodland_ACR","Chernarus","noe","eden"]) then 
+	//DDPM
+	if (worldName in ["IslaDuala3","IslaDuala3","Takistan","pja307"]) then 
 	{
-		_uniform = ["U_MU_B_soldier_wdl","U_MU_B_soldier_wdl_vest","U_MU_B_soldier_wdl_tshirt"];
-		_vest1 = "V_PlateCarrier2_rgr";
-		_vest2 = "V_PlateCarrier1_rgr";
-		_helmet = ["H_HelmetB","H_HelmetB_camo"];
-		_bag_small = "B_AssaultPack_rgr";
-		_bag_medium = "B_Kitbag_rgr";
-		_bag_big = "B_Carryall_oli";
-		_weapon_long = "arifle_MX_Black_F";
-		_weapon_short = "arifle_MXC_Black_F";
-		_weapon_ar = "arifle_MX_SW_Black_F";
-		_weapon_m = "arifle_MXM_Black_F";
-		_weapon_gl = "arifle_MX_GL_Black_F";
-		_weapon_mg = "MMG_02_black_F";
-		_cap ="H_MU_MilCap_blk";
-		_hat = "H_Booniehat_oli";
-	};
-	//Sage
-	if (worldName in ["Sara"]) then 
-	{
-		_uniform = ["U_MU_B_soldier_sage","U_MU_B_soldier_sage_vest","U_MU_B_soldier_sage_tshirt"];
-		_vest1 = "V_PlateCarrier2_rgr";
-		_vest2 = "V_PlateCarrier1_rgr";
-		_helmet = ["H_HelmetB_light","H_HelmetB_light_snakeskin","H_HelmetB_light_black","H_HelmetB_light_grass"];
-		_bag_small = "B_AssaultPack_rgr";
-		_bag_medium = "B_Kitbag_rgr";
-		_bag_big = "B_Carryall_cbr";
-		_weapon_long = "arifle_MX_Black_F";
-		_weapon_short = "arifle_MXC_Black_F";
-		_weapon_ar = "arifle_MX_SW_Black_F";
-		_weapon_m = "arifle_MXM_Black_F";
-		_weapon_gl = "arifle_MX_GL_Black_F";
-		_weapon_mg = "MMG_02_black_F";
-		_cap ="H_MilCap_gry";
-		_hat = "H_Booniehat_khk";
-	};
-	//Jungle
-	if (worldName in ["Tanoa","pja305"]) then 
-	{
-		_uniform = ["U_B_T_Soldier_SL_F","U_B_T_Soldier_F","U_B_T_Soldier_AR_F"];
-		_vest1 = "V_PlateCarrier2_tna_F";
-		_vest2 = "V_PlateCarrier1_tna_F";
-		_helmet = ["H_HelmetB_Enh_tna_F","H_HelmetB_tna_F","H_HelmetB_Light_tna_F"];
-		_bag_small = "B_AssaultPack_tna_F";
-		_bag_medium = "B_Kitbag_rgr";
-		_bag_big = "B_Carryall_oli";
-		_weapon_long = "arifle_MX_khk_F";
-		_weapon_short = "arifle_MXC_khk_F";
-		_weapon_ar = "arifle_MX_SW_khk_F";
-		_weapon_m = "arifle_MXM_khk_F";
-		_weapon_gl = "arifle_MX_GL_khk_F";
-		_weapon_mg = "MMG_02_black_F";
-		_cap ="H_MilCap_tna_F";
-		_hat = "H_Booniehat_tna_F";
+		_uniform = ["CUP_U_B_BAF_DDPM_S2_UnRolled","CUP_U_B_BAF_DDPM_S1_RolledUp","CUP_U_B_BAF_DDPM_Tshirt"];
+		_helmet = ["CUP_H_BAF_Helmet_1_DDPM","CUP_H_BAF_Helmet_Net_2_DDPM","CUP_H_BAF_Helmet_2_DDPM","CUP_H_BAF_Helmet_3_DDPM","CUP_H_BAF_Helmet_4_DDPM"];
+		_helmetnight = "CUP_H_BAF_Helmet_1_DDPM";
+		_helmetcrew = "CUP_H_BAF_Crew_Helmet_DDPM";
+		_vest_r = "CUP_V_BAF_Osprey_Mk2_DDPM_Soldier1";
+		_vest_sac = "CUP_V_BAF_Osprey_Mk2_DDPM_Sapper";
+		_vest_empty = "CUP_V_BAF_Osprey_Mk2_DDPM_Empty";
+		_vest_pilot = "CUP_V_BAF_Osprey_Mk2_DDPM_Pilot";
+		_vest_gl = "CUP_V_BAF_Osprey_Mk2_DDPM_Grenadier";
+		_sac = "B_MU_TacticalPack_cbr";
+		_ddpm = true;
 	};
 	if ((paramsArray select 3) == 1) then {_nvg = true};
 	if ((paramsArray select 3) == 2) then {_lamp = true};
@@ -168,37 +119,33 @@ loadoutCC_OFF = //
 	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_IR_Strobe_Item";
+	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACRE_PRC343";
-	_unit addItemToUniform "ACE_microDAGR";
+	_unit addItemToUniform "ACE_IR_Strobe_Item";
 	_unit addItemToUniform "ACE_MapTools";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "16Rnd_9x21_Mag";};
+	_unit addItemToUniform "ACE_microDAGR";
+	_unit addItemToUniform "ACRE_PRC148";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShellBlue";};
-	_unit addVest _vest2;
-	_unit addItemToVest "ACRE_PRC148";
-	for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
-	for "_i" from 1 to 4 do {_unit addItemToVest "30Rnd_65x39_caseless_mag";};
-	for "_i" from 1 to 4 do {_unit addItemToVest "30Rnd_65x39_caseless_mag_Tracer";};
-	for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellPurple";};
-	_unit addItemToVest "B_IR_Grenade";
+	_unit addVest _vest_r;
+	for "_i" from 1 to 2 do {_unit addItemToVest "CUP_HandGrenade_L109A1_HE";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellBlue";};
-	_unit addHeadgear _cap;
+	for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellPurple";};
+	for "_i" from 1 to 5 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+	for "_i" from 1 to 5 do {_unit addItemToVest "30Rnd_556x45_Stanag_Tracer_Red";};
+	_unit addHeadgear "CUP_H_BAF_Officer_Beret_PRR_O";
 
 	comment "Add weapons";
-	_unit addWeapon _weapon_short;
-	if (_nvg) then {_unit addPrimaryWeaponItem "acc_pointer_IR";};
+	_unit addWeapon "CUP_arifle_L85A2_NG";
+	if (_nvg) then {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_2";};
 	if (_lamp) then {_unit addPrimaryWeaponItem "acc_flashlight";};
-	_unit addPrimaryWeaponItem "optic_Holosight_blk_F";
-	_unit addWeapon "hgun_P07_F";
-	_unit addWeapon "Rangefinder";
-
+	_unit addPrimaryWeaponItem "CUP_optic_ACOG";
+	_unit addWeapon "ACE_Vector";
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-	if (_nvg) then {_unit linkItem "NVGoggles_OPFOR";};
+	if (_nvg) then {_unit linkItem "CUP_NVG_PVS7";};
 };
 
 loadoutCC_TL = //
@@ -219,38 +166,36 @@ loadoutCC_TL = //
 	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_IR_Strobe_Item";
+	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACRE_PRC343";
-	_unit addItemToUniform "ACE_microDAGR";
+	_unit addItemToUniform "ACE_IR_Strobe_Item";
 	_unit addItemToUniform "ACE_MapTools";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "16Rnd_9x21_Mag";};
+	_unit addItemToUniform "ACE_microDAGR";
+	_unit addItemToUniform "ACRE_PRC148";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShellBlue";};
-	_unit addVest _vest2;
-	_unit addItemToVest "ACRE_PRC148";
-	for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
-	for "_i" from 1 to 5 do {_unit addItemToVest "30Rnd_65x39_caseless_mag";};
-	for "_i" from 1 to 5 do {_unit addItemToVest "30Rnd_65x39_caseless_mag_Tracer";};
+	_unit addVest _vest_sac;
+	for "_i" from 1 to 2 do {_unit addItemToVest "CUP_HandGrenade_L109A1_HE";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellBlue";};
-	_unit addBackpack _bag_small;
-	_unit addHeadgear (selectrandom _helmet);
+	for "_i" from 1 to 5 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+	for "_i" from 1 to 5 do {_unit addItemToVest "30Rnd_556x45_Stanag_Tracer_Red";};
+	_unit addBackpack _sac;
+	if (_nvg) then {_unit addHeadgear (selectrandom _helmetnight)} else {_unit addHeadgear (selectrandom _helmet)};
 
 	comment "Add weapons";
-	_unit addWeapon _weapon_long;
-	if (_nvg) then {_unit addPrimaryWeaponItem "acc_pointer_IR";};
+	_unit addWeapon "CUP_arifle_L85A2_G";
+	if (_nvg) then {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_2";};
 	if (_lamp) then {_unit addPrimaryWeaponItem "acc_flashlight";};
-	_unit addPrimaryWeaponItem "optic_Hamr";
-	_unit addWeapon "hgun_P07_F";
+	_unit addPrimaryWeaponItem "CUP_optic_ACOG";
+	_unit addWeapon "ACE_Vector";
 	if (_rhsennemy) then {_unit addWeapon "rhs_weap_M136";};
-	if (!_rhsennemy) then {_unit addWeapon "launch_NLAW_F";};
-	_unit addWeapon "Rangefinder";
+	if (!_rhsennemy) then {_unit addWeapon "CUP_launch_M136";};
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-	if (_nvg) then {_unit linkItem "NVGoggles_OPFOR";};
+	if (_nvg) then {_unit linkItem "rhsusf_ANPVS_14";};
 };
 
 loadoutCC_DOC = //
@@ -271,16 +216,14 @@ loadoutCC_DOC = //
 	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_IR_Strobe_Item";
+	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACRE_PRC343";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "16Rnd_9x21_Mag";};
-	_unit addVest _vest2;
-	for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_mag";};
-	for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
-	_unit addBackpack _bag_medium;
+	_unit addVest _vest_sac;
+	for "_i" from 1 to 10 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+	for "_i" from 1 to 2 do {_unit addItemToVest "CUP_HandGrenade_L109A1_HE";};
+	_unit addBackpack _sac;
 	_unit addItemToBackpack "ACE_personalAidKit";
 	for "_i" from 1 to 20 do {_unit addItemToBackpack "ACE_fieldDressing";};
 	for "_i" from 1 to 20 do {_unit addItemToBackpack "ACE_packingBandage";};
@@ -293,21 +236,19 @@ loadoutCC_DOC = //
 	for "_i" from 1 to 8 do {_unit addItemToBackpack "ACE_epinephrine";};
 	for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_tourniquet";};
 	_unit addItemToBackpack "ACE_surgicalKit";
-	_unit addHeadgear (selectrandom _helmet);
+	if (_nvg) then {_unit addHeadgear (selectrandom _helmetnight)} else {_unit addHeadgear (selectrandom _helmet)};
 
 	comment "Add weapons";
-	_unit addWeapon _weapon_long;
-	if (_nvg) then {_unit addPrimaryWeaponItem "acc_pointer_IR";};
+	_unit addWeapon "CUP_arifle_L85A2_NG";
+	if (_nvg) then {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_2";};
 	if (_lamp) then {_unit addPrimaryWeaponItem "acc_flashlight";};
-	_unit addPrimaryWeaponItem "optic_Holosight_blk_F";
-	_unit addWeapon "hgun_P07_F";
-	_unit addWeapon "binocular";
+	_unit addPrimaryWeaponItem "CUP_optic_HoloBlack";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-	if (_nvg) then {_unit linkItem "NVGoggles_OPFOR";};
+	if (_nvg) then {_unit linkItem "rhsusf_ANPVS_14";};
 };
 
 loadoutCC_AR = //
@@ -328,33 +269,27 @@ loadoutCC_AR = //
 	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_IR_Strobe_Item";
+	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACRE_PRC343";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "16Rnd_9x21_Mag";};
-	_unit addVest _vest2;
-	for "_i" from 1 to 4 do {_unit addItemToVest "100Rnd_65x39_caseless_mag_Tracer";};
-	for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
-	_unit addBackpack _bag_small;
-	for "_i" from 1 to 4 do {_unit addItemToBackpack "100Rnd_65x39_caseless_mag_Tracer";};
-	_unit addHeadgear (selectrandom _helmet);
+	_unit addVest _vest_empty;
+	_unit addItemToVest "CUP_200Rnd_TE4_Red_Tracer_556x45_M249";
+	_unit addItemToVest "CUP_HandGrenade_L109A1_HE";
+	_unit addBackpack _sac;
+	for "_i" from 1 to 3 do {_unit addItemToBackpack "CUP_200Rnd_TE4_Red_Tracer_556x45_M249";};
+	if (_nvg) then {_unit addHeadgear (selectrandom _helmetnight)} else {_unit addHeadgear (selectrandom _helmet)};
 
 	comment "Add weapons";
-	_unit addWeapon _weapon_ar;
-	if (_nvg) then {_unit addPrimaryWeaponItem "acc_pointer_IR";};
-	if (_lamp) then {_unit addPrimaryWeaponItem "acc_flashlight";};
-	_unit addPrimaryWeaponItem "optic_Hamr";
-	_unit addPrimaryWeaponItem "bipod_01_F_blk";
-	_unit addWeapon "hgun_P07_F";
-	_unit addWeapon "Rangefinder";
+	_unit addWeapon "CUP_lmg_L110A1";
+	if (_lamp or _nvg) then {_unit addPrimaryWeaponItem "acc_flashlight";};
+	_unit addWeapon "ACE_Vector";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-	if (_nvg) then {_unit linkItem "NVGoggles_OPFOR";};
+	if (_nvg) then {_unit linkItem "rhsusf_ANPVS_14";};
 };
 
 loadoutCC_AAR = //
@@ -375,32 +310,29 @@ loadoutCC_AAR = //
 	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_IR_Strobe_Item";
+	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACRE_PRC343";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "16Rnd_9x21_Mag";};
-	_unit addVest _vest2;
-	for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_mag";};
-	for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
-	_unit addBackpack _bag_medium;
-	for "_i" from 1 to 6 do {_unit addItemToBackpack "100Rnd_65x39_caseless_mag_Tracer";};
-	_unit addHeadgear (selectrandom _helmet);
+	_unit addVest _vest_sac;
+	for "_i" from 1 to 10 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+	for "_i" from 1 to 2 do {_unit addItemToVest "CUP_HandGrenade_L109A1_HE";};
+	_unit addBackpack _sac;
+	for "_i" from 1 to 3 do {_unit addItemToBackpack "CUP_200Rnd_TE4_Red_Tracer_556x45_M249";};
+	if (_nvg) then {_unit addHeadgear (selectrandom _helmetnight)} else {_unit addHeadgear (selectrandom _helmet)};
 
 	comment "Add weapons";
-	_unit addWeapon _weapon_long;
-	if (_nvg) then {_unit addPrimaryWeaponItem "acc_pointer_IR";};
+	_unit addWeapon "CUP_arifle_L85A2_NG";
+	if (_nvg) then {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_2";};
 	if (_lamp) then {_unit addPrimaryWeaponItem "acc_flashlight";};
-	_unit addPrimaryWeaponItem "optic_Holosight_blk_F";
-	_unit addWeapon "hgun_P07_F";
-	_unit addWeapon "Rangefinder";
+	_unit addPrimaryWeaponItem "CUP_optic_HoloBlack";
+	_unit addWeapon "ACE_Vector";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-	if (_nvg) then {_unit linkItem "NVGoggles_OPFOR";};
+	if (_nvg) then {_unit linkItem "rhsusf_ANPVS_14";};
 };
 
 loadoutCC_MG = //
@@ -421,33 +353,27 @@ loadoutCC_MG = //
 	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_IR_Strobe_Item";
+	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACRE_PRC343";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "16Rnd_9x21_Mag";};
-	_unit addVest _vest2;
-	_unit addItemToVest "130Rnd_338_Mag";
-	for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
-	_unit addBackpack _bag_small;
-	for "_i" from 1 to 2 do {_unit addItemToBackpack "130Rnd_338_Mag";};
-	_unit addHeadgear (selectrandom _helmet);
+	_unit addVest _vest_empty;
+	_unit addItemToVest "CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M";
+	_unit addItemToVest "CUP_HandGrenade_L109A1_HE";
+	_unit addBackpack _sac;
+	for "_i" from 1 to 3 do {_unit addItemToBackpack "CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M";};
+	if (_nvg) then {_unit addHeadgear (selectrandom _helmetnight)} else {_unit addHeadgear (selectrandom _helmet)};
 
 	comment "Add weapons";
-	_unit addWeapon _weapon_mg;
-	if (_nvg) then {_unit addPrimaryWeaponItem "acc_pointer_IR";};
-	if (_lamp) then {_unit addPrimaryWeaponItem "acc_flashlight";};
-	_unit addPrimaryWeaponItem "optic_Hamr";
-	_unit addPrimaryWeaponItem "bipod_01_F_blk";
-	_unit addWeapon "hgun_P07_F";
-	_unit addWeapon "Rangefinder";
+	_unit addWeapon "CUP_lmg_L7A2";
+	_unit addPrimaryWeaponItem "CUP_optic_ElcanM145";
+	_unit addWeapon "ACE_Vector";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-	if (_nvg) then {_unit linkItem "NVGoggles_OPFOR";};
+	if (_nvg) then {_unit linkItem "rhsusf_ANPVS_14";};
 };
 
 loadoutCC_AMG = //
@@ -468,32 +394,29 @@ loadoutCC_AMG = //
 	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_IR_Strobe_Item";
+	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACRE_PRC343";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "16Rnd_9x21_Mag";};
-	_unit addVest _vest2;
-	for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_mag";};
-	for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
-	_unit addBackpack _bag_medium;
-	for "_i" from 1 to 4 do {_unit addItemToBackpack "130Rnd_338_Mag";};
-	_unit addHeadgear (selectrandom _helmet);
+	_unit addVest _vest_sac;
+	for "_i" from 1 to 10 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+	for "_i" from 1 to 2 do {_unit addItemToVest "CUP_HandGrenade_L109A1_HE";};
+	_unit addBackpack _sac;
+	for "_i" from 1 to 3 do {_unit addItemToBackpack "CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M";};
+	if (_nvg) then {_unit addHeadgear (selectrandom _helmetnight)} else {_unit addHeadgear (selectrandom _helmet)};
 
 	comment "Add weapons";
-	_unit addWeapon _weapon_long;
-	if (_nvg) then {_unit addPrimaryWeaponItem "acc_pointer_IR";};
+	_unit addWeapon "CUP_arifle_L85A2_NG";
+	if (_nvg) then {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_2";};
 	if (_lamp) then {_unit addPrimaryWeaponItem "acc_flashlight";};
-	_unit addPrimaryWeaponItem "optic_Aco";
-	_unit addWeapon "hgun_P07_F";
-	_unit addWeapon "Rangefinder";
+	_unit addPrimaryWeaponItem "CUP_optic_SUSAT";
+	_unit addWeapon "ACE_Vector";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-	if (_nvg) then {_unit linkItem "NVGoggles_OPFOR";};
+	if (_nvg) then {_unit linkItem "rhsusf_ANPVS_14";};
 };
 
 loadoutCC_AT = //
@@ -514,32 +437,27 @@ loadoutCC_AT = //
 	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_IR_Strobe_Item";
+	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACRE_PRC343";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "16Rnd_9x21_Mag";};
-	_unit addVest _vest1;
-	for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_mag";};
-	for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
-	_unit addHeadgear (selectrandom _helmet);
+	_unit addVest _vest_r;
+	for "_i" from 1 to 10 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+	for "_i" from 1 to 2 do {_unit addItemToVest "CUP_HandGrenade_L109A1_HE";};
+	if (_nvg) then {_unit addHeadgear (selectrandom _helmetnight)} else {_unit addHeadgear (selectrandom _helmet)};
 
 	comment "Add weapons";
-	_unit addWeapon _weapon_long;
-	if (_nvg) then {_unit addPrimaryWeaponItem "acc_pointer_IR";};
+	_unit addWeapon "CUP_arifle_L85A2_NG";
+	if (_nvg) then {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_2";};
 	if (_lamp) then {_unit addPrimaryWeaponItem "acc_flashlight";};
-	_unit addPrimaryWeaponItem "optic_Aco";
-	_unit addWeapon "launch_I_Titan_short_F";
-	_unit addsecondaryweaponitem "Titan_AT";
-	_unit addWeapon "hgun_P07_F";
-	_unit addWeapon "Rangefinder";
+	_unit addPrimaryWeaponItem "CUP_optic_HoloBlack";
+	_unit addWeapon "CUP_launch_NLAW";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-	if (_nvg) then {_unit linkItem "NVGoggles_OPFOR";};
+	if (_nvg) then {_unit linkItem "rhsusf_ANPVS_14";};
 };
 
 loadoutCC_AAT = //
@@ -560,32 +478,27 @@ loadoutCC_AAT = //
 	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_IR_Strobe_Item";
+	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACRE_PRC343";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "16Rnd_9x21_Mag";};
-	_unit addVest _vest2;
-	for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_mag";};
-	for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
-	_unit addBackpack _bag_big;
-	for "_i" from 1 to 2 do {_unit addItemToBackpack "Titan_AT";};
-	_unit addHeadgear (selectrandom _helmet);
+	_unit addVest _vest_r;
+	for "_i" from 1 to 10 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+	for "_i" from 1 to 2 do {_unit addItemToVest "CUP_HandGrenade_L109A1_HE";};
+	if (_nvg) then {_unit addHeadgear (selectrandom _helmetnight)} else {_unit addHeadgear (selectrandom _helmet)};
 
 	comment "Add weapons";
-	_unit addWeapon _weapon_short;
-	if (_nvg) then {_unit addPrimaryWeaponItem "acc_pointer_IR";};
+	_unit addWeapon "CUP_arifle_L85A2_NG";
+	if (_nvg) then {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_2";};
 	if (_lamp) then {_unit addPrimaryWeaponItem "acc_flashlight";};
-	_unit addPrimaryWeaponItem "optic_Holosight_blk_F";
-	_unit addWeapon "hgun_P07_F";
-	_unit addWeapon "Rangefinder";
+	_unit addPrimaryWeaponItem "CUP_optic_SUSAT";
+	_unit addWeapon "CUP_launch_NLAW";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-	if (_nvg) then {_unit linkItem "NVGoggles_OPFOR";};
+	if (_nvg) then {_unit linkItem "rhsusf_ANPVS_14";};
 };
 
 loadoutCC_DEMO = //
@@ -606,36 +519,32 @@ loadoutCC_DEMO = //
 	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_IR_Strobe_Item";
+	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACRE_PRC343";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "16Rnd_9x21_Mag";};
-	_unit addVest _vest2;
-	for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_mag";};
-	for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
-	_unit addBackpack _bag_medium;
+	_unit addVest _vest_sac;
+	for "_i" from 1 to 10 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+	for "_i" from 1 to 2 do {_unit addItemToVest "CUP_HandGrenade_L109A1_HE";};
+	_unit addBackpack _sac;
 	_unit addItemToBackpack "ACE_EntrenchingTool";
-	_unit addItemToBackpack "ACE_DefusalKit";
 	_unit addItemToBackpack "ACE_M26_Clacker";
+	_unit addItemToBackpack "ACE_DefusalKit";
 	_unit addItemToBackpack "SatchelCharge_Remote_Mag";
 	for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
-	_unit addHeadgear (selectrandom _helmet);
+	if (_nvg) then {_unit addHeadgear (selectrandom _helmetnight)} else {_unit addHeadgear (selectrandom _helmet)};
 
 	comment "Add weapons";
-	_unit addWeapon _weapon_short;
-	if (_nvg) then {_unit addPrimaryWeaponItem "acc_pointer_IR";};
+	_unit addWeapon "CUP_arifle_L85A2_NG";
+	if (_nvg) then {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_2";};
 	if (_lamp) then {_unit addPrimaryWeaponItem "acc_flashlight";};
-	_unit addPrimaryWeaponItem "optic_Holosight_blk_F";
-	_unit addWeapon "hgun_P07_F";
-	_unit addWeapon "Binocular";
+	_unit addPrimaryWeaponItem "CUP_optic_HoloBlack";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-	if (_nvg) then {_unit linkItem "NVGoggles_OPFOR";};
+	if (_nvg) then {_unit linkItem "rhsusf_ANPVS_14";};
 };
 
 loadoutCC_M = //
@@ -656,34 +565,31 @@ loadoutCC_M = //
 	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_IR_Strobe_Item";
+	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACRE_PRC343";
+	_unit addItemToUniform "ACE_MapTools";
+	_unit addItemToUniform "ACE_Kestrel4500";
+	_unit addItemToUniform "ACE_RangeCard";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "16Rnd_9x21_Mag";};
-	_unit addVest _vest1;
-	for "_i" from 1 to 10 do {_unit addItemToVest "30Rnd_65x39_caseless_mag";};
-	for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
-	_unit addItemToVest "ACE_MapTools";
-	_unit addItemToVest "ACE_Kestrel4500";
-	_unit addItemToVest "ACE_RangeCard";
-	_unit addHeadgear (selectrandom _helmet);
+	_unit addVest _vest_r;
+	for "_i" from 1 to 2 do {_unit addItemToVest "CUP_HandGrenade_L109A1_HE";};
+	for "_i" from 1 to 10 do {_unit addItemToVest "20Rnd_762x51_Mag";};
+	if (_nvg) then {_unit addHeadgear (selectrandom _helmetnight)} else {_unit addHeadgear (selectrandom _helmet)};
 
 	comment "Add weapons";
-	_unit addWeapon _weapon_m;
-	if (_nvg) then {_unit addPrimaryWeaponItem "acc_pointer_IR";};
+	_unit addWeapon "CUP_srifle_L129A1_HG";
+	if (_nvg) then {_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side";};
 	if (_lamp) then {_unit addPrimaryWeaponItem "acc_flashlight";};
-	_unit addPrimaryWeaponItem "optic_SOS";
+	_unit addPrimaryWeaponItem "CUP_optic_SB_11_4x20_PM";
 	_unit addPrimaryWeaponItem "bipod_01_F_blk";
-	_unit addWeapon "hgun_P07_F";
-	_unit addWeapon "Rangefinder";
+	_unit addWeapon "ACE_Vector";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-	if (_nvg) then {_unit linkItem "NVGoggles_OPFOR";};
+	if (_nvg) then {_unit linkItem "rhsusf_ANPVS_14";};
 };
 
 loadoutCC_GL = //
@@ -704,30 +610,28 @@ loadoutCC_GL = //
 	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_IR_Strobe_Item";
+	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACRE_PRC343";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "16Rnd_9x21_Mag";};
-	_unit addVest _vest1;
-	for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_mag";};
-	for "_i" from 1 to 10 do {_unit addItemToVest "1Rnd_HE_Grenade_shell";};
-	for "_i" from 1 to 4 do {_unit addItemToVest "1Rnd_SmokeRed_Grenade_shell";};
-	_unit addHeadgear (selectrandom _helmet);
+	_unit addItemToUniform "CUP_HandGrenade_L109A1_HE";
+	_unit addVest _vest_gl;
+	for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+	for "_i" from 1 to 15 do {_unit addItemToVest "CUP_1Rnd_HEDP_M203";};
+	for "_i" from 1 to 4 do {_unit addItemToVest "CUP_1Rnd_SmokeRed_M203";};
+	if (_nvg) then {_unit addHeadgear (selectrandom _helmetnight)} else {_unit addHeadgear (selectrandom _helmet)};
 
 	comment "Add weapons";
-	_unit addWeapon _weapon_gl;
-	if (_nvg) then {_unit addPrimaryWeaponItem "acc_pointer_IR";};
+	_unit addWeapon "CUP_arifle_L85A2_GL";
+	if (_nvg) then {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_2";};
 	if (_lamp) then {_unit addPrimaryWeaponItem "acc_flashlight";};
-	_unit addPrimaryWeaponItem "optic_Hamr";
-	_unit addWeapon "hgun_P07_F";
+	_unit addPrimaryWeaponItem "CUP_optic_SUSAT";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-	if (_nvg) then {_unit linkItem "NVGoggles_OPFOR";};
+	if (_nvg) then {_unit linkItem "rhsusf_ANPVS_14";};
 };
 
 loadoutCC_A = //
@@ -748,35 +652,31 @@ loadoutCC_A = //
 	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_IR_Strobe_Item";
+	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACRE_PRC343";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "16Rnd_9x21_Mag";};
-	_unit addVest _vest2;
-	for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_mag";};
-	for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
-	_unit addBackpack _bag_big;
-	for "_i" from 1 to 10 do {_unit addItemToBackpack "30Rnd_65x39_caseless_mag";};
-	for "_i" from 1 to 4 do {_unit addItemToBackpack "HandGrenade";};
+	_unit addVest _vest_sac;
+	for "_i" from 1 to 10 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+	for "_i" from 1 to 2 do {_unit addItemToVest "CUP_HandGrenade_L109A1_HE";};
+	_unit addBackpack _sac;
+	for "_i" from 1 to 10 do {_unit addItemToBackpack "30Rnd_556x45_Stanag";};
+	for "_i" from 1 to 4 do {_unit addItemToBackpack "CUP_HandGrenade_L109A1_HE";};
 	for "_i" from 1 to 4 do {_unit addItemToBackpack "SmokeShell";};
-	for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_HandFlare_White";};
-	_unit addHeadgear (selectrandom _helmet);
+	for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_HandFlare_Green";};
+	if (_nvg) then {_unit addHeadgear (selectrandom _helmetnight)} else {_unit addHeadgear (selectrandom _helmet)};
 
 	comment "Add weapons";
-	_unit addWeapon _weapon_long;
-	if (_nvg) then {_unit addPrimaryWeaponItem "acc_pointer_IR";};
+	_unit addWeapon "CUP_arifle_L85A2_NG";
+	if (_nvg) then {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_2";};
 	if (_lamp) then {_unit addPrimaryWeaponItem "acc_flashlight";};
-	_unit addPrimaryWeaponItem "optic_Aco";
-	_unit addWeapon "hgun_P07_F";
-	_unit addWeapon "Rangefinder";
+	_unit addPrimaryWeaponItem "CUP_optic_SUSAT";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-	if (_nvg) then {_unit linkItem "NVGoggles_OPFOR";};
+	if (_nvg) then {_unit linkItem "rhsusf_ANPVS_14";};
 };
 
 loadoutCC_LAT = //
@@ -797,31 +697,28 @@ loadoutCC_LAT = //
 	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_IR_Strobe_Item";
+	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACRE_PRC343";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "16Rnd_9x21_Mag";};
-	_unit addVest _vest1;
-	for "_i" from 1 to 10 do {_unit addItemToVest "30Rnd_65x39_caseless_mag";};
-	for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
-	_unit addHeadgear (selectrandom _helmet);
+	_unit addVest _vest_r;
+	for "_i" from 1 to 10 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+	for "_i" from 1 to 2 do {_unit addItemToVest "CUP_HandGrenade_L109A1_HE";};
+	if (_nvg) then {_unit addHeadgear (selectrandom _helmetnight)} else {_unit addHeadgear (selectrandom _helmet)};
 
 	comment "Add weapons";
-	_unit addWeapon _weapon_long;
-	if (_nvg) then {_unit addPrimaryWeaponItem "acc_pointer_IR";};
+	_unit addWeapon "CUP_arifle_L85A2_NG";
+	if (_nvg) then {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_2";};
 	if (_lamp) then {_unit addPrimaryWeaponItem "acc_flashlight";};
-	_unit addPrimaryWeaponItem "optic_Aco";
-	_unit addWeapon "hgun_P07_F";
+	_unit addPrimaryWeaponItem "CUP_optic_HoloBlack";
 	if (_rhsennemy) then {_unit addWeapon "rhs_weap_M136";};
-	if (!_rhsennemy) then {_unit addWeapon "launch_NLAW_F";};
+	if (!_rhsennemy) then {_unit addWeapon "CUP_launch_M136";};
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-	if (_nvg) then {_unit linkItem "NVGoggles_OPFOR";};
+	if (_nvg) then {_unit linkItem "rhsusf_ANPVS_14";};
 };
 
 loadoutCC_R = //
@@ -842,29 +739,26 @@ loadoutCC_R = //
 	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_IR_Strobe_Item";
+	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACRE_PRC343";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "16Rnd_9x21_Mag";};
-	_unit addVest _vest1;
-	for "_i" from 1 to 10 do {_unit addItemToVest "30Rnd_65x39_caseless_mag";};
-	for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
-	_unit addHeadgear (selectrandom _helmet);
+	_unit addVest _vest_r;
+	for "_i" from 1 to 10 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+	for "_i" from 1 to 2 do {_unit addItemToVest "CUP_HandGrenade_L109A1_HE";};
+	if (_nvg) then {_unit addHeadgear (selectrandom _helmetnight)} else {_unit addHeadgear (selectrandom _helmet)};
 
 	comment "Add weapons";
-	_unit addWeapon _weapon_long;
-	if (_nvg) then {_unit addPrimaryWeaponItem "acc_pointer_IR";};
+	_unit addWeapon "CUP_arifle_L85A2_NG";
+	if (_nvg) then {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_2";};
 	if (_lamp) then {_unit addPrimaryWeaponItem "acc_flashlight";};
-	_unit addPrimaryWeaponItem "optic_Aco";
-	_unit addWeapon "hgun_P07_F";
+	_unit addPrimaryWeaponItem "CUP_optic_HoloBlack";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-	if (_nvg) then {_unit linkItem "NVGoggles_OPFOR";};
+	if (_nvg) then {_unit linkItem "rhsusf_ANPVS_14";};
 };
 
 loadoutCC_CREW = //
@@ -885,32 +779,27 @@ loadoutCC_CREW = //
 	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_IR_Strobe_Item";
+	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACRE_PRC343";
-	_unit addItemToUniform "ACE_microDAGR";
-	_unit addItemToUniform "ACE_MapTools";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "16Rnd_9x21_Mag";};
-	_unit addVest "V_TacVest_khk";
+	_unit addVest _vest_sac;
 	_unit addItemToVest "ACRE_PRC148";
-	for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_mag";};
-	_unit addHeadgear "H_HelmetCrew_B";
+	_unit addItemToVest "ACE_MapTools";
+	_unit addItemToVest "ACE_microDAGR";
+	for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+	for "_i" from 1 to 2 do {_unit addItemToVest "CUP_HandGrenade_L109A1_HE";};
+	_unit addHeadgear _helmetcrew;
 
 	comment "Add weapons";
-	_unit addWeapon _weapon_short;
-	if (_nvg) then {_unit addPrimaryWeaponItem "acc_pointer_IR";};
-	if (_lamp) then {_unit addPrimaryWeaponItem "acc_flashlight";};
-	_unit addPrimaryWeaponItem "optic_Aco";
-	_unit addWeapon "hgun_P07_F";
-	_unit addWeapon "Binocular";
+	_unit addWeapon "CUP_arifle_L85A2";
+	_unit addPrimaryWeaponItem "CUP_optic_HoloBlack";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-	if (_nvg) then {_unit linkItem "NVGoggles_OPFOR";};
+	if (_nvg) then {_unit linkItem "rhsusf_ANPVS_14";};
 };
 
 loadoutCC_PILOT = //
@@ -928,7 +817,8 @@ loadoutCC_PILOT = //
 	removeGoggles _unit;
 
 	comment "Add containers";
-	_unit forceAddUniform "U_B_HeliPilotCoveralls";
+	if (_dpm) then {_unit forceAddUniform "CUP_U_B_BAF_DPM_S2_UnRolled"};
+	if (_ddpm) then {_unit forceAddUniform "CUP_U_B_BAF_DDPM_S2_UnRolled"};
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
 	_unit addItemToUniform "ACE_tourniquet";
@@ -936,21 +826,23 @@ loadoutCC_PILOT = //
 	_unit addItemToUniform "ACRE_PRC343";
 	_unit addItemToUniform "ACE_microDAGR";
 	_unit addItemToUniform "ACE_MapTools";
-	_unit addItemToUniform "ACE_IR_Strobe_Item";
+	_unit addItemToUniform "ACRE_PRC148";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShellBlue";};
-	_unit addVest "V_TacVest_blk";
-	_unit addItemToVest "ACRE_PRC148";
-	for "_i" from 1 to 6 do {_unit addItemToVest "30Rnd_9x21_Mag";};
-	_unit addHeadgear "H_PilotHelmetHeli_B";
+	_unit addVest _vest_pilot;
+	for "_i" from 1 to 6 do {_unit addItemToVest "CUP_30Rnd_9x19_MP5";};
+	for "_i" from 1 to 2 do {_unit addItemToVest "CUP_7Rnd_45ACP_1911";};
+	_unit addItemToVest "B_IR_Grenade";
+	_unit addHeadgear "CUP_H_BAF_Helmet_Pilot";
 
 	comment "Add weapons";
-	_unit addWeapon "hgun_PDW2000_F";
+	_unit addWeapon "CUP_smg_MP5A5";
+	_unit addWeapon "CUP_hgun_Colt1911";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-	if (_nvg) then {_unit linkItem "NVGoggles_OPFOR";};
+	if (_nvg) then {_unit linkItem "rhsusf_ANPVS_15";};
 };
 
 loadoutCC_SNIPER = //
@@ -971,36 +863,40 @@ loadoutCC_SNIPER = //
 	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
+	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACRE_PRC343";
+	_unit addItemToUniform "ACE_ATragMX";
+	_unit addItemToUniform "ACE_RangeCard";
 	_unit addItemToUniform "ACE_microDAGR";
 	_unit addItemToUniform "ACE_MapTools";
 	_unit addItemToUniform "ACE_Kestrel4500";
 	_unit addItemToUniform "ACE_IR_Strobe_Item";
-	_unit addItemToUniform "ACE_ATragMX";
-	_unit addItemToUniform "ACE_RangeCard";
+	_unit addItemToUniform "ACRE_PRC148";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	_unit addVest "V_Chestrig_rgr";
-	for "_i" from 1 to 3 do {_unit addItemToVest "16Rnd_9x21_Mag";};
-	for "_i" from 1 to 8 do {_unit addItemToVest "7Rnd_408_Mag";};
-	_unit addBackpack _bag_small;
-	for "_i" from 1 to 4 do {_unit addItemToBackpack "7Rnd_408_Mag";};
-	_unit addItemToBackpack "ACRE_PRC148";
-	_unit addHeadgear _hat;
+	_unit addVest _vest_r;
+	for "_i" from 1 to 3 do {_unit addItemToVest "CUP_7Rnd_45ACP_1911";};
+	for "_i" from 1 to 5 do {_unit addItemToVest "CUP_5Rnd_86x70_L115A1";};
+	if (_dpm) then {_unit addBackpack "B_AssaultPack_khk";};
+	if (_ddpm) then {_unit addBackpack "B_AssaultPack_cbr";};
+	for "_i" from 1 to 12 do {_unit addItemToBackpack "CUP_5Rnd_86x70_L115A1";};
+	if (_nvg) then {_unit addHeadgear (selectrandom _helmetnight)} else {_unit addHeadgear (selectrandom _helmet)};
 
 	comment "Add weapons";
-	_unit addWeapon "srifle_LRR_F";
-	_unit addPrimaryWeaponItem "optic_LRPS";
-	_unit addWeapon "hgun_P07_F";
-	_unit addHandgunItem "muzzle_snds_L";
+	_unit addWeapon "CUP_hgun_Colt1911";
+	if (_dpm) then {_unit addWeapon "CUP_srifle_AWM_wdl";};
+	if (_ddpm) then {_unit addWeapon "CUP_srifle_AWM_des";};
+	_unit addPrimaryWeaponItem "CUP_optic_SB_3_12x50_PMII";
+	if (_dpm) then {_unit addPrimaryWeaponItem "bipod_01_F_blk";};
+	if (_ddpm) then {_unit addPrimaryWeaponItem "bipod_01_F_snd";};
 	_unit addWeapon "Rangefinder";
+	_unit addItemToVest "CUP_optic_AN_PVS_4";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-	if (_nvg or _lamp) then {_unit linkItem "NVGoggles_OPFOR";};
+	if (_nvg or _lamp) then {_unit linkItem "rhsusf_ANPVS_14";};
 };
 
 loadoutCC_OBS = //
@@ -1021,38 +917,34 @@ loadoutCC_OBS = //
 	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
+	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACRE_PRC343";
+	_unit addItemToUniform "ACE_ATragMX";
+	_unit addItemToUniform "ACE_RangeCard";
 	_unit addItemToUniform "ACE_microDAGR";
 	_unit addItemToUniform "ACE_MapTools";
 	_unit addItemToUniform "ACE_Kestrel4500";
 	_unit addItemToUniform "ACE_IR_Strobe_Item";
-	_unit addItemToUniform "ACE_ATragMX";
+	_unit addItemToUniform "ACRE_PRC148";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	_unit addVest "V_Chestrig_rgr";
-	_unit addItemToVest "ACRE_PRC148";
-	for "_i" from 1 to 3 do {_unit addItemToVest "16Rnd_9x21_Mag";};
-	for "_i" from 1 to 10 do {_unit addItemToVest "30Rnd_65x39_caseless_mag";};
-	_unit addBackpack _bag_small;
-	_unit addItemToBackpack "ACE_Tripod";
-	_unit addItemToBackpack "ACE_SpottingScope";
-	_unit addHeadgear _hat;
+	_unit addVest _vest_r;
+	for "_i" from 1 to 2 do {_unit addItemToVest "CUP_HandGrenade_L109A1_HE";};
+	for "_i" from 1 to 10 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+	if (_nvg) then {_unit addHeadgear (selectrandom _helmetnight)} else {_unit addHeadgear (selectrandom _helmet)};
 
 	comment "Add weapons";
-	_unit addWeapon _weapon_short;
-	_unit addPrimaryWeaponItem "acc_pointer_IR";
-	_unit addPrimaryWeaponItem "optic_Hamr";
-	_unit addPrimaryWeaponItem "muzzle_snds_65_TI_blk_F";
-	_unit addWeapon "hgun_P07_F";
-	_unit addHandgunItem "muzzle_snds_L";
+	_unit addWeapon "CUP_arifle_L85A2_G";
+	_unit addPrimaryWeaponItem "CUP_muzzle_snds_L85";
+	if (_nvg or _lamp) then {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_2";};
+	_unit addPrimaryWeaponItem "CUP_optic_ACOG";
 	_unit addWeapon "Rangefinder";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-	if (_nvg or _lamp) then {_unit linkItem "NVGoggles_OPFOR";};
+	if (_nvg or _lamp) then {_unit linkItem "rhsusf_ANPVS_14";};
 };
 
 loadoutCC_JTAC = //
@@ -1073,35 +965,31 @@ loadoutCC_JTAC = //
 	_unit forceAddUniform (selectrandom _uniform);
 	for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_fieldDressing";};
 	_unit addItemToUniform "ACE_EarPlugs";
-	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
-	_unit addItemToUniform "ACE_IR_Strobe_Item";
+	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACRE_PRC343";
-	_unit addItemToUniform "ACE_microDAGR";
 	_unit addItemToUniform "ACE_MapTools";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "16Rnd_9x21_Mag";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShellBlue";};
-	_unit addVest _vest2;
-	for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
-	for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_mag";};
-	for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellBlue";};
-	_unit addBackpack _bag_small;
+	_unit addItemToUniform "ACE_microDAGR";
+	_unit addVest _vest_sac;
+	for "_i" from 1 to 10 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+	for "_i" from 1 to 2 do {_unit addItemToVest "CUP_HandGrenade_L109A1_HE";};
+	for "_i" from 1 to 8 do {_unit addItemToVest "SmokeShellPurple";};
+	if (_dpm) then {_unit addBackpack "B_AssaultPack_khk";};
+	if (_ddpm) then {_unit addBackpack "B_AssaultPack_cbr";};
 	_unit addItemToBackpack "ACRE_PRC117F";
 	for "_i" from 1 to 2 do {_unit addItemToBackpack "Laserbatteries";};
-	for "_i" from 1 to 4 do {_unit addItemToBackpack "SmokeShellPurple";};
-	_unit addHeadgear (selectrandom _helmet);
+	_unit addHeadgear "rhsusf_Bowman";
 
 	comment "Add weapons";
-	_unit addWeapon _weapon_short;
-	if (_nvg) then {_unit addPrimaryWeaponItem "acc_pointer_IR";};
+	_unit addWeapon "CUP_arifle_L85A2_NG";
+	if (_nvg) then {_unit addPrimaryWeaponItem "CUP_acc_ANPEQ_2";};
 	if (_lamp) then {_unit addPrimaryWeaponItem "acc_flashlight";};
-	_unit addPrimaryWeaponItem "optic_Holosight_blk_F";
-	_unit addWeapon "hgun_P07_F";
+	_unit addPrimaryWeaponItem "CUP_optic_HoloBlack";
 	_unit addWeapon "Laserdesignator";
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemWatch";
-	if (_nvg) then {_unit linkItem "NVGoggles_OPFOR";};
+	if (_nvg) then {_unit linkItem "CUP_NVG_PVS7";};
 };

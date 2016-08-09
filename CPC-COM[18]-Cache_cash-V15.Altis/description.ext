@@ -46,43 +46,32 @@ class Params
 	class Faction	//paramsArray select 5
 	{
 	title = "Faction joueur :";
-	values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26};
-	texts[] = {
-		"US Army ocp (RHS)",
-		"US Army ucp (CUP)",
-		"Russe mflora (RHS)",
-		"Russe emr (CUP)",
-		"Insurgés (RHS)",
-		"Insurgés (CUP)",
-		"Rebelles takistanais (RHS)",
-		"Rebelles takistanais (CUP)",
-		"Armée takistanaise (RHS)",
-		"Armée takistanaise (CUP)",
-		"KSK desert (CUP)",
-		"KSK woodland (CUP)",
+	values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14};
+	texts[] = 
+	{
 		"OTAN",
 		"CSAT",
 		"AAF",
-		"GFD (CUP)",
-		"NPFD (CUP)",
-		"RACS (CUP)",
-		"SLA (CUP)",
-		"Spetsnaz (RHS)",
-		"USMC (CUP)",
-		"Commando jungle (CUP)",
-		"BAF desert (CUP)",
-		"BAF woodland (CUP)",
-		"Chedaki (CUP)",
-		"URSS en afghanistan (RHS)",
-		"Russe moderne EMR (RHS)"
+		"US Army",
+		"US Marines",
+		"US forces spéciales",
+		"Russie 2000",
+		"Russie 2015",
+		"Russie forces spéciales",
+		"KSK",
+		"BAF",
+		"RACS",
+		"Armée takistanaise",
+		"Insurgés (adaptatifs)",
+		"Rebelles takistanais"
 	};
-	default = 0;
+	default = 3;
 	};
 
 	class Faction_Ennemi	//paramsArray select 6
 	{
 	title = "Faction Ennemie:";
-	values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,100,101,102,103,104,105,106};
+	values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,100,101,102,103,104,105,106,107};
 	texts[] = 
 	{
 		"US (RHS)",
@@ -100,13 +89,16 @@ class Params
 		"BAF desert (CUP)",
 		"BAF woodland (CUP)",
 		"CDF (RHS)",
+		"CSAT (Tanoa)",
+		"NATO (Tanoa)",
 		"Insurgés (RHS)",
 		"Rebelles takistanais (CUP)",
 		"NAPA (CUP)",
 		"FIA",
 		"NPFD (CUP)",
 		"ChDKZ (CUP)",
-		"Paramilitaires nationalistes (RHS)"
+		"Paramilitaires nationalistes (RHS)",
+		"Syndikat"
 	};
 	default = 100;
 	};
@@ -122,7 +114,7 @@ class Params
 	class Vehicule1		//paramsArray select 8
 	{
 	title = "1er vehicule :";
-	values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114};
+	values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120};
 	texts[] = 
 	{
 		"Aucun",
@@ -239,7 +231,13 @@ class Params
 		"static Metis (RHS)",
 		"static Kornet (RHS)",
 		"M1117 MRAP (RHS)",
-		"UAZ SPG9 (RHS)"
+		"UAZ SPG9 (RHS)",
+		"Quilin",
+		"Quilin armé",
+		"Prowler",
+		"Prowler armé",
+		"Prowler light",
+		"Jeep"
 	};
 	default = 0;
 	};
@@ -257,15 +255,15 @@ class Params
 	class Meteo	//paramsArray select 11
 	{
 	title = "Météo :";
-	values[] = {2,0,0.5,0.72,1};
-	texts[] = {"Par défaut","Dégagée","Nuageuse","Pluvieuse","Orageuse"};
-	default = 2;
+	values[] = {0,1,2,3,4};
+	texts[] = {"Ciel dégagé","Ciel légèrement nuageux","Ciel nuageux","Pluie","Orage"};
+	default = 1;
 	};
 
 	class Brouillard	//paramsArray select 12
 	{
 	title = "Brouillard :";
-	values[] = {0,0.25,0.5,0.8};
+	values[] = {0,1,2,3};
 	texts[] = {"Aucun","Léger","Moyen","Dense"};
 	default = 0;
 	};

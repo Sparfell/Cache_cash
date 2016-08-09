@@ -28,33 +28,21 @@ le 1 et le 2 sont là pour permettre l'ouverture de plusieurs portes
 
 // Paramètres modifiables à votre convenance
 switch (paramsArray select 5) do {
-		case 0 : {CPC_EXTRA_HeloType = "RHS_CH_47F";}; // US RHS
-		case 1 : {CPC_EXTRA_HeloType = "CUP_B_CH53E_USMC";}; // US CUP
-		case 2 : {CPC_EXTRA_HeloType = "RHS_Mi8mt_vvsc";}; // RU RHS
-		case 3 : {CPC_EXTRA_HeloType = "RHS_Mi8mt_vvsc";}; // RU CUP
-		case 4 : {CPC_EXTRA_HeloType = "RHS_Mi8amt_chdkz";}; // INS RHS
-		case 5 : {CPC_EXTRA_HeloType = "RHS_Mi8amt_chdkz";}; // INS CUP
-		case 6 : {CPC_EXTRA_HeloType = "CUP_C_Mi17_Civilian_RU";}; // INS TAK RHS
-		case 7 : {CPC_EXTRA_HeloType = "CUP_C_Mi17_Civilian_RU";}; // INS TAK
-		case 8 : {CPC_EXTRA_HeloType = "CUP_O_Mi17_TK";}; // TK RHS
-		case 9 : {CPC_EXTRA_HeloType = "CUP_O_Mi17_TK";}; // TK CUP
-		case 10 : {CPC_EXTRA_HeloType = "CUP_B_CH53E_GER";}; // GER Desert
-		case 11 : {CPC_EXTRA_HeloType = "CUP_B_CH53E_GER";}; // GER Woodland
-		case 12 : {CPC_EXTRA_HeloType = "B_Heli_Transport_03_unarmed_F";}; // OTAN
-		case 13 : {CPC_EXTRA_HeloType = "O_Heli_Transport_04_covered_F";}; // CSAT
-		case 14 : {CPC_EXTRA_HeloType = "I_Heli_Transport_02_F";}; // AAF
-		case 15 : {CPC_EXTRA_HeloType = "CPC_Duala_B_GFD_SA330";}; // GFD
-		case 16 : {CPC_EXTRA_HeloType = "CUP_C_Mi17_Civilian_RU";}; // NPFD
-		case 17 : {CPC_EXTRA_HeloType = "CUP_I_SA330_Puma_HC1_RACS";}; // RACS
-		case 18 : {CPC_EXTRA_HeloType = "CUP_O_Mi8_SLA_1";}; // SLA
-		case 19 : {CPC_EXTRA_HeloType = "RHS_Mi8mt_vvsc";}; // Spetsnaz RHS
-		case 20 : {CPC_EXTRA_HeloType = "RHS_CH_47F";}; // USMC SF SCAR
-		case 21 : {CPC_EXTRA_HeloType = "RHS_CH_47F";}; // commando jungle
-		case 22 : {CPC_EXTRA_HeloType = "CUP_B_Merlin_HC3_GB";}; // BAF desert
-		case 23 : {CPC_EXTRA_HeloType = "CUP_B_Merlin_HC3_GB";}; // BAF woodland
-		case 24 : {CPC_EXTRA_HeloType = "RHS_Mi8amt_chdkz";}; // Chedaki
-		case 25 : {CPC_EXTRA_HeloType = "RHS_Mi8mt_vvsc";}; // URSS Afgha
-		case 26 : {CPC_EXTRA_HeloType = "RHS_Mi8mt_vvsc";}; // RU modern RHS
+		case 0 : {CPC_EXTRA_HeloType = "B_Heli_Transport_03_unarmed_F";}; // NATO
+		case 1 : {CPC_EXTRA_HeloType = "O_Heli_Transport_04_covered_F";}; // CSAT
+		case 2 : {CPC_EXTRA_HeloType = "I_Heli_Transport_02_F";}; // AAF
+		case 3 : {CPC_EXTRA_HeloType = "RHS_CH_47F";}; // US Army RHS
+		case 4 : {CPC_EXTRA_HeloType = "RHS_CH_47F";}; // USMC RHS
+		case 5 : {CPC_EXTRA_HeloType = "RHS_CH_47F";}; // US SF RHS
+		case 6 : {CPC_EXTRA_HeloType = "RHS_Mi8mt_vvsc";}; // RU 2000
+		case 7 : {CPC_EXTRA_HeloType = "RHS_Mi8mt_vvsc";}; // RU 2015
+		case 8 : {CPC_EXTRA_HeloType = "RHS_Mi8mt_vvsc";}; // RU SF
+		case 9 : {CPC_EXTRA_HeloType = "CUP_B_CH53E_GER";}; // KSK
+		case 10 : {CPC_EXTRA_HeloType = "CUP_B_Merlin_HC3_GB";}; // BAF
+		case 11 : {CPC_EXTRA_HeloType = "CUP_I_SA330_Puma_HC1_RACS";}; // RACS
+		case 12 : {CPC_EXTRA_HeloType = "CUP_O_Mi17_TK";}; // TAK
+		case 13 : {CPC_EXTRA_HeloType = "rhsgref_ins_Mi8amt";}; // INS
+		case 14 : {CPC_EXTRA_HeloType = "CUP_C_Mi17_Civilian_RU";}; // TAK INS
 };
 CPC_EXTRA_AcreRadio = "ACRE_PRC148";					//Le Type de radio requis pour faire une demande d'extraction (classname)
 CPC_EXTRA_AcreChan = 5;									//Le Channel radio qui doit être utilisé pour faire une demande d'extraction
@@ -65,7 +53,7 @@ switch (CPC_EXTRA_HeloType) do {
 		case "RHS_CH_47F" : 					{CPC_EXTRA_DoorAnimName1 = "ramp_anim"; CPC_EXTRA_DoorAnimName2 = ""; CPC_EXTRA_AnimType = 2;};
 		case "CUP_B_CH53E_USMC" : 				{CPC_EXTRA_DoorAnimName1 = "ramp_bottom"; CPC_EXTRA_DoorAnimName2 = "ramp_top"; CPC_EXTRA_AnimType = 1;};
 		case "RHS_Mi8mt_vvsc" : 				{CPC_EXTRA_DoorAnimName1 = "RearDoors"; CPC_EXTRA_DoorAnimName2 = ""; CPC_EXTRA_AnimType = 2;};
-		case "RHS_Mi8amt_chdkz" : 				{CPC_EXTRA_DoorAnimName1 = "RearDoors"; CPC_EXTRA_DoorAnimName2 = ""; CPC_EXTRA_AnimType = 2;};
+		case "rhsgref_ins_Mi8amt" : 				{CPC_EXTRA_DoorAnimName1 = "RearDoors"; CPC_EXTRA_DoorAnimName2 = ""; CPC_EXTRA_AnimType = 2;};
 		case "CUP_C_Mi17_Civilian_RU" : 		{CPC_EXTRA_DoorAnimName1 = ""; CPC_EXTRA_DoorAnimName2 = ""; CPC_EXTRA_AnimType = 1;};
 		case "CUP_O_Mi17_TK" : 					{CPC_EXTRA_DoorAnimName1 = ""; CPC_EXTRA_DoorAnimName2 = ""; CPC_EXTRA_AnimType = 1;};
 		case "CUP_B_CH53E_GER" : 				{CPC_EXTRA_DoorAnimName1 = "ramp_bottom"; CPC_EXTRA_DoorAnimName2 = "ramp_top"; CPC_EXTRA_AnimType = 1;};

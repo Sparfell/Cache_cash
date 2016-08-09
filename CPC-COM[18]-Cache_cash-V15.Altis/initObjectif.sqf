@@ -20,8 +20,23 @@ P15  = if (isNil {P15})  then {objnull} else {P15};
 P16  = if (isNil {P16})  then {objnull} else {P16};
 P17  = if (isNil {P17})  then {objnull} else {P17};
 P18  = if (isNil {P18})  then {objnull} else {P18};
+P18  = if (isNil {P19})  then {objnull} else {P19};
+P18  = if (isNil {P20})  then {objnull} else {P20};
+P18  = if (isNil {P21})  then {objnull} else {P21};
+P18  = if (isNil {P22})  then {objnull} else {P22};
+P18  = if (isNil {P23})  then {objnull} else {P23};
+P18  = if (isNil {P24})  then {objnull} else {P24};
+P18  = if (isNil {P25})  then {objnull} else {P25};
+P18  = if (isNil {P26})  then {objnull} else {P26};
+P18  = if (isNil {P27})  then {objnull} else {P27};
+P18  = if (isNil {P28})  then {objnull} else {P28};
+P18  = if (isNil {P29})  then {objnull} else {P29};
+P18  = if (isNil {P30})  then {objnull} else {P30};
+P18  = if (isNil {P31})  then {objnull} else {P31};
+P18  = if (isNil {P32})  then {objnull} else {P32};
+P18  = if (isNil {P33})  then {objnull} else {P33};
 
-SlotPlayers = [P1,P2,P3,P4,P5,P6,P7,P8,P9,P10,P11,P12,P13,P14,P15,P16,P17,P18];
+SlotPlayers = [P1,P2,P3,P4,P5,P6,P7,P8,P9,P10,P11,P12,P13,P14,P15,P16,P17,P18,P19,P20,P21,P22,P23,P24,P25,P26,P27,P28,P29,P30,P31,P32,P33];
 task1done = false;
 task3done = false;
 Fin = false;
@@ -37,8 +52,11 @@ if (CPC_loadedworld == "IslaDuala3") then {_marker = str (75 + (floor random 25)
 if (CPC_loadedworld == "smd_sahrani_a3") then {_marker = str (87 + (floor random 13));};
 if (CPC_loadedworld == "FDF_Isle1_a") then {_marker = str (75 + (floor random 25));};
 if (CPC_loadedworld == "Woodland_ACR") then {_marker = str (88 + (floor random 12));};
-if (CPC_loadedworld == "pja305") then {_marker = str (71 + (floor random 29));};
+if (CPC_loadedworld == "pja305") then {_marker = str (72 + (floor random 28));};
 if (CPC_loadedworld == "pja307") then {_marker = str (80 + (floor random 20));};
+if (CPC_loadedworld == "Tanoa") then {_marker = str (84 + (floor random 16));};
+if (CPC_loadedworld == "noe") then {_marker = str (87 + (floor random 13));};
+if (CPC_loadedworld == "eden") then {_marker = str (92 + (floor random 8));};
 _markEx = [];
 Random_Position = [_marker,0,_markEx,50] call SHK_pos;
 while {((SurfaceNormal Random_Position) select 2) < 0.955} do {
@@ -75,33 +93,21 @@ if (paramsArray select 1 == 0) then {
 if ((paramsArray select 1) == 2) then 
 {
 	switch (paramsArray select 5) do {
-		case 0 : {heliType = "RHS_UH60M_d";}; // US RHS
-		case 1 : {heliType = "CUP_B_UH60M_US";}; // US CUP
-		case 2 : {heliType = "RHS_Mi8mt_vvsc";}; // RU RHS
-		case 3 : {heliType = "CUP_O_Mi8_medevac_RU";}; // RU CUP
-		case 4 : {heliType = "rhsgref_ins_g_Mi8amt";}; // INS RHS
-		case 5 : {heliType = "CUP_O_Mi8_CHDKZ";}; // INS CUP
-		case 6 : {heliType = "CUP_I_UH1H_TK_GUE";}; // INS TAK RHS
-		case 7 : {heliType = "CUP_I_UH1H_TK_GUE";}; // INS TAK
-		case 8 : {heliType = "CUP_O_Mi17_TK";}; // TK RHS
-		case 9 : {heliType = "CUP_O_Mi17_TK";}; // TK CUP
-		case 10 : {heliType = "CUP_B_UH60M_US";}; // GER Desert
-		case 11 : {heliType = "CUP_B_UH60M_US";}; // GER Woodland
-		case 12 : {heliType = "B_Heli_Transport_01_camo_F";}; // OTAN
-		case 13 : {heliType = "O_Heli_Light_02_F";}; // CSAT
-		case 14 : {heliType = "I_Heli_Transport_02_F";}; // AAF
-		case 15 : {heliType = "CPC_Duala_B_GFD_SA330";}; // GFD
-		case 16 : {heliType = "CUP_I_UH1H_TK_GUE";}; // NPFD
-		case 17 : {heliType = "CUP_I_UH60L_RACS";}; // RACS
-		case 18 : {heliType = "CUP_O_Mi8_SLA_1";}; // SLA
-		case 19 : {heliType = "RHS_Mi8mt_vvsc";}; // Spetsnaz RHS
-		case 20 : {heliType = "CUP_B_UH60M_US";}; // USMC SF SCAR
-		case 21 : {heliType = "CUP_B_UH60M_US";}; // commando jungle
-		case 22 : {heliType = "CUP_B_Merlin_HC3_GB";}; // BAF desert
-		case 23 : {heliType = "CUP_B_Merlin_HC3_GB";}; // BAF woodland
-		case 24 : {heliType = "CUP_O_Mi8_CHDKZ";}; // Chedaki
-		case 25 : {heliType = "RHS_Mi8mt_vvsc";}; // URSS Afgha
-		case 26 : {heliType = "RHS_Mi8mt_vvsc";}; // RU modern RHS
+		case 0 : {heliType = "B_Heli_Transport_01_camo_F";}; // NATO
+		case 1 : {heliType = "O_Heli_Light_02_F";}; // CSAT
+		case 2 : {heliType = "I_Heli_Transport_02_F";}; // AAF
+		case 3 : {heliType = "RHS_UH60M";}; // US Army RHS
+		case 4 : {heliType = "RHS_UH60M";}; // USMC RHS
+		case 5 : {heliType = "RHS_UH60M";}; // US SF RHS
+		case 6 : {heliType = "RHS_Mi8mt_vvsc";}; // RU 2000
+		case 7 : {heliType = "RHS_Mi8mt_vvsc";}; // RU 2015
+		case 8 : {heliType = "RHS_Mi8mt_vvsc";}; // RU SF
+		case 9 : {heliType = "RHS_UH60M";}; // KSK
+		case 10 : {heliType = "CUP_B_Merlin_HC3_GB";}; // BAF
+		case 11 : {heliType = "CUP_I_UH60L_RACS";}; // RACS
+		case 12 : {heliType = "CUP_O_Mi17_TK";}; // TAK
+		case 13 : {heliType = "rhsgref_ins_Mi8amt";}; // INS
+		case 14 : {heliType = "CUP_I_UH1H_TK_GUE";}; // TAK INS
 	};
 	"M_helipad1" setMarkerAlpha 1;
 	_HeliSpawn1 = heliType createVehicle (getMarkerPos "M_helipad1");
@@ -225,7 +231,13 @@ if ((paramsArray select 1) == 2) then
 	"rhs_Metis_9k115_2_msv",
 	"rhs_Kornet_9M133_2_msv",
 	"rhsusf_M1117_O",
-	"rhsgref_nat_uaz_spg9"
+	"rhsgref_nat_uaz_spg9",
+	"O_T_LSV_02_unarmed_F",
+	"O_T_LSV_02_armed_F",
+	"B_T_LSV_01_unarmed_F",
+	"B_T_LSV_01_armed_F",
+	"B_CTRG_LSV_01_light_F",
+	"C_Offroad_02_unarmed_F"
 	];
 	waitUntil {time > 0};
 	_pos = markerpos "Mark_inser";

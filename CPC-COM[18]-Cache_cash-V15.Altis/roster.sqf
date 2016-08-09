@@ -172,6 +172,10 @@ switch(_includeAI) do {
 		if((_x getVariable "displayName") != "") then {
 			_strRole = " - " +(_x getVariable "displayName");
 		};
+		
+		if((roleDescription _x) != "") then {
+			_strRole = " - " +(roleDescription _x);
+		};
 
 		if(_newGrp != _oldGrp) then {
 			_strGrp = "<br/>" + (groupID(group _x)) + "<br/>";

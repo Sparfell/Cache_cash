@@ -35,14 +35,15 @@ Classes envisagées :
 - Chef d'opération x1
 - TL x2
 - Doc x2
-- AR x2
-- AAR x2
-- MG x2
-- AMG x2
+- AR x1
+- AAR x1
+- MG x1
+- AMG x1
 - AT x2
 - AAT x2
 - Mark x1
-- Fusilier x6
+- LAT x2
+- Fusilier x4
 - Sac à dos x2
 - Sapeur x1
 - Grenadier x2
@@ -50,3 +51,4 @@ Classes envisagées :
 - pilote x2
 - Sniper x1
 - observateur x1
+- JTAC/Radio x1
