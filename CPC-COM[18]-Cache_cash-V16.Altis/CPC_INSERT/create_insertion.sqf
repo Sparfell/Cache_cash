@@ -14,9 +14,9 @@ switch (paramsArray select 5) do {
 		case 3 : {_type = "RHS_CH_47F";}; // US Army RHS
 		case 4 : {_type = "RHS_CH_47F";}; // USMC RHS
 		case 5 : {_type = "RHS_CH_47F";}; // US SF RHS
-		case 6 : {_type = "RHS_Mi8mt_vvsc";}; // RU 2000
-		case 7 : {_type = "RHS_Mi8mt_vvsc";}; // RU 2015
-		case 8 : {_type = "RHS_Mi8mt_vvsc";}; // RU SF
+		case 6 : {_type = "RHS_Mi8AMT_vvsc";}; // RU 2000
+		case 7 : {_type = "RHS_Mi8AMT_vvsc";}; // RU 2015
+		case 8 : {_type = "RHS_Mi8AMT_vvsc";}; // RU SF
 		case 9 : {_type = "CUP_B_CH53E_GER";}; // KSK
 		case 10 : {_type = "CUP_B_Merlin_HC3_GB";}; // BAF
 		case 11 : {_type = "CUP_I_SA330_Puma_HC1_RACS";}; // RACS
@@ -26,18 +26,18 @@ switch (paramsArray select 5) do {
 };
 
 switch (_type) do {
-		case "RHS_CH_47F" : 					{_DoorAnim1 = "ramp_anim"; _DoorAnim2 = ""; _AnimType = 2;};
+		case "RHS_CH_47F" : 					{_DoorAnim1 = "ramp_anim"; _DoorAnim2 = ""; _AnimType = 3;};
 		case "CUP_B_CH53E_USMC" : 				{_DoorAnim1 = "ramp_bottom"; _DoorAnim2 = "ramp_top"; _AnimType = 1;};
-		case "RHS_Mi8mt_vvsc" : 				{_DoorAnim1 = "RearDoors"; _DoorAnim2 = ""; _AnimType = 2;};
-		case "rhsgref_ins_Mi8amt" : 				{_DoorAnim1 = "RearDoors"; _DoorAnim2 = ""; _AnimType = 2;};
+		case "RHS_Mi8AMT_vvsc" : 				{_DoorAnim1 = "RearDoors"; _DoorAnim2 = ""; _AnimType = 2;};
+		case "rhsgref_ins_Mi8amt" : 			{_DoorAnim1 = "RearDoors"; _DoorAnim2 = ""; _AnimType = 2;};
 		case "CUP_C_Mi17_Civilian_RU" : 		{_DoorAnim1 = ""; _DoorAnim2 = ""; _AnimType = 1;};
 		case "CUP_O_Mi17_TK" : 					{_DoorAnim1 = ""; _DoorAnim2 = ""; _AnimType = 1;};
 		case "CUP_B_CH53E_GER" : 				{_DoorAnim1 = "ramp_bottom"; _DoorAnim2 = "ramp_top"; _AnimType = 1;};
 		case "B_Heli_Transport_03_unarmed_F" : 	{_DoorAnim1 = "Door_rear_source"; _DoorAnim2 = ""; _AnimType = 2;};
 		case "O_Heli_Transport_04_covered_F" : 	{_DoorAnim1 = "Door_4_source"; _DoorAnim2 = "Door_5_source"; _AnimType = 2;};
 		case "I_Heli_Transport_02_F" : 			{_DoorAnim1 = "CargoRamp_Open"; _DoorAnim2 = "Door_Back_R"; _AnimType = 2;};
-		case "CPC_Duala_B_GFD_SA330" : 			{_DoorAnim1 = "ofrp_puma_porte_droite"; _DoorAnim2 = "ofrp_puma_porte_gauche"; _AnimType = 1;};
-		case "CUP_I_SA330_Puma_HC1_RACS" : 		{_DoorAnim1 = "ofrp_puma_porte_droite"; _DoorAnim2 = "ofrp_puma_porte_gauche"; _AnimType = 1;};
+		case "CPC_Duala_B_GFD_SA330" : 			{_DoorAnim1 = "ofrp_puma_porte_droite"; _DoorAnim2 = "ofrp_puma_porte_gauche"; _AnimType = 4;};
+		case "CUP_I_SA330_Puma_HC1_RACS" : 		{_DoorAnim1 = "ofrp_puma_porte_droite"; _DoorAnim2 = "ofrp_puma_porte_gauche"; _AnimType = 4;};
 		case "CUP_O_Mi8_SLA_1" : 				{_DoorAnim1 = ""; _DoorAnim2 = ""; _AnimType = 1;};
 		case "CUP_B_Merlin_HC3_GB" : 			{_DoorAnim1 = ""; _DoorAnim2 = ""; _AnimType = 1;};
 };
@@ -93,9 +93,18 @@ if (isserver) then {
 	if (_AnimType == 1) then {
 	if (_DoorAnim1 != "") then {_helo animate [_DoorAnim1,1];};
 	if (_DoorAnim2 != "") then {_helo animate [_DoorAnim2,1];};
-	} else {
+	};
+	if (_AnimType == 2) then {
 	if (_DoorAnim1 != "") then {_helo animatedoor [_DoorAnim1,1];};
 	if (_DoorAnim2 != "") then {_helo animatedoor [_DoorAnim2,1];};
+	};
+	if (_AnimType == 3) then {
+	if (_DoorAnim1 != "") then {_helo animateSource [_DoorAnim1,0.6];};
+	if (_DoorAnim2 != "") then {_helo animateSource [_DoorAnim2,0.6];};
+	};
+	if (_AnimType == 4) then {
+	if (_DoorAnim1 != "") then {_helo animate [_DoorAnim1,0];};
+	if (_DoorAnim2 != "") then {_helo animate [_DoorAnim2,0];};
 	};
 	
 	//close ramp
@@ -103,9 +112,18 @@ if (isserver) then {
 	if (_AnimType == 1) then {
 	if (_DoorAnim1 != "") then {_helo animate [_DoorAnim1,0];};
 	if (_DoorAnim2 != "") then {_helo animate [_DoorAnim2,0];};
-	} else {
+	};
+	if (_AnimType == 2) then {
 	if (_DoorAnim1 != "") then {_helo animatedoor [_DoorAnim1,0];};
 	if (_DoorAnim2 != "") then {_helo animatedoor [_DoorAnim2,0];};
+	};
+	if (_AnimType == 3) then {
+	if (_DoorAnim1 != "") then {_helo animateSource [_DoorAnim1,0];};
+	if (_DoorAnim2 != "") then {_helo animateSource [_DoorAnim2,0];};
+	};
+	if (_AnimType == 4) then {
+	if (_DoorAnim1 != "") then {_helo animate [_DoorAnim1,1];};
+	if (_DoorAnim2 != "") then {_helo animate [_DoorAnim2,1];};
 	};
 
 }

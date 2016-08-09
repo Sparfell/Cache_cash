@@ -51,9 +51,18 @@ waitUntil {(CPC_EXTRA_Helo distance _CPC_EXTRA_helipad) < 30};
 if (CPC_EXTRA_AnimType == 1) then {
 if (CPC_EXTRA_DoorAnimName1 != "") then {CPC_EXTRA_Helo animate [CPC_EXTRA_DoorAnimName1,1];};
 if (CPC_EXTRA_DoorAnimName2 != "") then {CPC_EXTRA_Helo animate [CPC_EXTRA_DoorAnimName2,1];};
-} else {
+};
+if (CPC_EXTRA_AnimType == 2) then {
 if (CPC_EXTRA_DoorAnimName1 != "") then {CPC_EXTRA_Helo animatedoor [CPC_EXTRA_DoorAnimName1,1];};
 if (CPC_EXTRA_DoorAnimName2 != "") then {CPC_EXTRA_Helo animatedoor [CPC_EXTRA_DoorAnimName2,1];};
+};
+if (CPC_EXTRA_AnimType == 3) then {
+if (CPC_EXTRA_DoorAnimName1 != "") then {CPC_EXTRA_Helo animateSource [CPC_EXTRA_DoorAnimName1,0.6];};
+if (CPC_EXTRA_DoorAnimName2 != "") then {CPC_EXTRA_Helo animateSource [CPC_EXTRA_DoorAnimName2,0.6];};
+};
+if (CPC_EXTRA_AnimType == 4) then {
+if (CPC_EXTRA_DoorAnimName1 != "") then {CPC_EXTRA_Helo animateSource [CPC_EXTRA_DoorAnimName1,0];};
+if (CPC_EXTRA_DoorAnimName2 != "") then {CPC_EXTRA_Helo animateSource [CPC_EXTRA_DoorAnimName2,0];};
 };
 
 // Attente de l'autorisation de décoller
@@ -63,9 +72,18 @@ sleep 3;
 if (CPC_EXTRA_AnimType == 1) then {
 if (CPC_EXTRA_DoorAnimName1 != "") then {CPC_EXTRA_Helo animate [CPC_EXTRA_DoorAnimName1,0];};
 if (CPC_EXTRA_DoorAnimName2 != "") then {CPC_EXTRA_Helo animate [CPC_EXTRA_DoorAnimName2,0];};
-} else {
+};
+if (CPC_EXTRA_AnimType == 2) then {
 if (CPC_EXTRA_DoorAnimName1 != "") then {CPC_EXTRA_Helo animatedoor [CPC_EXTRA_DoorAnimName1,0];};
 if (CPC_EXTRA_DoorAnimName2 != "") then {CPC_EXTRA_Helo animatedoor [CPC_EXTRA_DoorAnimName2,0];};
+};
+if (CPC_EXTRA_AnimType == 3) then {
+if (CPC_EXTRA_DoorAnimName1 != "") then {CPC_EXTRA_Helo animateSource [CPC_EXTRA_DoorAnimName1,0];};
+if (CPC_EXTRA_DoorAnimName2 != "") then {CPC_EXTRA_Helo animateSource [CPC_EXTRA_DoorAnimName2,0];};
+};
+if (CPC_EXTRA_AnimType == 4) then {
+if (CPC_EXTRA_DoorAnimName1 != "") then {CPC_EXTRA_Helo animateSource [CPC_EXTRA_DoorAnimName1,1];};
+if (CPC_EXTRA_DoorAnimName2 != "") then {CPC_EXTRA_Helo animateSource [CPC_EXTRA_DoorAnimName2,1];};
 };
 	
 // Création du second point de passage de l'hélico

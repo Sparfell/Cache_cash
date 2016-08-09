@@ -34,9 +34,9 @@ switch (paramsArray select 5) do {
 		case 3 : {CPC_EXTRA_HeloType = "RHS_CH_47F";}; // US Army RHS
 		case 4 : {CPC_EXTRA_HeloType = "RHS_CH_47F";}; // USMC RHS
 		case 5 : {CPC_EXTRA_HeloType = "RHS_CH_47F";}; // US SF RHS
-		case 6 : {CPC_EXTRA_HeloType = "RHS_Mi8mt_vvsc";}; // RU 2000
-		case 7 : {CPC_EXTRA_HeloType = "RHS_Mi8mt_vvsc";}; // RU 2015
-		case 8 : {CPC_EXTRA_HeloType = "RHS_Mi8mt_vvsc";}; // RU SF
+		case 6 : {CPC_EXTRA_HeloType = "RHS_Mi8AMT_vvsc";}; // RU 2000
+		case 7 : {CPC_EXTRA_HeloType = "RHS_Mi8AMT_vvsc";}; // RU 2015
+		case 8 : {CPC_EXTRA_HeloType = "RHS_Mi8AMT_vvsc";}; // RU SF
 		case 9 : {CPC_EXTRA_HeloType = "CUP_B_CH53E_GER";}; // KSK
 		case 10 : {CPC_EXTRA_HeloType = "CUP_B_Merlin_HC3_GB";}; // BAF
 		case 11 : {CPC_EXTRA_HeloType = "CUP_I_SA330_Puma_HC1_RACS";}; // RACS
@@ -50,9 +50,9 @@ CPC_EXTRA_HeloSide = blufor;						//Le camp de l'hélico. Peut être independent
 CPC_EXTRA_HeloLandingType = "TR UNLOAD";				//Mode d'atterrissage : "TR UNLOAD" = descente frontale lente, "MOVE" = passe au dessus puis demi tour et posé.
 
 switch (CPC_EXTRA_HeloType) do {
-		case "RHS_CH_47F" : 					{CPC_EXTRA_DoorAnimName1 = "ramp_anim"; CPC_EXTRA_DoorAnimName2 = ""; CPC_EXTRA_AnimType = 2;};
+		case "RHS_CH_47F" : 					{CPC_EXTRA_DoorAnimName1 = "ramp_anim"; CPC_EXTRA_DoorAnimName2 = ""; CPC_EXTRA_AnimType = 3;};
 		case "CUP_B_CH53E_USMC" : 				{CPC_EXTRA_DoorAnimName1 = "ramp_bottom"; CPC_EXTRA_DoorAnimName2 = "ramp_top"; CPC_EXTRA_AnimType = 1;};
-		case "RHS_Mi8mt_vvsc" : 				{CPC_EXTRA_DoorAnimName1 = "RearDoors"; CPC_EXTRA_DoorAnimName2 = ""; CPC_EXTRA_AnimType = 2;};
+		case "RHS_Mi8AMT_vvsc" : 				{CPC_EXTRA_DoorAnimName1 = "RearDoors"; CPC_EXTRA_DoorAnimName2 = ""; CPC_EXTRA_AnimType = 2;};
 		case "rhsgref_ins_Mi8amt" : 				{CPC_EXTRA_DoorAnimName1 = "RearDoors"; CPC_EXTRA_DoorAnimName2 = ""; CPC_EXTRA_AnimType = 2;};
 		case "CUP_C_Mi17_Civilian_RU" : 		{CPC_EXTRA_DoorAnimName1 = ""; CPC_EXTRA_DoorAnimName2 = ""; CPC_EXTRA_AnimType = 1;};
 		case "CUP_O_Mi17_TK" : 					{CPC_EXTRA_DoorAnimName1 = ""; CPC_EXTRA_DoorAnimName2 = ""; CPC_EXTRA_AnimType = 1;};
@@ -60,8 +60,8 @@ switch (CPC_EXTRA_HeloType) do {
 		case "B_Heli_Transport_03_unarmed_F" : 	{CPC_EXTRA_DoorAnimName1 = "Door_rear_source"; CPC_EXTRA_DoorAnimName2 = ""; CPC_EXTRA_AnimType = 2;};
 		case "O_Heli_Transport_04_covered_F" : 	{CPC_EXTRA_DoorAnimName1 = "Door_4_source"; CPC_EXTRA_DoorAnimName2 = "Door_5_source"; CPC_EXTRA_AnimType = 2;};
 		case "I_Heli_Transport_02_F" : 			{CPC_EXTRA_DoorAnimName1 = "CargoRamp_Open"; CPC_EXTRA_DoorAnimName2 = "Door_Back_R"; CPC_EXTRA_AnimType = 2;};
-		case "CPC_Duala_B_GFD_SA330" : 			{CPC_EXTRA_DoorAnimName1 = "ofrp_puma_porte_droite"; CPC_EXTRA_DoorAnimName2 = "ofrp_puma_porte_gauche"; CPC_EXTRA_AnimType = 1;};
-		case "CUP_I_SA330_Puma_HC1_RACS" : 		{CPC_EXTRA_DoorAnimName1 = "ofrp_puma_porte_droite"; CPC_EXTRA_DoorAnimName2 = "ofrp_puma_porte_gauche"; CPC_EXTRA_AnimType = 1;};
+		case "CPC_Duala_B_GFD_SA330" : 			{CPC_EXTRA_DoorAnimName1 = "ofrp_puma_porte_droite"; CPC_EXTRA_DoorAnimName2 = "ofrp_puma_porte_gauche"; CPC_EXTRA_AnimType = 4;};
+		case "CUP_I_SA330_Puma_HC1_RACS" : 		{CPC_EXTRA_DoorAnimName1 = "ofrp_puma_porte_droite"; CPC_EXTRA_DoorAnimName2 = "ofrp_puma_porte_gauche"; CPC_EXTRA_AnimType = 4;};
 		case "CUP_O_Mi8_SLA_1" : 				{CPC_EXTRA_DoorAnimName1 = ""; CPC_EXTRA_DoorAnimName2 = ""; CPC_EXTRA_AnimType = 1;};
 		case "CUP_B_Merlin_HC3_GB" : 			{CPC_EXTRA_DoorAnimName1 = ""; CPC_EXTRA_DoorAnimName2 = ""; CPC_EXTRA_AnimType = 1;};
 };

@@ -49,7 +49,7 @@ if (CPC_loadedworld == "Altis") then {_marker = str (69 + (floor random 31));};
 if (CPC_loadedworld == "Takistan") then {_marker = str (68 + (floor random 32));};
 if (CPC_loadedworld == "Chernarus") then {_marker = str (70 + (floor random 30));};
 if (CPC_loadedworld == "IslaDuala3") then {_marker = str (75 + (floor random 25));};
-if (CPC_loadedworld == "smd_sahrani_a3") then {_marker = str (87 + (floor random 13));};
+if (CPC_loadedworld == "Sara") then {_marker = str (87 + (floor random 13));};
 if (CPC_loadedworld == "FDF_Isle1_a") then {_marker = str (75 + (floor random 25));};
 if (CPC_loadedworld == "Woodland_ACR") then {_marker = str (88 + (floor random 12));};
 if (CPC_loadedworld == "pja305") then {_marker = str (72 + (floor random 28));};
