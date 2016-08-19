@@ -58,7 +58,7 @@ hard_setLoadout =
 		_mountain = true;
 	};
 	//Desert
-	if (worldName in ["Takistan"]) then 
+	if (worldName in ["takistan"]) then 
 	{
 		_uniform = "rhs_uniform_m88_patchless";
 		_helmet = ["rhs_6b27m_green","rhs_6b27m_green_bala","rhs_6b27m_green_ess","rhs_6b27m_green_ess_bala"];
@@ -73,7 +73,7 @@ hard_setLoadout =
 		_des = true;
 	};
 	//Flora
-	if (worldName in ["Tanoa","Chernarus","Sara","FDF_Isle1_a","Woodland_ACR","pja305","noe","eden"]) then 
+	if (worldName in ["Tanoa","chernarus","Sara","FDF_Isle1_a","Woodland_ACR","pja305","noe","eden"]) then 
 	{
 		_uniform = "rhs_uniform_flora_patchless";
 		_helmet = ["rhs_6b26","rhs_6b26_bala","rhs_6b26_ess","rhs_6b26_ess_bala"];

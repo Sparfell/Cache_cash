@@ -36,7 +36,7 @@ hard_setLoadout =
 	_uniform2 = "";
 
 	//WDL
-	if (worldName in ["Altis","Chernarus","Sara","FDF_Isle1_a","Woodland_ACR","noe","eden"]) then 
+	if (worldName in ["Altis","chernarus","Sara","FDF_Isle1_a","Woodland_ACR","noe","eden"]) then 
 	{
 		_uniform = ["rhs_uniform_gorka_r_g","rhs_uniform_gorka_r_y"];
 		_helmet = [""];
@@ -46,7 +46,7 @@ hard_setLoadout =
 		_uniform2 = "U_I_FullGhillie_lsh";
 	};
 	//DES
-	if (worldName in ["Takistan","IslaDuala3","pja307"]) then 
+	if (worldName in ["takistan","IslaDuala3","pja307"]) then 
 	{
 		_uniform = ["rhs_uniform_emr_des_patchless"];
 		_helmet = ["H_Booniehat_tan","H_Booniehat_oli","H_Cap_oli","rhsusf_opscore_fg","rhsusf_opscore_ut","rhsusf_opscore_fg_pelt","rhsusf_opscore_ut_pelt"];

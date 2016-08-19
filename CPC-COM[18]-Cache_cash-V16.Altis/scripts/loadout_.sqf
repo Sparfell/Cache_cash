@@ -31,13 +31,13 @@ hard_setLoadout =
 	_uniform = [];
 	_helmet = [];
 	//WDL
-	if (worldName in ["Altis","Tanoa","Chernarus","Sara","FDF_Isle1_a","Woodland_ACR","pja305","noe","eden"]) then 
+	if (worldName in ["Altis","Tanoa","chernarus","Sara","FDF_Isle1_a","Woodland_ACR","pja305","noe","eden"]) then 
 	{
 		_uniform = [];
 		_helmet = [];
 	};
 	//DES
-	if (worldName in ["Takistan","IslaDuala3","pja307"]) then 
+	if (worldName in ["takistan","IslaDuala3","pja307"]) then 
 	{
 		_uniform = [];
 		_helmet = [];

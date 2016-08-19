@@ -39,7 +39,7 @@ hard_setLoadout =
 	_bag_big = ["B_Carryall_khk","B_Carryall_oli"];
 	
 	//WDL
-	if (worldName in ["Chernarus","FDF_Isle1_a","Woodland_ACR","eden"]) then 
+	if (worldName in ["chernarus","FDF_Isle1_a","Woodland_ACR","eden"]) then 
 	{
 		_uniform = ["U_BG_Guerrilla_6_1","CUP_U_O_CHDKZ_Kam_03","CUP_U_O_CHDKZ_Kam_01","CUP_U_O_CHDKZ_Kam_04","CUP_U_O_CHDKZ_Kam_02","rhs_chdkz_uniform_4","rhs_chdkz_uniform_3","rhsgref_uniform_woodland_olive","rhsgref_uniform_woodland","rhsgref_uniform_reed","rhsgref_uniform_flecktarn","CUP_U_I_GUE_Flecktarn2","CUP_U_I_GUE_Flecktarn","CUP_U_I_GUE_Woodland1","CUP_U_I_GUE_Anorak_03"];
 		_helmet = ["H_Bandanna_camo","H_Bandanna_mcamo","H_Bandanna_gry","rhs_beanie_green","CUP_H_C_Beanie_02","CUP_H_ChDKZ_Beanie","H_Beret_blk","H_Booniehat_oli","H_Booniehat_khk","H_Cap_grn","rhs_fieldcap_digi2","CUP_H_ChDKZ_Cap","CUP_H_ChDKZ_Beret","CUP_H_SLA_BeanieGreen","CUP_H_SLA_BeanieGreen","CUP_H_SLA_BeanieGreen","rhs_ssh68","CUP_H_C_Ushanka_03",""];
@@ -49,7 +49,7 @@ hard_setLoadout =
 	};
 	
 	//DES
-	if (worldName in ["Takistan","pja307"]) then 
+	if (worldName in ["takistan","pja307"]) then 
 	{
 		_uniform = ["rhs_chdkz_uniform_4","rhs_chdkz_uniform_3","U_MU_B_GuerillaGarment2","U_MU_B_GuerillaGarment2_brown","U_MU_B_GuerillaGarment2_grey","U_MU_B_GuerillaGarment2_skull","U_BG_Guerilla1_1","U_MU_B_GuerillaGarment_brown","U_MU_B_GuerillaGarment_grey","U_MU_B_GuerillaGarment_skull","U_BG_leader","CUP_O_TKI_Khet_Jeans_04","CUP_O_TKI_Khet_Jeans_02","CUP_O_TKI_Khet_Jeans_01"];
 		_helmet = ["H_ShemagOpen_khk","H_ShemagOpen_khk","H_ShemagOpen_khk","H_ShemagOpen_tan","H_Shemag_olive","CUP_H_TKI_Lungee_01","CUP_H_TKI_Lungee_02","CUP_H_TKI_Lungee_03","CUP_H_TKI_Lungee_04","CUP_H_TKI_Lungee_05","CUP_H_TKI_Lungee_06"];

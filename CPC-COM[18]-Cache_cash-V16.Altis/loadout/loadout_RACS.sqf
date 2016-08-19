@@ -38,7 +38,7 @@ hard_setLoadout =
 	_bag_small = "";
 
 	//Desert
-	if (worldName in ["Takistan","pja307","IslaDuala3"]) then 
+	if (worldName in ["takistan","pja307","IslaDuala3"]) then 
 	{
 		_uniform = ["CUP_U_I_RACS_Desert_2","CUP_U_I_RACS_Desert_1"];
 		_helmet = "CUP_H_RACS_Helmet_DES";
@@ -62,7 +62,7 @@ hard_setLoadout =
 		_bag_small = "rhsusf_falconii";
 	};
 	//WDL
-	if (worldName in ["Tanoa","Chernarus","FDF_Isle1_a","Woodland_ACR","eden"]) then 
+	if (worldName in ["Tanoa","chernarus","FDF_Isle1_a","Woodland_ACR","eden"]) then 
 	{
 		_uniform = ["CUP_U_I_RACS_WDL_2","CUP_U_I_RACS_WDL_1"];
 		_helmet = "CUP_H_RACS_Helmet_olive";

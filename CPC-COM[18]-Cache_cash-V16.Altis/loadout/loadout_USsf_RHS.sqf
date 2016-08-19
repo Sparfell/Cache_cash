@@ -42,14 +42,14 @@ hard_setLoadout =
 	};
 	
 	// WDL
-	if (worldName in ["Chernarus","FDF_Isle1_a","Woodland_ACR","eden"]) then 
+	if (worldName in ["chernarus","FDF_Isle1_a","Woodland_ACR","eden"]) then 
 	{
 		_helmet = ["rhsusf_ach_bare_wood_headset","rhsusf_ach_bare_wood","rhsusf_ach_bare_semi_headset","rhsusf_ach_bare_semi","rhsusf_ach_bare_headset","rhsusf_ach_bare"];
 		_lunettes = ["G_Balaclava_blk","G_Balaclava_oli"];
 	};
 	
 	//Desert
-	if (worldName in ["pja307","Takistan"]) then 
+	if (worldName in ["pja307","takistan"]) then 
 	{
 		_helmet = ["rhsusf_opscore_paint","rhsusf_opscore_paint_pelt","rhsusf_opscore_paint_pelt_nsw","rhsusf_opscore_ut","rhsusf_opscore_ut_pelt","rhsusf_opscore_mc","rhsusf_opscore_mc_pelt","CUP_H_PMC_Cap_EP_Tan","CUP_H_PMC_Cap_Back_EP_Tan"];
 	};
@@ -1066,7 +1066,7 @@ if (worldName in ["Altis"]) then
 };
 
 // WDL
-if (worldName in ["Chernarus","FDF_Isle1_a","Woodland_ACR"]) then 
+if (worldName in ["chernarus","FDF_Isle1_a","Woodland_ACR"]) then 
 {
 	loadoutCC_OFF = //
 	{
@@ -2057,7 +2057,7 @@ if (worldName in ["Chernarus","FDF_Isle1_a","Woodland_ACR"]) then
 };
 
 // Desert
-if (worldName in ["pja307","Takistan"]) then 
+if (worldName in ["pja307","takistan"]) then 
 {
 	loadoutCC_OFF = //
 	{

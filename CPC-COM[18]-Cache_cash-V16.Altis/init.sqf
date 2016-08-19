@@ -56,6 +56,8 @@ finishMissionInit;
 
 waitUntil {time > 0};
 
+//METEO
+null = [] execVM "scripts\meteo.sqf";
 
 if (CPC_CC_Insertion_OK) exitWith {};
 

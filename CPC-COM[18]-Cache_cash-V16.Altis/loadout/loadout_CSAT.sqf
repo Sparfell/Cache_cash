@@ -33,7 +33,7 @@ hard_setLoadout =
 	_jungle = false;
 
 	//Hex
-	if (worldName in ["Takistan","Altis","IslaDuala3","pja307","FDF_Isle1_a","Woodland_ACR","Chernarus","noe","eden"]) then 
+	if (worldName in ["takistan","Altis","IslaDuala3","pja307","FDF_Isle1_a","Woodland_ACR","chernarus","noe","eden"]) then 
 	{
 		_helmet = ["H_HelmetLeaderO_ocamo","H_HelmetO_ocamo"];
 		_hex = true;
@@ -72,7 +72,7 @@ hard_setLoadout =
 	};
 };
 
-if (worldName in ["Takistan","Altis","IslaDuala3","pja307","FDF_Isle1_a","Woodland_ACR","Chernarus"]) then {
+if (worldName in ["takistan","Altis","IslaDuala3","pja307","FDF_Isle1_a","Woodland_ACR","chernarus"]) then {
 
 loadoutCC_OFF = //
 {

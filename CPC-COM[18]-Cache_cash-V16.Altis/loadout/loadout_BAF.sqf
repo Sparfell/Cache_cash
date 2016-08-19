@@ -42,7 +42,7 @@ hard_setLoadout =
 	_sac = "";
 
 	//DPM
-	if (worldName in ["Sara","Altis","Tanoa","Chernarus","FDF_Isle1_a","Woodland_ACR","pja305","noe","eden"]) then 
+	if (worldName in ["Sara","Altis","Tanoa","chernarus","FDF_Isle1_a","Woodland_ACR","pja305","noe","eden"]) then 
 	{
 		_uniform = ["CUP_U_B_BAF_DPM_S2_UnRolled","CUP_U_B_BAF_DPM_S1_RolledUp","CUP_U_B_BAF_DPM_Tshirt"];
 		_helmet = ["CUP_H_BAF_Helmet_1_DPM","CUP_H_BAF_Helmet_Net_2_DPM","CUP_H_BAF_Helmet_2_DPM","CUP_H_BAF_Helmet_3_DPM","CUP_H_BAF_Helmet_4_DPM"];
@@ -57,7 +57,7 @@ hard_setLoadout =
 		_dpm = true;		
 	};
 	//DDPM
-	if (worldName in ["IslaDuala3","IslaDuala3","Takistan","pja307"]) then 
+	if (worldName in ["IslaDuala3","takistan","pja307"]) then 
 	{
 		_uniform = ["CUP_U_B_BAF_DDPM_S2_UnRolled","CUP_U_B_BAF_DDPM_S1_RolledUp","CUP_U_B_BAF_DDPM_Tshirt"];
 		_helmet = ["CUP_H_BAF_Helmet_1_DDPM","CUP_H_BAF_Helmet_Net_2_DDPM","CUP_H_BAF_Helmet_2_DDPM","CUP_H_BAF_Helmet_3_DDPM","CUP_H_BAF_Helmet_4_DDPM"];

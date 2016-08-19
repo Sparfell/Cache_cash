@@ -34,14 +34,14 @@ hard_setLoadout =
 	_helmet = [];
 
 	//OCP
-	if (worldName in ["Altis","Tanoa","Chernarus","IslaDuala3","Sara","FDF_Isle1_a","Woodland_ACR","pja305","pja307","noe","eden"]) then 
+	if (worldName in ["Altis","Tanoa","chernarus","IslaDuala3","Sara","FDF_Isle1_a","Woodland_ACR","pja305","pja307","noe","eden"]) then 
 	{
 		_uniform = "rhs_uniform_cu_ocp";
 		_helmet = ["rhsusf_ach_helmet_ocp","rhsusf_ach_helmet_ocp","rhsusf_ach_helmet_ocp","rhsusf_ach_helmet_camo_ocp"];
 		_ocp = true;		
 	};
 	//UCP
-	if (worldName in ["Takistan"]) then 
+	if (worldName in ["takistan"]) then 
 	{
 		_uniform = "rhs_uniform_cu_ucp";
 		_helmet = ["rhsusf_ach_helmet_ucp","rhsusf_ach_helmet_ucp"];

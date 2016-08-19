@@ -71,8 +71,8 @@ switch (paramsArray select 6) do {
 		_compo_group = [
 			["CUP_O_TK_Soldier_SL","CUP_O_TK_Soldier","CUP_O_TK_Soldier_MG"],
 			["CUP_O_TK_Soldier","CUP_O_TK_Soldier","CUP_O_TK_Soldier_GL"],
-			["CUP_O_TK_Soldier","CUP_O_TK_Soldier_AT","O_medic_F"],
-			["CUP_O_TK_Soldier_SL","CUP_O_TK_Soldier","CUP_O_TK_Soldier","O_medic_F","CUP_O_TK_Soldier"],
+			["CUP_O_TK_Soldier","CUP_O_TK_Soldier_AT","CUP_O_TK_Medic"],
+			["CUP_O_TK_Soldier_SL","CUP_O_TK_Soldier","CUP_O_TK_Soldier","CUP_O_TK_Medic","CUP_O_TK_Soldier"],
 			["CUP_O_TK_Soldier_AR","CUP_O_TK_Soldier"]
 		];
 

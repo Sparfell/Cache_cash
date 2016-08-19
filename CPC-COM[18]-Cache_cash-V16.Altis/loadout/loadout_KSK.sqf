@@ -38,7 +38,7 @@ hard_setLoadout =
 	_wdl = false;
 
 	//WDL
-	if (worldName in ["Altis","Tanoa","Chernarus","Sara","FDF_Isle1_a","Woodland_ACR","pja305","noe","eden"]) then 
+	if (worldName in ["Altis","Tanoa","chernarus","Sara","FDF_Isle1_a","Woodland_ACR","pja305","noe","eden"]) then 
 	{
 		_uniform = ["CUP_U_B_GER_Flecktarn_2","CUP_U_B_GER_Flecktarn_1"];
 		_helmet = ["CUP_H_Ger_Boonie_Flecktarn","H_Watchcap_khk","H_Cap_oli_hs","CUP_H_PMC_EP_Headset","CUP_H_PMC_PRR_Headset"];
@@ -49,7 +49,7 @@ hard_setLoadout =
 		_wdl = true;
 	};
 	//DES
-	if (worldName in ["Takistan","IslaDuala3","pja307"]) then 
+	if (worldName in ["takistan","IslaDuala3","pja307"]) then 
 	{
 		_uniform = ["CUP_U_B_GER_Tropentarn_2","CUP_U_B_GER_Tropentarn_1"];
 		_helmet = ["CUP_H_Ger_Boonie_desert","H_ShemagOpen_khk","H_ShemagOpen_khk","CUP_H_PMC_Cap_PRR_Tan"];
