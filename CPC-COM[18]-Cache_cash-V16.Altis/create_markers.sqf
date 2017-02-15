@@ -16,9 +16,10 @@ strmark = strmark + br + _x;
 copyToClipboard strmark;
 
 */
+switch (CPC_loadedworld) do {
 
 //Altis
-if (CPC_loadedworld == "Altis") then {
+case "Altis" : {
 
 	CPC_WorldType = "vanilla";
 	publicVariable "CPC_WorldType";
@@ -59,7 +60,7 @@ if (CPC_loadedworld == "Altis") then {
 };
 
 //Tanoa
-if (CPC_loadedworld == "Tanoa") then {
+case "Tanoa" : {
 
 	CPC_WorldType = "fidji";
 	publicVariable "CPC_WorldType";
@@ -89,7 +90,7 @@ if (CPC_loadedworld == "Tanoa") then {
 };
 
 //Takistan
-if (CPC_loadedworld == "Takistan") then {
+case "Takistan" : {
 
 	CPC_WorldType = "desert";
 	publicVariable "CPC_WorldType";
@@ -136,7 +137,7 @@ if (CPC_loadedworld == "Takistan") then {
 };
 
 //Chernarus
-if (CPC_loadedworld == "Chernarus") then {
+case "Chernarus" : {
 
 	CPC_WorldType = "chernarus";
 	publicVariable "CPC_WorldType";
@@ -181,7 +182,7 @@ if (CPC_loadedworld == "Chernarus") then {
 };
 
 //IslaDuala3
-if (CPC_loadedworld == "IslaDuala3") then {
+case "IslaDuala3" : {
 
 	CPC_WorldType = "afrique";
 	publicVariable "CPC_WorldType";
@@ -221,7 +222,7 @@ if (CPC_loadedworld == "IslaDuala3") then {
 };
 
 //Sahrani
-if (CPC_loadedworld == "Sara") then {
+case "Sara" : {
 
 	CPC_WorldType = "vanilla";
 	publicVariable "CPC_WorldType";
@@ -249,7 +250,7 @@ if (CPC_loadedworld == "Sara") then {
 };
 
 //Podagorsk
-if (CPC_loadedworld == "FDF_Isle1_a") then {
+case "FDF_Isle1_a" : {
 
 	CPC_WorldType = "chernarus";
 	publicVariable "CPC_WorldType";
@@ -289,7 +290,7 @@ if (CPC_loadedworld == "FDF_Isle1_a") then {
 };
 
 //Bystrica
-if (CPC_loadedworld == "Woodland_ACR") then {
+case "Woodland_ACR" : {
 
 	CPC_WorldType = "chernarus";
 	publicVariable "CPC_WorldType";
@@ -316,7 +317,7 @@ if (CPC_loadedworld == "Woodland_ACR") then {
 };
 
 //N'Ziwasogo
-if (CPC_loadedworld == "pja305") then {
+case "pja305" : {
 
 	CPC_WorldType = "jungle";
 	publicVariable "CPC_WorldType";
@@ -358,7 +359,7 @@ if (CPC_loadedworld == "pja305") then {
 };
 
 //daryiah
-if (CPC_loadedworld == "pja307") then {
+case "pja307" : {
 
 	CPC_WorldType = "desert";
 	publicVariable "CPC_WorldType";
@@ -392,7 +393,7 @@ if (CPC_loadedworld == "pja307") then {
 };
 
 //Nogova
-if (CPC_loadedworld == "noe") then {
+case "noe" : {
 
 	CPC_WorldType = "vanilla";
 	publicVariable "CPC_WorldType";
@@ -420,7 +421,7 @@ if (CPC_loadedworld == "noe") then {
 };
 
 //Everon
-if (CPC_loadedworld == "eden") then {
+case "eden" : {
 
 	CPC_WorldType = "vanilla";
 	publicVariable "CPC_WorldType";
@@ -441,6 +442,13 @@ if (CPC_loadedworld == "eden") then {
 	"M_helipad2" setMarkerPos [4872.43,11771.4,0];
 };
 
+};
+
+//Cacher les marqueurs de zone
+for "_x" from 1 to 100 do
+{
+	format ["%1",_x] setMarkerAlpha 0;
+};
 
 
 CPC_MarkersCreated = true;

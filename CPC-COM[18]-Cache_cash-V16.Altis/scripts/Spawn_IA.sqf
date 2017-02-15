@@ -5,7 +5,7 @@ waitUntil {CPC_MarkersCreated};
 
 null = [] execVM "InitGaia.sqf";
 
-waituntil {time > 30};
+waituntil {time > 10};
 
 private ["_Nombre_Ennemi","_compo_group","_mark","_markEx","_markPos","_markSize","_pos","_group","_fois","_dir","_upPos","_binome","_ennemi_group","_rand_vehi","_transp_vehi","_offroad","_helico"];
 
@@ -27,7 +27,7 @@ switch (paramsArray select 6) do {
 
 		_binome = ["rhsusf_army_ocp_riflemanl","rhsusf_army_ocp_riflemanl"];
 		_ennemi_group = ["rhsusf_army_ocp_teamleader","rhsusf_army_ocp_rifleman","rhsusf_army_ocp_autorifleman","rhsusf_army_ocp_riflemanat","rhsusf_army_ocp_grenadier"];
-		_rand_vehi = ["rhsusf_M1117_W","rhsusf_M1117_O","rhsusf_m113_usarmy","rhsusf_m113_usarmy_M240","RHS_M2A2_wd","RHS_M2A3_BUSKI_wd","rhsusf_m1a1aimwd_usarmy"];
+		_rand_vehi = ["rhsusf_M1232_M2_usarmy_wd","rhsusf_M1117_O","rhsusf_m113_usarmy","rhsusf_m113_usarmy_M240","RHS_M2A2_wd","RHS_M2A3_BUSKI_wd","rhsusf_m1a1aimwd_usarmy"];
 		_transp_vehi = "rhsusf_rg33_wd";
 		_offroad = "rhsusf_m1025_w_m2";
 		_helico = "RHS_UH60M";
@@ -45,7 +45,7 @@ switch (paramsArray select 6) do {
 		_binome = ["CUP_B_USMC_Soldier","CUP_B_USMC_Soldier"];
 		_ennemi_group = ["CUP_B_USMC_Soldier_SL","CUP_B_USMC_Soldier","CUP_B_USMC_Soldier_AR","CUP_B_USMC_Soldier_LAT","CUP_B_USMC_Soldier_GL"];
 		_rand_vehi = ["CUP_RG31_M2_OD","CUP_RG31_M2_OD","CUP_RG31_M2_OD","CUP_RG31_Mk19_OD","CUP_B_LAV25M240_USMC","CUP_B_M1A1_Woodland_USMC"];
-		_transp_vehi = "B_Truck_01_covered_F";
+		_transp_vehi = "CUP_B_MTVR_USMC";
 		_offroad = "CUP_B_HMMWV_M2_USMC";
 		_helico = "CUP_B_MH60S_USMC";
 	};
@@ -62,7 +62,7 @@ switch (paramsArray select 6) do {
 		_binome = ["rhs_msv_rifleman","rhs_msv_rifleman"];
 		_ennemi_group = ["rhs_msv_efreitor","rhs_msv_rifleman","rhs_msv_grenadier","rhs_msv_at","rhs_msv_machinegunner"];
 		_rand_vehi = ["rhs_btr80_msv","rhs_btr80a_msv","rhs_bmp2k_msv","rhs_bmp3_late_msv","rhs_bmp1p_msv","rhs_t72bd_tv","rhs_t80bvk"];
-		_transp_vehi = "RHS_Ural_MSV_01";
+		_transp_vehi = "rhs_kamaz5350_msv";
 		_offroad = "rhs_tigr_sts_msv";
 		_helico = "RHS_Mi8mt_vdv";
 	};
@@ -124,7 +124,7 @@ switch (paramsArray select 6) do {
 			["I_soldier_F","I_soldier_F","I_Soldier_GL_F"],
 			["I_soldier_F","I_Soldier_LAT_F","I_medic_F"],
 			["I_Soldier_SL_F","I_soldier_F","I_Soldier_lite_F","I_medic_F","I_Soldier_lite_F"],
-			["rhs_g_Soldier_M_F","I_Soldier_lite_F"]
+			["I_soldier_M_F","I_Soldier_lite_F"]
 		];
 
 		_binome = ["I_Soldier_lite_F","I_Soldier_lite_F"];
@@ -181,7 +181,7 @@ switch (paramsArray select 6) do {
 		_binome = ["CPC_Duala_B_GFD_soldier_light","CPC_Duala_B_GFD_soldier_light"];
 		_ennemi_group = ["CPC_Duala_B_GFD_soldier_TL","CPC_Duala_B_GFD_soldier_1","CPC_Duala_B_GFD_soldier_MG","CPC_Duala_B_GFD_soldier_AT","CPC_Duala_B_GFD_soldier_GL"];
 		_rand_vehi = ["CPC_Duala_B_GFD_BTR40_MG","CPC_Duala_B_GFD_BTR40_MG","CPC_Duala_B_GFD_BRDM2","CPC_Duala_B_GFD_BRDM2","CPC_Duala_B_GFD_BTR60","CPC_Duala_B_GFD_M113","CPC_Duala_B_GFD_M113","CPC_Duala_B_GFD_T55"];
-		_transp_vehi = "CPC_Duala_B_GFD_LR_Transport";
+		_transp_vehi = "CPC_Afrique_B_GFD_V3S_Covered";
 		_offroad = "CPC_Duala_B_GFD_LR_MG";
 		_helico = "CPC_Duala_B_GFD_SA330";
 	};
@@ -215,7 +215,7 @@ switch (paramsArray select 6) do {
 		_binome = ["CUP_B_US_Soldier","CUP_B_US_Soldier"];
 		_ennemi_group = ["CUP_B_US_Soldier_TL","CUP_B_US_Soldier_LAT","CUP_B_US_Soldier_AR","CUP_B_US_Medic","CUP_B_US_Soldier_GL"];
 		_rand_vehi = ["CUP_B_M1126_ICV_M2_Desert_Slat","CUP_B_M1126_ICV_M2_Desert_Slat","CUP_B_M1126_ICV_MK19_Desert_Slat","CUP_B_M1128_MGS_Desert_Slat","CUP_B_M2Bradley_USA_D","CUP_B_M2A3Bradley_USA_D","CUP_B_M1A2_TUSK_MG_DES_US_Army"];
-		_transp_vehi = "CUP_B_HMMWV_Transport_USA";
+		_transp_vehi = "CUP_B_MTVR_USA";
 		_offroad = "CUP_B_HMMWV_M2_GPK_USA";
 		_helico = "CUP_B_UH60M_US";
 	};
@@ -334,7 +334,7 @@ switch (paramsArray select 6) do {
 		_binome = ["CUP_I_TK_GUE_Soldier_AK_47S","CUP_I_TK_GUE_Soldier_AK_47S"];
 		_ennemi_group = ["CUP_I_TK_GUE_Soldier_TL","CUP_I_TK_GUE_Soldier","CUP_I_TK_GUE_Soldier_MG","CUP_I_TK_GUE_Guerilla_Medic","CUP_I_TK_GUE_Soldier_GL"];
 		_rand_vehi = ["CUP_I_BTR40_MG_TKG","CUP_I_BTR40_MG_TKG","CUP_I_BRDM2_TK_Gue","CUP_I_BMP1_TK_GUE","CUP_I_BRDM2_TK_Gue","CUP_I_T34_TK_GUE","CUP_I_T34_TK_GUE","CUP_I_T55_TK_GUE"];
-		_transp_vehi = "CUP_O_Ural_SLA";
+		_transp_vehi = "CUP_I_V3S_Covered_TKG";
 		_offroad = "CUP_I_Datsun_PK_TK";
 		_helico = "";
 	};
@@ -351,7 +351,7 @@ switch (paramsArray select 6) do {
 		_binome = ["CUP_I_GUE_Soldier_AKSU","CUP_I_GUE_Soldier_AKSU"];
 		_ennemi_group = ["CUP_I_GUE_Officer","CUP_I_GUE_Soldier_AKS74","CUP_I_GUE_Soldier_MG","CUP_I_GUE_Medic","CUP_I_GUE_Soldier_GL"];
 		_rand_vehi = ["CUP_I_BRDM2_NAPA","CUP_I_BRDM2_NAPA","CUP_I_BRDM2_NAPA","CUP_I_BMP2_NAPA","CUP_I_T34_NAPA","CUP_I_T72_NAPA"];
-		_transp_vehi = "CUP_O_Ural_SLA";
+		_transp_vehi = "CUP_V3S_Open_NAPA";
 		_offroad = "CUP_I_Datsun_PK";
 		_helico = "";
 	};
@@ -385,7 +385,7 @@ switch (paramsArray select 6) do {
 		_binome = ["CPC_Duala_O_NPFD_soldier_5","CPC_Duala_O_NPFD_soldier_5"];
 		_ennemi_group = ["CPC_Duala_O_NPFD_soldier_TL","CPC_Duala_O_NPFD_soldier_2","CPC_Duala_O_NPFD_soldier_MG","CPC_Duala_O_NPFD_soldier_Medic","CPC_Duala_O_NPFD_soldier_GL"];
 		_rand_vehi = ["CPC_Duala_O_NPFD_BTR40_MG","CPC_Duala_O_NPFD_Datsun_PK","CPC_Duala_O_NPFD_Datsun_PK","CPC_Duala_O_NPFD_Datsun_PK","CPC_Duala_O_NPFD_Ural_ZU23"];
-		_transp_vehi = "CPC_Duala_O_NPFD_Ural_1";
+		_transp_vehi = "CPC_Afrique_O_NPFD_V3S_Covered";
 		_offroad = "CPC_Duala_O_NPFD_Datsun_PK";
 		_helico = "";
 	};
@@ -465,7 +465,6 @@ _fois = switch (_Nombre_Ennemi) do {
 	case 2: {3};
 	case 3: {4};
 };
-//if (typecamp == 2) then {_fois = _fois + 2;}; la ville doit elle vraiment provoquer + de véhicules ?
 if ((paramsArray select 13) < 1) then {
 for "_n" from 1 to _fois do {
 	_pos = [_mark,0,_markEx,100] call SHK_pos;
@@ -537,16 +536,16 @@ _fois = switch (_Nombre_Ennemi) do {
 	case 3: {(floor random 3) + 2};
 };
 if ((paramsArray select 13) == 0) then {
-if (_rab_veh) then {_fois = _fois + 1 + _Nombre_Ennemi;}; 
-_mark = "3";
-_markEx = "2";
-for "_n" from 1 to _fois do {
-	_pos = [_mark,0,_markEx,200] call SHK_pos; 
-	_type = selectrandom _rand_vehi;
-	_group = [_pos,random 360,_type,resistance] call BIS_fnc_spawnVehicle;
-	group ((_group select 1) select 0) setVariable ["GAIA_ZONE_INTEND",[_mark, "MOVE"], false];
-	sleep 0.5;
-};
+	if (_rab_veh) then {_fois = _fois + 1 + _Nombre_Ennemi;}; 
+	_mark = "3";
+	_markEx = "2";
+	for "_n" from 1 to _fois do {
+		_pos = [_mark,0,_markEx,200] call SHK_pos; 
+		_type = selectrandom _rand_vehi;
+		_group = [_pos,random 360,_type,resistance] call BIS_fnc_spawnVehicle;
+		group ((_group select 1) select 0) setVariable ["GAIA_ZONE_INTEND",[_mark, "MOVE"], false];
+		sleep 0.5;
+	};
 };
 
 // Fait spawn un mortier qui bombarde la grande zone
@@ -569,7 +568,7 @@ if (random 100 < 22) then {
 		[
 			_pos
 			, selectrandom ["campA","campB","campC","campD","campE","campF"]
-		] execVM "spawn\spawn_OP.sqf";
+		] execVM "scripts\create_camp.sqf";
 		_mark = createMarker [format["CPos%1",_x],_pos];
 			_mark setmarkerColor "colorRed";
 			_mark setMarkerShape "ELLIPSE";
@@ -580,7 +579,7 @@ if (random 100 < 22) then {
 		_group setVariable ["GAIA_ZONE_INTEND",[_mark, "FORTIFY"], false];
 		sleep 0.5;
 	};
-} foreach [45,25,8,2];
+} foreach [40,20,5,2];
 
 // Fait spawn un véhicule de transport de troupes sur une route entre 1000m et 1500m du camp et le fait patrouiller.
 if ((paramsArray select 13) < 1) then {
@@ -638,40 +637,47 @@ _group setVariable ["GAIA_ZONE_INTEND",["4", "FORTIFY"], false];
 
 //hélico
 if ((paramsArray select 13) == 0) then {
-if ((_helico != "") AND (random 100 < 20)) then {
-	_mark = "2";
-	_markEx = "1";
-	_dir = random 360;
-	_pos = [_mark,0,_markEx,[300,_helico]] call SHK_pos;
-	_veh = [_pos,random 360,_helico,resistance] call BIS_fnc_spawnVehicle;
-	_group = createGroup resistance;
-	_group = [[0,0,0], resistance, _ennemi_group] call BIS_fnc_spawnGroup;
-	{_x assignAsCargo (_veh select 0); _x moveInCargo (_veh select 0);} foreach units _group;
-	units _group join (_veh select 2);
-	(_veh select 2) setVariable ["GAIA_ZONE_INTEND",["3", "MOVE"], false];
-};
+	if ((_helico != "") AND (random 100 < 20)) then {
+		_mark = "2";
+		_markEx = "1";
+		_dir = random 360;
+		_pos = [_mark,0,_markEx,[300,_helico]] call SHK_pos;
+		_veh = [_pos,random 360,_helico,resistance] call BIS_fnc_spawnVehicle;
+		_group = createGroup resistance;
+		_group = [[0,0,0], resistance, _ennemi_group] call BIS_fnc_spawnGroup;
+		{_x assignAsCargo (_veh select 0); _x moveInCargo (_veh select 0);} foreach units _group;
+		units _group join (_veh select 2);
+		(_veh select 2) setVariable ["GAIA_ZONE_INTEND",["3", "MOVE"], false];
+	};
 };
 
 //Fait spawn des binomes dans les batiments de la grande zone et les assigne en FORTIFY à cette zone (désactivé pour l'instant car les mecs semblent se regouper sur le camp central)
 _houselist = nearestObjects [getMarkerPos "3", ["Building","House"], 1200];
-/*
+
 {
 	if (random 100 < 3.5) then {
 		_pos = getpos _x;
 		_group = [_pos, resistance, _binome,[],[],[],[],[],random 360] call BIS_fnc_spawnGroup;
-		_group setVariable ["GAIA_ZONE_INTEND",["3", "FORTIFY"], false];
-		if ((isnull chefIA) AND (random 100 < 20) AND !(["1",_pos] call BIS_fnc_inTrigger)) then {
+		_mark = createMarker [format["BPos%1",_x],_pos];
+			_mark setmarkerColor "colorPink";
+			_mark setMarkerShape "ELLIPSE";
+			_mark setMarkerSize [40,40];
+			_mark setMarkerAlpha 0;
+		_group setVariable ["GAIA_ZONE_INTEND",[_mark, "FORTIFY"], false];
+		if ((!chefIA_create) AND (random 100 < 20) AND !(["1",_pos] call BIS_fnc_inTrigger)) then {
 			chefIA = _group createUnit [(_binome select 0), _pos, [], 0, "FORM"];
 			chefIA allowDamage false; 
 			_mark = createMarker ["Chefmarker",_pos];
 			_mark setMarkerType "HD_dot";
 			_mark setMarkerColor "colorRed";
 			publicVariable "chefIA";
+			chefIA_create = true;
+			publicVariable "chefIA_create";
 		};
 		sleep 0.5;
 	};
 } foreach _houselist;
-*/
+
 // Fait spawn des civils dans des batiments de la grande zone et les fait se balader.
 _houseOutlist = (nearestObjects [getMarkerPos "3", ["Building","House"], 1800]) - _houselist;
 {
@@ -703,22 +709,22 @@ _markEx = "1";
 		_veh setVectorUp surfaceNormal position _veh;
 		sleep 0.5;
 	};
-} foreach [95,85,75,65,55,45,35,25,15,5];
+} foreach [80,70,60,50,40,30,10];
 
 
 
 // réglage des skills
 _skill = paramsArray select 4;
 {
-	if (side _x == resistance) then {_x unlinkItem "rhsusf_ANPVS_14";  _x unlinkItem "NVGoggles"; _x unlinkItem "NVGoggles_OPFOR"; _x unlinkItem "NVGoggles_INDEP";};
 	_IA = _x;
 	{
-	_Sktype = _IA skill _x ;
-	_IA setSkill [_x,( _Sktype * _skill)];
+		_Sktype = _IA skill _x ;
+		_IA setSkill [_x,( _Sktype * _skill)];
 	} foreach ["aimingShake","aimingSpeed","spotTime","spotDistance","aimingAccuracy"];
-} foreach allUnits;
+} foreach (allUnits select {side _x == resistance});
 
-if (!isnull chefIA) then {removeHeadgear chefIA; chefIA addHeadgear "CUP_H_RUS_Beret_Spetsnaz"; chefIA allowDamage true;};
+// chef IA (désactivé pour l'instant)
+if (chefIA_create) then {removeHeadgear chefIA; chefIA addHeadgear "CUP_H_RUS_Beret_Spetsnaz"; chefIA allowDamage true;};
 
 //event fin
 [_Nombre_Ennemi,_Compo_group,_skill] spawn {
@@ -741,11 +747,10 @@ if (!isnull chefIA) then {removeHeadgear chefIA; chefIA addHeadgear "CUP_H_RUS_B
 		_group setVariable ["GAIA_ZONE_INTEND",[_mark, "NOFOLLOW"], false];
 		sleep 0.5;
 		{
-			if (side _x == resistance) then {_x unlinkItem "rhsusf_ANPVS_14";  _x unlinkItem "NVGoggles"; _x unlinkItem "NVGoggles_OPFOR"; _x unlinkItem "NVGoggles_INDEP";};
 			_IA = _x;
 			{
-			_Sktype = _IA skill _x ;
-			_IA setSkill [_x,( _Sktype * _skill)];
+				_Sktype = _IA skill _x ;
+				_IA setSkill [_x,( _Sktype * _skill)];
 			} foreach ["aimingShake","aimingSpeed","spotTime","spotDistance","aimingAccuracy"];
 		} foreach (units _group);
 	};
@@ -764,11 +769,10 @@ if ((paramsArray select 13) < 1) then {
 	(_veh select 2) setVariable ["GAIA_ZONE_INTEND",["2", "MOVE"], false];
 
 {
-	if (side _x == resistance) then {_x unlinkItem "rhsusf_ANPVS_14";  _x unlinkItem "NVGoggles"; _x unlinkItem "NVGoggles_OPFOR"; _x unlinkItem "NVGoggles_INDEP";};
 	_IA = _x;
 	{
-	_Sktype = _IA skill _x ;
-	_IA setSkill [_x,( _Sktype * _skill)];
+		_Sktype = _IA skill _x ;
+		_IA setSkill [_x,( _Sktype * _skill)];
 	} foreach ["aimingShake","aimingSpeed","spotTime","spotDistance","aimingAccuracy"];
 } foreach (units (_veh select 2));
 };
@@ -784,16 +788,15 @@ if ((random 100 < 50) AND ((paramsArray select 13) < 1)) then {
 		(_veh select 2) setVariable ["GAIA_ZONE_INTEND",["2", "MOVE"], false];
 
 	{
-		if (side _x == resistance) then {_x unlinkItem "rhsusf_ANPVS_14";  _x unlinkItem "NVGoggles"; _x unlinkItem "NVGoggles_OPFOR"; _x unlinkItem "NVGoggles_INDEP";};
 		_IA = _x;
 		{
-		_Sktype = _IA skill _x ;
-		_IA setSkill [_x,( _Sktype * _skill)];
+			_Sktype = _IA skill _x ;
+			_IA setSkill [_x,( _Sktype * _skill)];
 		} foreach ["aimingShake","aimingSpeed","spotTime","spotDistance","aimingAccuracy"];
 	} foreach (units (_veh select 2));
 };
 
-if ((({(paramsArray select 6) == _x} count [0,1,4,8]) > 0) AND (4 > random 10)) then {
+if (((paramsArray select 6) < 100) AND (4 > random 10)) then {
 	waitUntil {time > 4200};
 	sleep (random 300);
 	_group = CreateGroup resistance;
@@ -811,7 +814,7 @@ if ((({(paramsArray select 6) == _x} count [0,1,4,8]) > 0) AND (4 > random 10)) 
 		};
 	};
 	_veh spawn {
-		waitUntil {({(_this distance _x) < 700} count SlotPlayers) != 0};
+		waitUntil {({(_this distance2D _x) < 700} count playableUnits) != 0};
 		[_this,140] execVM "scripts\Eject.sqf";
 		sleep 40;
 		_wp2 = group driver _this addWaypoint [[0,0,500], 0];
@@ -825,28 +828,27 @@ if ((({(paramsArray select 6) == _x} count [0,1,4,8]) > 0) AND (4 > random 10)) 
 };
 
 if ((paramsArray select 13) == 0) then {
-if ((_helico != "") AND (random 100 < 35)) then {
-	waitUntil {time > (6100+ (random 300))};
-	_mark = "2";
-	_markEx = "1";
-	_dir = random 360;
-	_pos = [_mark,0,_markEx,[300,_helico]] call SHK_pos;
-	_veh = [_pos,random 360,_helico,resistance] call BIS_fnc_spawnVehicle;
-	_group = createGroup resistance;
-	_group = [[0,0,0], resistance, _ennemi_group] call BIS_fnc_spawnGroup;
-	{_x assignAsCargo (_veh select 0); _x moveInCargo (_veh select 0);} foreach units _group;
-	units _group join (_veh select 2);
-	(_veh select 2) setVariable ["GAIA_ZONE_INTEND",["3", "MOVE"], false];
+	if ((_helico != "") AND (random 100 < 35)) then {
+		waitUntil {time > (6100+ (random 300))};
+		_mark = "2";
+		_markEx = "1";
+		_dir = random 360;
+		_pos = [_mark,0,_markEx,[300,_helico]] call SHK_pos;
+		_veh = [_pos,random 360,_helico,resistance] call BIS_fnc_spawnVehicle;
+		_group = createGroup resistance;
+		_group = [[0,0,0], resistance, _ennemi_group] call BIS_fnc_spawnGroup;
+		{_x assignAsCargo (_veh select 0); _x moveInCargo (_veh select 0);} foreach units _group;
+		units _group join (_veh select 2);
+		(_veh select 2) setVariable ["GAIA_ZONE_INTEND",["3", "MOVE"], false];
 
-	{
-		if (side _x == resistance) then {_x unlinkItem "rhsusf_ANPVS_14";  _x unlinkItem "NVGoggles"; _x unlinkItem "NVGoggles_OPFOR"; _x unlinkItem "NVGoggles_INDEP";};
-		_IA = _x;
 		{
-		_Sktype = _IA skill _x ;
-		_IA setSkill [_x,( _Sktype * _skill)];
-		} foreach ["aimingShake","aimingSpeed","spotTime","spotDistance","aimingAccuracy"];
-	} foreach (units (_veh select 2));
-};
+			_IA = _x;
+			{
+				_Sktype = _IA skill _x ;
+				_IA setSkill [_x,( _Sktype * _skill)];
+			} foreach ["aimingShake","aimingSpeed","spotTime","spotDistance","aimingAccuracy"];
+		} foreach (units (_veh select 2));
+	};
 };
 
 

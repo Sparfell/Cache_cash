@@ -1,3 +1,7 @@
+/*
+	
+*/
+
 if (!isServer) exitwith {};
 
 
@@ -60,7 +64,7 @@ if ((paramsArray select 6) > 99) then {
 } else {
 	typecamp = 3; publicvariable "typecamp";
 	[
-		Random_Position
-		, selectRandom ["OutpostA","OutpostC","OutpostD","OutpostE"]
-	] execVM "spawn\spawn_camp.sqf";
+		Random_Position,
+		selectRandom ["OutpostA","OutpostC","OutpostD","OutpostE"]
+	] execVM "scripts\create_fob.sqf";
 };

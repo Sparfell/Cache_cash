@@ -7,6 +7,7 @@ switch (paramsArray select 11) do {
 	case 0 : // Dégagé
 	{
 		0 setOvercast 0;
+			sleep 0.1;
 		0 setWindForce 0.1;
 		0 setRain 0;
 		0 setRainbow 0;
@@ -21,6 +22,7 @@ switch (paramsArray select 11) do {
 	case 1 : // Légèrement nébuleux
 	{
 		0 setOvercast 0.3;
+			sleep 0.1;
 		0 setWindForce 0.2;
 		0 setRain 0;
 		0 setRainbow 0;
@@ -35,6 +37,7 @@ switch (paramsArray select 11) do {
 	case 2 : // Nuageux
 	{
 		0 setOvercast (random [0.6,0.75,1]);
+			sleep 0.1;
 		0 setWindForce 0.2;
 		0 setRain 0;
 		0 setRainbow 0;
@@ -49,6 +52,7 @@ switch (paramsArray select 11) do {
 	case 3 : // Pluvieux
 	{
 		0 setOvercast (random [0.7,0.8,0.9]);
+			sleep 0.1;
 		0 setWindForce 0.1;
 		0 setRain (random [0.2,0.4,0.8]);
 		0 setRainbow 0;
@@ -63,6 +67,7 @@ switch (paramsArray select 11) do {
 	case 4 : // Orageux
 	{
 		0 setOvercast 1;
+			sleep 0.1;
 		0 setWindForce 0.1;
 		0 setRain (random [0,0.8,1]);
 		0 setRainbow 0;

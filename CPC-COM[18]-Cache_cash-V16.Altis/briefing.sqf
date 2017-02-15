@@ -88,12 +88,13 @@ player createDiaryRecord ["Diary",["Mission",
 "]];
 
 [] spawn {
-	waitUntil {!isnull chefIA};
+	waitUntil {chefIA_create};
 	["TaskAssigned",["","Chef Ennemi repéré."]] call BIS_fnc_showNotification;
 	task4 = player createSimpleTask ["Tuer le chef. (optionnel)"];
 	task4 setSimpleTaskDescription ["Tuer le chef. (optionnel)","Tuer le chef. (optionnel)","Tuer le chef. (optionnel)"];
 	task4 setSimpleTaskDestination markerpos "chefmarker";
 	waitUntil {!alive chefIA};
+	sleep (random 60);
 	["TaskSucceeded",["","Le chef ennemi est mort."]] call BIS_fnc_showNotification;
 	task4 setTaskState "Succeeded"; 
 };
