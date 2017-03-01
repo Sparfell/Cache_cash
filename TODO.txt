@@ -3,10 +3,22 @@
 - utiliser des batiments A2/APEX dans les campements/villes WIP
 - ajouter des munitions dans les véhicules ?
 
-- rajouter des chemlights dans les loadouts de nuit.
+- réviser le matos JVN des IA
 
-- améliorer la gestion de la météo (voir Sugar tran)
 
-- mettre Ah-6 RHS
-- rajouter la/les nouvelle map de CUP terrains
-- les configs de grp de campement directement dans la mission ?
+Un noir complet :
+"colorCorrections" ppEffectEnable true;
+"colorCorrections" ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]];
+"colorCorrections" ppEffectCommit 0;
+
+waitUntil {time > 1.0};
+disableUserInput true;
+hint "Chargement de la mission...";
+sleep 10.0;
+"colorCorrections" ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [1, 1, 1, 1], [0, 0, 0, 0]];
+"colorCorrections" ppEffectCommit 5;
+sleep 5.0;
+"colorCorrections" ppEffectEnable false;
+
+
+ru SF ammo pas de silencer.
