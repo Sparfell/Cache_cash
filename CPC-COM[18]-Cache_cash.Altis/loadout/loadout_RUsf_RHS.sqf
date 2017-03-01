@@ -118,7 +118,7 @@ loadoutCC_OFF = //
 	_unit addItemToUniform "ACRE_PRC343";
 	_unit addItemToUniform "ACE_IR_Strobe_Item";
 	_unit addItemToUniform "ACE_MapTools";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShellGreen";};
 	_unit addVest "rhs_6sh92_digi_radio";
 	_unit addItemToVest "ACRE_PRC148";
@@ -168,14 +168,14 @@ loadoutCC_TL = //
 	_unit addItemToUniform "ACE_IR_Strobe_Item";
 	_unit addItemToUniform "ACE_MapTools";
 	_unit addItemToUniform "ACE_microDAGR";
-	_unit addItemToUniform "rhs_mag_rgo";
+	_unit addItemToUniform "rhs_mag_rgd5";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShellGreen";};
 	_unit addVest "rhs_6sh92_digi_radio";
 	_unit addItemToVest "ACRE_PRC148";
 	for "_i" from 1 to 5 do {_unit addItemToVest "rhs_30Rnd_545x39_AK";};
 	for "_i" from 1 to 5 do {_unit addItemToVest "rhs_30Rnd_545x39_AK_green";};
 	_unit addBackpack "rhs_assault_umbts";
-	for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_rgo";};
+	for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_rgd5";};
 	for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellGreen";};
 	for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_HandFlare_Green";};
 	for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellPurple";};
@@ -222,7 +222,7 @@ loadoutCC_DOC = //
 	_unit addItemToUniform "ACRE_PRC343";
 	_unit addItemToUniform "ACE_IR_Strobe_Item";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
 	_unit addVest "rhs_6sh92_digi";
 	for "_i" from 1 to 10 do {_unit addItemToVest "rhs_30Rnd_545x39_AK";};
 	_unit addBackpack "rhs_assault_umbts";
@@ -278,7 +278,7 @@ loadoutCC_AR = //
 	_unit addItemToUniform "ACRE_PRC343";
 	_unit addItemToUniform "ACE_IR_Strobe_Item";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
 	_unit addVest "rhs_6sh92_digi";
 	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_100Rnd_762x54mmR";};
 	_unit addBackpack "rhs_assault_umbts";
@@ -321,7 +321,7 @@ loadoutCC_AAR = //
 	_unit addItemToUniform "ACRE_PRC343";
 	_unit addItemToUniform "ACE_IR_Strobe_Item";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
 	_unit addVest "rhs_6sh92_digi";
 	for "_i" from 1 to 8 do {_unit addItemToVest "rhs_30Rnd_545x39_AK";};
 	_unit addBackpack "B_Carryall_oli";
@@ -368,7 +368,7 @@ loadoutCC_MG = //
 	_unit addItemToUniform "ACRE_PRC343";
 	_unit addItemToUniform "ACE_IR_Strobe_Item";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
 	_unit addVest "rhs_6sh92_digi";
 	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_100Rnd_762x54mmR";};
 	_unit addBackpack "rhs_assault_umbts";
@@ -411,7 +411,7 @@ loadoutCC_AMG = //
 	_unit addItemToUniform "ACRE_PRC343";
 	_unit addItemToUniform "ACE_IR_Strobe_Item";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
 	_unit addVest "rhs_6sh92_digi";
 	for "_i" from 1 to 8 do {_unit addItemToVest "rhs_30Rnd_545x39_AK";};
 	_unit addBackpack "B_Carryall_oli";
@@ -458,7 +458,7 @@ loadoutCC_AT = //
 	_unit addItemToUniform "ACRE_PRC343";
 	_unit addItemToUniform "ACE_IR_Strobe_Item";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
 	_unit addVest "rhs_6sh92_digi";
 	for "_i" from 1 to 10 do {_unit addItemToVest "rhs_30Rnd_545x39_AK";};
 	_unit addHeadgear (selectrandom _helmet);
@@ -516,7 +516,7 @@ loadoutCC_AAT = //
 	_unit addItemToUniform "ACRE_PRC343";
 	_unit addItemToUniform "ACE_IR_Strobe_Item";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
 	_unit addVest "rhs_6sh92_digi";
 	for "_i" from 1 to 10 do {_unit addItemToVest "rhs_30Rnd_545x39_AK";};
 	if (_rhsennemy) then {
@@ -569,7 +569,7 @@ loadoutCC_DEMO = //
 	_unit addItemToUniform "ACRE_PRC343";
 	_unit addItemToUniform "ACE_IR_Strobe_Item";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
 	_unit addVest "rhs_6sh92_digi";
 	for "_i" from 1 to 10 do {_unit addItemToVest "rhs_30Rnd_545x39_AK";};
 	_unit addBackpack "rhs_assault_umbts_engineer_empty";
@@ -618,7 +618,7 @@ loadoutCC_M = //
 	_unit addItemToUniform "ACRE_PRC343";
 	_unit addItemToUniform "ACE_IR_Strobe_Item";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
 	_unit addVest "rhs_6sh92_digi";
 	_unit addItemToVest "ACE_Kestrel4500";
 	_unit addItemToVest "ACE_MapTools";
@@ -663,7 +663,7 @@ loadoutCC_GL = //
 	_unit addItemToUniform "ACRE_PRC343";
 	_unit addItemToUniform "ACE_IR_Strobe_Item";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
 	_unit addVest "rhs_6sh92_digi_vog";
 	for "_i" from 1 to 8 do {_unit addItemToVest "rhs_30Rnd_545x39_AK";};
 	for "_i" from 1 to 12 do {_unit addItemToVest "rhs_VOG25";};
@@ -712,11 +712,11 @@ loadoutCC_A = //
 	_unit addItemToUniform "ACRE_PRC343";
 	_unit addItemToUniform "ACE_IR_Strobe_Item";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
 	_unit addVest "rhs_6sh92_digi";
 	for "_i" from 1 to 10 do {_unit addItemToVest "rhs_30Rnd_545x39_AK";};
 	_unit addBackpack "B_Carryall_oli";
-	for "_i" from 1 to 4 do {_unit addItemToBackpack "rhs_mag_rgo";};
+	for "_i" from 1 to 4 do {_unit addItemToBackpack "rhs_mag_rgd5";};
 	for "_i" from 1 to 4 do {_unit addItemToBackpack "SmokeShell";};
 	for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_HandFlare_Green";};
 	_unit addHeadgear (selectrandom _helmet);
@@ -725,6 +725,7 @@ loadoutCC_A = //
 	comment "Add weapons";
 	_unit addWeapon (selectrandom _weapon_npz);
 	_unit addPrimaryWeaponItem "CUP_optic_LeupoldMk4_CQ_T";
+	_unit addPrimaryWeaponItem "rhs_acc_dtk4short";
 	if (_lamp) then {_unit addPrimaryWeaponItem "rhs_acc_2dpZenit";};
 	if (_nvg) then {_unit addPrimaryWeaponItem "rhs_acc_perst1ik";};
 	_unit addPrimaryWeaponItem "rhs_acc_pkas";
@@ -760,7 +761,7 @@ loadoutCC_LAT = //
 	_unit addItemToUniform "ACRE_PRC343";
 	_unit addItemToUniform "ACE_IR_Strobe_Item";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
 	_unit addVest "rhs_6sh92_digi";
 	for "_i" from 1 to 10 do {_unit addItemToVest "rhs_30Rnd_545x39_AK";};
 	_unit addHeadgear (selectrandom _helmet);
@@ -805,7 +806,7 @@ loadoutCC_R = //
 	_unit addItemToUniform "ACRE_PRC343";
 	_unit addItemToUniform "ACE_IR_Strobe_Item";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
 	_unit addVest "rhs_6sh92_digi";
 	for "_i" from 1 to 10 do {_unit addItemToVest "rhs_30Rnd_545x39_AK";};
 	_unit addHeadgear (selectrandom _helmet);
@@ -848,7 +849,7 @@ loadoutCC_CREW = //
 	_unit addItemToUniform "ACRE_PRC343";
 	_unit addItemToUniform "ACE_IR_Strobe_Item";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
 	_unit addVest "rhs_6sh92_digi";
 	_unit addItemToVest "ACE_microDAGR";
 	_unit addItemToVest "ACE_MapTools";
@@ -937,7 +938,7 @@ loadoutCC_SNIPER = //
 	_unit addItemToUniform "ACE_ATragMX";
 	_unit addItemToUniform "ACE_RangeCard";
 	for "_i" from 1 to 3 do {_unit addItemToUniform "16Rnd_9x21_Mag";};
-	_unit addItemToUniform "rhs_mag_rgo";
+	_unit addItemToUniform "rhs_mag_rgd5";
 	_unit addItemToUniform "SmokeShell";
 	_unit addVest "V_Chestrig_rgr";
 	for "_i" from 1 to 6 do {_unit addItemToVest "5Rnd_127x108_Mag";};
@@ -986,7 +987,7 @@ loadoutCC_OBS = //
 	_unit addItemToUniform "ACRE_PRC148";
 	_unit addItemToUniform "ACE_ATragMX";
 	_unit addItemToUniform "ACE_RangeCard";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
 	_unit addVest "V_Chestrig_rgr";
 	for "_i" from 1 to 10 do {_unit addItemToVest "rhs_30Rnd_545x39_AK";};
@@ -1031,7 +1032,7 @@ loadoutCC_JTAC = //
 	_unit addItemToUniform "ACE_Flashlight_KSF1";
 	_unit addItemToUniform "ACRE_PRC343";
 	_unit addItemToUniform "ACE_IR_Strobe_Item";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgo";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
 	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShellGreen";};
 	_unit addVest "rhs_6sh92_digi";
 	_unit addItemToVest "ACE_MapTools";

@@ -43,7 +43,7 @@ player onMapSingleClick {
 	player onMapSingleClick "";
 	
 	// Ajout de l'action "Partir" pour tous les clients
-	[CPC_EXTRA_Helo,["<t color='#ff0000'>Partir</t>","CPC_EXTRA_LeaveLZ = true; publicVariable 'CPC_EXTRA_LeaveLZ'; _wp = (group CPC_EXTRA_Helo) addWaypoint [CPC_EXTRA_Pos, 0]; _wp setWaypointType 'MOVE';",0,1.5,false,true,"","(!CPC_EXTRA_LeaveLZ) AND (_this in (assignedCargo _target))"]] remoteExec ["addaction", 0];
+	[CPC_EXTRA_Helo,["<t color='#ff0000'>Partir</t>","CPC_EXTRA_LeaveLZ = true; publicVariable 'CPC_EXTRA_LeaveLZ'; _wp = (group CPC_EXTRA_Helo) addWaypoint [CPC_EXTRA_Pos, 0]; _wp setWaypointType 'MOVE';",0,1.5,false,true,"","(!CPC_EXTRA_LeaveLZ) AND ((vehicle _this) == _target)"]] remoteExec ["addaction", 0];
 
 };
 

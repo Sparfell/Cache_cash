@@ -164,7 +164,7 @@ loadoutCC_TL = //
 	for "_i" from 1 to 5 do {_unit addItemToVest "rhs_30Rnd_545x39_AK";};
 	for "_i" from 1 to 5 do {_unit addItemToVest "rhs_30Rnd_545x39_AK_green";};
 	_unit addBackpack "rhs_assault_umbts";
-	for "_i" from 1 to 4 do {_unit addItemToBackpack "rhs_mag_rgo";};
+	for "_i" from 1 to 4 do {_unit addItemToBackpack "rhs_mag_rgd5";};
 	for "_i" from 1 to 4 do {_unit addItemToBackpack "rhs_mag_rdg2_white";};
 	if (_nvg) then {_unit addHeadgear (selectrandom _helmetnight)} else {_unit addHeadgear (selectrandom _helmet)};
 
@@ -209,7 +209,7 @@ loadoutCC_DOC = //
 	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rdg2_white";};
 	_unit addVest "rhs_6b23_digi_medic";
 	for "_i" from 1 to 10 do {_unit addItemToVest "rhs_30Rnd_545x39_AK";};
-	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgo";};
+	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgd5";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
 	_unit addBackpack "rhs_assault_umbts";
 	_unit addItemToBackpack "ACE_personalAidKit";
@@ -262,7 +262,7 @@ loadoutCC_AR = //
 	_unit addItemToUniform "ACRE_PRC343";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rdg2_white";};
 	_unit addVest "rhs_6b23_digi_rifleman";
-	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgo";};
+	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgd5";};
 	_unit addItemToVest "rhs_100Rnd_762x54mmR";
 	_unit addBackpack "rhs_assault_umbts";
 	_unit addItemToBackpack "rhs_100Rnd_762x54mmR";
@@ -304,7 +304,7 @@ loadoutCC_AAR = //
 	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rdg2_white";};
 	_unit addVest "rhs_6b23_digi_6sh92";
 	for "_i" from 1 to 10 do {_unit addItemToVest "rhs_30Rnd_545x39_AK";};
-	_unit addItemToVest "rhs_mag_rgo";
+	_unit addItemToVest "rhs_mag_rgd5";
 	_unit addBackpack "rhs_assault_umbts";
 	_unit addItemToBackpack "rhs_100Rnd_762x54mmR";
 	for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_100Rnd_762x54mmR_green";};
@@ -346,7 +346,7 @@ loadoutCC_MG = //
 	_unit addItemToUniform "ACRE_PRC343";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rdg2_white";};
 	_unit addVest "rhs_6b23_digi_rifleman";
-	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgo";};
+	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgd5";};
 	_unit addItemToVest "rhs_100Rnd_762x54mmR";
 	_unit addBackpack "rhs_assault_umbts";
 	_unit addItemToBackpack "rhs_100Rnd_762x54mmR";
@@ -388,7 +388,7 @@ loadoutCC_AMG = //
 	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rdg2_white";};
 	_unit addVest "rhs_6b23_digi_6sh92";
 	for "_i" from 1 to 10 do {_unit addItemToVest "rhs_30Rnd_545x39_AK";};
-	_unit addItemToVest "rhs_mag_rgo";
+	_unit addItemToVest "rhs_mag_rgd5";
 	_unit addBackpack "rhs_assault_umbts";
 	_unit addItemToBackpack "rhs_100Rnd_762x54mmR";
 	for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_100Rnd_762x54mmR_green";};
@@ -431,7 +431,7 @@ loadoutCC_AT = //
 	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rdg2_white";};
 	_unit addVest "rhs_6b23_digi_6sh92";
 	for "_i" from 1 to 10 do {_unit addItemToVest "rhs_30Rnd_545x39_AK";};
-	_unit addItemToVest "rhs_mag_rgo";
+	_unit addItemToVest "rhs_mag_rgd5";
 	if (_nvg) then {_unit addHeadgear (selectrandom _helmetnight)} else {_unit addHeadgear (selectrandom _helmet)};
 
 	comment "Add weapons";
@@ -484,7 +484,7 @@ loadoutCC_AAT = //
 	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rdg2_white";};
 	_unit addVest "rhs_6b23_digi_6sh92";
 	for "_i" from 1 to 10 do {_unit addItemToVest "rhs_30Rnd_545x39_AK";};
-	_unit addItemToVest "rhs_mag_rgo";
+	_unit addItemToVest "rhs_mag_rgd5";
 	if (_rhsennemy) then {
 		_unit addBackpack "rhs_rpg_empty";
 		for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_rpg7_PG7VL_mag";};
@@ -533,7 +533,7 @@ loadoutCC_DEMO = //
 	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rdg2_white";};
 	_unit addVest "rhs_6b23_digi_engineer";
 	for "_i" from 1 to 8 do {_unit addItemToVest "rhs_30Rnd_545x39_AK";};
-	_unit addItemToVest "rhs_mag_rgo";
+	_unit addItemToVest "rhs_mag_rgd5";
 	_unit addBackpack "rhs_assault_umbts_engineer_empty";
 	_unit addItemToBackpack "ACE_M26_Clacker";
 	_unit addItemToBackpack "ACE_DefusalKit";
@@ -578,7 +578,7 @@ loadoutCC_M = //
 	_unit addItemToUniform "ACRE_PRC343";
 	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rdg2_white";};
 	_unit addVest "rhs_6b23_6sh116";
-	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgo";};
+	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgd5";};
 	for "_i" from 1 to 18 do {_unit addItemToVest "rhs_10Rnd_762x54mmR_7N1";};
 	if (_nvg) then {_unit addHeadgear (selectrandom _helmetnight)} else {_unit addHeadgear (selectrandom _helmet)};
 
@@ -660,11 +660,11 @@ loadoutCC_A = //
 	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rdg2_white";};
 	_unit addVest "rhs_6b23_digi_rifleman";
 	for "_i" from 1 to 8 do {_unit addItemToVest "rhs_30Rnd_545x39_AK";};
-	_unit addItemToVest "rhs_mag_rgo";
+	_unit addItemToVest "rhs_mag_rgd5";
 	_unit addBackpack "rhs_assault_umbts";
 	for "_i" from 1 to 10 do {_unit addItemToBackpack "rhs_30Rnd_545x39_AK";};
 	for "_i" from 1 to 4 do {_unit addItemToBackpack "rhs_mag_rdg2_white";};
-	for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_rgo";};
+	for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_rgd5";};
 	for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_HandFlare_Green";};
 	if (_nvg) then {_unit addHeadgear (selectrandom _helmetnight)} else {_unit addHeadgear (selectrandom _helmet)};
 
@@ -705,7 +705,7 @@ loadoutCC_LAT = //
 	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rdg2_white";};
 	_unit addVest "rhs_6b23_6sh116";
 	for "_i" from 1 to 10 do {_unit addItemToVest "rhs_30Rnd_545x39_AK";};
-	_unit addItemToVest "rhs_mag_rgo";
+	_unit addItemToVest "rhs_mag_rgd5";
 	if (_nvg) then {_unit addHeadgear (selectrandom _helmetnight)} else {_unit addHeadgear (selectrandom _helmet)};
 
 	comment "Add weapons";
@@ -746,7 +746,7 @@ loadoutCC_R = //
 	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rdg2_white";};
 	_unit addVest "rhs_6b23_6sh116";
 	for "_i" from 1 to 10 do {_unit addItemToVest "rhs_30Rnd_545x39_AK";};
-	_unit addItemToVest "rhs_mag_rgo";
+	_unit addItemToVest "rhs_mag_rgd5";
 	if (_nvg) then {_unit addHeadgear (selectrandom _helmetnight)} else {_unit addHeadgear (selectrandom _helmet)};
 
 	comment "Add weapons";
@@ -919,7 +919,7 @@ loadoutCC_OBS = //
 	_unit addItemToUniform "ACE_IR_Strobe_Item";
 	_unit addItemToUniform "ACE_RangeCard";
 	_unit addVest "rhs_6sh92_digi_radio";
-	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgo";};
+	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgd5";};
 	for "_i" from 1 to 6 do {_unit addItemToVest "rhs_20rnd_9x39mm_SP5";};
 	_unit addBackpack "B_FieldPack_khk";
 	for "_i" from 1 to 9 do {_unit addItemToBackpack "rhs_20rnd_9x39mm_SP6";};
