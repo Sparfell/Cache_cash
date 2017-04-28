@@ -473,7 +473,7 @@ loadoutCC_AT = //
 	_unit addWeapon "rhs_pdu4";
 	if (_rhsennemy) then {
 		_unit addWeapon "rhs_weap_rpg7";
-		_unit addSecondaryWeaponItem "rhs_acc_pgo7v";
+		_unit addSecondaryWeaponItem "rhs_acc_pgo7v3";
 		_unit addBackpack "rhs_rpg_empty";
 		for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_rpg7_PG7VL_mag";};
 		for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_rpg7_OG7V_mag";};
