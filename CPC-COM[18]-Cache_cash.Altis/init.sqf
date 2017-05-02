@@ -31,11 +31,11 @@ if ((!isServer) && (player != player)) then
 if (isNil "paramsArray") then {
 	paramsArray = [
 		12,		//Heure
-		0,		//Insertion
+		1,		//Insertion
 		1,		//Difficulté
 		0,		//NVG
 		1,		//Skill
-		3,		//Faction
+		17,		//Faction
 		100,	//Faction IA
 		1,		//extraction
 		0,		//Véhicule 1

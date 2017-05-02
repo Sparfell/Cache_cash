@@ -48,7 +48,8 @@ switch (paramsArray select 5) do {
 		case 13 : {CPC_EXTRA_Veh = "rhsgref_ins_Mi8amt";}; // INS
 		case 14 : {CPC_EXTRA_Veh = "CUP_C_Mi17_Civilian_RU";}; // TAK INS
 		case 15 : {CPC_EXTRA_Veh = "rhssaf_airforce_ht48";}; // SAF
-		case 16 : {CPC_EXTRA_Veh = "rhsgref_cdf_b_reg_Mi8amt";}; // SAF
+		case 16 : {CPC_EXTRA_Veh = "rhsgref_cdf_b_reg_Mi8amt";}; // CDF
+		case 17 : {CPC_EXTRA_Veh = "MU_MERC_Mohawk";}; // PMC
 };
 CPC_EXTRA_Pos = _this select 4;
 if (count _this > 5) then {

@@ -16,7 +16,7 @@ class Params
 	title = "Type d'insertion :";
 	values[] = {0,1,2,3,4,5};
 	texts[] = {"Aléatoire","Choisie","Héliportée","Héliportée (IA)","Parachutage","HALO jump"};
-	default = 0;
+	default = 1;
 	};
 
 	class difficulte	//paramsArray select 2
@@ -46,7 +46,7 @@ class Params
 	class Faction	//paramsArray select 5
 	{
 	title = "Faction joueur :";
-	values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
+	values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17};
 	texts[] = 
 	{
 		"OTAN",
@@ -65,9 +65,10 @@ class Params
 		"Insurgés (adaptatifs)",
 		"Rebelles takistanais",
 		"SAF",
-		"CDF"
+		"CDF",
+		"PMC"
 	};
-	default = 3;
+	default = 17;
 	};
 
 	class Faction_Ennemi	//paramsArray select 6

@@ -442,7 +442,7 @@ switch (paramsArray select 6) do {
 	};
 };
 
-// Fait spawn des groupes (jusqu'à 4) qui patrouillent dans la petite zone en NOFOLLOW
+// Fait spawn des groupes (jusqu'Ã  4) qui patrouillent dans la petite zone en NOFOLLOW
 _fois = switch (_Nombre_Ennemi) do {
 	case 0: {1};
 	case 1: {2};
@@ -458,7 +458,7 @@ for "_n" from 1 to _fois do {
 	sleep 0.5;
 };
 
-// Fait spawn des technicals (jusqu'à 4) qui patrouillent dans la petite zone en MOVE
+// Fait spawn des technicals (jusqu'Ã  4) qui patrouillent dans la petite zone en MOVE
 _fois = switch (_Nombre_Ennemi) do {
 	case 0: {2};
 	case 1: {2 + (floor random 2)};
@@ -477,7 +477,7 @@ for "_n" from 1 to _fois do {
 };
 };
 
-// Fait spawn des groupes (jusqu'à 6) qui restent dans la zone du camp en FORTIFY
+// Fait spawn des groupes (jusqu'Ã  6) qui restent dans la zone du camp en FORTIFY
 if (typecamp == 1) then { //petit camp
 	_fois = switch (_Nombre_Ennemi) do {
 		case 0: {2};
@@ -528,7 +528,7 @@ for "_n" from 1 to _fois do {
 	} foreach [1,2,3,4];
 };
 
-// Fait spawn des véhicules "lourds" (entre 1 et 8) qui patrouillent dans la grande zone en MOVE 
+// Fait spawn des vÃ©hicules "lourds" (entre 1 et 8) qui patrouillent dans la grande zone en MOVE 
 _fois = switch (_Nombre_Ennemi) do {
 	case 0: {floor random 2};
 	case 1: {floor ((random 2)+ 0.5)};
@@ -558,7 +558,7 @@ if (random 100 < 22) then {
 	units _group select 0 moveInGunner _objet; units _group select 0 assignAsGunner _objet;
 };
 
-//Fait spawn des petits camps (jusqu'à 4) dans la grande zone avec un groupe dessus en FORTIFY
+//Fait spawn des petits camps (jusqu'Ã  4) dans la grande zone avec un groupe dessus en FORTIFY
 {
 	if (random 100 < _x) then {
 		_pos = [[getmarkerpos "1" select 0, getmarkerpos "1" select 1,0],[450,800],random 360,0] call SHK_pos;
@@ -581,7 +581,7 @@ if (random 100 < 22) then {
 	};
 } foreach [40,20,5,2];
 
-// Fait spawn un véhicule de transport de troupes sur une route entre 1000m et 1500m du camp et le fait patrouiller.
+// Fait spawn un vÃ©hicule de transport de troupes sur une route entre 1000m et 1500m du camp et le fait patrouiller.
 if ((paramsArray select 13) < 1) then {
 if (random 100 < 75) then {
 	_vehtype = _transp_vehi;
@@ -635,7 +635,7 @@ leader _group setPosATL (_objet buildingPos 1);
 _group setVariable ["GAIA_ZONE_INTEND",["4", "FORTIFY"], false];
 };
 
-//hélico
+//hÃ©lico
 if ((paramsArray select 13) == 0) then {
 	if ((_helico != "") AND (random 100 < 20)) then {
 		_mark = "2";
@@ -651,7 +651,7 @@ if ((paramsArray select 13) == 0) then {
 	};
 };
 
-//Fait spawn des binomes dans les batiments de la grande zone et les assigne en FORTIFY à cette zone (désactivé pour l'instant car les mecs semblent se regouper sur le camp central)
+//Fait spawn des binomes dans les batiments de la grande zone et les assigne en FORTIFY Ã  cette zone
 _houselist = nearestObjects [getMarkerPos "3", ["Building","House"], 1200];
 
 {
@@ -667,7 +667,7 @@ _houselist = nearestObjects [getMarkerPos "3", ["Building","House"], 1200];
 		if ((!chefIA_create) AND (random 100 < 20) AND !(["1",_pos] call BIS_fnc_inTrigger)) then {
 			chefIA = _group createUnit [(_binome select 0), _pos, [], 0, "FORM"];
 			chefIA allowDamage false;
-			[chefIA,["<t color='#ff0000'>Confirmer l'élimination</t>","chefIA_killed = true; publicVariable 'chefIA_killed';(_this select 0) removeAction (_this select 2);",0,1.5,true,true,"","!alive chefIA"]] remoteExec ["addaction", 0];
+			[chefIA,["<t color='#ff0000'>Confirmer l'Ã©limination</t>","chefIA_killed = true; publicVariable 'chefIA_killed';(_this select 0) removeAction (_this select 2);",0,1.5,true,true,"","(!alive chefIA) AND ((_target distance _this) < 3)"]] remoteExec ["addaction", 0];
 			_mark = createMarker ["Chefmarker",_pos];
 			_mark setMarkerType "HD_dot";
 			_mark setMarkerColor "colorRed";
@@ -714,7 +714,7 @@ _markEx = "1";
 
 
 
-// réglage des skills
+// rÃ©glage des skills
 _skill = paramsArray select 4;
 {
 	_IA = _x;
