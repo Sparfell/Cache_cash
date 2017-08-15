@@ -1,5 +1,5 @@
 //Spectateur ACRE
-[true] call acre_api_fnc_setSpectator;
+if (isClass(configFile >> "CfgPatches" >> "acre_main")) then {[true] call acre_api_fnc_setSpectator;};
 
 //Anti mouettes
 {
@@ -9,3 +9,4 @@
 		_x enablesimulationglobal false;
 	};
 } forEach nearestObjects [player, [], 250];
+

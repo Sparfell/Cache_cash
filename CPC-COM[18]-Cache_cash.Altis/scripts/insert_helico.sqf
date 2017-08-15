@@ -32,6 +32,7 @@ switch (paramsArray select 5) do {
 		case 15 : {_type = "rhssaf_airforce_ht48";}; // SAF
 		case 16 : {_type = "rhsgref_cdf_b_reg_Mi8amt";}; // CDF
 		case 17 : {_type = "MU_MERC_Mohawk";}; // PMC
+		case 18 : {_type = "CUP_B_SA330_Puma_HC2_BAF";}; // FR
 };
 
 waituntil {time > 0};
