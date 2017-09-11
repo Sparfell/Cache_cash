@@ -440,6 +440,7 @@ loadoutCC_AT = //
 	_unit addWeapon "rhs_weap_hk416d145";
 	if (_nvg) then {_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15_bk";};
 	if (_lamp) then {_unit addPrimaryWeaponItem "rhsusf_acc_M952V";};
+	_unit addPrimaryWeaponItem "rhsusf_acc_eotech_552";
 	_unit addPrimaryWeaponItem "bipod_01_F_blk";
 	_unit addWeapon "CUP_launch_M47";
 	_unit addItemToBackpack "CUP_Dragon_EP1_M";
@@ -487,6 +488,7 @@ loadoutCC_AAT = //
 	_unit addWeapon "rhs_weap_hk416d145";
 	if (_nvg) then {_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15_bk";};
 	if (_lamp) then {_unit addPrimaryWeaponItem "rhsusf_acc_M952V";};
+	_unit addPrimaryWeaponItem "optic_MRCO";
 	_unit addPrimaryWeaponItem "bipod_01_F_blk";
 
 	comment "Add items";
