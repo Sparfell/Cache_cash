@@ -16,16 +16,25 @@ strmark = strmark + br + _x;
 copyToClipboard strmark;
 
 */
-switch (worldName) do {
+
+CPC_MAP = toLower worldName;
+publicVariable "CPC_MAP";
+
+switch (CPC_MAP) do {
 
 //Altis
-case "Altis" : {
+case "altis" : {
 
 	CPC_WorldType = "vanilla";
 	publicVariable "CPC_WorldType";
 	CPC_FullMoon = [2016,5,30,0,0];
 	publicVariable "CPC_FullMoon";
 
+	_marker_x = createMarker ["64",[22358.6,7595.3,0]]; "64" SetMarkerShape "RECTANGLE"; "64" setMarkerSize [413.912,647.154]; "64" setMarkerDir 148.972;
+	_marker_x = createMarker ["65",[20721.4,10417.7,0]]; "65" SetMarkerShape "RECTANGLE"; "65" setMarkerSize [515.093,1368.83]; "65" setMarkerDir 190.719;
+	_marker_x = createMarker ["66",[7008.93,15672.9,0]]; "66" SetMarkerShape "RECTANGLE"; "66" setMarkerSize [1843.41,485.569]; "66" setMarkerDir 177.321;
+	_marker_x = createMarker ["67",[10083.5,12066.3,0]]; "67" SetMarkerShape "RECTANGLE"; "67" setMarkerSize [424.325,1271.44]; "67" setMarkerDir 129.763;
+	_marker_x = createMarker ["68",[24771.5,19745.8,0]]; "68" SetMarkerShape "ELLIPSE"; "68" setMarkerSize [737.336,899.925]; "68" setMarkerDir 89.533;
 	_marker0 = createMarker ["69", [19492.094,12333.145,0]]; "69" setMarkerShape "ELLIPSE";	"69" setMarkerSize [600, 1500];	"69" setMarkerDir 70.668; 
 	_marker1 = createMarker ["70", [22872.4,20867.8,0]]; "70" setMarkerShape "RECTANGLE";	"70" setMarkerSize [600, 800];	"70" setMarkerDir 336.272;
 	_marker2 = createMarker ["71", [21988.215,19201.723,0]]; "71" setMarkerShape "RECTANGLE";	"71" setMarkerSize [600, 800];	"71" setMarkerDir 41.943;
@@ -60,7 +69,7 @@ case "Altis" : {
 };
 
 //Tanoa
-case "Tanoa" : {
+case "tanoa" : {
 
 	CPC_WorldType = "fidji";
 	publicVariable "CPC_WorldType";
@@ -181,8 +190,8 @@ case "chernarus" : {
 	
 };
 
-//Chernarus
-case "Chernarus" : {
+//chernarus summer
+case "chernarus_summer" : {
 
 	CPC_WorldType = "chern";
 	publicVariable "CPC_WorldType";
@@ -226,8 +235,9 @@ case "Chernarus" : {
 	
 };
 
+
 //IslaDuala3
-case "IslaDuala3" : {
+case "isladuala3" : {
 
 	CPC_WorldType = "afrique";
 	publicVariable "CPC_WorldType";
@@ -267,7 +277,7 @@ case "IslaDuala3" : {
 };
 
 //Sahrani
-case "Sara" : {
+case "sara" : {
 
 	CPC_WorldType = "vanilla";
 	publicVariable "CPC_WorldType";
@@ -295,7 +305,7 @@ case "Sara" : {
 };
 
 //Podagorsk
-case "FDF_Isle1_a" : {
+case "fdf_isle1_a" : {
 
 	CPC_WorldType = "chernarus";
 	publicVariable "CPC_WorldType";
@@ -335,7 +345,7 @@ case "FDF_Isle1_a" : {
 };
 
 //Bystrica
-case "Woodland_ACR" : {
+case "woodland_acr" : {
 
 	CPC_WorldType = "chernarus";
 	publicVariable "CPC_WorldType";

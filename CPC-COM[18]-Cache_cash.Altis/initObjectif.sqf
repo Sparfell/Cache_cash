@@ -10,18 +10,18 @@ if !(isServer) exitwith {};
 private ["_marker","_markEx","_pos","_rdir","_deg","_i","_type","_veh"];
 
 //position de la base ennemie
-switch (worldName) do {
-	case "Altis" : {_marker = str (69 + (floor random 31));};
+switch (CPC_MAP) do {
+	case "altis" : {_marker = str (64 + (floor random 36));};
 	case "takistan" : {_marker = str (68 + (floor random 32));};
 	case "chernarus" : {_marker = str (70 + (floor random 30));};
-	case "Chernarus" : {_marker = str (70 + (floor random 30));};
-	case "IslaDuala3" : {_marker = str (75 + (floor random 25));};
-	case "Sara" : {_marker = str (87 + (floor random 13));};
-	case "FDF_Isle1_a" : {_marker = str (75 + (floor random 25));};
-	case "Woodland_ACR" : {_marker = str (88 + (floor random 12));};
+	case "chernarus_summer" : {_marker = str (70 + (floor random 30));};
+	case "isladuala3" : {_marker = str (75 + (floor random 25));};
+	case "sara" : {_marker = str (87 + (floor random 13));};
+	case "fdf_isle1_a" : {_marker = str (75 + (floor random 25));};
+	case "woodland_acr" : {_marker = str (88 + (floor random 12));};
 	case "pja305" : {_marker = str (72 + (floor random 28));};
 	case "pja307" : {_marker = str (80 + (floor random 20));};
-	case "Tanoa" : {_marker = str (84 + (floor random 16));};
+	case "tanoa" : {_marker = str (84 + (floor random 16));};
 	case "noe" : {_marker = str (87 + (floor random 13));};
 	case "eden" : {_marker = str (92 + (floor random 8));};
 };
