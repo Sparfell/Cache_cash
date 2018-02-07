@@ -11,3 +11,7 @@ _trg = createTrigger ["EmptyDetector", [0,0,0], true];
 _trg setTriggerActivation ["ALPHA", "PRESENT", false];
 _trg setTriggerText "Couper la mission";
 _trg setTriggerStatements ["this", "['end1',true,4] call BIS_fnc_endMission;", ""];
+
+if ((paramsArray select 15) == 1) then {
+	null = [] execVM "scripts\AmmoCrate.sqf";
+};

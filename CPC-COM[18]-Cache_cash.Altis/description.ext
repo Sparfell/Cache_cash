@@ -69,7 +69,7 @@ class Params
 		"PMC",
 		"FR"
 	};
-	default = 17;
+	default = 3;
 	};
 
 	class Faction_Ennemi	//paramsArray select 6
@@ -287,6 +287,14 @@ class Params
 	class Fullmoon	//paramsArray select 14
 	{
 	title = "Nuit de pleine lune :";
+	values[] = {0,1};
+	texts[] = {"Non","Oui"};
+	default = 0;
+	};
+
+	class AmmoCrate	//paramsArray select 15
+	{
+	title = "caisse de matos supplémentaire :";
 	values[] = {0,1};
 	texts[] = {"Non","Oui"};
 	default = 0;

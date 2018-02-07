@@ -31,12 +31,12 @@ hard_setLoadout =
 	_wdl = false;
 	_des = false;
 	//WDL
-	if (worldName in ["Altis","Tanoa","chernarus","Chernarus","Sara","FDF_Isle1_a","Woodland_ACR","pja305","noe","eden"]) then 
+	if (CPC_MAP in ["altis","tanoa","chernarus","chernarus_summer","sara","fdf_isle1_a","woodland_acr","pja305","noe","eden"]) then 
 	{
 		_wdl = true;
 	};
 	//DES
-	if (worldName in ["takistan","IslaDuala3","pja307"]) then 
+	if (CPC_MAP in ["takistan","isladuala3","pja307"]) then 
 	{
 		_des = true;
 	};

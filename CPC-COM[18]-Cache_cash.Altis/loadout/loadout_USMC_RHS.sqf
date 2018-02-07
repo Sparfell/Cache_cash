@@ -34,14 +34,14 @@ hard_setLoadout =
 	_helmet = [];
 
 	//WDL
-	if (worldName in ["Altis","Tanoa","chernarus","Chernarus","Sara","FDF_Isle1_a","Woodland_ACR","pja305","noe","eden"]) then 
+	if (CPC_MAP in ["altis","tanoa","chernarus","chernarus_summer","sara","fdf_isle1_a","woodland_acr","pja305","noe","eden"]) then 
 	{
 		_uniform = "rhs_uniform_FROG01_wd";
 		_helmet = ["rhsusf_lwh_helmet_marpatwd","rhsusf_lwh_helmet_marpatwd","rhsusf_lwh_helmet_marpatwd","rhsusf_lwh_helmet_marpatwd_blk_ess"];
 		_wdl = true;		
 	};
 	//Des
-	if (worldName in ["takistan","IslaDuala3","pja307"]) then 
+	if (CPC_MAP in ["takistan","isladuala3","pja307"]) then 
 	{
 		_uniform = "rhs_uniform_FROG01_d";
 		_helmet = ["rhsusf_lwh_helmet_marpatd","rhsusf_lwh_helmet_marpatd","rhsusf_lwh_helmet_marpatd","rhsusf_lwh_helmet_marpatd_ess"];

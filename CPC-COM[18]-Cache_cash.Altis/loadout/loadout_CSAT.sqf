@@ -33,13 +33,13 @@ hard_setLoadout =
 	_jungle = false;
 
 	//Hex
-	if (worldName in ["takistan","Altis","IslaDuala3","pja307","FDF_Isle1_a","Woodland_ACR","chernarus","Chernarus","noe","eden"]) then 
+	if (CPC_MAP in ["takistan","altis","isladuala3","pja307","fdf_isle1_a","woodland_acr","chernarus","chernarus_summer","noe","eden"]) then 
 	{
 		_helmet = ["H_HelmetLeaderO_ocamo","H_HelmetO_ocamo"];
 		_hex = true;
 	};
 	//Jungle
-	if (worldName in ["Tanoa","pja305"]) then 
+	if (CPC_MAP in ["tanoa","pja305"]) then 
 	{
 		_helmet = ["H_HelmetLeaderO_ghex_F","H_HelmetO_ghex_F"];
 		_jungle = true;

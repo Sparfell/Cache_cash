@@ -38,7 +38,7 @@ hard_setLoadout =
 	_wdl = false;
 
 	//WDL
-	if (worldName in ["Altis","Tanoa","chernarus","Chernarus","Sara","FDF_Isle1_a","Woodland_ACR","pja305","noe","eden"]) then 
+	if (CPC_MAP in ["altis","tanoa","chernarus","chernarus_summer","sara","fdf_isle1_a","woodland_acr","pja305","noe","eden"]) then 
 	{
 		_uniform = ["CUP_U_B_GER_Flecktarn_2","CUP_U_B_GER_Flecktarn_1"];
 		_helmet = ["CUP_H_Ger_Boonie_Flecktarn","H_Watchcap_khk","H_Cap_oli_hs","CUP_H_PMC_EP_Headset","CUP_H_PMC_PRR_Headset"];
@@ -49,7 +49,7 @@ hard_setLoadout =
 		_wdl = true;
 	};
 	//DES
-	if (worldName in ["takistan","IslaDuala3","pja307"]) then 
+	if (CPC_MAP in ["takistan","isladuala3","pja307"]) then 
 	{
 		_uniform = ["CUP_U_B_GER_Tropentarn_2","CUP_U_B_GER_Tropentarn_1"];
 		_helmet = ["CUP_H_Ger_Boonie_desert","H_ShemagOpen_khk","H_ShemagOpen_khk","CUP_H_PMC_Cap_PRR_Tan"];
@@ -361,7 +361,7 @@ loadoutCC_MG = //
 
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_m240G";
-	_unit addPrimaryWeaponItem "CUP_optic_ElcanM145";
+	_unit addPrimaryWeaponItem "rhsusf_acc_ACOG_MDO";
 	_unit addWeapon "CUP_hgun_Glock17";
 	_unit addWeapon "ACE_Vector";
 
@@ -445,12 +445,10 @@ loadoutCC_AT = //
 	for "_i" from 1 to 8 do {_unit addItemToVest "CUP_30Rnd_556x45_G36";};
 	_unit addBackpack "B_Carryall_oli";
 	if (_rhsennemy) then {
-		for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_smaw_HEAA";};
-		_unit addItemToBackpack "rhs_mag_smaw_SR";
+		for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_maaws_HEAT";};
 	};
 	if (!_rhsennemy) then {
-		for "_i" from 1 to 2 do {_unit addItemToBackpack "CUP_SMAW_HEAA_M";};
-		_unit addItemToBackpack "CUP_SMAW_Spotting";
+		for "_i" from 1 to 2 do {_unit addItemToBackpack "CUP_MAAWS_HEAT_M";};
 	};
 	_unit addHeadgear (selectrandom _helmet);
 
@@ -460,12 +458,10 @@ loadoutCC_AT = //
 	_unit addWeapon "CUP_hgun_Glock17";
 	_unit addWeapon "ACE_Vector";
 	if (_rhsennemy) then {
-		_unit addWeapon "rhs_weap_smaw_green";
-		_unit addSecondaryWeaponItem "rhs_weap_optic_smaw";
+		_unit addWeapon "rhs_weap_maaws_optic";
 	};
 	if (!_rhsennemy) then {
-		_unit addWeapon "CUP_launch_Mk153Mod0";
-		_unit addSecondaryWeaponItem "CUP_optic_SMAW_Scope";
+		_unit addWeapon "CUP_launch_MAAWS_Scope";
 	};
 
 	comment "Add items";
@@ -504,12 +500,12 @@ loadoutCC_AAT = //
 	for "_i" from 1 to 8 do {_unit addItemToVest "CUP_30Rnd_556x45_G36";};
 	_unit addBackpack "B_Carryall_oli";
 	if (_rhsennemy) then {
-		for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_smaw_HEAA";};
-		_unit addItemToBackpack "rhs_mag_smaw_SR";
+		_unit addItemToBackpack "rhs_mag_maaws_HEAT";
+		_unit addItemToBackpack "rhs_mag_maaws_HEDP";
 	};
 	if (!_rhsennemy) then {
-		for "_i" from 1 to 2 do {_unit addItemToBackpack "CUP_SMAW_HEAA_M";};
-		_unit addItemToBackpack "CUP_SMAW_Spotting";
+		_unit addItemToBackpack "CUP_MAAWS_HEAT_M";
+		_unit addItemToBackpack "CUP_MAAWS_HEDP_M";
 	};
 	_unit addHeadgear (selectrandom _helmet);
 

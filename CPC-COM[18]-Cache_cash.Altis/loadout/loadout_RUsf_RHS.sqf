@@ -36,7 +36,7 @@ hard_setLoadout =
 	_uniform2 = "";
 
 	//WDL
-	if (worldName in ["Altis","chernarus","Chernarus","Sara","FDF_Isle1_a","Woodland_ACR","noe","eden"]) then 
+	if (CPC_MAP in ["altis","chernarus","chernarus_summer","sara","fdf_isle1_a","woodland_acr","noe","eden"]) then 
 	{
 		_uniform = ["rhs_uniform_gorka_r_g","rhs_uniform_gorka_r_y"];
 		_helmet = [""];
@@ -46,7 +46,7 @@ hard_setLoadout =
 		_uniform2 = "U_I_FullGhillie_lsh";
 	};
 	//DES
-	if (worldName in ["takistan","IslaDuala3","pja307"]) then 
+	if (CPC_MAP in ["takistan","isladuala3","pja307"]) then 
 	{
 		_uniform = ["rhs_uniform_emr_des_patchless"];
 		_helmet = ["H_Booniehat_tan","H_Booniehat_oli","H_Cap_oli","rhsusf_opscore_fg","rhsusf_opscore_ut","rhsusf_opscore_fg_pelt","rhsusf_opscore_ut_pelt"];
@@ -56,7 +56,7 @@ hard_setLoadout =
 		_uniform2 = "U_B_FullGhillie_sard";
 	};
 	//jungle
-	if (worldName in ["Tanoa","pja305"]) then 
+	if (CPC_MAP in ["tanoa","pja305"]) then 
 	{
 		_uniform = ["rhs_uniform_emr_patchless"];
 		_helmet = ["CUP_H_RUS_Bandana_HS","H_Booniehat_oli","CUP_H_FR_Headband_Headset","H_Cap_headphones","H_Cap_oli","H_Bandanna_khk_hs","H_Bandanna_camo","H_Bandanna_khk"];

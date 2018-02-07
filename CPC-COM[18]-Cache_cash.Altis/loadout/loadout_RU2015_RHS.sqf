@@ -37,7 +37,7 @@ hard_setLoadout =
 	_helmetnight = [];
 
 	//WDL
-	if (worldName in ["Altis","Tanoa","chernarus","Chernarus","Sara","FDF_Isle1_a","Woodland_ACR","pja305","noe","eden"]) then 
+	if (CPC_MAP in ["altis","tanoa","chernarus","chernarus_summer","sara","FDF_Isle1_a","woodland_acr","pja305","noe","eden"]) then 
 	{
 		_uniform = "rhs_uniform_emr_patchless";
 		_uniform2 = "rhs_uniform_df15";
@@ -47,7 +47,7 @@ hard_setLoadout =
 		_wdl = true;		
 	};
 	//DES
-	if (worldName in ["takistan","pja307","IslaDuala3"]) then 
+	if (CPC_MAP in ["takistan","pja307","isladuala3"]) then 
 	{
 		_uniform = "rhs_uniform_emr_des_patchless";
 		_uniform2 = "rhs_uniform_df15_tan";

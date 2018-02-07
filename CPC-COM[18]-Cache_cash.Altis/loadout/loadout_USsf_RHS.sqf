@@ -36,32 +36,32 @@ hard_setLoadout =
 	
 	
 	// Altis
-	if (worldName in ["Altis"]) then 
+	if (CPC_MAP in ["altis"]) then 
 	{
 		_helmet = ["rhsusf_opscore_mc_pelt","rhsusf_opscore_mc_pelt_nsw","rhsusf_opscore_mc","rhsusf_opscore_mc_cover","rhsusf_opscore_mc_cover_pelt","rhsusf_opscore_mc_cover_pelt_cam"];
 	};
 	
 	// WDL
-	if (worldName in ["chernarus","Chernarus","FDF_Isle1_a","Woodland_ACR","eden"]) then 
+	if (CPC_MAP in ["chernarus","chernarus_summer","fdf_isle1_a","woodland_acr","eden"]) then 
 	{
 		_helmet = ["rhsusf_ach_bare_wood_headset","rhsusf_ach_bare_wood","rhsusf_ach_bare_semi_headset","rhsusf_ach_bare_semi","rhsusf_ach_bare_headset","rhsusf_ach_bare"];
 		_lunettes = ["G_Balaclava_blk","G_Balaclava_oli"];
 	};
 	
 	//Desert
-	if (worldName in ["pja307","takistan"]) then 
+	if (CPC_MAP in ["pja307","takistan"]) then 
 	{
 		_helmet = ["rhsusf_opscore_paint","rhsusf_opscore_paint_pelt","rhsusf_opscore_paint_pelt_nsw","rhsusf_opscore_ut","rhsusf_opscore_ut_pelt","rhsusf_opscore_mc","rhsusf_opscore_mc_pelt","CUP_H_PMC_Cap_EP_Tan","CUP_H_PMC_Cap_Back_EP_Tan"];
 	};
 	
 	//Afrique
-	if (worldName in ["IslaDuala3","Sara","noe"]) then 
+	if (CPC_MAP in ["isladuala3","sara","noe"]) then 
 	{
 		_helmet = ["rhsusf_protech_helmet_rhino","rhsusf_protech_helmet_rhino","rhsusf_protech_helmet_rhino_ess"];
 	};
 	
 	// Jungle
-	if (worldName in ["Tanoa","pja305"]) then 
+	if (CPC_MAP in ["tanoa","pja305"]) then 
 	{
 		_helmet = ["H_Booniehat_oli","rhs_Booniehat_m81","H_Booniehat_khk","H_Bandanna_camo","CUP_H_FR_BandanaGreen","H_Bandanna_khk"];
 		_helmet_chef = ["CUP_H_FR_Cap_Headset_Green","H_Booniehat_khk_hs","CUP_H_RUS_Bandana_HS","CUP_H_FR_Headband_Headset"];
@@ -93,7 +93,7 @@ hard_setLoadout =
 };
 
 // Altis
-if (worldName in ["Altis"]) then 
+if (CPC_MAP in ["altis"]) then 
 {
 	loadoutCC_OFF = //
 	{
@@ -1066,7 +1066,7 @@ if (worldName in ["Altis"]) then
 };
 
 // WDL
-if (worldName in ["chernarus","Chernarus","FDF_Isle1_a","Woodland_ACR"]) then 
+if (CPC_MAP in ["chernarus","fdf_isle1_a","woodland_acr"]) then 
 {
 	loadoutCC_OFF = //
 	{
@@ -2057,7 +2057,7 @@ if (worldName in ["chernarus","Chernarus","FDF_Isle1_a","Woodland_ACR"]) then
 };
 
 // Desert
-if (worldName in ["pja307","takistan"]) then 
+if (CPC_MAP in ["pja307","takistan"]) then 
 {
 	loadoutCC_OFF = //
 	{
@@ -3031,7 +3031,7 @@ if (worldName in ["pja307","takistan"]) then
 };
 
 // Afrique
-if (worldName in ["IslaDuala3","Sara"]) then 
+if (CPC_MAP in ["isladuala3","sara"]) then 
 {
 	loadoutCC_OFF = //
 	{
@@ -4005,7 +4005,7 @@ if (worldName in ["IslaDuala3","Sara"]) then
 };
 
 // Jungle
-if (worldName in ["Tanoa","pja305"]) then 
+if (CPC_MAP in ["tanoa","pja305"]) then 
 {
 	loadoutCC_OFF = //
 	{

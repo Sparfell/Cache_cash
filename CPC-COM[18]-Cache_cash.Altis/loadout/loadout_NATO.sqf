@@ -45,7 +45,7 @@ hard_setLoadout =
 	_hat = "";
 
 	//MTP
-	if (worldName in ["takistan","Altis","IslaDuala3","pja307"]) then 
+	if (CPC_MAP in ["takistan","altis","isladuala3","pja307"]) then 
 	{
 		_uniform = ["U_B_CombatUniform_mcam","U_B_CombatUniform_mcam_tshirt","U_B_CombatUniform_mcam_vest"];
 		_vest1 = "V_PlateCarrier2_rgr";
@@ -64,7 +64,7 @@ hard_setLoadout =
 		_hat = "H_Booniehat_mcamo";
 	};
 	//WDL
-	if (worldName in ["FDF_Isle1_a","Woodland_ACR","chernarus","Chernarus","noe","eden"]) then 
+	if (CPC_MAP in ["fdf_isle1_a","woodland_acr","chernarus","chernarus_summer","noe","eden"]) then 
 	{
 		_uniform = ["U_MU_B_soldier_wdl","U_MU_B_soldier_wdl_vest","U_MU_B_soldier_wdl_tshirt"];
 		_vest1 = "V_PlateCarrier2_rgr";
@@ -83,7 +83,7 @@ hard_setLoadout =
 		_hat = "H_Booniehat_oli";
 	};
 	//Sage
-	if (worldName in ["Sara"]) then 
+	if (CPC_MAP in ["sara"]) then 
 	{
 		_uniform = ["U_MU_B_soldier_sage","U_MU_B_soldier_sage_vest","U_MU_B_soldier_sage_tshirt"];
 		_vest1 = "V_PlateCarrier2_rgr";
@@ -102,7 +102,7 @@ hard_setLoadout =
 		_hat = "H_Booniehat_khk";
 	};
 	//Jungle
-	if (worldName in ["Tanoa","pja305"]) then 
+	if (CPC_MAP in ["tanoa","pja305"]) then 
 	{
 		_uniform = ["U_B_T_Soldier_SL_F","U_B_T_Soldier_F","U_B_T_Soldier_AR_F"];
 		_vest1 = "V_PlateCarrier2_tna_F";

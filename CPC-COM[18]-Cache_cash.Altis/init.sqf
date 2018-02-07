@@ -35,7 +35,7 @@ if (isNil "paramsArray") then {
 		1,		//Difficulté
 		0,		//NVG
 		1,		//Skill
-		17,		//Faction
+		3,		//Faction
 		100,	//Faction IA
 		1,		//extraction
 		0,		//Véhicule 1
@@ -44,7 +44,8 @@ if (isNil "paramsArray") then {
 		1,		//météo
 		0,		//brouillard
 		0,		//ennemyveh
-		0		//Moon
+		0,		//Moon
+		0		//Caisse
 	];
 };
 

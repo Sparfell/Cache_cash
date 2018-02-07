@@ -38,7 +38,7 @@ hard_setLoadout =
 	_bag_small = "";
 
 	//Desert
-	if (worldName in ["takistan","pja307","IslaDuala3"]) then 
+	if (CPC_MAP in ["takistan","pja307","isladuala3"]) then 
 	{
 		_uniform = ["CUP_U_I_RACS_Desert_2","CUP_U_I_RACS_Desert_1"];
 		_helmet = "CUP_H_RACS_Helmet_DES";
@@ -50,7 +50,7 @@ hard_setLoadout =
 		_bag_small = "CUP_B_AssaultPack_Coyote";
 	};
 	//Mixed
-	if (worldName in ["Altis","Sara","pja305","noe"]) then 
+	if (CPC_MAP in ["altis","sara","pja305","noe"]) then 
 	{
 		_uniform = ["CUP_U_I_RACS_mech_2","CUP_U_I_RACS_mech_1"];
 		_helmet = "CUP_H_RACS_Helmet_mech";
@@ -62,7 +62,7 @@ hard_setLoadout =
 		_bag_small = "rhsusf_falconii";
 	};
 	//WDL
-	if (worldName in ["Tanoa","chernarus","Chernarus","FDF_Isle1_a","Woodland_ACR","eden"]) then 
+	if (CPC_MAP in ["tanoa","chernarus","chernarus_summer","fdf_isle1_a","woodland_acr","eden"]) then 
 	{
 		_uniform = ["CUP_U_I_RACS_WDL_2","CUP_U_I_RACS_WDL_1"];
 		_helmet = "CUP_H_RACS_Helmet_olive";
