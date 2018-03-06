@@ -75,7 +75,7 @@ class Params
 	class Faction_Ennemi	//paramsArray select 6
 	{
 	title = "Faction Ennemie:";
-	values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,100,101,102,103,104,105,106,107};
+	values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,100,101,102,103,104,105,106,107,108,109};
 	texts[] = 
 	{
 		"US (RHS)",
@@ -95,6 +95,9 @@ class Params
 		"CDF (RHS)",
 		"CSAT (Tanoa)",
 		"NATO (Tanoa)",
+		"Kamistan (RHS)",
+		"République du Damuz (RHS)",
+		"Asian Army (RHS)",
 		"Insurgés (RHS)",
 		"Rebelles takistanais (CUP)",
 		"NAPA (CUP)",
@@ -102,7 +105,9 @@ class Params
 		"NPFD (CUP)",
 		"ChDKZ (CUP)",
 		"Paramilitaires nationalistes (RHS)",
-		"Syndikat"
+		"Syndikat",
+		"Desert rebels (RHS)",
+		"Asian Guerilla (RHS)"
 	};
 	default = 100;
 	};

@@ -13,7 +13,7 @@ _veh = "CUP_USBasicWeapons_EP1" createVehicle _pos;
 _veh allowdamage false;
 
 _rhsennemy = false;
-if ((paramsArray select 6) in [0,2,14,100,106]) then {_rhsennemy = true};
+if ((paramsArray select 6) in [0,2,14,17,18,19,100,106,108,109]) then {_rhsennemy = true};
 
 switch (paramsArray select 5) do {
 	//OTAN

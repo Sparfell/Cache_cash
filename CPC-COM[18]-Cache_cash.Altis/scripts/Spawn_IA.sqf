@@ -305,6 +305,57 @@ switch (paramsArray select 6) do {
 		_helico = "B_Heli_Transport_01_camo_F";
 	};
 
+	case 17 : { // Kamistan
+		_compo_group = [
+			["CPC_ME_O_KAM_soldier_TL","CPC_ME_O_KAM_soldier_1","CPC_ME_O_KAM_soldier_MG"],
+			["CPC_ME_O_KAM_soldier_2","CPC_ME_O_KAM_soldier_1","CPC_ME_O_KAM_soldier_GL"],
+			["CPC_ME_O_KAM_soldier_1","CPC_ME_O_KAM_soldier_AT","CPC_ME_O_KAM_soldier_ENG"],
+			["CPC_ME_O_KAM_soldier_TL","CPC_ME_O_KAM_soldier_1","CPC_ME_O_KAM_soldier_LAT","CPC_ME_O_KAM_soldier_Medic","CPC_ME_O_KAM_soldier_1"],
+			["CPC_ME_O_KAM_soldier_M","CPC_ME_O_KAM_soldier_1"]
+		];
+
+		_binome = ["CPC_ME_O_KAM_soldier_1","CPC_ME_O_KAM_soldier_2"];
+		_ennemi_group = ["CPC_ME_O_KAM_soldier_TL","CPC_ME_O_KAM_soldier_1","CPC_ME_O_KAM_soldier_MG","CPC_ME_O_KAM_soldier_AT","CPC_ME_O_KAM_soldier_GL"];
+		_rand_vehi = ["CPC_ME_O_KAM_BTR80","CPC_ME_O_KAM_BTR80","CPC_ME_O_KAM_BMP1D","CPC_ME_O_KAM_BMP1","CPC_ME_O_KAM_T72B"];
+		_transp_vehi = "CPC_ME_O_KAM_gaz66";
+		_offroad = "CPC_ME_O_KAM_uaz_dshkm";
+		_helico = "CPC_ME_O_KAM_Mi8";
+	};
+
+	case 18 : { // Damuz
+		_compo_group = [
+			["CPC_ME_B_DAM_soldier_TL","CPC_ME_B_DAM_soldier_1","CPC_ME_B_DAM_soldier_MG"],
+			["CPC_ME_B_DAM_soldier_2","CPC_ME_B_DAM_soldier_1","CPC_ME_B_DAM_soldier_GL"],
+			["CPC_ME_B_DAM_soldier_1","CPC_ME_B_DAM_soldier_AT","CPC_ME_B_DAM_soldier_ENG"],
+			["CPC_ME_B_DAM_soldier_TL","CPC_ME_B_DAM_soldier_1","CPC_ME_B_DAM_soldier_LAT","CPC_ME_B_DAM_soldier_Medic","CPC_ME_B_DAM_soldier_1"],
+			["CPC_ME_B_DAM_soldier_M","CPC_ME_B_DAM_soldier_1"]
+		];
+
+		_binome = ["CPC_ME_B_DAM_soldier_1","CPC_ME_B_DAM_soldier_2"];
+		_ennemi_group = ["CPC_ME_B_DAM_soldier_TL","CPC_ME_B_DAM_soldier_1","CPC_ME_B_DAM_soldier_AR","CPC_ME_B_DAM_soldier_AT","CPC_ME_B_DAM_soldier_GL"];
+		_rand_vehi = ["CPC_ME_B_DAM_M113_m2","CPC_ME_B_DAM_M113_m2","CPC_ME_B_DAM_BTR70","CPC_ME_B_DAM_BTR70","CPC_ME_B_DAM_M1117"];
+		_transp_vehi = "CPC_ME_B_DAM_M998_2dr_fulltop";
+		_offroad = "CPC_ME_B_DAM_M1025_m2";
+		_helico = "rhsgref_cdf_reg_Mi17Sh";
+	};
+
+	case 19 : { // Asian Army
+		_compo_group = [
+			["CPC_JUN_B_AMIL_soldier_TL","CPC_JUN_B_AMIL_soldier_1","CPC_JUN_B_AMIL_soldier_MG"],
+			["CPC_JUN_B_AMIL_soldier_TL","CPC_JUN_B_AMIL_soldier_1","CPC_JUN_B_AMIL_soldier_1"],
+			["CPC_JUN_B_AMIL_soldier_1","CPC_JUN_B_AMIL_soldier_AT","CPC_JUN_B_AMIL_soldier_ENG"],
+			["CPC_JUN_B_AMIL_soldier_TL","CPC_JUN_B_AMIL_soldier_1","CPC_JUN_B_AMIL_soldier_LAT","CPC_JUN_B_AMIL_soldier_Medic","CPC_JUN_B_AMIL_soldier_1"],
+			["CPC_JUN_B_AMIL_soldier_M","CPC_JUN_B_AMIL_soldier_1"]
+		];
+
+		_binome = ["CPC_JUN_B_AMIL_soldier_1","CPC_JUN_B_AMIL_soldier_light"];
+		_ennemi_group = ["CPC_JUN_B_AMIL_soldier_TL","CPC_JUN_B_AMIL_soldier_1","CPC_JUN_B_AMIL_soldier_MG","CPC_JUN_B_AMIL_soldier_LAT","CPC_JUN_B_AMIL_soldier_1"];
+		_rand_vehi = ["CPC_JUN_B_AMIL_M113_m2","CPC_JUN_B_AMIL_M113_m2","CPC_JUN_B_AMIL_M113_m2","CPC_JUN_B_AMIL_M1117"];
+		_transp_vehi = "CPC_JUN_B_AMIL_M998_2dr_fulltop";
+		_offroad = "CPC_JUN_B_AMIL_M1025_m2";
+		_helico = "CPC_JUN_B_AMIL_UH60M";
+	};
+
 	case 100 : { // Insurge RHS
 		_compo_group = [
 			["rhsgref_ins_g_rifleman","rhsgref_ins_g_rifleman_akm","rhsgref_ins_g_machinegunner"],
@@ -438,6 +489,40 @@ switch (paramsArray select 6) do {
 		_rand_vehi = ["B_G_Offroad_01_armed_F","I_C_Offroad_02_unarmed_F"];
 		_transp_vehi = "I_C_Van_01_transport_F";
 		_offroad = "B_G_Offroad_01_armed_F";
+		_helico = "";
+	};
+
+	case 108 : { // desert rebels
+		_compo_group = [
+			["CPC_ME_I_REB_soldier_TL","CPC_ME_I_REB_soldier_1","CPC_ME_I_REB_soldier_MG"],
+			["CPC_ME_I_REB_soldier_4","CPC_ME_I_REB_soldier_3","CPC_ME_I_REB_soldier_GL"],
+			["CPC_ME_I_REB_soldier_3","CPC_ME_I_REB_soldier_AT","CPC_ME_I_REB_soldier_ENG"],
+			["CPC_ME_I_REB_soldier_TL","CPC_ME_I_REB_soldier_1","CPC_ME_I_REB_soldier_4","CPC_ME_I_REB_soldier_Medic","CPC_ME_I_REB_soldier_LAT1"],
+			["CPC_ME_I_REB_soldier_M","CPC_ME_I_REB_soldier_2"]
+		];
+
+		_binome = ["CPC_ME_I_REB_soldier_1","CPC_ME_I_REB_soldier_2"];
+		_ennemi_group = ["CPC_ME_I_REB_soldier_TL","CPC_ME_I_REB_soldier_3","CPC_ME_I_REB_soldier_MG","CPC_ME_I_REB_soldier_AT","CPC_ME_I_REB_soldier_GL"];
+		_rand_vehi = ["CPC_ME_I_REB_uaz_dshkm","CPC_ME_I_REB_uaz_dshkm","CPC_ME_I_REB_uaz_spg9"];
+		_transp_vehi = "CPC_ME_I_REB_gaz66o";
+		_offroad = "CPC_ME_I_REB_uaz_dshkm";
+		_helico = "";
+	};
+
+	case 109 : { // asian guerrilla
+		_compo_group = [
+			["CPC_JUN_I_AGUE_soldier_TL","CPC_JUN_I_AGUE_soldier_1","CPC_JUN_I_AGUE_soldier_MG"],
+			["CPC_JUN_I_AGUE_soldier_1","CPC_JUN_I_AGUE_soldier_2","CPC_JUN_I_AGUE_soldier_GL"],
+			["CPC_JUN_I_AGUE_soldier_2","CPC_JUN_I_AGUE_soldier_AT","CPC_JUN_I_AGUE_soldier_ENG"],
+			["CPC_JUN_I_AGUE_soldier_TL","CPC_JUN_I_AGUE_soldier_1","CPC_JUN_I_AGUE_soldier_3","CPC_JUN_I_AGUE_soldier_Medic","CPC_JUN_I_AGUE_soldier_LAT"],
+			["CPC_JUN_I_AGUE_soldier_M","CPC_JUN_I_AGUE_soldier_2"]
+		];
+
+		_binome = ["CPC_JUN_I_AGUE_soldier_1","CPC_JUN_I_AGUE_soldier_2"];
+		_ennemi_group = ["CPC_JUN_I_AGUE_soldier_TL","CPC_JUN_I_AGUE_soldier_3","CPC_JUN_I_AGUE_soldier_MG","CPC_JUN_I_AGUE_soldier_AT","CPC_JUN_I_AGUE_soldier_GL"];
+		_rand_vehi = ["CPC_ME_I_REB_uaz_dshkm","CPC_ME_I_REB_uaz_dshkm","CPC_ME_I_REB_uaz_spg9"];
+		_transp_vehi = "CPC_ME_I_REB_gaz66o";
+		_offroad = "CPC_ME_I_REB_uaz_dshkm";
 		_helico = "";
 	};
 };

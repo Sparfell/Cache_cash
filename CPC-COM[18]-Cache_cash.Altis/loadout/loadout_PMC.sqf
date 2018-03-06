@@ -25,7 +25,7 @@ hard_setLoadout =
 	_loadout = _unit getVariable "loadout";
 	
 	_rhsennemy = false;
-	if ((paramsArray select 6) in [0,2,14,100,106]) then {_rhsennemy = true};
+	if ((paramsArray select 6) in [0,2,14,17,18,19,100,106,108,109]) then {_rhsennemy = true};
 	_nvg = false;
 	_lamp = false;
 	_uniform = ["CUP_I_B_PMC_Unit_24","CUP_I_B_PMC_Unit_23","CUP_I_B_PMC_Unit_22","CUP_I_B_PMC_Unit_21","CUP_I_B_PMC_Unit_20","CUP_I_B_PMC_Unit_19","CUP_I_B_PMC_Unit_17","CUP_I_B_PMC_Unit_16","CUP_I_B_PMC_Unit_15","CUP_I_B_PMC_Unit_14","CUP_I_B_PMC_Unit_13","CUP_I_B_PMC_Unit_12","CUP_I_B_PMC_Unit_11","CUP_I_B_PMC_Unit_10","CUP_I_B_PMC_Unit_9","CUP_I_B_PMC_Unit_8","CUP_I_B_PMC_Unit_7","CUP_I_B_PMC_Unit_6","CUP_I_B_PMC_Unit_5","CUP_I_B_PMC_Unit_4","CUP_I_B_PMC_Unit_3","CUP_I_B_PMC_Unit_2","CUP_I_B_PMC_Unit_1"];

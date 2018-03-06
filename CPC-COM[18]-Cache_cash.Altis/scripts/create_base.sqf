@@ -48,6 +48,9 @@ if ((paramsArray select 6) > 99) then {
 			case 14 : {"rhsgref_cdf_DSHKM_Mini_TriPod"}; //BAF wdl CUP
 			case 15 : {"O_HMG_01_F"}; //CSAT Tanoa
 			case 16 : {"B_T_HMG_01_F"}; //NATO Tanoa
+			case 17 : {"CPC_ME_O_KAM_DSHKM_MiniTriPod"}; //Kamistan RHS
+			case 18 : {"CPC_ME_B_DAM_M2_MiniTriPod"}; //Damuz RHS
+			case 19 : {"CPC_JUN_B_AMIL_M2_MiniTriPod"}; //Asian Army RHS
 			case 100 : {"rhsgref_ins_g_DSHKM_Mini_TriPod"}; //INS RHS
 			case 101 : {"CUP_I_DSHkM_MiniTriPod_TK_GUE"}; //INS TK
 			case 102 : {"CUP_I_DSHKM_NAPA"}; //NAPA
@@ -56,6 +59,8 @@ if ((paramsArray select 6) > 99) then {
 			case 105 : {"CUP_O_DSHkM_MiniTriPod_ChDKZ"}; //chdkz
 			case 106 : {"rhsgref_nat_rifleman"}; //nationalists RHS
 			case 107 : {"CUP_O_DSHkM_MiniTriPod_ChDKZ"}; //Syndikat
+			case 108 : {"CPC_ME_I_REB_DSHKM_MiniTriPod"}; //Desret Rebels RHS
+			case 109 : {"CPC_JUN_I_AGUE_DSHKM_MiniTriPod"}; //Asian Guerilla RHS
 		};
 		_objet = _type CreateVehicle [(Random_Position select 0)+((sin (_rdir + (_x +30)))*10),(Random_Position select 1)+((cos (_rdir + (_x +30)))*10),0];
 		_objet setdir (_rdir + (_x +30));

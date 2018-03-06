@@ -25,7 +25,7 @@ hard_setLoadout =
 	_loadout = _unit getVariable "loadout";
 	
 	_rhsennemy = false;
-	if ((paramsArray select 6) in [0,2,14,100,106]) then {_rhsennemy = true};
+	if ((paramsArray select 6) in [0,2,14,17,18,19,100,106,108,109]) then {_rhsennemy = true};
 	_nvg = false;
 	_lamp = false;
 	_ucp = false;
