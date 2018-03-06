@@ -5,22 +5,6 @@
 ***	Description: 
 	client init
 
-*** En plus, pour visualiser l'inventaire sur les IA dans l'inventaires, à coller à la fin de ce fichier :
-
-if !(isMultiplayer) then
-{
-	{
-		if !(isNil {_x getVariable "loadout"}) then 
-		{
-			if (isNil {_x getVariable "loadout_done"}) then 
-			{
-				[_x] call hard_setLoadout;
-				_x setVariable ["loadout_done", true, true];
-			};
-		};
-	} foreach allUnits;
-};
-
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -89,7 +73,9 @@ if !(isMultiplayer) then
 };
 
 
-[] execVM "inventory_briefing.sqf"; // lancement du script qui affiche le loadout lors du briefing.
+execVM "briefing.sqf";
+[] call GDC_fnc_inventoryBriefing; // lancement du script qui affiche le loadout lors du briefing.
+[] call GDC_fnc_rosterBriefing; // lancement du script qui affiche le roster lors du briefing.
 
 player allowdamage false;
 
