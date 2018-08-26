@@ -51,7 +51,7 @@ hard_setLoadout =
 	//DES
 	if (CPC_MAP in ["takistan","pja307"]) then 
 	{
-		_uniform = ["rhs_chdkz_uniform_4","rhs_chdkz_uniform_3","U_MU_B_GuerillaGarment2","U_MU_B_GuerillaGarment2_brown","U_MU_B_GuerillaGarment2_grey","U_MU_B_GuerillaGarment2_skull","U_BG_Guerilla1_1","U_MU_B_GuerillaGarment_brown","U_MU_B_GuerillaGarment_grey","U_MU_B_GuerillaGarment_skull","U_BG_leader","CUP_O_TKI_Khet_Jeans_04","CUP_O_TKI_Khet_Jeans_02","CUP_O_TKI_Khet_Jeans_01"];
+		_uniform = ["CPC_ME_Uniform_M93_sand_1","CPC_ME_Uniform_M93_sand_2","CPC_ME_Uniform_M93_sand_3","CPC_ME_Uniform_M93_sand_4","rhs_chdkz_uniform_4","rhs_chdkz_uniform_3","U_MU_B_GuerillaGarment2","U_MU_B_GuerillaGarment2_brown","U_MU_B_GuerillaGarment2_grey","U_MU_B_GuerillaGarment2_skull","U_BG_Guerilla1_1","U_MU_B_GuerillaGarment_brown","U_MU_B_GuerillaGarment_grey","U_MU_B_GuerillaGarment_skull","U_BG_leader","CUP_O_TKI_Khet_Jeans_04","CUP_O_TKI_Khet_Jeans_02","CUP_O_TKI_Khet_Jeans_01"];
 		_helmet = ["H_ShemagOpen_khk","H_ShemagOpen_khk","H_ShemagOpen_khk","H_ShemagOpen_tan","H_Shemag_olive","CUP_H_TKI_Lungee_01","CUP_H_TKI_Lungee_02","CUP_H_TKI_Lungee_03","CUP_H_TKI_Lungee_04","CUP_H_TKI_Lungee_05","CUP_H_TKI_Lungee_06"];
 		_face = [""];
 		_vest1 = ["CUP_V_I_Carrier_Belt","CUP_V_B_GER_Carrier_Rig_2_Brown","CUP_V_I_RACS_Carrier_Rig_wdl_2","CUP_V_RUS_Smersh_1","V_TacChestrig_grn_F","V_TacChestrig_oli_F","V_TacVest_blk","V_TacVest_camo","V_TacVest_khk","V_TacVest_oli","V_I_G_resistanceLeader_F"];
@@ -62,7 +62,7 @@ hard_setLoadout =
 	if (CPC_MAP in ["tanoa","pja305","isladuala3"]) then 
 	{
 		_uniform = ["U_I_C_Soldier_Para_1_F","U_I_C_Soldier_Para_2_F","U_I_C_Soldier_Para_3_F","U_I_C_Soldier_Para_4_F","U_I_C_Soldier_Camo_F"];
-		_helmet = ["H_Bandanna_camo","CUP_H_FR_BandanaWdl","CUP_H_FR_BandanaGreen","H_Bandanna_sgg","rhs_Booniehat_digi","H_Booniehat_khk","H_Booniehat_dgtl","H_Booniehat_oli","rhs_Booniehat_m81","H_Cap_oli","rhs_fieldcap_digi2","rhs_fieldcap_digi2"];
+		_helmet = ["H_Bandanna_camo","CUP_H_FR_BandanaWdl","CUP_H_FR_BandanaGreen","H_Bandanna_sgg","rhs_Booniehat_digi","H_Booniehat_khk","CPC_JUN_fieldcap","H_Booniehat_oli","rhs_Booniehat_m81","CPC_JUN_fieldcap","CPC_JUN_fieldcap","CPC_JUN_fieldcap"];
 		_face = ["G_Bandanna_oli","G_Bandanna_blk","G_Bandanna_khk","","","","","",""];
 		_vest1 = ["CUP_V_I_Carrier_Belt","CUP_V_B_GER_Carrier_Rig_2_Brown","CUP_V_I_RACS_Carrier_Rig_wdl_2","CUP_V_RUS_Smersh_1","V_TacChestrig_grn_F","V_TacChestrig_oli_F","V_TacVest_camo","V_TacVest_oli","V_I_G_resistanceLeader_F"];
 		_vest2 = ["CUP_V_B_GER_Carrier_Rig_3_Brown","CUP_V_O_Ins_Carrier_Rig_Com","CUP_V_I_RACS_Carrier_Rig_wdl_3","CUP_V_RUS_Smersh_2"];

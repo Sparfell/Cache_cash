@@ -94,10 +94,10 @@ loadoutCC_OFF = //
 	_unit addItemToUniform "ACE_IR_Strobe_Item";
 	_unit addItemToUniform "ACRE_PRC148";
 	_unit addItemToUniform "ACE_microDAGR";
-	_unit addItemToUniform "rhs_mag_rgd5";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_m18_green";};
+	_unit addItemToUniform "rhssaf_mag_br_m84";
+	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShellGreen";};
 	if (_wdl) then {_unit addVest "rhssaf_vest_md12_digital";} else {_unit addVest "rhssaf_vest_md12_digital_desert";};
-	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_m18_purple";};
+	for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellPurple";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "ACE_HandFlare_White";};
 	for "_i" from 1 to 5 do {_unit addItemToVest "rhsgref_30rnd_556x45_m21_t";};
 	_unit addHeadgear "rhssaf_beret_green";
@@ -139,15 +139,15 @@ loadoutCC_TL = //
 	_unit addItemToUniform "ACE_MapTools";
 	_unit addItemToUniform "ACE_IR_Strobe_Item";
 	_unit addItemToUniform "ACE_DAGR";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_an_m8hc";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhssaf_mag_br_m84";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
 	if (_wdl) then {_unit addVest "rhssaf_vest_md12_digital";} else {_unit addVest "rhssaf_vest_md12_digital_desert";};
 	_unit addItemToVest "ACRE_PRC148";
 	for "_i" from 1 to 3 do {_unit addItemToVest "rhsgref_30rnd_556x45_m21";};
 	for "_i" from 1 to 3 do {_unit addItemToVest "rhsgref_30rnd_556x45_m21_t";};
 	if (_wdl) then {_unit addBackpack "rhssaf_kitbag_digital";} else {_unit addBackpack "rhssaf_kitbag_smb";};
-	for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_m18_green";};
-	for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_m18_purple";};
+	for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellGreen";};
+	for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellPurple";};
 	for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_HandFlare_Green";};
 	for "_i" from 1 to 3 do {_unit addItemToBackpack "rhsgref_30rnd_556x45_m21";};
 	for "_i" from 1 to 3 do {_unit addItemToBackpack "rhsgref_30rnd_556x45_m21_t";};
@@ -156,7 +156,7 @@ loadoutCC_TL = //
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_m21a_pr";
 	_unit addPrimaryWeaponItem "rhsusf_acc_ACOG";
-	if (_rhsennemy) then {_unit addWeapon "rhs_weap_m72a7";} else {_unit addWeapon "CUP_launch_M136";};
+	if (_rhsennemy) then {_unit addWeapon "rhs_weap_m80";} else {_unit addWeapon "CUP_launch_M72A6";};
 	_unit addWeapon "ACE_Vector";
 
 	comment "Add items";
@@ -188,8 +188,8 @@ loadoutCC_DOC = //
 	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACRE_PRC343";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_an_m8hc";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhssaf_mag_br_m84";};
 	if (_wdl) then {_unit addVest "rhssaf_vest_md12_digital";} else {_unit addVest "rhssaf_vest_md12_digital_desert";};
 	for "_i" from 1 to 8 do {_unit addItemToVest "rhsgref_30rnd_556x45_m21";};
 	if (_wdl) then {_unit addBackpack "rhssaf_kitbag_digital";} else {_unit addBackpack "rhssaf_kitbag_smb";};
@@ -239,8 +239,8 @@ loadoutCC_AR = //
 	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACRE_PRC343";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_an_m8hc";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhssaf_mag_br_m84";};
 	_unit addVest "rhssaf_vest_md98_md2camo";
 	if (_wdl) then {_unit addBackpack "rhssaf_kitbag_digital";} else {_unit addBackpack "rhssaf_kitbag_smb";};
 	for "_i" from 1 to 6 do {_unit addItemToBackpack "rhs_200rnd_556x45_M_SAW";};
@@ -280,8 +280,8 @@ loadoutCC_AAR = //
 	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACRE_PRC343";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_an_m8hc";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhssaf_mag_br_m84";};
 	if (_wdl) then {_unit addVest "rhssaf_vest_md12_digital";} else {_unit addVest "rhssaf_vest_md12_digital_desert";};
 	for "_i" from 1 to 8 do {_unit addItemToVest "rhsgref_30rnd_556x45_m21";};
 	if (_wdl) then {_unit addBackpack "rhssaf_kitbag_digital";} else {_unit addBackpack "rhssaf_kitbag_smb";};
@@ -321,8 +321,8 @@ loadoutCC_MG = //
 	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACRE_PRC343";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_an_m8hc";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhssaf_mag_br_m84";};
 	_unit addVest "rhssaf_vest_md98_md2camo";
 	if (_wdl) then {_unit addBackpack "rhssaf_kitbag_digital";} else {_unit addBackpack "rhssaf_kitbag_smb";};
 	for "_i" from 1 to 4 do {_unit addItemToBackpack "rhs_100Rnd_762x54mmR_green";};
@@ -360,8 +360,8 @@ loadoutCC_AMG = //
 	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACRE_PRC343";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_an_m8hc";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhssaf_mag_br_m84";};
 	if (_wdl) then {_unit addVest "rhssaf_vest_md12_digital";} else {_unit addVest "rhssaf_vest_md12_digital_desert";};
 	for "_i" from 1 to 8 do {_unit addItemToVest "rhsgref_30rnd_556x45_m21";};
 	if (_wdl) then {_unit addBackpack "rhssaf_kitbag_digital";} else {_unit addBackpack "rhssaf_kitbag_smb";};
@@ -401,8 +401,8 @@ loadoutCC_AT = //
 	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACRE_PRC343";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_an_m8hc";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhssaf_mag_br_m84";};
 	if (_wdl) then {_unit addVest "rhssaf_vest_md12_digital";} else {_unit addVest "rhssaf_vest_md12_digital_desert";};
 	for "_i" from 1 to 8 do {_unit addItemToVest "rhsgref_30rnd_556x45_m21";};
 	if (_wdl) then {_unit addHeadgear "rhssaf_helmet_m97_digital";} else {_unit addHeadgear "rhssaf_helmet_m97_olive_nocamo";};
@@ -452,8 +452,8 @@ loadoutCC_AAT = //
 	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACRE_PRC343";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_an_m8hc";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhssaf_mag_br_m84";};
 	if (_wdl) then {_unit addVest "rhssaf_vest_md12_digital";} else {_unit addVest "rhssaf_vest_md12_digital_desert";};
 	for "_i" from 1 to 8 do {_unit addItemToVest "rhsgref_30rnd_556x45_m21";};
 	if (_rhsennemy) then {
@@ -500,8 +500,8 @@ loadoutCC_DEMO = //
 	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACRE_PRC343";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_an_m8hc";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhssaf_mag_br_m84";};
 	if (_wdl) then {_unit addVest "rhssaf_vest_md12_digital";} else {_unit addVest "rhssaf_vest_md12_digital_desert";};
 	for "_i" from 1 to 8 do {_unit addItemToVest "rhsgref_30rnd_556x45_m21";};
 	if (_wdl) then {_unit addBackpack "rhssaf_kitbag_digital";} else {_unit addBackpack "rhssaf_kitbag_smb";};
@@ -545,8 +545,8 @@ loadoutCC_M = //
 	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACRE_PRC343";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_an_m8hc";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhssaf_mag_br_m84";};
 	if (_wdl) then {_unit addVest "rhssaf_vest_md12_digital";} else {_unit addVest "rhssaf_vest_md12_digital_desert";};
 	for "_i" from 1 to 12 do {_unit addItemToVest "rhsgref_10Rnd_792x57_m76";};
 	if (_wdl) then {_unit addHeadgear "rhssaf_helmet_m97_digital";} else {_unit addHeadgear "rhssaf_helmet_m97_olive_nocamo";};
@@ -583,8 +583,8 @@ loadoutCC_GL = //
 	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACRE_PRC343";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_an_m8hc";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhssaf_mag_br_m84";};
 	_unit addItemToUniform "rhsgref_30rnd_556x45_m21";
 	if (_wdl) then {_unit addVest "rhssaf_vest_md12_digital";} else {_unit addVest "rhssaf_vest_md12_digital_desert";};
 	for "_i" from 1 to 5 do {_unit addItemToVest "rhsgref_30rnd_556x45_m21";};
@@ -622,13 +622,13 @@ loadoutCC_A = //
 	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACRE_PRC343";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_an_m8hc";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhssaf_mag_br_m84";};
 	if (_wdl) then {_unit addVest "rhssaf_vest_md12_digital";} else {_unit addVest "rhssaf_vest_md12_digital_desert";};
 	for "_i" from 1 to 8 do {_unit addItemToVest "rhsgref_30rnd_556x45_m21";};
 	if (_wdl) then {_unit addBackpack "rhssaf_kitbag_digital";} else {_unit addBackpack "rhssaf_kitbag_smb";};
-	for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_rgd5";};
-	for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_an_m8hc";};
+	for "_i" from 1 to 2 do {_unit addItemToBackpack "rhssaf_mag_br_m84";};
+	for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShell";};
 	for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_HandFlare_White";};
 	for "_i" from 1 to 10 do {_unit addItemToBackpack "rhsgref_30rnd_556x45_m21";};
 	if (_wdl) then {_unit addHeadgear "rhssaf_helmet_m97_digital";} else {_unit addHeadgear "rhssaf_helmet_m97_olive_nocamo";};
@@ -666,15 +666,15 @@ loadoutCC_LAT = //
 	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACRE_PRC343";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_an_m8hc";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhssaf_mag_br_m84";};
 	if (_wdl) then {_unit addVest "rhssaf_vest_md12_digital";} else {_unit addVest "rhssaf_vest_md12_digital_desert";};
 	for "_i" from 1 to 8 do {_unit addItemToVest "rhsgref_30rnd_556x45_m21";};
 	if (_wdl) then {_unit addHeadgear "rhssaf_helmet_m97_digital";} else {_unit addHeadgear "rhssaf_helmet_m97_olive_nocamo";};
 
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_m21a";
-	if (_rhsennemy) then {_unit addWeapon "rhs_weap_m72a7";} else {_unit addWeapon "CUP_launch_M136";};
+	if (_rhsennemy) then {_unit addWeapon "rhs_weap_m80";} else {_unit addWeapon "CUP_launch_M72A6";};
 
 	comment "Add items";
 	_unit linkItem "ItemMap";
@@ -705,8 +705,8 @@ loadoutCC_R = //
 	_unit addItemToUniform "ACE_Flashlight_MX991";
 	_unit addItemToUniform "ACE_tourniquet";
 	_unit addItemToUniform "ACRE_PRC343";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_an_m8hc";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhssaf_mag_br_m84";};
 	if (_wdl) then {_unit addVest "rhssaf_vest_md12_digital";} else {_unit addVest "rhssaf_vest_md12_digital_desert";};
 	for "_i" from 1 to 8 do {_unit addItemToVest "rhsgref_30rnd_556x45_m21";};
 	if (_wdl) then {_unit addHeadgear "rhssaf_helmet_m97_digital";} else {_unit addHeadgear "rhssaf_helmet_m97_olive_nocamo";};
@@ -745,8 +745,8 @@ loadoutCC_CREW = //
 	_unit addItemToUniform "ACRE_PRC343";
 	_unit addItemToUniform "ACE_DAGR";
 	_unit addItemToUniform "ACE_MapTools";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_an_m8hc";};
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhssaf_mag_br_m84";};
 	if (_wdl) then {_unit addVest "rhssaf_vest_md12_digital";} else {_unit addVest "rhssaf_vest_md12_digital_desert";};
 	_unit addItemToVest "ACRE_PRC148";
 	for "_i" from 1 to 6 do {_unit addItemToVest "rhs_30Rnd_762x39mm";};
@@ -786,7 +786,7 @@ loadoutCC_PILOT = //
 	_unit addItemToUniform "ACE_MapTools";
 	_unit addItemToUniform "ACE_IR_Strobe_Item";
 	_unit addItemToUniform "ACE_microDAGR";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_an_m8hc";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShell";};
 	if (_wdl) then {_unit addVest "rhssaf_vest_md12_digital";} else {_unit addVest "rhssaf_vest_md12_digital_desert";};
 	_unit addItemToVest "ACRE_PRC148";
 	for "_i" from 1 to 6 do {_unit addItemToVest "rhs_30Rnd_762x39mm";};
@@ -830,7 +830,7 @@ loadoutCC_SNIPER = //
 	_unit addItemToUniform "ACE_MapTools";
 	_unit addItemToUniform "ACE_microDAGR";
 	_unit addItemToUniform "ACRE_PRC148";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhssaf_mag_br_m84";};
 	_unit addItemToUniform "rhs_mag_9x19_17";
 	if (_wdl) then {_unit addVest "rhssaf_vest_md99_digital_rifleman";} else {_unit addVest "rhssaf_vest_md99_woodland_rifleman";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_9x19_17";};
@@ -883,11 +883,11 @@ loadoutCC_OBS = //
 	_unit addItemToUniform "ACE_MapTools";
 	_unit addItemToUniform "ACE_microDAGR";
 	_unit addItemToUniform "ACRE_PRC148";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rgd5";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "rhssaf_mag_br_m84";};
 	_unit addItemToUniform "rhs_mag_9x19_17";
 	if (_wdl) then {_unit addVest "rhssaf_vest_md99_digital_rifleman";} else {_unit addVest "rhssaf_vest_md99_woodland_rifleman";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_9x19_17";};
-	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
+	for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
 	for "_i" from 1 to 9 do {_unit addItemToVest "rhssaf_30rnd_556x45_MDIM_G36";};
 	_unit addBackpack "rhssaf_kitbag_md2camo";
 	_unit addItemToBackpack "ACE_SpottingScope";
@@ -936,8 +936,8 @@ loadoutCC_JTAC = //
 	_unit addItemToUniform "ACE_microDAGR";
 	_unit addItemToUniform "ACE_MapTools";
 	_unit addItemToUniform "ACE_IR_Strobe_Item";
-	_unit addItemToUniform "rhs_mag_rgd5";
-	for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_m18_green";};
+	_unit addItemToUniform "rhssaf_mag_br_m84";
+	for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShellGreen";};
 	for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_HandFlare_Green";};
 	if (_wdl) then {_unit addVest "rhssaf_vest_md12_digital";} else {_unit addVest "rhssaf_vest_md12_digital_desert";};
 	for "_i" from 1 to 6 do {_unit addItemToVest "rhsgref_30rnd_556x45_m21_t";};
@@ -948,7 +948,7 @@ loadoutCC_JTAC = //
 	for "_i" from 1 to 4 do {_unit addItemToBackpack "rhs_VG40OP_green";};
 	for "_i" from 1 to 4 do {_unit addItemToBackpack "rhs_VG40OP_red";};
 	for "_i" from 1 to 2 do {_unit addItemToBackpack "Laserbatteries";};
-	for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_m18_green";};
+	for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellGreen";};
 	if (_wdl) then {_unit addHeadgear "rhssaf_booniehat_digital";} else {_unit addHeadgear "H_Booniehat_khk";};
 
 	comment "Add weapons";

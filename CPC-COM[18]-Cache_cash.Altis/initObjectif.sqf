@@ -31,7 +31,7 @@ while {((SurfaceNormal Random_Position) select 2) < 0.955} do {
 	Random_Position = [_marker,0,_markEx,50] call SHK_pos;
 }; // permet de trouver une position plate ?
 
-//création de la caisse objectif et gestion des marqueurs
+//creation de la caisse objectif et gestion des marqueurs
 { _x hideObjectGlobal true;} forEach (nearestObjects [Random_Position,[],30]);
 _Cargo = "Land_Cargo20_military_green_F" createVehicle [0,0,0];
 _Cargo setpos [(Random_Position select 0) + 2,Random_Position select 1,1];
@@ -43,17 +43,17 @@ _pos = markerpos "Mark_Cible";
 "2" setmarkerpos markerpos "Mark_Cible";
 "3" setmarkerpos markerpos "Mark_Cible_1";
 
-//création du camp
+//creation du camp
 if (random 100 < 70) then {
 	[] execVM "scripts\create_base.sqf";
 } else {
 	["1"] execVM "scripts\create_ville.sqf";
 };
 
-//spawn des hélicos si insertion hélico
-if ((paramsArray select 1) == 2) then 
+//spawn des helicos si insertion helico
+if (CC_p_insertion == 2) then 
 {
-	switch (paramsArray select 5) do {
+	switch (CC_p_loaout) do {
 		case 0 : {_type = "B_Heli_Transport_01_camo_F";}; // NATO
 		case 1 : {_type = "O_Heli_Light_02_F";}; // CSAT
 		case 2 : {_type = "I_Heli_Transport_02_F";}; // AAF
@@ -208,7 +208,14 @@ if ((paramsArray select 1) == 2) then
 	"rhsusf_M1232_M2_usarmy_wd",
 	"rhsusf_M1237_M2_usarmy_d",
 	"CUP_B_Challenger2_2CW_BAF",
-	"CUP_B_Challenger2_Desert_BAF"
+	"CUP_B_Challenger2_Desert_BAF",
+	"rhsusf_CGRCAT1A2_M2_usmc_wd",
+	"rhsusf_CGRCAT1A2_M2_usmc_d",
+	"rhs_zil131_msv",
+	"CPC_JUN_B_AMIL_UH1H_gunship",
+	"I_LT_01_AT_F",
+	"O_MBT_04_cannon_F",
+	"B_AFV_Wheeled_01_up_cannon_F"
 	];
 	waitUntil {time > 0};
 	_pos = markerpos "Mark_inser";
@@ -218,7 +225,7 @@ if ((paramsArray select 1) == 2) then
 		clearItemCargoGlobal _veh;
 		clearWeaponCargoGlobal _veh;
 		clearMagazineCargoGlobal _veh;
-		if (((paramsArray select 1) == 4)AND(_type != "")) then {
+		if ((CC_p_insertion == 4)AND(_type != "")) then {
 			_dir = [[getMarkerPos "Mark_Inser" select 0,getMarkerPos "Mark_Inser" select 1,0],[getMarkerPos "2" select 0,getMarkerPos "2" select 1,0]] call BIS_fnc_dirTo;
 			_dir = _dir +90;
 			_para = "NonSteerable_Parachute_F" createVehicle [0,0,0];
@@ -229,7 +236,7 @@ if ((paramsArray select 1) == 2) then
 };
 
 //extraction
-switch (paramsArray select 7) do {
+switch (CC_p_extraction) do {
 	case 0 : {
 		trig_ext setpos Random_Position;
 	};

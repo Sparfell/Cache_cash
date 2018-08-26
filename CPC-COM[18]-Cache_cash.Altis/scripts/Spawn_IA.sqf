@@ -10,12 +10,12 @@ waituntil {time > 10};
 private ["_Nombre_Ennemi","_compo_group","_mark","_markEx","_markPos","_markSize","_pos","_group","_fois","_dir","_upPos","_binome","_ennemi_group","_rand_vehi","_transp_vehi","_offroad","_helico"];
 
 _group = createGroup resistance;
-_Nombre_Ennemi = floor(paramsArray select 2);
-_rab_veh = if (((paramsArray select 2) - _Nombre_Ennemi )!= 0) then {true} else {false};
+_Nombre_Ennemi = floor CC_p_difficulty;
+_rab_veh = if ((CC_p_difficulty - _Nombre_Ennemi )!= 0) then {true} else {false};
 _fois = 0;
 
 //type d'ennemis
-switch (paramsArray select 6) do {
+switch (CC_p_ennemy) do {
 	case 0 : { // US RHS
 		_compo_group = [
 			["rhsusf_army_ocp_teamleader","rhsusf_army_ocp_rifleman","rhsusf_army_ocp_autorifleman"],
@@ -550,7 +550,7 @@ _fois = switch (_Nombre_Ennemi) do {
 	case 2: {3};
 	case 3: {4};
 };
-if ((paramsArray select 13) < 1) then {
+if (CC_p_ennemyveh < 1) then {
 for "_n" from 1 to _fois do {
 	_pos = [_mark,0,_markEx,100] call SHK_pos;
 	_objet = _offroad CreateVehicle _pos;
@@ -620,7 +620,7 @@ _fois = switch (_Nombre_Ennemi) do {
 	case 2: {(floor random 1.8) + 1};
 	case 3: {(floor random 3) + 2};
 };
-if ((paramsArray select 13) == 0) then {
+if (CC_p_ennemyveh == 0) then {
 	if (_rab_veh) then {_fois = _fois + 1 + _Nombre_Ennemi;}; 
 	_mark = "3";
 	_markEx = "2";
@@ -667,7 +667,7 @@ if (random 100 < 22) then {
 } foreach [40,20,5,2];
 
 // Fait spawn un véhicule de transport de troupes sur une route entre 1000m et 1500m du camp et le fait patrouiller.
-if ((paramsArray select 13) < 1) then {
+if (CC_p_ennemyveh < 1) then {
 if (random 100 < 75) then {
 	_vehtype = _transp_vehi;
 	_pos = [getMarkerPos "1",[1000,1500],random 360,0,[1,500],_vehtype] call SHK_pos;
@@ -721,7 +721,7 @@ _group setVariable ["GAIA_ZONE_INTEND",["4", "FORTIFY"], false];
 };
 
 //hélico
-if ((paramsArray select 13) == 0) then {
+if (CC_p_ennemyveh == 0) then {
 	if ((_helico != "") AND (random 100 < 20)) then {
 		_mark = "2";
 		_markEx = "1";
@@ -800,7 +800,7 @@ _markEx = "1";
 
 
 // réglage des skills
-_skill = paramsArray select 4;
+_skill = CC_p_skillia;
 {
 	_IA = _x;
 	{
@@ -845,7 +845,7 @@ if (chefIA_create) then {removeHeadgear chefIA; chefIA addHeadgear "CUP_H_RUS_Be
 
 waitUntil {time > (2100 + (random 600))};
 //random Event
-if ((paramsArray select 13) < 1) then {
+if (CC_p_ennemyveh < 1) then {
 	_vehtype = _transp_vehi;
 	_pos = [getMarkerPos "1",[1500,1800],random 360,0,[1,200],_vehtype] call SHK_pos;
 	_veh = [_pos,random 360,_vehtype,resistance] call BIS_fnc_spawnVehicle;
@@ -863,7 +863,7 @@ if ((paramsArray select 13) < 1) then {
 } foreach (units (_veh select 2));
 };
 
-if ((random 100 < 50) AND ((paramsArray select 13) < 1)) then {
+if ((random 100 < 50) AND (CC_p_ennemyveh < 1)) then {
 	sleep (600 + (random 300));
 		_vehtype = _transp_vehi;
 		_pos = [getMarkerPos "1",[1500,1800],random 360,0,[1,200],_vehtype] call SHK_pos;
@@ -882,7 +882,7 @@ if ((random 100 < 50) AND ((paramsArray select 13) < 1)) then {
 	} foreach (units (_veh select 2));
 };
 
-if (((paramsArray select 6) < 100) AND (4 > random 10)) then {
+if ((CC_p_ennemy < 100) AND (4 > random 10)) then {
 	waitUntil {time > 4200};
 	sleep (random 300);
 	_group = CreateGroup resistance;
@@ -913,7 +913,7 @@ if (((paramsArray select 6) < 100) AND (4 > random 10)) then {
 	};
 };
 
-if ((paramsArray select 13) == 0) then {
+if (CC_p_ennemyveh == 0) then {
 	if ((_helico != "") AND (random 100 < 35)) then {
 		waitUntil {time > (6100+ (random 300))};
 		_mark = "2";

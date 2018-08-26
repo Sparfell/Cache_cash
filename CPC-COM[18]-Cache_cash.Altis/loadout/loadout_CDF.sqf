@@ -148,7 +148,7 @@ loadoutCC_TL = //
 
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_m70ab2";
-	if (_rhsennemy) then {_unit addWeapon "rhs_weap_rpg26";} else {_unit addWeapon "CUP_launch_RPG18";};
+	if (_rhsennemy) then {_unit addWeapon "rhs_weap_rpg75";} else {_unit addWeapon "CUP_launch_RPG18";};
 	_unit addWeapon "Binocular";
 
 	comment "Add items";
@@ -644,7 +644,7 @@ loadoutCC_LAT = //
 
 	comment "Add weapons";
 	_unit addWeapon "rhs_weap_m70b1";
-	if (_rhsennemy) then {_unit addWeapon "rhs_weap_rpg26";} else {_unit addWeapon "CUP_launch_RPG18";};
+	if (_rhsennemy) then {_unit addWeapon "rhs_weap_rpg75";} else {_unit addWeapon "CUP_launch_RPG18";};
 
 	comment "Add items";
 	_unit linkItem "ItemMap";

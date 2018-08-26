@@ -13,7 +13,7 @@ if (rank player == "SERGEANT") then {
 private["_type","_veh","_dir","_pos","_group","_wp","_unitArray"];
 
 
-switch (paramsArray select 5) do {
+switch (CC_p_loaout) do {
 		case 0 : {_type = "B_Heli_Transport_03_unarmed_F";}; // NATO
 		case 1 : {_type = "O_Heli_Transport_04_covered_F";}; // CSAT
 		case 2 : {_type = "I_Heli_Transport_02_F";}; // AAF

@@ -2,7 +2,7 @@
 
 
 //CIEL
-switch (paramsArray select 11) do {
+switch (CC_p_overcast) do {
 	
 	case 0 : // Dégagé
 	{
@@ -81,7 +81,7 @@ switch (paramsArray select 11) do {
 };
 
 // Brouillard
-switch (paramsArray select 12) do {
+switch (CC_p_fog) do {
 	
 	case 0 : // Aucun
 	{

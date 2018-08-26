@@ -1,27 +1,50 @@
-/*-----------------------------------------------------------------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------------------------------------------------------------
-***	Author: Hardballer
+// Variables liées au paramètres de la mission
+CC_p_time = (paramsArray select 0);
+CC_p_insertion = (paramsArray select 1);
+CC_p_difficulty = (paramsArray select 2);
+CC_p_nvg = (paramsArray select 3);
+CC_p_skillia = (paramsArray select 4);
+CC_p_loaout = (paramsArray select 5);
+CC_p_ennemy = (paramsArray select 6);
+CC_p_extraction = (paramsArray select 7);
+CC_p_vehicle1 = (paramsArray select 8);
+CC_p_vehicle2 = (paramsArray select 9);
+CC_p_vehicle3 = (paramsArray select 10);
+CC_p_overcast = (paramsArray select 11);
+CC_p_fog = (paramsArray select 12);
+CC_p_ennemyveh = (paramsArray select 13);
+CC_p_fullmoon = (paramsArray select 14);
+CC_p_ammocrate = (paramsArray select 15);
 
-***	Description: 
-	client init
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//	1) PARAM
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+// Variables pour les loadouts
 playerUnit = _this select 0;	// unité du joueur (sélectionnée dans l'écran des slots)
 playerIsJIP = _this select 1;	// boolean (true ou false). True = le joueur se connecte en cours de partie.
-enableSaving [false, false]; // supprime la sauvegarde
+cc_rhsennemy = false;
+if (CC_p_ennemy in [0,2,14,17,18,19,100,106,108,109]) then {cc_rhsennemy = true};
+cc_loadoutcamo = "polyvalent";
+switch (toLower worldName) do {
+	case "altis" : {cc_loadoutcamo = "polyvalent"};
+	case "sara" : {cc_loadoutcamo = "polyvalent"};
+	case "chernarus" : {cc_loadoutcamo = "woodland"};
+	case "chernarus_summer" : {cc_loadoutcamo = "woodland"};
+	case "fdf_isle1_a" : {cc_loadoutcamo = "woodland"}; // Podagorsk
+	case "woodland_acr" : {cc_loadoutcamo = "woodland"}; // Bystrica
+	case "noe" : {cc_loadoutcamo = "woodland"}; // Nogova
+	case "eden" : {cc_loadoutcamo = "woodland"}; // Everon
+	case "takistan" : {cc_loadoutcamo = "desert"};
+	case "pja307" : {cc_loadoutcamo = "desert"}; // dariyah
+	case "isladuala3" : {cc_loadoutcamo = "desert"};
+	case "tanoa" : {cc_loadoutcamo = "jungle"};
+	case "pja305" : {cc_loadoutcamo = "jungle"}; // Nazigogo
+	default {cc_loadoutcamo = "polyvalent"};
+};
 
 waitUntil {CPC_MarkersCreated};
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //	2) CALL / COMPILE
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-switch (paramsArray select 5) do {
+switch (CC_p_loaout) do {
 	case 0 : {call compile preprocessFileLineNumbers "loadout\loadout_NATO.sqf";};
 	case 1 : {call compile preprocessFileLineNumbers "loadout\loadout_CSAT.sqf";};
 	case 2 : {call compile preprocessFileLineNumbers "loadout\loadout_AAF.sqf";};
@@ -30,7 +53,7 @@ switch (paramsArray select 5) do {
 	case 5 : {call compile preprocessFileLineNumbers "loadout\loadout_USsf_RHS.sqf";};
 	case 6 : {call compile preprocessFileLineNumbers "loadout\loadout_RU2000_RHS.sqf";};
 	case 7 : {call compile preprocessFileLineNumbers "loadout\loadout_RU2015_RHS.sqf";};
-	case 8 : {call compile preprocessFileLineNumbers "loadout\loadout_RUsf_RHS.sqf";};
+	case 8 : {call compile preprocessFileLineNumbers "loadout\loadout_RUsf.sqf";};
 	case 9 : {call compile preprocessFileLineNumbers "loadout\loadout_KSK.sqf";};
 	case 10 : {call compile preprocessFileLineNumbers "loadout\loadout_BAF.sqf";};
 	case 11 : {call compile preprocessFileLineNumbers "loadout\loadout_RACS.sqf";};
@@ -41,6 +64,7 @@ switch (paramsArray select 5) do {
 	case 16 : {call compile preprocessFileLineNumbers "loadout\loadout_CDF.sqf";};
 	case 17 : {call compile preprocessFileLineNumbers "loadout\loadout_PMC.sqf";};
 	case 18 : {call compile preprocessFileLineNumbers "loadout\loadout_FR.sqf";};
+	case 19 : {call compile preprocessFileLineNumbers "loadout\loadout_occident.sqf";};
 };
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

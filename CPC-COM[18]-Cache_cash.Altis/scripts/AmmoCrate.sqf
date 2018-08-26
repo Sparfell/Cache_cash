@@ -3,7 +3,7 @@ Script pour créer une caisse avec du matos en plus près du spawn des joueurs
 
 
 */
-private ["_pos","_veh","_rhsennemy","_lat","_at","_mag_at1","_mag_at2","_mag_at3","_hat","_mag_hat","_gre","_mag1","_mag2","_mag_ar","_mag_mg"];
+private ["_pos","_veh","cc_rhsennemy","_lat","_at","_mag_at1","_mag_at2","_mag_at3","_hat","_mag_hat","_gre","_mag1","_mag2","_mag_ar","_mag_mg"];
 
 waitUntil {time > 1};
 
@@ -12,10 +12,7 @@ _pos = [_pos, 0, 30, 3, 0] call BIS_fnc_findSafePos;
 _veh = "CUP_USBasicWeapons_EP1" createVehicle _pos;
 _veh allowdamage false;
 
-_rhsennemy = false;
-if ((paramsArray select 6) in [0,2,14,17,18,19,100,106,108,109]) then {_rhsennemy = true};
-
-switch (paramsArray select 5) do {
+switch (CC_p_loaout) do {
 	//OTAN
 	case 0 : {
 		_gre = "HandGrenade";
@@ -23,7 +20,7 @@ switch (paramsArray select 5) do {
 		_mag2 = "30Rnd_65x39_caseless_mag";
 		_mag_ar = "100Rnd_65x39_caseless_mag_Tracer";
 		_mag_mg = "130Rnd_338_Mag";
-		if (_rhsennemy) then {
+		if (cc_rhsennemy) then {
 			_lat = "rhs_weap_M136";
 			_at = "launch_I_Titan_short_F";
 			_mag_at1 = "Titan_AT";
@@ -48,7 +45,7 @@ switch (paramsArray select 5) do {
 		_mag2 = "10Rnd_762x54_Mag";
 		_mag_ar = "150Rnd_762x54_Box_Tracer";
 		_mag_mg = "150Rnd_762x54_Box_Tracer";
-		if (_rhsennemy) then {
+		if (cc_rhsennemy) then {
 			_lat = "";
 			_at = "rhs_weap_rpg7_pgo";
 			_mag_at1 = "rhs_rpg7_PG7VL_mag";
@@ -73,7 +70,7 @@ switch (paramsArray select 5) do {
 		_mag2 = "20Rnd_762x51_Mag";
 		_mag_ar = "200Rnd_65x39_cased_Box";
 		_mag_mg = "200Rnd_65x39_cased_Box_Tracer";
-		if (_rhsennemy) then {
+		if (cc_rhsennemy) then {
 			_lat = "rhs_weap_m72a7";
 			_at = "launch_I_Titan_short_F";
 			_mag_at1 = "Titan_AT";
@@ -98,7 +95,7 @@ switch (paramsArray select 5) do {
 		_mag2 = "rhsusf_20Rnd_762x51_m118_special_Mag";
 		_mag_ar = "rhs_200rnd_556x45_M_SAW";
 		_mag_mg = "rhsusf_50Rnd_762x51_m62_tracer";
-		if (_rhsennemy) then {
+		if (cc_rhsennemy) then {
 			_lat = "rhs_weap_M136";
 			_at = "rhs_weap_smaw_gr_optic";
 			_mag_at1 = "rhs_mag_smaw_HEAA";
@@ -123,7 +120,7 @@ switch (paramsArray select 5) do {
 		_mag2 = "rhsusf_20Rnd_762x51_m118_special_Mag";
 		_mag_ar = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
 		_mag_mg = "rhsusf_50Rnd_762x51_m62_tracer";
-		if (_rhsennemy) then {
+		if (cc_rhsennemy) then {
 			_lat = "rhs_weap_M136";
 			_at = "rhs_weap_smaw_gr_optic";
 			_mag_at1 = "rhs_mag_smaw_HEAA";
@@ -148,7 +145,7 @@ switch (paramsArray select 5) do {
 		_mag2 = "rhsusf_20Rnd_762x51_m118_special_Mag";
 		_mag_ar = "rhs_200rnd_556x45_M_SAW";
 		_mag_mg = "rhsusf_50Rnd_762x51_m62_tracer";
-		if (_rhsennemy) then {
+		if (cc_rhsennemy) then {
 			_lat = "rhs_weap_M136";
 			_at = "rhs_weap_smaw_gr_optic";
 			_mag_at1 = "rhs_mag_smaw_HEAA";
@@ -173,7 +170,7 @@ switch (paramsArray select 5) do {
 		_mag2 = "rhs_10Rnd_762x54mmR_7N1";
 		_mag_ar = "CUP_45Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M";
 		_mag_mg = "rhs_100Rnd_762x54mmR_green";
-		if (_rhsennemy) then {
+		if (cc_rhsennemy) then {
 			_lat = "rhs_weap_rpg26";
 			_at = "rhs_weap_rpg7_pgo";
 			_mag_at1 = "rhs_rpg7_PG7VR_mag";
@@ -198,7 +195,7 @@ switch (paramsArray select 5) do {
 		_mag2 = "rhs_10Rnd_762x54mmR_7N1";
 		_mag_ar = "rhs_100Rnd_762x54mmR_green";
 		_mag_mg = "rhs_100Rnd_762x54mmR_green";
-		if (_rhsennemy) then {
+		if (cc_rhsennemy) then {
 			_lat = "rhs_weap_rpg26";
 			_at = "rhs_weap_rpg7_pgo";
 			_mag_at1 = "rhs_rpg7_PG7VR_mag";
@@ -219,11 +216,11 @@ switch (paramsArray select 5) do {
 	//RUSF
 	case 8 : {
 		_gre = "rhs_mag_rgd5";
-		_mag1 = "rhs_30Rnd_545x39_AK";
-		_mag2 = "rhs_10Rnd_762x54mmR_7N1";
-		_mag_ar = "rhs_100Rnd_762x54mmR_green";
-		_mag_mg = "rhs_100Rnd_762x54mmR_green";
-		if (_rhsennemy) then {
+		_mag1 = "rhs_30Rnd_545x39_7N22_AK";
+		_mag2 = "rhs_10Rnd_762x54mmR_7N14";
+		_mag_ar = "rhs_45Rnd_545X39_7N22_AK";
+		_mag_mg = "rhs_100Rnd_762x54mmR_7N26";
+		if (cc_rhsennemy) then {
 			_lat = "rhs_weap_rpg26";
 			_at = "rhs_weap_rpg7_pgo";
 			_mag_at1 = "rhs_rpg7_PG7VR_mag";
@@ -248,7 +245,7 @@ switch (paramsArray select 5) do {
 		_mag2 = "rhsusf_20Rnd_762x51_m118_special_Mag";
 		_mag_ar = "CUP_100Rnd_TE1_Red_Tracer_556x45_BetaCMag";
 		_mag_mg = "rhsusf_100Rnd_762x51_m62_tracer";
-		if (_rhsennemy) then {
+		if (cc_rhsennemy) then {
 			_lat = "rhs_weap_M136";
 			_at = "rhs_weap_maaws_optic";
 			_mag_at1 = "rhs_mag_maaws_HEAT";
@@ -273,7 +270,7 @@ switch (paramsArray select 5) do {
 		_mag2 = "20Rnd_762x51_Mag";
 		_mag_ar = "CUP_200Rnd_TE4_Red_Tracer_556x45_M249";
 		_mag_mg = "CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M";
-		if (_rhsennemy) then {
+		if (cc_rhsennemy) then {
 			_lat = "rhs_weap_M136";
 			_at = "rhs_weap_maaws_optic";
 			_mag_at1 = "rhs_mag_maaws_HEAT";
@@ -298,7 +295,7 @@ switch (paramsArray select 5) do {
 		_mag2 = "20Rnd_762x51_Mag";
 		_mag_ar = "CUP_200Rnd_TE4_Red_Tracer_556x45_M249";
 		_mag_mg = "CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M";
-		if (_rhsennemy) then {
+		if (cc_rhsennemy) then {
 			_lat = "rhs_weap_m72a7";
 			_at = "rhs_weap_maaws_optic";
 			_mag_at1 = "rhs_mag_maaws_HEAT";
@@ -323,7 +320,7 @@ switch (paramsArray select 5) do {
 		_mag2 = "30Rnd_556x45_Stanag";
 		_mag_ar = "CUP_45Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M";
 		_mag_mg = "rhs_100Rnd_762x54mmR_green";
-		if (_rhsennemy) then {
+		if (cc_rhsennemy) then {
 			_lat = "rhs_weap_rpg26";
 			_at = "rhs_weap_rpg7_pgo";
 			_mag_at1 = "rhs_rpg7_PG7VR_mag";
@@ -348,7 +345,7 @@ switch (paramsArray select 5) do {
 		_mag2 = "rhsgref_10Rnd_792x57_m76";
 		_mag_ar = "CUP_45Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M";
 		_mag_mg = "rhs_100Rnd_762x54mmR_green";
-		if (_rhsennemy) then {
+		if (cc_rhsennemy) then {
 			_lat = "rhs_weap_rpg26";
 			_at = "rhs_weap_rpg7_pgo";
 			_mag_at1 = "rhs_rpg7_PG7VL_mag";
@@ -373,7 +370,7 @@ switch (paramsArray select 5) do {
 		_mag2 = "CUP_10Rnd_762x54_SVD_M";
 		_mag_ar = "CUP_45Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M";
 		_mag_mg = "rhs_100Rnd_762x54mmR_green";
-		if (_rhsennemy) then {
+		if (cc_rhsennemy) then {
 			_lat = "rhs_weap_rpg26";
 			_at = "rhs_weap_rpg7_pgo";
 			_mag_at1 = "rhs_rpg7_PG7VL_mag";
@@ -398,8 +395,8 @@ switch (paramsArray select 5) do {
 		_mag2 = "rhsgref_10Rnd_792x57_m76";
 		_mag_ar = "rhs_200rnd_556x45_M_SAW";
 		_mag_mg = "rhs_100Rnd_762x54mmR_green";
-		if (_rhsennemy) then {
-			_lat = "rhs_weap_m72a7";
+		if (cc_rhsennemy) then {
+			_lat = "rhs_weap_m80";
 			_at = "rhs_weap_rpg7_pgo";
 			_mag_at1 = "rhs_rpg7_PG7VL_mag";
 			_mag_at2 = "rhs_rpg7_OG7V_mag";
@@ -423,8 +420,8 @@ switch (paramsArray select 5) do {
 		_mag2 = "rhsgref_10Rnd_792x57_m76";
 		_mag_ar = "rhs_100Rnd_762x54mmR_green";
 		_mag_mg = "rhs_100Rnd_762x54mmR_green";
-		if (_rhsennemy) then {
-			_lat = "rhs_weap_rpg26";
+		if (cc_rhsennemy) then {
+			_lat = "rhs_weap_rpg75";
 			_at = "rhs_weap_rpg7_pgo";
 			_mag_at1 = "rhs_rpg7_PG7VR_mag";
 			_mag_at2 = "rhs_rpg7_OG7V_mag";
@@ -448,7 +445,7 @@ switch (paramsArray select 5) do {
 		_mag2 = "rhsusf_20Rnd_762x51_m118_special_Mag";
 		_mag_ar = "rhs_200rnd_556x45_M_SAW";
 		_mag_mg = "rhsusf_50Rnd_762x51";
-		if (_rhsennemy) then {
+		if (cc_rhsennemy) then {
 			_lat = "rhs_weap_M136";
 			_at = "rhs_weap_smaw_gr_optic";
 			_mag_at1 = "rhs_mag_smaw_HEAA";
@@ -473,7 +470,7 @@ switch (paramsArray select 5) do {
 		_mag2 = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
 		_mag_ar = "rhs_200rnd_556x45_M_SAW";
 		_mag_mg = "rhsusf_100Rnd_762x51_m62_tracer";
-		if (_rhsennemy) then {
+		if (cc_rhsennemy) then {
 			_lat = "rhs_weap_M136";
 			_at = "rhs_weap_smaw_gr_optic";
 			_mag_at1 = "rhs_mag_smaw_HEAA";
@@ -490,6 +487,31 @@ switch (paramsArray select 5) do {
 			_hat = "CUP_launch_M47";
 			_mag_hat = "CUP_Dragon_EP1_M";
 		};	
+	};
+	// armée occident
+	case 19 : {
+		_gre = "HandGrenade";
+		_mag1 = "rhsgref_30rnd_556x45_vhs2";
+		_mag2 = "rhsgref_30rnd_556x45_vhs2_t";
+		_mag_ar = "rhs_200rnd_556x45_M_SAW";
+		_mag_mg = "rhsusf_100Rnd_762x51_m62_tracer";
+		if (cc_rhsennemy) then {
+			_lat = "rhs_weap_m72a7";
+			_at = "rhs_weap_smaw_gr_optic";
+			_mag_at1 = "rhs_mag_smaw_HEAA";
+			_mag_at2 = "rhs_mag_smaw_HEDP";
+			_mag_at3 = "rhs_mag_smaw_SR";
+			_hat = "rhs_weap_fgm148";
+			_mag_hat = "rhs_fgm148_magazine_AT";
+		} else {
+			_lat = "CUP_launch_M72A6";
+			_at = "CUP_launch_Mk153Mod0_SMAWOptics";
+			_mag_at1 = "CUP_SMAW_HEAA_M";
+			_mag_at2 = "CUP_SMAW_HEDP_M";
+			_mag_at3 = "CUP_SMAW_Spotting";
+			_hat = "CUP_launch_Javelin";
+			_mag_hat = "CUP_Javelin_M";
+		};
 	};
 };
 

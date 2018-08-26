@@ -9,7 +9,7 @@ task1 setSimpleTaskDestination markerpos "Mark_Cible";
 task2 = player createSimpleTask ["Tuer tout les ennemis. (optionnel)"];
 task2 setSimpleTaskDescription ["Tuer tout les ennemis. (optionnel)","Tuer tout les ennemis. (optionnel)","Tuer tout les ennemis. (optionnel)"];
 
-switch (paramsArray select 7) do {
+switch (CC_p_extraction) do {
 	case 0: {
 		task3 = player createSimpleTask ["Tenir la base."];
 		task3 setSimpleTaskDescription ["Tenir la base ennemie.","Tenir la base ennemie.","Tenir la base ennemie."];
@@ -30,7 +30,7 @@ switch (paramsArray select 7) do {
 
 player createDiaryRecord ["Diary",["Extraction",
 
-switch (paramsArray select 7) do {
+switch (CC_p_extraction) do {
 	case 0: {"| Aucune extraction |
 <br/><br/>Restez quelques minutes dans la base ennemie une fois la cache détruite. (un chef de groupe peut fermer la mission avec le menu molette)
 	"};
@@ -47,7 +47,7 @@ switch (paramsArray select 7) do {
 
 player createDiaryRecord ["Diary",["Insertion",
 
-switch (paramsArray select 1) do { 
+switch (CC_p_insertion) do { 
 
 case 0:{
 	"| Insertion aléatoire |
